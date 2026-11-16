@@ -17,7 +17,7 @@ from pathlib import Path
 
 import markdown
 
-AUTEUR = "Yanis"          # à compléter avec ton nom complet si besoin
+AUTEUR = "HELALI Yanis"
 FORMATION = "IPSSI - Mastère Développement, Data & IA - 5e année"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 

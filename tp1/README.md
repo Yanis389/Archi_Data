@@ -1,7 +1,7 @@
 # TP Jour 1 — Retail Intelligence Platform
 
 **IPSSI — Mastère Développement, Data & IA (5e année) — Module Architecture Data**
-Auteur : Yanis (Yanis389)
+Auteur : HELALI Yanis (Yanis389)
 
 Ce dépôt contient les productions du TP J1 : **UC-01** (besoin métier et exploration des sources) et **UC-02**
 (conception et justification d'une architecture Data) pour l'enseigne fictive *Retail Intelligence*, à partir du
