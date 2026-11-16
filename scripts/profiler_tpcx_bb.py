@@ -9,8 +9,11 @@ dans DuckDB, puis écrit dans `--out` des preuves reproductibles :
   controles_relations.csv   taux de correspondance des jointures candidates (clés étrangères)
   controles_qualite.csv     anomalies visibles (doublons, valeurs aberrantes, incohérences)
   comparaison_refresh.csv   data_refresh est-il un complément de data ? (recouvrement des clés)
+  couverture_temporelle.csv période couverte par chaque table de faits
   kpi_tests.csv             calculs de KPI de test (preuve de calculabilité)
-  kpi_series_annuelles.csv  évolution annuelle du CA par canal
+  kpi_series_annuelles.csv  évolution annuelle du CA par canal (data, puis data + data_refresh)
+  kpi_series_categories.csv CA par catégorie de produit et par canal
+  kpi_series_magasins.csv   CA et tickets par magasin
   apercu_donnees.txt        premières lignes de chaque table
   arborescence.txt          arborescence des données et tailles
   audit_item_marketprices.txt  contenu des fichiers .csv d'audit
