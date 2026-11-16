@@ -43,6 +43,15 @@ def S(code: str) -> str:
     return f'<span class="st {cls}">{label}</span>'
 
 
+FAISABILITE = {"C": ("Couverte", "v"), "P": ("Partielle", "h"), "N": ("Non fiable", "n"), "X": ("Non couverte", "n")}
+
+
+def F(code: str) -> str:
+    """Badge de faisabilité d'un besoin (vocabulaire distinct des statuts de certitude du TP)."""
+    label, cls = FAISABILITE[code]
+    return f'<span class="st {cls}">{label}</span>'
+
+
 def inline(txt: str) -> str:
     """Markdown en ligne -> HTML (sans <p>)."""
     out = markdown.markdown(str(txt), extensions=["sane_lists"])
@@ -56,6 +65,10 @@ CSS = """
   @bottom-left { content: string(doctitle); font: 8pt Helvetica, Arial, sans-serif; color:#7a858c; }
   @bottom-right { content: counter(page) " / " counter(pages); font: 8pt Helvetica, Arial, sans-serif; color:#7a858c; } }
 @page :first { @bottom-left { content: ""; } @bottom-right { content: ""; } }
+@page land { size: A4 landscape; margin: 15mm 14mm 16mm 14mm;
+  @bottom-left { content: string(doctitle); font: 8pt Helvetica, Arial, sans-serif; color:#7a858c; }
+  @bottom-right { content: counter(page) " / " counter(pages); font: 8pt Helvetica, Arial, sans-serif; color:#7a858c; } }
+.land { page: land; }
 * { box-sizing: border-box; }
 body { font: 10pt/1.42 "Helvetica Neue", Helvetica, Arial, sans-serif; color:#1d2830; margin:0; }
 .doctitle { string-set: doctitle content(); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
@@ -74,6 +87,7 @@ h1, h2, h3 { page-break-after: avoid; }
 p { margin: 0 0 2.4mm; text-align: justify; hyphens: auto; }
 ul, ol { margin: 0 0 3mm 0; padding-left: 5.5mm; } li { margin-bottom: 1mm; }
 table { border-collapse: collapse; width:100%; margin: 2mm 0 4mm; font-size: 8.4pt; }
+table.fixed { table-layout: fixed; } table.fixed td, table.fixed th { overflow-wrap: anywhere; }
 th { background: var(--bleu); color:#fff; text-align:left; padding: 1.6mm 2mm; font-weight:600; }
 td { border: 1px solid var(--ligne); padding: 1.4mm 2mm; vertical-align: top; }
 tr { page-break-inside: avoid; } tbody tr:nth-child(even) td { background:#f7fafb; }
@@ -144,13 +158,18 @@ class Doc:
             tds = "".join(f'<td class="{"num" if i in num_cols else ""}">{inline(c)}</td>'
                           for i, c in enumerate(r))
             trs.append(f"<tr>{tds}</tr>")
-        self.body.append(f"<table>{cg}<thead><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table>")
+        klass = ' class="fixed"' if widths else ""
+        self.body.append(f"<table{klass}>{cg}<thead><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table>")
 
     def figure(self, svg: str, legende: str) -> None:
         self.body.append(f"<figure>{svg}<figcaption>{inline(legende)}</figcaption></figure>")
 
     def raw(self, h: str) -> None:
         self.body.append(h)
+
+    def landscape(self, on: bool = True) -> None:
+        """Ouvre (True) ou ferme (False) une section en paysage."""
+        self.body.append('<div class="land">' if on else "</div>")
 
     def pagebreak(self) -> None:
         self.body.append('<div class="pb"></div>')
