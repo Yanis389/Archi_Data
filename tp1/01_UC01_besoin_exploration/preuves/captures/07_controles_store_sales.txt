@@ -1,0 +1,15 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 python3 scripts/captures_uc01.py controles store_sales
+
+Contrôles simples sur store_sales (667 579 lignes)
+------------------------------------------------------------------------------
+Lignes sans client (ss_customer_sk vide)      :         0  (  0.00 %)
+Doublons sur (ticket, produit) [lignes en trop]:     4136  (  0.62 %)
+Prix de vente < coût d'achat                  :    462852  ( 69.33 %)
+Marge nette négative                          :    495971  ( 74.29 %)
+Plage de ss_sold_date_sk                      : 36890 -> 38697
+
+Colonnes avec valeurs vides :
+  ss_cdemo_sk                     238  (  0.04 %)
+  ss_hdemo_sk                     295  (  0.04 %)
+  ss_addr_sk                      448  (  0.07 %)
+  ss_promo_sk                     158  (  0.02 %)

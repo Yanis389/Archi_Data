@@ -1,0 +1,9 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 python3 scripts/captures_uc01.py jointures
+
+Vérification des relations (lignes orphelines = sans correspondance dans la table parent)
+--------------------------------------------------------------------------------------------
+relation                                                 renseignées  orphelines   verdict
+store_sales.ss_item_sk      -> item.i_item_sk                 667579           0   relation vérifiée
+store_sales.ss_store_sk     -> store.s_store_sk               667579           0   relation vérifiée
+store_sales.ss_sold_date_sk -> date_dim.d_date_sk             667579           0   relation vérifiée
+store_sales.ss_customer_sk  -> customer.c_customer_sk         667579           0   relation vérifiée

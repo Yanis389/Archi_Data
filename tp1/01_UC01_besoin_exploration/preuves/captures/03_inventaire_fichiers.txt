@@ -1,0 +1,18 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 bash -c 'cd /data; du -sh data data_refresh; echo "fichiers : $(find . -type f | wc -l)"; echo ".dat : $(find . -name "*.dat" | wc -l)   .csv : $(find . -name "*.csv" | wc -l)"; wc -l data/*/*.dat | sort -rn | head -12'
+
+978M	data
+9.2M	data_refresh
+fichiers : 37
+.dat : 34   .csv : 2
+  33907536 total
+  23255100 data/inventory/inventory.dat
+   6770550 data/web_clickstreams/web_clickstreams.dat
+   1920800 data/customer_demographics/customer_demographics.dat
+    668052 data/web_sales/web_sales.dat
+    667579 data/store_sales/store_sales.dat
+    109573 data/date_dim/date_dim.dat
+     99000 data/customer/customer.dat
+     89991 data/product_reviews/product_reviews.dat
+     89100 data/item_marketprices/item_marketprices.dat
+     86400 data/time_dim/time_dim.dat
+     49500 data/customer_address/customer_address.dat

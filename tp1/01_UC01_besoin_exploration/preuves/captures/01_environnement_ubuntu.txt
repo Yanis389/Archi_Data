@@ -1,0 +1,8 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 bash -c 'head -n 4 /etc/os-release; uname -srm; python3 --version'
+
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+Linux 7.0.12-linuxkit aarch64
+Python 3.12.3

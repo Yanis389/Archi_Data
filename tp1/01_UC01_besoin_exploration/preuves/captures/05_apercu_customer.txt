@@ -1,0 +1,5 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 bash -c 'cd /data/data; head -n 3 customer/customer.dat | cut -c1-170'
+
+0|AAAAAAAAAAAAAAAA|1824793|3203|2555|28776|14690|Ms.|Marisa|Harrington|N|17|4|1988|UNITED ARAB EMIRATES|RRCyuY3XfE3a|Marisa.Harrington@lawyer.com|gdMmGdU9
+1|AAAAAAAAAAAAAAAB|830976|2600|9191|94658|19931|Miss|Bessie|Calderon|N|20|10|1945|MONACO|aCJb9cc|Bessie.Calderon@snail-mail.net|hLQn0LtVa
+2|AAAAAAAAAAAAAAAC|335540|5527|14091|31783|106195|Miss|Barbara|Hoover|Y|3|4|1952|GREENLAND|59cfL9Fbpv|Barbara.Hoover@lawyer.com|vDVbSOCI

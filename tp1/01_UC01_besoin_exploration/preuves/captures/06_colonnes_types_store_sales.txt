@@ -1,0 +1,27 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 python3 scripts/captures_uc01.py colonnes store_sales
+
+Table : store_sales   |   lignes : 667 579
+ #  colonne                   type observé     nulls  distincts  exemple
+ 1  ss_sold_date_sk           entier               0       1808  37022
+ 2  ss_sold_time_sk           entier               0      55645  83653
+ 3  ss_item_sk                entier               0      17820  11584
+ 4  ss_customer_sk            entier               0      37336  93671
+ 5  ss_cdemo_sk               entier             238      36953  11016
+ 6  ss_hdemo_sk               entier             295       7161  2898
+ 7  ss_addr_sk                entier             448      26286  42248
+ 8  ss_store_sk               entier               0         12  2
+ 9  ss_promo_sk               entier             158        300  183
+10  ss_ticket_number          entier               0      89100  6276
+11  ss_quantity               entier               0        100  59
+12  ss_wholesale_cost         décimal              0       9901  82.94
+13  ss_list_price             décimal              0      19524  2.58
+14  ss_sales_price            décimal              0      17199  107.81
+15  ss_ext_discount_amt       décimal              0     238093  180.00
+16  ss_ext_sales_price        décimal              0     237770  90.45
+17  ss_ext_wholesale_cost     décimal              0     264513  586.20
+18  ss_ext_list_price         décimal              0     328908  6723.36
+19  ss_ext_tax                décimal              0      53387  28.45
+20  ss_coupon_amt             décimal              0      87123  0.00
+21  ss_net_paid               décimal              0     255026  2135.04
+22  ss_net_paid_inc_tax       décimal              0     315642  6315.51
+23  ss_net_profit             décimal              0     288874  -1011.96

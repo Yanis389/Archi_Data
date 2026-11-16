@@ -1,0 +1,75 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 tree -h -L 3 --noreport -I .DS_Store /data
+
+[ 160]  /data
+|-- [ 800]  data
+|   |-- [  96]  customer
+|   |   `-- [ 13M]  customer.dat
+|   |-- [  96]  customer_address
+|   |   `-- [5.1M]  customer_address.dat
+|   |-- [  96]  customer_demographics
+|   |   `-- [ 74M]  customer_demographics.dat
+|   |-- [  96]  date_dim
+|   |   `-- [ 15M]  date_dim.dat
+|   |-- [  96]  household_demographics
+|   |   `-- [151K]  household_demographics.dat
+|   |-- [  96]  income_band
+|   |   `-- [ 327]  income_band.dat
+|   |-- [  96]  inventory
+|   |   `-- [405M]  inventory.dat
+|   |-- [  96]  item
+|   |   `-- [6.5M]  item.dat
+|   |-- [ 128]  item_marketprices
+|   |   |-- [4.0M]  item_marketprices.dat
+|   |   `-- [ 273]  item_marketprices_audit.csv
+|   |-- [  96]  product_reviews
+|   |   `-- [ 54M]  product_reviews.dat
+|   |-- [  96]  promotion
+|   |   `-- [ 45K]  promotion.dat
+|   |-- [  96]  reason
+|   |   `-- [3.0K]  reason.dat
+|   |-- [  96]  ship_mode
+|   |   `-- [1.2K]  ship_mode.dat
+|   |-- [  96]  store
+|   |   `-- [3.3K]  store.dat
+|   |-- [  96]  store_returns
+|   |   `-- [4.1M]  store_returns.dat
+|   |-- [  96]  store_sales
+|   |   `-- [ 88M]  store_sales.dat
+|   |-- [  96]  time_dim
+|   |   `-- [4.9M]  time_dim.dat
+|   |-- [  96]  warehouse
+|   |   `-- [ 584]  warehouse.dat
+|   |-- [  96]  web_clickstreams
+|   |   `-- [170M]  web_clickstreams.dat
+|   |-- [  96]  web_page
+|   |   `-- [7.9K]  web_page.dat
+|   |-- [  96]  web_returns
+|   |   `-- [5.1M]  web_returns.dat
+|   |-- [  96]  web_sales
+|   |   `-- [128M]  web_sales.dat
+|   `-- [  96]  web_site
+|       `-- [8.6K]  web_site.dat
+`-- [ 416]  data_refresh
+    |-- [  96]  customer
+    |   `-- [131K]  customer.dat
+    |-- [  96]  customer_address
+    |   `-- [ 53K]  customer_address.dat
+    |-- [  96]  inventory
+    |   `-- [4.1M]  inventory.dat
+    |-- [  96]  item
+    |   `-- [ 68K]  item.dat
+    |-- [ 128]  item_marketprices
+    |   |-- [ 42K]  item_marketprices.dat
+    |   `-- [147K]  item_marketprices_audit.csv
+    |-- [  96]  product_reviews
+    |   `-- [560K]  product_reviews.dat
+    |-- [  96]  store_returns
+    |   `-- [ 48K]  store_returns.dat
+    |-- [  96]  store_sales
+    |   `-- [901K]  store_sales.dat
+    |-- [  96]  web_clickstreams
+    |   `-- [1.7M]  web_clickstreams.dat
+    |-- [  96]  web_returns
+    |   `-- [ 55K]  web_returns.dat
+    `-- [  96]  web_sales
+        `-- [1.3M]  web_sales.dat

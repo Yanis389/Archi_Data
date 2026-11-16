@@ -75,6 +75,32 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/build_uca1.py
 ```
 
+## Environnement Linux / Ubuntu (Docker) et captures d'écran
+
+Les contrôles d'exploration ont aussi été exécutés dans un conteneur **Ubuntu 24.04** (`docker/Dockerfile`), données
+montées en lecture seule. Les sorties réelles sont conservées dans `01_UC01_besoin_exploration/preuves/captures/`
+(un `.png` et le `.txt` correspondant, qui contient la commande exacte) :
+
+| Capture | Contenu |
+|---|---|
+| `01_environnement_ubuntu` | Distribution, noyau et version de Python du conteneur |
+| `02_arborescence` | Arborescence de `retail_project/` (`data/` et `data_refresh/`) avec tailles |
+| `03_inventaire_fichiers` | Volumes, nombre de fichiers par format, lignes par fichier |
+| `04_apercu_store_sales`, `05_apercu_customer` | Premières lignes brutes (fichiers `.dat` sans en-tête, CRLF) |
+| `06_colonnes_types_store_sales` | Colonnes, types observés, valeurs vides, valeurs distinctes |
+| `07_controles_store_sales` | Contrôles simples (doublons, prix < coût, marge négative, valeurs vides) |
+| `08_controles_relations` | Jointures `store_sales` vers `item`, `store`, `date_dim`, `customer` |
+| `09_profilage_complet` | Exécution complète de `profiler_tpcx_bb.py` (≈ 36 s) |
+
+```bash
+docker build -t retail-tools:ubuntu24 tp1/docker
+# depuis le dossier qui contient retail_project/ et ce dépôt :
+docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro \
+  retail-tools:ubuntu24 python3 scripts/captures_uc01.py controles store_sales
+```
+
+Les `.png` sont des rendus style terminal de la sortie réelle de ces commandes (pas des copies d'écran natives).
+
 Les PDF sont rendus avec Google Chrome en mode headless (macOS : `/Applications/Google Chrome.app`).
 L'exploration a été faite avec **DuckDB** : outil de travail **hors référentiel du parcours**, non retenu dans
 l'architecture cible (voir `UC02_positionnement_composants.pdf`).

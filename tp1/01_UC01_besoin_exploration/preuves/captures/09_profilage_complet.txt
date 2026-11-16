@@ -1,0 +1,40 @@
+$ docker run --rm -v $PWD/retail_project:/data:ro -v $PWD/J1_Retail_Intelligence/tp1/scripts:/work/scripts:ro retail-tools:ubuntu24 python3 scripts/profiler_tpcx_bb.py --data /data --out /tmp/preuves --db /tmp/tpcxbb.duckdb 2>&1 | tail -n 38
+
+[16:04:28]   data/customer_address
+[16:04:29]   data/customer_demographics
+[16:04:29]   data/household_demographics
+[16:04:29]   data/income_band
+[16:04:30]   data/date_dim
+[16:04:30]   data/time_dim
+[16:04:30]   data/item
+[16:04:30]   data/item_marketprices
+[16:04:30]   data/promotion
+[16:04:30]   data/reason
+[16:04:30]   data/ship_mode
+[16:04:30]   data/store
+[16:04:30]   data/warehouse
+[16:04:34]   data/inventory
+[16:04:35]   data/store_sales
+[16:04:35]   data/store_returns
+[16:04:37]   data/web_sales
+[16:04:37]   data/web_returns
+[16:04:37]   data/web_page
+[16:04:37]   data/web_site
+[16:04:39]   data/web_clickstreams
+[16:04:40]   data/product_reviews
+[16:04:40]   data_refresh/customer
+[16:04:40]   data_refresh/customer_address
+[16:04:40]   data_refresh/item
+[16:04:40]   data_refresh/item_marketprices
+[16:04:40]   data_refresh/inventory
+[16:04:40]   data_refresh/store_sales
+[16:04:40]   data_refresh/store_returns
+[16:04:40]   data_refresh/web_sales
+[16:04:40]   data_refresh/web_returns
+[16:04:40]   data_refresh/web_clickstreams
+[16:04:40]   data_refresh/product_reviews
+[16:04:40] Contrôle des relations candidates
+[16:04:43]   114 relations contrôlées
+[16:04:43] Contrôles de qualité
+[16:04:48] KPI de test
+[16:04:48] Terminé en 35.9 s -> /tmp/preuves
