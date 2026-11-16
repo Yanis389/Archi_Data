@@ -1,0 +1,12 @@
+# Environnement Python local
+.venv/
+__pycache__/
+*.pyc
+
+# Données TPCx-BB : volumineuses (~1 Go), conservées hors dépôt
+retail_project/
+*.dat
+
+# Fichiers intermédiaires de génération des PDF
+build/
+.DS_Store
