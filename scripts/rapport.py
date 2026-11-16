@@ -52,6 +52,11 @@ def F(code: str) -> str:
     return f'<span class="st {cls}">{label}</span>'
 
 
+def B(label: str, cls: str = "v") -> str:
+    """Badge libre (verdict d'exploitabilité, par exemple) : cls v=vert, h=ambre, n=rouge, d=bleu."""
+    return f'<span class="st {cls}">{label}</span>'
+
+
 def inline(txt: str) -> str:
     """Markdown en ligne -> HTML (sans <p>)."""
     out = markdown.markdown(str(txt), extensions=["sane_lists"])
@@ -91,7 +96,7 @@ table.fixed { table-layout: fixed; } table.fixed td, table.fixed th { overflow-w
 th { background: var(--bleu); color:#fff; text-align:left; padding: 1.6mm 2mm; font-weight:600; }
 td { border: 1px solid var(--ligne); padding: 1.4mm 2mm; vertical-align: top; }
 tr { page-break-inside: avoid; } tbody tr:nth-child(even) td { background:#f7fafb; }
-td.num, th.num { text-align:right; font-variant-numeric: tabular-nums; white-space:nowrap; }
+td.num, th.num { text-align:right; font-variant-numeric: tabular-nums; } td.num { white-space:nowrap; }
 code { font: 8.6pt Menlo, monospace; background:#eef2f5; padding: 0 1mm; border-radius: 1mm; }
 .st { display:inline-block; font-size:7.2pt; font-weight:700; padding: .2mm 1.6mm; border-radius: 1.2mm; white-space:nowrap; color:#fff; }
 .st.v { background:#1e7b4b; } .st.d { background:#2c6fb0; } .st.h { background:#b8860b; }
