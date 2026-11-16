@@ -19,3 +19,8 @@ Stock moyen par relevé;Entrepôts;AVG(inv_quantity_on_hand);500.14;unités;
 Part des clics aboutissant à une commande;Web;COUNT(wcs_sales_sk) / COUNT(*);9.867;%;
 Note moyenne des avis;Web;AVG(pr_review_rating);4.24;note sur 5;
 Nombre de produits distincts vendus;Magasin;COUNT(DISTINCT ss_item_sk);17820;produits;
+Clients distincts acheteurs;Magasin;COUNT(DISTINCT ss_customer_sk);37336;clients;
+Clients distincts acheteurs;Web;COUNT(DISTINCT ws_bill_customer_sk);37367;clients;
+Part des relevés de stock à zéro (rupture);Entrepôts;COUNT(inv_quantity_on_hand = 0) / COUNT(inv_quantity_on_hand);0.099;%;
+Écart moyen du prix concurrent vs prix courant;Prix;AVG(imp_competitor_price / i_current_price) - 1;243.57;%;
+Écart médian du prix concurrent vs prix courant;Prix;MEDIAN(imp_competitor_price / i_current_price) - 1;-0.26;%;

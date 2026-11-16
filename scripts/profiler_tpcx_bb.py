@@ -493,15 +493,60 @@ def kpi_tests(con) -> tuple[list[dict], list[dict]]:
     add("Nombre de produits distincts vendus", "Magasin", "COUNT(DISTINCT ss_item_sk)",
         "select count(distinct ss_item_sk) from store_sales", "produits")
 
+    add("Clients distincts acheteurs", "Magasin", "COUNT(DISTINCT ss_customer_sk)",
+        "select count(distinct ss_customer_sk) from store_sales", "clients")
+    add("Clients distincts acheteurs", "Web", "COUNT(DISTINCT ws_bill_customer_sk)",
+        "select count(distinct ws_bill_customer_sk) from web_sales", "clients")
+    add("Part des relevés de stock à zéro (rupture)", "Entrepôts",
+        "COUNT(inv_quantity_on_hand = 0) / COUNT(inv_quantity_on_hand)",
+        f"select round(100 * avg(case when {num('inv_quantity_on_hand')} = 0 then 1 else 0 end), 3) "
+        "from inventory where nullif(inv_quantity_on_hand,'') is not null", "%")
+    add("Écart moyen du prix concurrent vs prix courant", "Prix",
+        "AVG(imp_competitor_price / i_current_price) - 1",
+        f"select round(100 * (avg({num('m.imp_competitor_price')} / {num('i.i_current_price')}) - 1), 2) "
+        f"from item_marketprices m join item i on i.i_item_sk = {sk('m.imp_item_sk')} "
+        f"where {num('m.imp_competitor_price')} > 0", "%")
+    add("Écart médian du prix concurrent vs prix courant", "Prix",
+        "MEDIAN(imp_competitor_price / i_current_price) - 1",
+        f"select round(100 * (median({num('m.imp_competitor_price')} / {num('i.i_current_price')}) - 1), 2) "
+        f"from item_marketprices m join item i on i.i_item_sk = {sk('m.imp_item_sk')} "
+        f"where {num('m.imp_competitor_price')} > 0", "%")
+
     series = []
     for canal, tbl, dcol, mcol in (("Magasin", "store_sales", "ss_sold_date_sk", "ss_net_paid"),
                                    ("Web", "web_sales", "ws_sold_date_sk", "ws_net_paid")):
-        rows = con.execute(
-            f"select d.d_year, round(sum({num('f.' + mcol)}), 2), count(*) from {tbl} f "
-            f"join date_dim d on d.d_date_sk = {sk('f.' + dcol)} group by 1 order by 1").fetchall()
-        for y, ca, n in rows:
-            series.append({"canal": canal, "annee": y, "chiffre_affaires": ca, "lignes": n})
+        for perimetre, sources in (("data", [tbl]), ("data + data_refresh", [tbl, tbl + "__refresh"])):
+            union = " union all ".join(f"select {dcol} d, {mcol} m from {s}" for s in sources)
+            rows = con.execute(
+                f"select d.d_year, round(sum({num('f.m')}), 2), count(*), count(distinct d.d_date) "
+                f"from ({union}) f join date_dim d on d.d_date_sk = {sk('f.d')} group by 1 order by 1").fetchall()
+            for y, ca, n, days in rows:
+                series.append({"canal": canal, "perimetre": perimetre, "annee": y,
+                               "chiffre_affaires": ca, "lignes": n, "jours_distincts": days})
     return K, series
+
+
+def kpi_dimensions(con) -> tuple[list[dict], list[dict]]:
+    """CA par catégorie de produit et par magasin (preuve que les axes d'analyse sont exploitables)."""
+    cats = []
+    for canal, tbl, icol, mcol, qcol in (("Magasin", "store_sales", "ss_item_sk", "ss_net_paid", "ss_quantity"),
+                                         ("Web", "web_sales", "ws_item_sk", "ws_net_paid", "ws_quantity")):
+        rows = con.execute(
+            f"select i.i_category, round(sum({num('f.' + mcol)}), 2), sum({num('f.' + qcol)}), count(*) "
+            f"from {tbl} f join item i on i.i_item_sk = {sk('f.' + icol)} group by 1 order by 2 desc").fetchall()
+        tot = sum(r[1] for r in rows)
+        for cat, ca, q, n in rows:
+            cats.append({"canal": canal, "categorie": cat, "chiffre_affaires": ca, "quantite": q,
+                         "lignes": n, "part_ca_pct": round(100 * ca / tot, 2)})
+    stores = []
+    rows = con.execute(
+        f"select s.s_store_sk, s.s_store_name, s.s_state, round(sum({num('f.ss_net_paid')}), 2), "
+        "count(distinct f.ss_ticket_number) from store_sales f "
+        f"join store s on s.s_store_sk = {sk('f.ss_store_sk')} group by 1, 2, 3 order by 4 desc").fetchall()
+    for sid, name, state, ca, tickets in rows:
+        stores.append({"magasin_sk": sid, "nom": name, "etat": state, "chiffre_affaires": ca,
+                       "tickets": tickets})
+    return cats, stores
 
 
 # --------------------------------------------------------------------------- fichiers de preuve
@@ -638,7 +683,11 @@ def main() -> None:
         k, series = kpi_tests(con)
         write_csv(out / "kpi_tests.csv", k, list(k[0].keys()))
         write_csv(out / "kpi_series_annuelles.csv", series, list(series[0].keys()))
+        cats, stores = kpi_dimensions(con)
+        write_csv(out / "kpi_series_categories.csv", cats, list(cats[0].keys()))
+        write_csv(out / "kpi_series_magasins.csv", stores, list(stores[0].keys()))
         result["kpi"], result["kpi_series"] = k, series
+        result["kpi_categories"], result["kpi_magasins"] = cats, stores
 
     result["duree_execution_s"] = round(time.time() - t0, 1)
     (out / "profil.json").write_text(json.dumps(result, ensure_ascii=False, indent=1, default=str),

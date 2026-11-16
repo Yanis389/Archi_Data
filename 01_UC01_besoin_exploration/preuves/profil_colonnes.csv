@@ -1,118 +1,118 @@
 source;domaine;table;position;colonne;description;type_observe;nb_lignes;nb_nulls;pct_nulls;nb_distincts;min;max;longueur_max;exemple;role
-data;Clients;customer;1;c_customer_sk;Identifiant client (clé de substitution);entier;99000;0;0.0;99000;0.0;98999.0;5;6144;clé primaire (candidate)
-data;Clients;customer;2;c_customer_id;Identifiant client métier;texte;99000;0;0.0;99000;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAFQLR;16;AAAAAAAAAAAAAJCI;attribut
-data;Clients;customer;3;c_current_cdemo_sk;;entier;99000;18;0.018;96438;18.0;1920796.0;7;728848;clé étrangère (candidate)
-data;Clients;customer;4;c_current_hdemo_sk;;entier;99000;29;0.029;7200;0.0;7199.0;4;1305;clé étrangère (candidate)
-data;Clients;customer;5;c_current_addr_sk;;entier;99000;22;0.022;42734;0.0;49499.0;5;46915;clé étrangère (candidate)
-data;Clients;customer;6;c_first_shipto_date_sk;;entier;99000;25;0.025;65121;3.0;109570.0;6;102644;clé étrangère (candidate)
-data;Clients;customer;7;c_first_sales_date_sk;;entier;99000;18;0.018;65187;1.0;109568.0;6;21314;clé étrangère (candidate)
+data;Clients;customer;1;c_customer_sk;Identifiant client (clé de substitution);entier;99000;0;0.0;99000;0.0;98999.0;5;4096;clé primaire (candidate)
+data;Clients;customer;2;c_customer_id;Identifiant client métier;texte;99000;0;0.0;99000;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAFQLR;16;AAAAAAAAAAAAAGBO;attribut
+data;Clients;customer;3;c_current_cdemo_sk;;entier;99000;18;0.018;96438;18.0;1920796.0;7;1755645;clé étrangère (candidate)
+data;Clients;customer;4;c_current_hdemo_sk;;entier;99000;29;0.029;7200;0.0;7199.0;4;4121;clé étrangère (candidate)
+data;Clients;customer;5;c_current_addr_sk;;entier;99000;22;0.022;42734;0.0;49499.0;5;27996;clé étrangère (candidate)
+data;Clients;customer;6;c_first_shipto_date_sk;;entier;99000;25;0.025;65121;3.0;109570.0;6;15586;clé étrangère (candidate)
+data;Clients;customer;7;c_first_sales_date_sk;;entier;99000;18;0.018;65187;1.0;109568.0;6;49491;clé étrangère (candidate)
 data;Clients;customer;8;c_salutation;;texte;99000;28;0.028;6;Dr.;Sir;4;Dr.;attribut
-data;Clients;customer;9;c_first_name;;texte;99000;0;0.0;4115;Aaron;Zulma;11;Williams;attribut
-data;Clients;customer;10;c_last_name;;texte;99000;0;0.0;4981;Aaron;Zuniga;13;Thomas;attribut
+data;Clients;customer;9;c_first_name;;texte;99000;0;0.0;4115;Aaron;Zulma;11;Ronald;attribut
+data;Clients;customer;10;c_last_name;;texte;99000;0;0.0;4981;Aaron;Zuniga;13;King;attribut
 data;Clients;customer;11;c_preferred_cust_flag;;texte;99000;27;0.027;2;N;Y;1;Y;attribut
-data;Clients;customer;12;c_birth_day;;entier;99000;18;0.018;31;1.0;31.0;2;22;attribut
-data;Clients;customer;13;c_birth_month;;entier;99000;25;0.025;12;1.0;12.0;2;5;attribut
-data;Clients;customer;14;c_birth_year;Année de naissance;entier;99000;30;0.03;69;1924.0;1992.0;4;1989;attribut
-data;Clients;customer;15;c_birth_country;Pays de naissance;texte;99000;16;0.016;212;AFGHANISTAN;ZIMBABWE;20;NAMIBIA;attribut
-data;Clients;customer;16;c_login;;texte;99000;26;0.026;87102;0;zzwNvcFMmc;13;dSO;attribut
-data;Clients;customer;17;c_email_address;;texte;99000;23;0.023;98655;Aaron.Alexander@wildmail.com;Zulma.Meyer@rediffmail.com;41;Williams.Thomas@safe-mail.net;attribut
-data;Clients;customer;18;c_last_review_date;;texte;99000;28;0.028;82657;0;zzwy3;10;prNVdY02A2;attribut
-data;Clients;customer_address;1;ca_address_sk;;entier;49500;0;0.0;49500;0.0;49499.0;5;8192;clé primaire (candidate)
-data;Clients;customer_address;2;ca_address_id;;texte;49500;0;0.0;49500;AAAAAAAAAAAAAAAA;AAAAAAAAAAAACVFV;16;AAAAAAAAAAAAAMDC;attribut
-data;Clients;customer_address;3;ca_street_number;;entier;49500;14;0.028;1000;1.0;1000.0;4;284;attribut
-data;Clients;customer_address;4;ca_street_name;;texte;49500;10;0.02;6893;10th;Woodland Woodland;21;Third Miller;attribut
-data;Clients;customer_address;5;ca_street_type;;texte;49500;13;0.026;20;Ave;Wy;9;Cir.;attribut
-data;Clients;customer_address;6;ca_suite_number;;texte;49500;23;0.046;42232;0;zzqCbPS;10;z;attribut
-data;Clients;customer_address;7;ca_city;;texte;49500;0;0.0;986;Aberdeen;Zion;20;Pinehurst;attribut
-data;Clients;customer_address;8;ca_county;;texte;49500;0;0.0;1846;Abbeville County;Ziebach County;28;Brule County;attribut
-data;Clients;customer_address;9;ca_state;;texte;49500;0;0.0;51;AK;WY;2;SD;attribut
-data;Clients;customer_address;10;ca_zip;;entier;49500;14;0.028;38050;10002.0;99998.0;5;52202;attribut
+data;Clients;customer;12;c_birth_day;;entier;99000;18;0.018;31;1.0;31.0;2;16;attribut
+data;Clients;customer;13;c_birth_month;;entier;99000;25;0.025;12;1.0;12.0;2;11;attribut
+data;Clients;customer;14;c_birth_year;Année de naissance;entier;99000;30;0.03;69;1924.0;1992.0;4;1931;attribut
+data;Clients;customer;15;c_birth_country;Pays de naissance;texte;99000;16;0.016;212;AFGHANISTAN;ZIMBABWE;20;MALDIVES;attribut
+data;Clients;customer;16;c_login;;texte;99000;26;0.026;87102;0;zzwNvcFMmc;13;nCfRffTIyU;attribut
+data;Clients;customer;17;c_email_address;;texte;99000;23;0.023;98655;Aaron.Alexander@wildmail.com;Zulma.Meyer@rediffmail.com;41;Ronald.King@hushmail.com;attribut
+data;Clients;customer;18;c_last_review_date;;texte;99000;28;0.028;82657;0;zzwy3;10;9dG2a;attribut
+data;Clients;customer_address;1;ca_address_sk;;entier;49500;0;0.0;49500;0.0;49499.0;5;2048;clé primaire (candidate)
+data;Clients;customer_address;2;ca_address_id;;texte;49500;0;0.0;49500;AAAAAAAAAAAAAAAA;AAAAAAAAAAAACVFV;16;AAAAAAAAAAAAADAU;attribut
+data;Clients;customer_address;3;ca_street_number;;entier;49500;14;0.028;1000;1.0;1000.0;4;276;attribut
+data;Clients;customer_address;4;ca_street_name;;texte;49500;10;0.02;6893;10th;Woodland Woodland;21;Cedar;attribut
+data;Clients;customer_address;5;ca_street_type;;texte;49500;13;0.026;20;Ave;Wy;9;Ln;attribut
+data;Clients;customer_address;6;ca_suite_number;;texte;49500;23;0.046;42232;0;zzqCbPS;10;dLlVmaVHGz;attribut
+data;Clients;customer_address;7;ca_city;;texte;49500;0;0.0;986;Aberdeen;Zion;20;Church Hill;attribut
+data;Clients;customer_address;8;ca_county;;texte;49500;0;0.0;1846;Abbeville County;Ziebach County;28;Nobles County;attribut
+data;Clients;customer_address;9;ca_state;;texte;49500;0;0.0;51;AK;WY;2;MN;attribut
+data;Clients;customer_address;10;ca_zip;;entier;49500;14;0.028;38050;10002.0;99998.0;5;68871;attribut
 data;Clients;customer_address;11;ca_country;;texte;49500;0;0.0;1;United States;United States;13;United States;attribut
 data;Clients;customer_address;12;ca_gmt_offset;;entier;49500;0;0.0;6;-10.0;-5.0;3;-6;attribut
 data;Clients;customer_address;13;ca_location_type;;texte;49500;0;0.0;3;apartment;single family;13;condo;attribut
-data;Clients;customer_demographics;1;cd_demo_sk;;entier;1920800;0;0.0;1920800;0.0;1920799.0;7;18432;clé primaire (candidate)
-data;Clients;customer_demographics;2;cd_gender;;texte;1920800;486;0.025;2;F;M;1;M;attribut
-data;Clients;customer_demographics;3;cd_marital_status;;texte;1920800;485;0.025;5;D;W;1;D;attribut
-data;Clients;customer_demographics;4;cd_education_status;;texte;1920800;506;0.026;7;2 yr Degree;Unknown;15;2 yr Degree;attribut
-data;Clients;customer_demographics;5;cd_purchase_estimate;;entier;1920800;507;0.026;20;500.0;10000.0;5;5500;attribut
-data;Clients;customer_demographics;6;cd_credit_rating;;texte;1920800;506;0.026;4;Good;Unknown;9;High Risk;attribut
+data;Clients;customer_demographics;1;cd_demo_sk;;entier;1920800;0;0.0;1920800;0.0;1920799.0;7;14336;clé primaire (candidate)
+data;Clients;customer_demographics;2;cd_gender;;texte;1920800;486;0.025;2;F;M;1;F;attribut
+data;Clients;customer_demographics;3;cd_marital_status;;texte;1920800;485;0.025;5;D;W;1;U;attribut
+data;Clients;customer_demographics;4;cd_education_status;;texte;1920800;506;0.026;7;2 yr Degree;Unknown;15;4 yr Degree;attribut
+data;Clients;customer_demographics;5;cd_purchase_estimate;;entier;1920800;507;0.026;20;500.0;10000.0;5;9000;attribut
+data;Clients;customer_demographics;6;cd_credit_rating;;texte;1920800;506;0.026;4;Good;Unknown;9;Good;attribut
 data;Clients;customer_demographics;7;cd_dep_count;;entier;1920800;544;0.028;10;0.0;9.0;1;1;attribut
-data;Clients;customer_demographics;8;cd_dep_employed_count;;entier;1920800;488;0.025;10;0.0;9.0;1;3;attribut
-data;Clients;customer_demographics;9;cd_dep_college_count;;entier;1920800;500;0.026;10;0.0;9.0;1;1;attribut
-data;Clients;household_demographics;1;hd_demo_sk;;entier;7200;0;0.0;7200;0.0;7199.0;4;6144;clé primaire (candidate)
-data;Clients;household_demographics;2;hd_income_band_sk;;entier;7200;2;0.028;20;0.0;19.0;2;5;clé étrangère (candidate)
+data;Clients;customer_demographics;8;cd_dep_employed_count;;entier;1920800;488;0.025;10;0.0;9.0;1;7;attribut
+data;Clients;customer_demographics;9;cd_dep_college_count;;entier;1920800;500;0.026;10;0.0;9.0;1;0;attribut
+data;Clients;household_demographics;1;hd_demo_sk;;entier;7200;0;0.0;7200;0.0;7199.0;4;0;clé primaire (candidate)
+data;Clients;household_demographics;2;hd_income_band_sk;;entier;7200;2;0.028;20;0.0;19.0;2;3;clé étrangère (candidate)
 data;Clients;household_demographics;3;hd_buy_potential;;texte;7200;1;0.014;6;0-500;Unknown;10;1001-5000;attribut
-data;Clients;household_demographics;4;hd_dep_count;;entier;7200;2;0.028;10;0.0;9.0;1;6;attribut
-data;Clients;household_demographics;5;hd_vehicle_count;;entier;7200;2;0.028;6;-1.0;4.0;2;3;attribut
+data;Clients;household_demographics;4;hd_dep_count;;entier;7200;2;0.028;10;0.0;9.0;1;0;attribut
+data;Clients;household_demographics;5;hd_vehicle_count;;entier;7200;2;0.028;6;-1.0;4.0;2;0;attribut
 data;Clients;income_band;1;ib_income_band_sk;;entier;20;0;0.0;20;0.0;19.0;2;0;clé primaire (candidate)
 data;Clients;income_band;2;ib_lower_bound;;entier;20;0;0.0;20;1.0;190001.0;6;1;attribut
 data;Clients;income_band;3;ib_upper_bound;;entier;20;0;0.0;20;10000.0;200000.0;6;10000;attribut
-data;Dates et temps;date_dim;1;d_date_sk;Identifiant date (clé de substitution);entier;109573;0;0.0;109573;0.0;109572.0;6;12288;clé primaire (candidate)
-data;Dates et temps;date_dim;2;d_date_id;;texte;109573;0;0.0;109573;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAGGCI;16;AAAAAAAAAAAAASEQ;attribut
-data;Dates et temps;date_dim;3;d_date;Date calendaire;date;109573;0;0.0;109573;1900-01-01;2199-12-31;10;1933-08-24;attribut
-data;Dates et temps;date_dim;4;d_month_seq;;entier;109573;0;0.0;3600;0.0;3599.0;4;403;attribut
-data;Dates et temps;date_dim;5;d_week_seq;;entier;109573;0;0.0;15654;0.0;15653.0;5;1755;attribut
-data;Dates et temps;date_dim;6;d_quarter_seq;;entier;109573;0;0.0;1200;0.0;1199.0;4;134;attribut
-data;Dates et temps;date_dim;7;d_year;Année;entier;109573;0;0.0;300;1900.0;2199.0;4;1933;attribut
-data;Dates et temps;date_dim;8;d_dow;;entier;109573;0;0.0;7;1.0;7.0;1;4;attribut
-data;Dates et temps;date_dim;9;d_moy;Mois de l'année;entier;109573;0;0.0;12;1.0;12.0;2;8;attribut
-data;Dates et temps;date_dim;10;d_dom;;entier;109573;0;0.0;31;1.0;31.0;2;24;attribut
-data;Dates et temps;date_dim;11;d_qoy;Trimestre;entier;109573;0;0.0;4;1.0;4.0;1;3;attribut
-data;Dates et temps;date_dim;12;d_fy_year;;entier;109573;0;0.0;300;1900.0;2199.0;4;1933;attribut
-data;Dates et temps;date_dim;13;d_fy_quarter_seq;;entier;109573;0;0.0;1200;0.0;1199.0;4;134;attribut
-data;Dates et temps;date_dim;14;d_fy_week_seq;;entier;109573;0;0.0;15654;0.0;15653.0;5;1755;attribut
-data;Dates et temps;date_dim;15;d_day_name;;texte;109573;0;0.0;7;Friday;Wednesday;9;Thursday;attribut
-data;Dates et temps;date_dim;16;d_quarter_name;;texte;109573;0;0.0;1200;1900Q1;2199Q4;6;1933Q3;attribut
+data;Dates et temps;date_dim;1;d_date_sk;Identifiant date (clé de substitution);entier;109573;0;0.0;109573;0.0;109572.0;6;4096;clé primaire (candidate)
+data;Dates et temps;date_dim;2;d_date_id;;texte;109573;0;0.0;109573;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAGGCI;16;AAAAAAAAAAAAAGBO;attribut
+data;Dates et temps;date_dim;3;d_date;Date calendaire;date;109573;0;0.0;109573;1900-01-01;2199-12-31;10;1911-03-21;attribut
+data;Dates et temps;date_dim;4;d_month_seq;;entier;109573;0;0.0;3600;0.0;3599.0;4;134;attribut
+data;Dates et temps;date_dim;5;d_week_seq;;entier;109573;0;0.0;15654;0.0;15653.0;5;585;attribut
+data;Dates et temps;date_dim;6;d_quarter_seq;;entier;109573;0;0.0;1200;0.0;1199.0;4;44;attribut
+data;Dates et temps;date_dim;7;d_year;Année;entier;109573;0;0.0;300;1900.0;2199.0;4;1911;attribut
+data;Dates et temps;date_dim;8;d_dow;;entier;109573;0;0.0;7;1.0;7.0;1;2;attribut
+data;Dates et temps;date_dim;9;d_moy;Mois de l'année;entier;109573;0;0.0;12;1.0;12.0;2;3;attribut
+data;Dates et temps;date_dim;10;d_dom;;entier;109573;0;0.0;31;1.0;31.0;2;21;attribut
+data;Dates et temps;date_dim;11;d_qoy;Trimestre;entier;109573;0;0.0;4;1.0;4.0;1;1;attribut
+data;Dates et temps;date_dim;12;d_fy_year;;entier;109573;0;0.0;300;1900.0;2199.0;4;1911;attribut
+data;Dates et temps;date_dim;13;d_fy_quarter_seq;;entier;109573;0;0.0;1200;0.0;1199.0;4;44;attribut
+data;Dates et temps;date_dim;14;d_fy_week_seq;;entier;109573;0;0.0;15654;0.0;15653.0;5;585;attribut
+data;Dates et temps;date_dim;15;d_day_name;;texte;109573;0;0.0;7;Friday;Wednesday;9;Tuesday;attribut
+data;Dates et temps;date_dim;16;d_quarter_name;;texte;109573;0;0.0;1200;1900Q1;2199Q4;6;1911Q1;attribut
 data;Dates et temps;date_dim;17;d_holiday;;texte;109573;0;0.0;1;Y;Y;1;Y;attribut
 data;Dates et temps;date_dim;18;d_weekend;;texte;109573;0;0.0;2;N;Y;1;N;attribut
-data;Dates et temps;date_dim;19;d_following_holiday;;texte;109573;0;0.0;2;N;Y;1;N;attribut
-data;Dates et temps;date_dim;20;d_first_dom;;entier;109573;0;0.0;56753;2415021.0;2488069.0;7;2427684;attribut
-data;Dates et temps;date_dim;21;d_last_dom;;entier;109573;0;0.0;56970;2415020.0;2488370.0;7;2432507;attribut
-data;Dates et temps;date_dim;22;d_same_day_ly;;entier;109573;0;0.0;56725;2414657.0;2487705.0;7;2484489;attribut
-data;Dates et temps;date_dim;23;d_same_day_lq;;entier;109573;0;0.0;56778;2414930.0;2487977.0;7;2422223;attribut
+data;Dates et temps;date_dim;19;d_following_holiday;;texte;109573;0;0.0;2;N;Y;1;Y;attribut
+data;Dates et temps;date_dim;20;d_first_dom;;entier;109573;0;0.0;56753;2415021.0;2488069.0;7;2455417;attribut
+data;Dates et temps;date_dim;21;d_last_dom;;entier;109573;0;0.0;56970;2415020.0;2488370.0;7;2474104;attribut
+data;Dates et temps;date_dim;22;d_same_day_ly;;entier;109573;0;0.0;56725;2414657.0;2487705.0;7;2425604;attribut
+data;Dates et temps;date_dim;23;d_same_day_lq;;entier;109573;0;0.0;56778;2414930.0;2487977.0;7;2470594;attribut
 data;Dates et temps;date_dim;24;d_current_day;;texte;109573;0;0.0;2;N;Y;1;N;attribut
 data;Dates et temps;date_dim;25;d_current_week;;texte;109573;0;0.0;2;N;Y;1;N;attribut
 data;Dates et temps;date_dim;26;d_current_month;;texte;109573;0;0.0;2;N;Y;1;N;attribut
 data;Dates et temps;date_dim;27;d_current_quarter;;texte;109573;0;0.0;2;N;Y;1;N;attribut
 data;Dates et temps;date_dim;28;d_current_year;;texte;109573;0;0.0;2;N;Y;1;N;attribut
-data;Dates et temps;time_dim;1;t_time_sk;;entier;86400;0;0.0;86400;0.0;86399.0;5;0;clé primaire (candidate)
-data;Dates et temps;time_dim;2;t_time_id;;texte;86400;0;0.0;86400;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAEXVB;16;AAAAAAAAAAAAAAAA;attribut
-data;Dates et temps;time_dim;3;t_time;;entier;86400;0;0.0;86400;0.0;86399.0;5;0;attribut
-data;Dates et temps;time_dim;4;t_hour;;entier;86400;0;0.0;24;0.0;23.0;2;0;attribut
-data;Dates et temps;time_dim;5;t_minute;;entier;86400;0;0.0;60;0.0;59.0;2;0;attribut
-data;Dates et temps;time_dim;6;t_second;;entier;86400;0;0.0;60;0.0;59.0;2;0;attribut
+data;Dates et temps;time_dim;1;t_time_sk;;entier;86400;0;0.0;86400;0.0;86399.0;5;20480;clé primaire (candidate)
+data;Dates et temps;time_dim;2;t_time_id;;texte;86400;0;0.0;86400;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAEXVB;16;AAAAAAAAAAAABEHS;attribut
+data;Dates et temps;time_dim;3;t_time;;entier;86400;0;0.0;86400;0.0;86399.0;5;20480;attribut
+data;Dates et temps;time_dim;4;t_hour;;entier;86400;0;0.0;24;0.0;23.0;2;5;attribut
+data;Dates et temps;time_dim;5;t_minute;;entier;86400;0;0.0;60;0.0;59.0;2;41;attribut
+data;Dates et temps;time_dim;6;t_second;;entier;86400;0;0.0;60;0.0;59.0;2;20;attribut
 data;Dates et temps;time_dim;7;t_am_pm;;texte;86400;0;0.0;2;AM;PM;2;AM;attribut
 data;Dates et temps;time_dim;8;t_shift;;texte;86400;0;0.0;3;first;third;6;third;attribut
 data;Dates et temps;time_dim;9;t_sub_shift;;texte;86400;0;0.0;4;afternoon;night;9;night;attribut
 data;Dates et temps;time_dim;10;t_meal_time;;texte;86400;50400;58.333;3;breakfast;lunch;9;breakfast;attribut
-data;Produits et prix;item;1;i_item_sk;Identifiant produit (clé de substitution);entier;17820;0;0.0;17820;0.0;17819.0;5;4096;clé primaire (candidate)
-data;Produits et prix;item;2;i_item_id;Identifiant produit métier (plusieurs versions possibles);texte;17820;0;0.0;17820;AAAAAAAAAAAAAAAA;AAAAAAAAAAAABAJJ;16;AAAAAAAAAAAAAGBO;attribut
-data;Produits et prix;item;3;i_rec_start_date;;date;17820;0;0.0;364;2000-01-03;2000-12-31;10;2000-12-03;attribut
+data;Produits et prix;item;1;i_item_sk;Identifiant produit (clé de substitution);entier;17820;0;0.0;17820;0.0;17819.0;5;2048;clé primaire (candidate)
+data;Produits et prix;item;2;i_item_id;Identifiant produit métier (plusieurs versions possibles);texte;17820;0;0.0;17820;AAAAAAAAAAAAAAAA;AAAAAAAAAAAABAJJ;16;AAAAAAAAAAAAADAU;attribut
+data;Produits et prix;item;3;i_rec_start_date;;date;17820;0;0.0;364;2000-01-03;2000-12-31;10;2000-01-24;attribut
 data;Produits et prix;item;4;i_rec_end_date;;vide;17820;17820;100.0;0;;;;;attribut
-data;Produits et prix;item;5;i_item_desc;;texte;17820;4;0.022;17816;Tiresias' about the thin bold frets s...;waters without the doggedly bold brai...;200;slyly bold forges among the somas integrate blithe waters...;attribut
-data;Produits et prix;item;6;i_current_price;Prix courant catalogue;entier;17820;0;0.0;8343;0.1;99.98;5;1.88;attribut
-data;Produits et prix;item;7;i_wholesale_cost;Coût d'achat;entier;17820;0;0.0;7598;0.02;87.35;5;81.17;attribut
-data;Produits et prix;item;8;i_brand_id;;entier;17820;8;0.045;17797;1001703.0;10015586.0;8;9492394;attribut
-data;Produits et prix;item;9;i_brand;Marque;texte;17820;6;0.034;17554;0;zzjGgUYcbAv5;50;gldEULs6U1ENO4mWp7zd3lt5R7U2W;attribut
-data;Produits et prix;item;10;i_class_id;;entier;17820;0;0.0;16;1.0;16.0;2;5;attribut
-data;Produits et prix;item;11;i_class;Classe de produit;texte;17820;0;0.0;74;Accessories;World Music;26;World Music;attribut
-data;Produits et prix;item;12;i_category_id;;entier;17820;0;0.0;9;1.0;9.0;1;2;attribut
-data;Produits et prix;item;13;i_category;Catégorie de produit;texte;17820;0;0.0;9;Books;Toys & Games;24;Music;attribut
-data;Produits et prix;item;14;i_manufact_id;;entier;17820;0;0.0;1000;1.0;1000.0;4;185;attribut
-data;Produits et prix;item;15;i_manufact;;texte;17820;0;0.0;17481;0;zzgZWXS8l9;50;FlvOeWS;attribut
-data;Produits et prix;item;16;i_size;;texte;17820;0;0.0;7;N/A;small;11;medium;attribut
-data;Produits et prix;item;17;i_formulation;;texte;17820;0;0.0;16916;0;zzgcmuIaN7RYM7l0;20;IRlpHk9EHX;attribut
-data;Produits et prix;item;18;i_color;;texte;17820;0;0.0;92;almond;yellow;10;lawn;attribut
-data;Produits et prix;item;19;i_units;;texte;17820;0;0.0;21;Box;Unknown;7;Gram;attribut
+data;Produits et prix;item;5;i_item_desc;;texte;17820;4;0.022;17816;Tiresias' about the thin bold frets s...;waters without the doggedly bold brai...;200;patterns cajole! dolphins at the furious permanent orbits...;attribut
+data;Produits et prix;item;6;i_current_price;Prix courant catalogue;entier;17820;0;0.0;8343;0.1;99.98;5;19.81;attribut
+data;Produits et prix;item;7;i_wholesale_cost;Coût d'achat;entier;17820;0;0.0;7598;0.02;87.35;5;8.38;attribut
+data;Produits et prix;item;8;i_brand_id;;entier;17820;8;0.045;17797;1001703.0;10015586.0;8;2306822;attribut
+data;Produits et prix;item;9;i_brand;Marque;texte;17820;6;0.034;17554;0;zzjGgUYcbAv5;50;gOr2P5zO0V5ueZGZNgxbq;attribut
+data;Produits et prix;item;10;i_class_id;;entier;17820;0;0.0;16;1.0;16.0;2;1;attribut
+data;Produits et prix;item;11;i_class;Classe de produit;texte;17820;0;0.0;74;Accessories;World Music;26;Men;attribut
+data;Produits et prix;item;12;i_category_id;;entier;17820;0;0.0;9;1.0;9.0;1;4;attribut
+data;Produits et prix;item;13;i_category;Catégorie de produit;texte;17820;0;0.0;9;Books;Toys & Games;24;Clothing & Accessories;attribut
+data;Produits et prix;item;14;i_manufact_id;;entier;17820;0;0.0;1000;1.0;1000.0;4;534;attribut
+data;Produits et prix;item;15;i_manufact;;texte;17820;0;0.0;17481;0;zzgZWXS8l9;50;NDb8cuI;attribut
+data;Produits et prix;item;16;i_size;;texte;17820;0;0.0;7;N/A;small;11;large;attribut
+data;Produits et prix;item;17;i_formulation;;texte;17820;0;0.0;16916;0;zzgcmuIaN7RYM7l0;20;9XrL;attribut
+data;Produits et prix;item;18;i_color;;texte;17820;0;0.0;92;almond;yellow;10;cornflower;attribut
+data;Produits et prix;item;19;i_units;;texte;17820;0;0.0;21;Box;Unknown;7;Each;attribut
 data;Produits et prix;item;20;i_container;;texte;17820;0;0.0;1;Unknown;Unknown;7;Unknown;attribut
-data;Produits et prix;item;21;i_manager_id;;entier;17820;0;0.0;100;1.0;100.0;3;41;attribut
-data;Produits et prix;item;22;i_product_name;;texte;17820;0;0.0;17820;007opddaOvFJaNhIv3bJnnaQdVzksWzjR8mmNdV;zzpaKRcbmMb3ZS29lmbJ;50;vbYbDC;attribut
-data;Produits et prix;item_marketprices;1;imp_sk;;entier;89100;0;0.0;89100;0.0;89099.0;5;0;clé primaire (candidate)
-data;Produits et prix;item_marketprices;2;imp_item_sk;Produit comparé (clé vers item);entier;89100;0;0.0;17820;0.0;17819.0;5;5810;clé étrangère (candidate)
-data;Produits et prix;item_marketprices;3;imp_competitor;Identifiant du concurrent;texte;89100;0;0.0;1000;AAAAAAAAAAAAAAAB;AAAAAAAAAAAAABMM;16;AAAAAAAAAAAAAANN;attribut
-data;Produits et prix;item_marketprices;4;imp_competitor_price;Prix constaté chez le concurrent;entier;89100;29;0.033;9989;0.09;99.98;5;95.41;attribut
-data;Produits et prix;item_marketprices;5;imp_start_date;;entier;89100;0;0.0;1808;36890.0;38697.0;5;36890;attribut
-data;Produits et prix;item_marketprices;6;imp_end_date;;entier;89100;30;0.034;1794;36897.0;38717.0;5;38405;attribut
+data;Produits et prix;item;21;i_manager_id;;entier;17820;0;0.0;100;1.0;100.0;3;36;attribut
+data;Produits et prix;item;22;i_product_name;;texte;17820;0;0.0;17820;007opddaOvFJaNhIv3bJnnaQdVzksWzjR8mmNdV;zzpaKRcbmMb3ZS29lmbJ;50;a8q131EOqcuxN30E;attribut
+data;Produits et prix;item_marketprices;1;imp_sk;;entier;89100;0;0.0;89100;0.0;89099.0;5;10240;clé primaire (candidate)
+data;Produits et prix;item_marketprices;2;imp_item_sk;Produit comparé (clé vers item);entier;89100;0;0.0;17820;0.0;17819.0;5;43;clé étrangère (candidate)
+data;Produits et prix;item_marketprices;3;imp_competitor;Identifiant du concurrent;texte;89100;0;0.0;1000;AAAAAAAAAAAAAAAB;AAAAAAAAAAAAABMM;16;AAAAAAAAAAAAAAHY;attribut
+data;Produits et prix;item_marketprices;4;imp_competitor_price;Prix constaté chez le concurrent;entier;89100;29;0.033;9989;0.09;99.98;5;38.49;attribut
+data;Produits et prix;item_marketprices;5;imp_start_date;;entier;89100;0;0.0;1808;36890.0;38697.0;5;37097;attribut
+data;Produits et prix;item_marketprices;6;imp_end_date;;entier;89100;30;0.034;1794;36897.0;38717.0;5;38025;attribut
 data;Promotions;promotion;1;p_promo_sk;;entier;300;0;0.0;300;0.0;299.0;3;0;clé primaire (candidate)
 data;Promotions;promotion;2;p_promo_id;;texte;300;0;0.0;300;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAAALN;16;AAAAAAAAAAAAAAAA;attribut
 data;Promotions;promotion;3;p_start_date_sk;;entier;300;0;0.0;300;560.0;109404.0;6;61336;clé étrangère (candidate)
@@ -185,110 +185,110 @@ data;Magasins et entrepôts;warehouse;12;w_zip;;entier;5;0;0.0;5;16496.0;87891.0
 data;Magasins et entrepôts;warehouse;13;w_country;;texte;5;0;0.0;1;United States;United States;13;United States;attribut
 data;Magasins et entrepôts;warehouse;14;w_gmt_offset;;entier;5;0;0.0;3;-7.0;-5.0;2;-5;attribut
 data;Stocks;inventory;1;inv_date_sk;Date du relevé de stock (clé vers date_dim);entier;23255100;0;0.0;259;36890.0;38696.0;5;36890;clé primaire composite (candidate)
-data;Stocks;inventory;2;inv_item_sk;Produit (clé vers item);entier;23255100;0;0.0;18000;0.0;17999.0;5;6576;clé primaire composite (candidate)
-data;Stocks;inventory;3;inv_warehouse_sk;Entrepôt (clé vers warehouse);entier;23255100;0;0.0;5;0.0;4.0;1;1;clé primaire composite (candidate)
-data;Stocks;inventory;4;inv_quantity_on_hand;Quantité en stock à la date du relevé;entier;23255100;5999;0.026;1001;0.0;1000.0;4;784;attribut
-data;Ventes magasin;store_sales;1;ss_sold_date_sk;Date de vente (clé vers date_dim);entier;667579;0;0.0;1808;36890.0;38697.0;5;36890;clé étrangère (candidate)
-data;Ventes magasin;store_sales;2;ss_sold_time_sk;Heure de vente (clé vers time_dim);entier;667579;0;0.0;55645;0.0;86399.0;5;71480;clé étrangère (candidate)
-data;Ventes magasin;store_sales;3;ss_item_sk;Produit vendu (clé vers item);entier;667579;0;0.0;17820;0.0;17819.0;5;10001;clé primaire composite (candidate)
-data;Ventes magasin;store_sales;4;ss_customer_sk;Client (clé vers customer);entier;667579;0;0.0;37336;2.0;98999.0;5;44404;clé étrangère (candidate)
-data;Ventes magasin;store_sales;5;ss_cdemo_sk;;entier;667579;238;0.036;36953;18.0;1920742.0;7;493944;clé étrangère (candidate)
-data;Ventes magasin;store_sales;6;ss_hdemo_sk;;entier;667579;295;0.044;7161;0.0;7199.0;4;2898;clé étrangère (candidate)
-data;Ventes magasin;store_sales;7;ss_addr_sk;;entier;667579;448;0.067;26286;0.0;49499.0;5;44093;clé étrangère (candidate)
-data;Ventes magasin;store_sales;8;ss_store_sk;Magasin (clé vers store);entier;667579;0;0.0;12;0.0;11.0;2;10;clé étrangère (candidate)
-data;Ventes magasin;store_sales;9;ss_promo_sk;Promotion appliquée (clé vers promotion);entier;667579;158;0.024;300;0.0;299.0;3;294;clé étrangère (candidate)
-data;Ventes magasin;store_sales;10;ss_ticket_number;Numéro de ticket de caisse;entier;667579;0;0.0;89100;0.0;89099.0;5;0;clé primaire composite (candidate)
-data;Ventes magasin;store_sales;11;ss_quantity;Quantité vendue sur la ligne;entier;667579;0;0.0;100;1.0;100.0;3;31;attribut
-data;Ventes magasin;store_sales;12;ss_wholesale_cost;Coût d'achat unitaire;entier;667579;0;0.0;9901;1.0;100.0;6;18.00;attribut
-data;Ventes magasin;store_sales;13;ss_list_price;Prix catalogue unitaire;entier;667579;0;0.0;19524;1.0;200.0;6;30.78;attribut
-data;Ventes magasin;store_sales;14;ss_sales_price;Prix de vente unitaire;entier;667579;0;0.0;17199;0.0;199.3;6;23.08;attribut
-data;Ventes magasin;store_sales;15;ss_ext_discount_amt;Remise totale de la ligne;entier;667579;0;0.0;238093;0.0;18984.0;8;238.70;attribut
-data;Ventes magasin;store_sales;16;ss_ext_sales_price;Montant de la ligne (quantité x prix de vente);entier;667579;0;0.0;237770;0.0;18745.0;8;715.48;attribut
-data;Ventes magasin;store_sales;17;ss_ext_wholesale_cost;;entier;667579;0;0.0;264513;1.0;9997.0;7;558.00;attribut
-data;Ventes magasin;store_sales;18;ss_ext_list_price;Montant de la ligne au prix catalogue;entier;667579;0;0.0;328908;1.2;19814.0;8;954.18;attribut
-data;Ventes magasin;store_sales;19;ss_ext_tax;;entier;667579;0;0.0;53387;0.0;1637.8;7;21.46;attribut
+data;Stocks;inventory;2;inv_item_sk;Produit (clé vers item);entier;23255100;0;0.0;18000;0.0;17999.0;5;12288;clé primaire composite (candidate)
+data;Stocks;inventory;3;inv_warehouse_sk;Entrepôt (clé vers warehouse);entier;23255100;0;0.0;5;0.0;4.0;1;0;clé primaire composite (candidate)
+data;Stocks;inventory;4;inv_quantity_on_hand;Quantité en stock à la date du relevé;entier;23255100;5999;0.026;1001;0.0;1000.0;4;39;attribut
+data;Ventes magasin;store_sales;1;ss_sold_date_sk;Date de vente (clé vers date_dim);entier;667579;0;0.0;1808;36890.0;38697.0;5;36917;clé étrangère (candidate)
+data;Ventes magasin;store_sales;2;ss_sold_time_sk;Heure de vente (clé vers time_dim);entier;667579;0;0.0;55645;0.0;86399.0;5;85047;clé étrangère (candidate)
+data;Ventes magasin;store_sales;3;ss_item_sk;Produit vendu (clé vers item);entier;667579;0;0.0;17820;0.0;17819.0;5;14519;clé primaire composite (candidate)
+data;Ventes magasin;store_sales;4;ss_customer_sk;Client (clé vers customer);entier;667579;0;0.0;37336;2.0;98999.0;5;75364;clé étrangère (candidate)
+data;Ventes magasin;store_sales;5;ss_cdemo_sk;;entier;667579;238;0.036;36953;18.0;1920742.0;7;1079941;clé étrangère (candidate)
+data;Ventes magasin;store_sales;6;ss_hdemo_sk;;entier;667579;295;0.044;7161;0.0;7199.0;4;6405;clé étrangère (candidate)
+data;Ventes magasin;store_sales;7;ss_addr_sk;;entier;667579;448;0.067;26286;0.0;49499.0;5;22538;clé étrangère (candidate)
+data;Ventes magasin;store_sales;8;ss_store_sk;Magasin (clé vers store);entier;667579;0;0.0;12;0.0;11.0;2;9;clé étrangère (candidate)
+data;Ventes magasin;store_sales;9;ss_promo_sk;Promotion appliquée (clé vers promotion);entier;667579;158;0.024;300;0.0;299.0;3;290;clé étrangère (candidate)
+data;Ventes magasin;store_sales;10;ss_ticket_number;Numéro de ticket de caisse;entier;667579;0;0.0;89100;0.0;89099.0;5;1377;clé primaire composite (candidate)
+data;Ventes magasin;store_sales;11;ss_quantity;Quantité vendue sur la ligne;entier;667579;0;0.0;100;1.0;100.0;3;46;attribut
+data;Ventes magasin;store_sales;12;ss_wholesale_cost;Coût d'achat unitaire;entier;667579;0;0.0;9901;1.0;100.0;6;92.30;attribut
+data;Ventes magasin;store_sales;13;ss_list_price;Prix catalogue unitaire;entier;667579;0;0.0;19524;1.0;200.0;6;115.38;attribut
+data;Ventes magasin;store_sales;14;ss_sales_price;Prix de vente unitaire;entier;667579;0;0.0;17199;0.0;199.3;6;21.92;attribut
+data;Ventes magasin;store_sales;15;ss_ext_discount_amt;Remise totale de la ligne;entier;667579;0;0.0;238093;0.0;18984.0;8;4299.16;attribut
+data;Ventes magasin;store_sales;16;ss_ext_sales_price;Montant de la ligne (quantité x prix de vente);entier;667579;0;0.0;237770;0.0;18745.0;8;1008.32;attribut
+data;Ventes magasin;store_sales;17;ss_ext_wholesale_cost;;entier;667579;0;0.0;264513;1.0;9997.0;7;4245.80;attribut
+data;Ventes magasin;store_sales;18;ss_ext_list_price;Montant de la ligne au prix catalogue;entier;667579;0;0.0;328908;1.2;19814.0;8;5307.48;attribut
+data;Ventes magasin;store_sales;19;ss_ext_tax;;entier;667579;0;0.0;53387;0.0;1637.8;7;70.58;attribut
 data;Ventes magasin;store_sales;20;ss_coupon_amt;;entier;667579;0;0.0;87123;0.0;14371.66;8;0.00;attribut
-data;Ventes magasin;store_sales;21;ss_net_paid;Montant net payé (hors taxe);entier;667579;0;0.0;255026;0.0;18745.0;8;715.48;attribut
-data;Ventes magasin;store_sales;22;ss_net_paid_inc_tax;;entier;667579;0;0.0;315642;0.0;19869.7;8;736.94;attribut
-data;Ventes magasin;store_sales;23;ss_net_profit;Marge nette de la ligne (net payé - coût d'achat);entier;667579;0;0.0;288874;-9866.6;9134.0;8;157.48;attribut
-data;Retours;store_returns;1;sr_returned_date_sk;Date du retour (clé vers date_dim);entier;37902;0;0.0;2221;36914.0;39398.0;5;38148;clé étrangère (candidate)
-data;Retours;store_returns;2;sr_return_time_sk;;entier;37902;0;0.0;30697;2.0;86399.0;5;46307;attribut
-data;Retours;store_returns;3;sr_item_sk;Produit retourné (clé vers item);entier;37902;0;0.0;12551;0.0;17819.0;5;17278;clé primaire composite (candidate)
-data;Retours;store_returns;4;sr_customer_sk;Client (clé vers customer);entier;37902;0;0.0;6226;2.0;98991.0;5;70956;clé étrangère (candidate)
-data;Retours;store_returns;5;sr_cdemo_sk;;entier;37902;21;0.055;6277;226.0;1920352.0;7;1870287;attribut
-data;Retours;store_returns;6;sr_hdemo_sk;;entier;37902;15;0.04;4215;1.0;7197.0;4;6588;attribut
-data;Retours;store_returns;7;sr_addr_sk;;entier;37902;42;0.111;5913;8.0;49493.0;5;11538;attribut
-data;Retours;store_returns;8;sr_store_sk;Magasin (clé vers store);entier;37902;0;0.0;12;0.0;11.0;2;8;clé étrangère (candidate)
-data;Retours;store_returns;9;sr_reason_sk;Motif de retour (clé vers reason);entier;37902;11;0.029;35;0.0;34.0;2;26;clé étrangère (candidate)
-data;Retours;store_returns;10;sr_ticket_number;Ticket de la vente d'origine;entier;37902;0;0.0;8910;7.0;89096.0;5;56946;clé primaire composite (candidate)
-data;Retours;store_returns;11;sr_return_quantity;Quantité retournée;entier;37902;0;0.0;100;1.0;100.0;3;44;attribut
-data;Retours;store_returns;12;sr_return_amt;Montant remboursé (hors taxe);entier;37902;0;0.0;29163;0.0;15441.3;8;45.32;attribut
-data;Retours;store_returns;13;sr_return_tax;;entier;37902;0;0.0;11617;0.0;1159.19;7;0.45;attribut
-data;Retours;store_returns;14;sr_return_amt_inc_tax;;entier;37902;0;0.0;32024;0.0;16522.19;8;45.77;attribut
-data;Retours;store_returns;15;sr_fee;;entier;37902;0;0.0;9712;0.5;100.0;6;84.08;attribut
-data;Retours;store_returns;16;sr_return_ship_cost;;entier;37902;0;0.0;32264;0.0;15089.41;8;542.36;attribut
-data;Retours;store_returns;17;sr_refunded_cash;;entier;37902;0;0.0;26912;0.0;12818.84;8;20.85;attribut
-data;Retours;store_returns;18;sr_reversed_charge;;entier;37902;0;0.0;21080;0.0;7473.37;7;9.05;attribut
-data;Retours;store_returns;19;sr_store_credit;;entier;37902;0;0.0;20717;0.0;8846.21;7;15.42;attribut
-data;Retours;store_returns;20;sr_net_loss;;entier;37902;0;0.0;32952;0.0;15089.41;8;543.26;attribut
-data;Ventes web;web_sales;1;ws_sold_date_sk;Date de commande web (clé vers date_dim);entier;668052;0;0.0;1808;36890.0;38697.0;5;36895;clé étrangère (candidate)
-data;Ventes web;web_sales;2;ws_sold_time_sk;;entier;668052;0;0.0;55563;0.0;86398.0;5;19197;clé étrangère (candidate)
-data;Ventes web;web_sales;3;ws_ship_date_sk;Date d'expédition (clé vers date_dim);entier;668052;0;0.0;1927;36891.0;38817.0;5;36972;clé étrangère (candidate)
-data;Ventes web;web_sales;4;ws_item_sk;Produit vendu (clé vers item);entier;668052;0;0.0;17820;0.0;17819.0;5;5618;clé primaire composite (candidate)
-data;Ventes web;web_sales;5;ws_bill_customer_sk;Client facturé (clé vers customer);entier;668052;0;0.0;37367;2.0;98998.0;5;33765;clé étrangère (candidate)
-data;Ventes web;web_sales;6;ws_bill_cdemo_sk;;entier;668052;309;0.046;36985;18.0;1920793.0;7;293379;attribut
-data;Ventes web;web_sales;7;ws_bill_hdemo_sk;;entier;668052;288;0.043;7152;0.0;7199.0;4;2755;attribut
-data;Ventes web;web_sales;8;ws_bill_addr_sk;;entier;668052;272;0.041;26208;0.0;49499.0;5;38216;clé étrangère (candidate)
-data;Ventes web;web_sales;9;ws_ship_customer_sk;;entier;668052;0;0.0;39377;2.0;98998.0;5;33765;clé étrangère (candidate)
-data;Ventes web;web_sales;10;ws_ship_cdemo_sk;;entier;668052;492;0.074;38952;18.0;1920793.0;7;293379;attribut
-data;Ventes web;web_sales;11;ws_ship_hdemo_sk;;entier;668052;495;0.074;7166;0.0;7199.0;4;2755;attribut
-data;Ventes web;web_sales;12;ws_ship_addr_sk;;entier;668052;398;0.06;27154;0.0;49499.0;5;38216;attribut
-data;Ventes web;web_sales;13;ws_web_page_sk;Page web de la vente (clé vers web_page);entier;668052;164;0.025;60;0.0;59.0;2;41;clé étrangère (candidate)
-data;Ventes web;web_sales;14;ws_web_site_sk;Site web (clé vers web_site);entier;668052;154;0.023;30;0.0;29.0;2;22;clé étrangère (candidate)
-data;Ventes web;web_sales;15;ws_ship_mode_sk;Mode d'expédition (clé vers ship_mode);entier;668052;170;0.025;20;0.0;19.0;2;14;clé étrangère (candidate)
-data;Ventes web;web_sales;16;ws_warehouse_sk;Entrepôt d'expédition (clé vers warehouse);entier;668052;158;0.024;5;0.0;4.0;1;4;clé étrangère (candidate)
-data;Ventes web;web_sales;17;ws_promo_sk;Promotion appliquée (clé vers promotion);entier;668052;121;0.018;300;0.0;299.0;3;109;clé étrangère (candidate)
-data;Ventes web;web_sales;18;ws_order_number;Numéro de commande web;entier;668052;0;0.0;89100;0.0;89099.0;5;291;clé primaire composite (candidate)
-data;Ventes web;web_sales;19;ws_quantity;Quantité vendue sur la ligne;entier;668052;0;0.0;100;1.0;100.0;3;52;attribut
-data;Ventes web;web_sales;20;ws_wholesale_cost;;entier;668052;0;0.0;9901;1.0;100.0;6;99.44;attribut
-data;Ventes web;web_sales;21;ws_list_price;;entier;668052;0;0.0;28932;1.03;299.82;6;231.70;attribut
-data;Ventes web;web_sales;22;ws_sales_price;Prix de vente unitaire;entier;668052;0;0.0;24334;0.0;299.67;6;23.17;attribut
-data;Ventes web;web_sales;23;ws_ext_discount_amt;;entier;668052;0;0.0;273369;0.0;29682.18;8;10843.56;attribut
-data;Ventes web;web_sales;24;ws_ext_sales_price;Montant de la ligne (quantité x prix de vente);entier;668052;0;0.0;272379;0.0;28808.01;8;1204.84;attribut
-data;Ventes web;web_sales;25;ws_ext_wholesale_cost;;entier;668052;0;0.0;264108;1.01;9998.0;7;5170.88;attribut
-data;Ventes web;web_sales;26;ws_ext_list_price;;entier;668052;0;0.0;371439;1.28;29858.0;8;12048.40;attribut
-data;Ventes web;web_sales;27;ws_ext_tax;;entier;668052;0;0.0;65792;0.0;2421.72;7;36.15;attribut
+data;Ventes magasin;store_sales;21;ss_net_paid;Montant net payé (hors taxe);entier;667579;0;0.0;255026;0.0;18745.0;8;1008.32;attribut
+data;Ventes magasin;store_sales;22;ss_net_paid_inc_tax;;entier;667579;0;0.0;315642;0.0;19869.7;8;1078.90;attribut
+data;Ventes magasin;store_sales;23;ss_net_profit;Marge nette de la ligne (net payé - coût d'achat);entier;667579;0;0.0;288874;-9866.6;9134.0;8;-3237.48;attribut
+data;Retours;store_returns;1;sr_returned_date_sk;Date du retour (clé vers date_dim);entier;37902;0;0.0;2221;36914.0;39398.0;5;37220;clé étrangère (candidate)
+data;Retours;store_returns;2;sr_return_time_sk;;entier;37902;0;0.0;30697;2.0;86399.0;5;20171;attribut
+data;Retours;store_returns;3;sr_item_sk;Produit retourné (clé vers item);entier;37902;0;0.0;12551;0.0;17819.0;5;657;clé primaire composite (candidate)
+data;Retours;store_returns;4;sr_customer_sk;Client (clé vers customer);entier;37902;0;0.0;6226;2.0;98991.0;5;62112;clé étrangère (candidate)
+data;Retours;store_returns;5;sr_cdemo_sk;;entier;37902;21;0.055;6277;226.0;1920352.0;7;590085;attribut
+data;Retours;store_returns;6;sr_hdemo_sk;;entier;37902;15;0.04;4215;1.0;7197.0;4;5399;attribut
+data;Retours;store_returns;7;sr_addr_sk;;entier;37902;42;0.111;5913;8.0;49493.0;5;31442;attribut
+data;Retours;store_returns;8;sr_store_sk;Magasin (clé vers store);entier;37902;0;0.0;12;0.0;11.0;2;5;clé étrangère (candidate)
+data;Retours;store_returns;9;sr_reason_sk;Motif de retour (clé vers reason);entier;37902;11;0.029;35;0.0;34.0;2;19;clé étrangère (candidate)
+data;Retours;store_returns;10;sr_ticket_number;Ticket de la vente d'origine;entier;37902;0;0.0;8910;7.0;89096.0;5;12605;clé primaire composite (candidate)
+data;Retours;store_returns;11;sr_return_quantity;Quantité retournée;entier;37902;0;0.0;100;1.0;100.0;3;17;attribut
+data;Retours;store_returns;12;sr_return_amt;Montant remboursé (hors taxe);entier;37902;0;0.0;29163;0.0;15441.3;8;364.99;attribut
+data;Retours;store_returns;13;sr_return_tax;;entier;37902;0;0.0;11617;0.0;1159.19;7;3.65;attribut
+data;Retours;store_returns;14;sr_return_amt_inc_tax;;entier;37902;0;0.0;32024;0.0;16522.19;8;368.64;attribut
+data;Retours;store_returns;15;sr_fee;;entier;37902;0;0.0;9712;0.5;100.0;6;87.40;attribut
+data;Retours;store_returns;16;sr_return_ship_cost;;entier;37902;0;0.0;32264;0.0;15089.41;8;48.65;attribut
+data;Retours;store_returns;17;sr_refunded_cash;;entier;37902;0;0.0;26912;0.0;12818.84;8;335.79;attribut
+data;Retours;store_returns;18;sr_reversed_charge;;entier;37902;0;0.0;21080;0.0;7473.37;7;23.36;attribut
+data;Retours;store_returns;19;sr_store_credit;;entier;37902;0;0.0;20717;0.0;8846.21;7;5.84;attribut
+data;Retours;store_returns;20;sr_net_loss;;entier;37902;0;0.0;32952;0.0;15089.41;8;55.95;attribut
+data;Ventes web;web_sales;1;ws_sold_date_sk;Date de commande web (clé vers date_dim);entier;668052;0;0.0;1808;36890.0;38697.0;5;36928;clé étrangère (candidate)
+data;Ventes web;web_sales;2;ws_sold_time_sk;;entier;668052;0;0.0;55563;0.0;86398.0;5;60402;clé étrangère (candidate)
+data;Ventes web;web_sales;3;ws_ship_date_sk;Date d'expédition (clé vers date_dim);entier;668052;0;0.0;1927;36891.0;38817.0;5;37001;clé étrangère (candidate)
+data;Ventes web;web_sales;4;ws_item_sk;Produit vendu (clé vers item);entier;668052;0;0.0;17820;0.0;17819.0;5;9606;clé primaire composite (candidate)
+data;Ventes web;web_sales;5;ws_bill_customer_sk;Client facturé (clé vers customer);entier;668052;0;0.0;37367;2.0;98998.0;5;32603;clé étrangère (candidate)
+data;Ventes web;web_sales;6;ws_bill_cdemo_sk;;entier;668052;309;0.046;36985;18.0;1920793.0;7;60949;attribut
+data;Ventes web;web_sales;7;ws_bill_hdemo_sk;;entier;668052;288;0.043;7152;0.0;7199.0;4;1036;attribut
+data;Ventes web;web_sales;8;ws_bill_addr_sk;;entier;668052;272;0.041;26208;0.0;49499.0;5;41170;clé étrangère (candidate)
+data;Ventes web;web_sales;9;ws_ship_customer_sk;;entier;668052;0;0.0;39377;2.0;98998.0;5;32603;clé étrangère (candidate)
+data;Ventes web;web_sales;10;ws_ship_cdemo_sk;;entier;668052;492;0.074;38952;18.0;1920793.0;7;60949;attribut
+data;Ventes web;web_sales;11;ws_ship_hdemo_sk;;entier;668052;495;0.074;7166;0.0;7199.0;4;1036;attribut
+data;Ventes web;web_sales;12;ws_ship_addr_sk;;entier;668052;398;0.06;27154;0.0;49499.0;5;41170;attribut
+data;Ventes web;web_sales;13;ws_web_page_sk;Page web de la vente (clé vers web_page);entier;668052;164;0.025;60;0.0;59.0;2;23;clé étrangère (candidate)
+data;Ventes web;web_sales;14;ws_web_site_sk;Site web (clé vers web_site);entier;668052;154;0.023;30;0.0;29.0;2;7;clé étrangère (candidate)
+data;Ventes web;web_sales;15;ws_ship_mode_sk;Mode d'expédition (clé vers ship_mode);entier;668052;170;0.025;20;0.0;19.0;2;1;clé étrangère (candidate)
+data;Ventes web;web_sales;16;ws_warehouse_sk;Entrepôt d'expédition (clé vers warehouse);entier;668052;158;0.024;5;0.0;4.0;1;3;clé étrangère (candidate)
+data;Ventes web;web_sales;17;ws_promo_sk;Promotion appliquée (clé vers promotion);entier;668052;121;0.018;300;0.0;299.0;3;269;clé étrangère (candidate)
+data;Ventes web;web_sales;18;ws_order_number;Numéro de commande web;entier;668052;0;0.0;89100;0.0;89099.0;5;1899;clé primaire composite (candidate)
+data;Ventes web;web_sales;19;ws_quantity;Quantité vendue sur la ligne;entier;668052;0;0.0;100;1.0;100.0;3;18;attribut
+data;Ventes web;web_sales;20;ws_wholesale_cost;;entier;668052;0;0.0;9901;1.0;100.0;6;60.73;attribut
+data;Ventes web;web_sales;21;ws_list_price;;entier;668052;0;0.0;28932;1.03;299.82;6;172.47;attribut
+data;Ventes web;web_sales;22;ws_sales_price;Prix de vente unitaire;entier;668052;0;0.0;24334;0.0;299.67;6;144.87;attribut
+data;Ventes web;web_sales;23;ws_ext_discount_amt;;entier;668052;0;0.0;273369;0.0;29682.18;8;496.80;attribut
+data;Ventes web;web_sales;24;ws_ext_sales_price;Montant de la ligne (quantité x prix de vente);entier;668052;0;0.0;272379;0.0;28808.01;8;2607.66;attribut
+data;Ventes web;web_sales;25;ws_ext_wholesale_cost;;entier;668052;0;0.0;264108;1.01;9998.0;7;1093.14;attribut
+data;Ventes web;web_sales;26;ws_ext_list_price;;entier;668052;0;0.0;371439;1.28;29858.0;8;3104.46;attribut
+data;Ventes web;web_sales;27;ws_ext_tax;;entier;668052;0;0.0;65792;0.0;2421.72;7;130.38;attribut
 data;Ventes web;web_sales;28;ws_coupon_amt;;entier;668052;0;0.0;93607;0.0;27569.64;8;0.00;attribut
-data;Ventes web;web_sales;29;ws_ext_ship_cost;;entier;668052;0;0.0;277674;0.0;14216.37;8;1927.74;attribut
-data;Ventes web;web_sales;30;ws_net_paid;Montant net payé (hors taxe, hors port);entier;668052;0;0.0;289544;0.0;28808.01;8;1204.84;attribut
-data;Ventes web;web_sales;31;ws_net_paid_inc_tax;;entier;668052;0;0.0;351954;0.0;30248.41;8;1240.99;attribut
-data;Ventes web;web_sales;32;ws_net_paid_inc_ship;;entier;668052;0;0.0;436619;0.0;38975.5;8;3132.58;attribut
-data;Ventes web;web_sales;33;ws_net_paid_inc_ship_tax;;entier;668052;0;0.0;441575;0.0;41246.72;8;3168.73;attribut
-data;Ventes web;web_sales;34;ws_net_profit;Marge nette de la ligne;entier;668052;0;0.0;322066;-9894.06;18977.31;8;-3966.04;attribut
-data;Retours;web_returns;1;wr_returned_date_sk;Date du retour (clé vers date_dim);entier;38487;0;0.0;2492;36915.0;39523.0;5;38515;clé étrangère (candidate)
-data;Retours;web_returns;2;wr_returned_time_sk;;entier;38487;0;0.0;30996;0.0;86393.0;5;31535;attribut
-data;Retours;web_returns;3;wr_item_sk;Produit retourné (clé vers item);entier;38487;0;0.0;12601;1.0;17818.0;5;10003;clé primaire composite (candidate)
-data;Retours;web_returns;4;wr_refunded_customer_sk;Client remboursé (clé vers customer);entier;38487;0;0.0;6437;2.0;98989.0;5;17810;clé étrangère (candidate)
-data;Retours;web_returns;5;wr_refunded_cdemo_sk;;entier;38487;40;0.104;6424;226.0;1920652.0;7;1205113;attribut
-data;Retours;web_returns;6;wr_refunded_hdemo_sk;;entier;38487;19;0.049;4285;1.0;7196.0;4;6813;attribut
-data;Retours;web_returns;7;wr_refunded_addr_sk;;entier;38487;42;0.109;6012;9.0;49499.0;5;447;attribut
-data;Retours;web_returns;8;wr_returning_customer_sk;;entier;38487;0;0.0;6437;2.0;98989.0;5;17810;clé étrangère (candidate)
-data;Retours;web_returns;9;wr_returning_cdemo_sk;;entier;38487;63;0.164;6422;226.0;1920652.0;7;1205113;attribut
-data;Retours;web_returns;10;wr_returning_hdemo_sk;;entier;38487;33;0.086;4285;1.0;7196.0;4;6813;attribut
-data;Retours;web_returns;11;wr_returning_addr_sk;;entier;38487;57;0.148;6010;9.0;49499.0;5;447;attribut
-data;Retours;web_returns;12;wr_web_page_sk;;entier;38487;10;0.026;60;0.0;59.0;2;27;clé étrangère (candidate)
-data;Retours;web_returns;13;wr_reason_sk;Motif de retour (clé vers reason);entier;38487;7;0.018;35;0.0;34.0;2;24;clé étrangère (candidate)
-data;Retours;web_returns;14;wr_order_number;Commande web d'origine;entier;38487;0;0.0;8910;6.0;89092.0;5;41775;clé primaire composite (candidate)
-data;Retours;web_returns;15;wr_return_quantity;Quantité retournée;entier;38487;0;0.0;100;1.0;100.0;3;59;attribut
-data;Retours;web_returns;16;wr_return_amt;Montant remboursé (hors taxe);entier;38487;0;0.0;31025;0.0;21944.16;8;1301.54;attribut
-data;Retours;web_returns;17;wr_return_tax;;entier;38487;0;0.0;13473;0.0;1603.38;7;78.09;attribut
-data;Retours;web_returns;18;wr_return_amt_inc_tax;;entier;38487;0;0.0;33563;0.0;23041.37;8;1379.63;attribut
-data;Retours;web_returns;19;wr_fee;;entier;38487;0;0.0;9735;0.5;100.0;6;39.94;attribut
-data;Retours;web_returns;20;wr_return_ship_cost;;entier;38487;0;0.0;33640;0.0;22251.64;8;4933.20;attribut
-data;Retours;web_returns;21;wr_refunded_cash;;entier;38487;0;0.0;28703;0.0;17605.44;8;286.34;attribut
-data;Retours;web_returns;22;wr_reversed_charge;;entier;38487;0;0.0;23037;0.0;13448.48;8;284.26;attribut
-data;Retours;web_returns;23;wr_account_credit;;entier;38487;0;0.0;22664;0.0;14338.32;8;730.94;attribut
-data;Retours;web_returns;24;wr_net_loss;;entier;38487;0;0.0;34439;0.0;23511.98;8;5089.38;attribut
+data;Ventes web;web_sales;29;ws_ext_ship_cost;;entier;668052;0;0.0;277674;0.0;14216.37;8;1303.87;attribut
+data;Ventes web;web_sales;30;ws_net_paid;Montant net payé (hors taxe, hors port);entier;668052;0;0.0;289544;0.0;28808.01;8;2607.66;attribut
+data;Ventes web;web_sales;31;ws_net_paid_inc_tax;;entier;668052;0;0.0;351954;0.0;30248.41;8;2738.04;attribut
+data;Ventes web;web_sales;32;ws_net_paid_inc_ship;;entier;668052;0;0.0;436619;0.0;38975.5;8;3911.53;attribut
+data;Ventes web;web_sales;33;ws_net_paid_inc_ship_tax;;entier;668052;0;0.0;441575;0.0;41246.72;8;4041.91;attribut
+data;Ventes web;web_sales;34;ws_net_profit;Marge nette de la ligne;entier;668052;0;0.0;322066;-9894.06;18977.31;8;1514.52;attribut
+data;Retours;web_returns;1;wr_returned_date_sk;Date du retour (clé vers date_dim);entier;38487;0;0.0;2492;36915.0;39523.0;5;37713;clé étrangère (candidate)
+data;Retours;web_returns;2;wr_returned_time_sk;;entier;38487;0;0.0;30996;0.0;86393.0;5;77591;attribut
+data;Retours;web_returns;3;wr_item_sk;Produit retourné (clé vers item);entier;38487;0;0.0;12601;1.0;17818.0;5;13995;clé primaire composite (candidate)
+data;Retours;web_returns;4;wr_refunded_customer_sk;Client remboursé (clé vers customer);entier;38487;0;0.0;6437;2.0;98989.0;5;71334;clé étrangère (candidate)
+data;Retours;web_returns;5;wr_refunded_cdemo_sk;;entier;38487;40;0.104;6424;226.0;1920652.0;7;941681;attribut
+data;Retours;web_returns;6;wr_refunded_hdemo_sk;;entier;38487;19;0.049;4285;1.0;7196.0;4;3394;attribut
+data;Retours;web_returns;7;wr_refunded_addr_sk;;entier;38487;42;0.109;6012;9.0;49499.0;5;5283;attribut
+data;Retours;web_returns;8;wr_returning_customer_sk;;entier;38487;0;0.0;6437;2.0;98989.0;5;71334;clé étrangère (candidate)
+data;Retours;web_returns;9;wr_returning_cdemo_sk;;entier;38487;63;0.164;6422;226.0;1920652.0;7;941681;attribut
+data;Retours;web_returns;10;wr_returning_hdemo_sk;;entier;38487;33;0.086;4285;1.0;7196.0;4;3394;attribut
+data;Retours;web_returns;11;wr_returning_addr_sk;;entier;38487;57;0.148;6010;9.0;49499.0;5;5283;attribut
+data;Retours;web_returns;12;wr_web_page_sk;;entier;38487;10;0.026;60;0.0;59.0;2;10;clé étrangère (candidate)
+data;Retours;web_returns;13;wr_reason_sk;Motif de retour (clé vers reason);entier;38487;7;0.018;35;0.0;34.0;2;26;clé étrangère (candidate)
+data;Retours;web_returns;14;wr_order_number;Commande web d'origine;entier;38487;0;0.0;8910;6.0;89092.0;5;33699;clé primaire composite (candidate)
+data;Retours;web_returns;15;wr_return_quantity;Quantité retournée;entier;38487;0;0.0;100;1.0;100.0;3;48;attribut
+data;Retours;web_returns;16;wr_return_amt;Montant remboursé (hors taxe);entier;38487;0;0.0;31025;0.0;21944.16;8;1021.92;attribut
+data;Retours;web_returns;17;wr_return_tax;;entier;38487;0;0.0;13473;0.0;1603.38;7;20.44;attribut
+data;Retours;web_returns;18;wr_return_amt_inc_tax;;entier;38487;0;0.0;33563;0.0;23041.37;8;1042.36;attribut
+data;Retours;web_returns;19;wr_fee;;entier;38487;0;0.0;9735;0.5;100.0;6;91.63;attribut
+data;Retours;web_returns;20;wr_return_ship_cost;;entier;38487;0;0.0;33640;0.0;22251.64;8;1501.29;attribut
+data;Retours;web_returns;21;wr_refunded_cash;;entier;38487;0;0.0;28703;0.0;17605.44;8;981.04;attribut
+data;Retours;web_returns;22;wr_reversed_charge;;entier;38487;0;0.0;23037;0.0;13448.48;8;22.48;attribut
+data;Retours;web_returns;23;wr_account_credit;;entier;38487;0;0.0;22664;0.0;14338.32;8;18.40;attribut
+data;Retours;web_returns;24;wr_net_loss;;entier;38487;0;0.0;34439;0.0;23511.98;8;1542.17;attribut
 data;Navigation web;web_page;1;wp_web_page_sk;;entier;60;0;0.0;60;0.0;59.0;2;0;clé primaire (candidate)
 data;Navigation web;web_page;2;wp_web_page_id;;texte;60;0;0.0;60;AAAAAAAAAAAAAAAA;AAAAAAAAAAAAAACH;16;AAAAAAAAAAAAAAAA;attribut
 data;Navigation web;web_page;3;wp_rec_start_date;;date;60;0;0.0;36;2000-01-09;2000-12-25;10;2000-08-14;attribut
@@ -329,20 +329,20 @@ data;Navigation web;web_site;23;web_zip;;entier;30;0;0.0;30;12092.0;96546.0;5;68
 data;Navigation web;web_site;24;web_country;;texte;30;0;0.0;1;United States;United States;13;United States;attribut
 data;Navigation web;web_site;25;web_gmt_offset;;entier;30;0;0.0;3;-7.0;-5.0;2;-5;attribut
 data;Navigation web;web_site;26;web_tax_percentage;;entier;30;0;0.0;10;0.01;0.11;4;0.04;attribut
-data;Navigation web;web_clickstreams;1;wcs_click_date_sk;Date du clic (clé vers date_dim);entier;6770550;0;0.0;1808;36890.0;38697.0;5;36891;clé étrangère (candidate)
-data;Navigation web;web_clickstreams;2;wcs_click_time_sk;Heure du clic (clé vers time_dim);entier;6770550;0;0.0;86400;0.0;86399.0;5;72786;clé étrangère (candidate)
-data;Navigation web;web_clickstreams;3;wcs_sales_sk;Commande web associée (vide si le clic n'a pas abouti à une vente);entier;6770550;6102498;90.133;89100;0.0;89099.0;5;54;clé étrangère (candidate)
-data;Navigation web;web_clickstreams;4;wcs_item_sk;Produit consulté (clé vers item);entier;6770550;0;0.0;17820;0.0;17819.0;5;4023;clé étrangère (candidate)
-data;Navigation web;web_clickstreams;5;wcs_web_page_sk;Page consultée (clé vers web_page);entier;6770550;164;0.002;60;0.0;59.0;2;26;clé étrangère (candidate)
-data;Navigation web;web_clickstreams;6;wcs_user_sk;Visiteur identifié (clé vers customer, vide si anonyme);entier;6770550;2853461;42.145;88695;0.0;98998.0;5;25101;clé étrangère (candidate)
-data;Avis produits;product_reviews;1;pr_review_sk;Identifiant de l'avis;entier;89991;0;0.0;89991;0.0;89990.0;5;12288;clé primaire (candidate)
-data;Avis produits;product_reviews;2;pr_review_date;;date;89991;0;0.0;1827;2001-01-01;2006-01-01;10;2003-11-25;attribut
-data;Avis produits;product_reviews;3;pr_review_time;;heure;89991;0;0.0;10100;00:00:00;23:59:51;8;16:40:18;attribut
+data;Navigation web;web_clickstreams;1;wcs_click_date_sk;Date du clic (clé vers date_dim);entier;6770550;0;0.0;1808;36890.0;38697.0;5;36893;clé étrangère (candidate)
+data;Navigation web;web_clickstreams;2;wcs_click_time_sk;Heure du clic (clé vers time_dim);entier;6770550;0;0.0;86400;0.0;86399.0;5;24508;clé étrangère (candidate)
+data;Navigation web;web_clickstreams;3;wcs_sales_sk;Commande web associée (vide si le clic n'a pas abouti à une vente);entier;6770550;6102498;90.133;89100;0.0;89099.0;5;163;clé étrangère (candidate)
+data;Navigation web;web_clickstreams;4;wcs_item_sk;Produit consulté (clé vers item);entier;6770550;0;0.0;17820;0.0;17819.0;5;16575;clé étrangère (candidate)
+data;Navigation web;web_clickstreams;5;wcs_web_page_sk;Page consultée (clé vers web_page);entier;6770550;164;0.002;60;0.0;59.0;2;13;clé étrangère (candidate)
+data;Navigation web;web_clickstreams;6;wcs_user_sk;Visiteur identifié (clé vers customer, vide si anonyme);entier;6770550;2853461;42.145;88695;0.0;98998.0;5;21816;clé étrangère (candidate)
+data;Avis produits;product_reviews;1;pr_review_sk;Identifiant de l'avis;entier;89991;0;0.0;89991;0.0;89990.0;5;4096;clé primaire (candidate)
+data;Avis produits;product_reviews;2;pr_review_date;;date;89991;0;0.0;1827;2001-01-01;2006-01-01;10;2005-03-21;attribut
+data;Avis produits;product_reviews;3;pr_review_time;;heure;89991;0;0.0;10100;00:00:00;23:59:51;8;17:33:37;attribut
 data;Avis produits;product_reviews;4;pr_review_rating;Note de l'avis;entier;89991;0;0.0;5;1.0;5.0;1;5;attribut
-data;Avis produits;product_reviews;5;pr_item_sk;Produit noté (clé vers item);entier;89991;0;0.0;16742;0.0;17819.0;5;15188;clé étrangère (candidate)
-data;Avis produits;product_reviews;6;pr_user_sk;Client auteur (clé vers customer);entier;89991;0;0.0;39376;2.0;98998.0;5;49150;clé étrangère (candidate)
-data;Avis produits;product_reviews;7;pr_order_sk;Commande liée à l'avis;entier;89991;0;0.0;89098;0.0;89097.0;5;66679;clé étrangère (candidate)
-data;Avis produits;product_reviews;8;pr_review_content;Texte libre de l'avis (donnée non structurée);texte;89991;5;0.006;83138;"""A Customer"" is wrong. This is Jay's ...";yuk yuk yuk, this woman CANNOT SING! ...;5748;Man, some more jammin tracks from the collection, though,...;attribut
+data;Avis produits;product_reviews;5;pr_item_sk;Produit noté (clé vers item);entier;89991;0;0.0;16742;0.0;17819.0;5;10000;clé étrangère (candidate)
+data;Avis produits;product_reviews;6;pr_user_sk;Client auteur (clé vers customer);entier;89991;0;0.0;39376;2.0;98998.0;5;65366;clé étrangère (candidate)
+data;Avis produits;product_reviews;7;pr_order_sk;Commande liée à l'avis;entier;89991;0;0.0;89098;0.0;89097.0;5;4455;clé étrangère (candidate)
+data;Avis produits;product_reviews;8;pr_review_content;Texte libre de l'avis (donnée non structurée);texte;89991;5;0.006;83138;"""A Customer"" is wrong. This is Jay's ...";yuk yuk yuk, this woman CANNOT SING! ...;5748;Next time will go with the product it was hard to find sh...;attribut
 data_refresh;Clients;customer;1;c_customer_sk;Identifiant client (clé de substitution);entier;1000;0;0.0;1000;99000.0;99999.0;5;99000;clé primaire (candidate)
 data_refresh;Clients;customer;2;c_customer_id;Identifiant client métier;texte;1000;0;0.0;1000;AAAAAAAAAAAAFQLS;AAAAAAAAAAAAFRYD;16;AAAAAAAAAAAAFQLS;attribut
 data_refresh;Clients;customer;3;c_current_cdemo_sk;;entier;1000;0;0.0;1000;7171.0;1919420.0;7;1743789;clé étrangère (candidate)
@@ -403,9 +403,9 @@ data_refresh;Produits et prix;item_marketprices;4;imp_competitor_price;Prix cons
 data_refresh;Produits et prix;item_marketprices;5;imp_start_date;;entier;900;0;0.0;19;38697.0;38715.0;5;38697;attribut
 data_refresh;Produits et prix;item_marketprices;6;imp_end_date;;entier;900;0;0.0;20;38698.0;38717.0;5;38717;attribut
 data_refresh;Stocks;inventory;1;inv_date_sk;Date du relevé de stock (clé vers date_dim);entier;234900;0;0.0;3;38696.0;38710.0;5;38696;clé primaire composite (candidate)
-data_refresh;Stocks;inventory;2;inv_item_sk;Produit (clé vers item);entier;234900;0;0.0;18000;0.0;17999.0;5;1580;clé primaire composite (candidate)
-data_refresh;Stocks;inventory;3;inv_warehouse_sk;Entrepôt (clé vers warehouse);entier;234900;0;0.0;5;0.0;4.0;1;3;clé primaire composite (candidate)
-data_refresh;Stocks;inventory;4;inv_quantity_on_hand;Quantité en stock à la date du relevé;entier;234900;63;0.027;1001;0.0;1000.0;4;93;attribut
+data_refresh;Stocks;inventory;2;inv_item_sk;Produit (clé vers item);entier;234900;0;0.0;18000;0.0;17999.0;5;6108;clé primaire composite (candidate)
+data_refresh;Stocks;inventory;3;inv_warehouse_sk;Entrepôt (clé vers warehouse);entier;234900;0;0.0;5;0.0;4.0;1;4;clé primaire composite (candidate)
+data_refresh;Stocks;inventory;4;inv_quantity_on_hand;Quantité en stock à la date du relevé;entier;234900;63;0.027;1001;0.0;1000.0;4;876;attribut
 data_refresh;Ventes magasin;store_sales;1;ss_sold_date_sk;Date de vente (clé vers date_dim);entier;6632;0;0.0;19;38697.0;38715.0;5;38697;clé étrangère (candidate)
 data_refresh;Ventes magasin;store_sales;2;ss_sold_time_sk;Heure de vente (clé vers time_dim);entier;6632;0;0.0;896;80.0;86215.0;5;21281;clé étrangère (candidate)
 data_refresh;Ventes magasin;store_sales;3;ss_item_sk;Produit vendu (clé vers item);entier;6632;0;0.0;3536;3.0;17989.0;5;12731;clé primaire composite (candidate)
@@ -449,40 +449,40 @@ data_refresh;Retours;store_returns;17;sr_refunded_cash;;entier;426;0;0.0;423;0.0
 data_refresh;Retours;store_returns;18;sr_reversed_charge;;entier;426;0;0.0;415;0.0;4390.85;7;17.86;attribut
 data_refresh;Retours;store_returns;19;sr_store_credit;;entier;426;0;0.0;414;0.0;2732.33;7;10.95;attribut
 data_refresh;Retours;store_returns;20;sr_net_loss;;entier;426;0;0.0;425;4.76;9188.68;7;420.23;attribut
-data_refresh;Ventes web;web_sales;1;ws_sold_date_sk;Date de commande web (clé vers date_dim);entier;6879;0;0.0;19;38697.0;38715.0;5;38703;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;2;ws_sold_time_sk;;entier;6879;0;0.0;895;32.0;86315.0;5;36412;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;3;ws_ship_date_sk;Date d'expédition (clé vers date_dim);entier;6879;0;0.0;137;38699.0;38835.0;5;38708;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;4;ws_item_sk;Produit vendu (clé vers item);entier;6879;0;0.0;3692;0.0;17998.0;5;1704;clé primaire composite (candidate)
-data_refresh;Ventes web;web_sales;5;ws_bill_customer_sk;Client facturé (clé vers customer);entier;6879;0;0.0;847;9.0;99945.0;5;35547;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;6;ws_bill_cdemo_sk;;entier;6879;0;0.0;847;1099.0;1919911.0;7;1206940;attribut
-data_refresh;Ventes web;web_sales;7;ws_bill_hdemo_sk;;entier;6879;13;0.189;795;3.0;7191.0;4;1241;attribut
-data_refresh;Ventes web;web_sales;8;ws_bill_addr_sk;;entier;6879;10;0.145;837;18.0;49937.0;5;27396;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;9;ws_ship_customer_sk;;entier;6879;0;0.0;854;145.0;99945.0;5;35547;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;10;ws_ship_cdemo_sk;;entier;6879;0;0.0;854;1099.0;1919911.0;7;1206940;attribut
-data_refresh;Ventes web;web_sales;11;ws_ship_hdemo_sk;;entier;6879;13;0.189;803;3.0;7191.0;4;1241;attribut
-data_refresh;Ventes web;web_sales;12;ws_ship_addr_sk;;entier;6879;10;0.145;844;18.0;49937.0;5;27396;attribut
-data_refresh;Ventes web;web_sales;13;ws_web_page_sk;Page web de la vente (clé vers web_page);entier;6879;2;0.029;60;0.0;59.0;2;57;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;14;ws_web_site_sk;Site web (clé vers web_site);entier;6879;3;0.044;30;0.0;29.0;2;10;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;15;ws_ship_mode_sk;Mode d'expédition (clé vers ship_mode);entier;6879;1;0.015;20;0.0;19.0;2;14;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;16;ws_warehouse_sk;Entrepôt d'expédition (clé vers warehouse);entier;6879;2;0.029;5;0.0;4.0;1;4;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;17;ws_promo_sk;Promotion appliquée (clé vers promotion);entier;6879;2;0.029;300;0.0;299.0;3;70;clé étrangère (candidate)
-data_refresh;Ventes web;web_sales;18;ws_order_number;Numéro de commande web;entier;6879;0;0.0;900;89100.0;89999.0;5;89360;clé primaire composite (candidate)
-data_refresh;Ventes web;web_sales;19;ws_quantity;Quantité vendue sur la ligne;entier;6879;0;0.0;100;1.0;100.0;3;24;attribut
-data_refresh;Ventes web;web_sales;20;ws_wholesale_cost;;entier;6879;0;0.0;5024;1.01;99.99;5;34.15;attribut
-data_refresh;Ventes web;web_sales;21;ws_list_price;;entier;6879;0;0.0;5940;1.28;296.16;6;99.38;attribut
-data_refresh;Ventes web;web_sales;22;ws_sales_price;Prix de vente unitaire;entier;6879;0;0.0;5081;0.0;276.11;6;83.48;attribut
-data_refresh;Ventes web;web_sales;23;ws_ext_discount_amt;;entier;6879;0;0.0;6657;0.0;23960.64;8;381.60;attribut
-data_refresh;Ventes web;web_sales;24;ws_ext_sales_price;Montant de la ligne (quantité x prix de vente);entier;6879;0;0.0;6678;0.0;23944.0;8;2003.52;attribut
-data_refresh;Ventes web;web_sales;25;ws_ext_wholesale_cost;;entier;6879;0;0.0;6753;2.14;9733.36;7;819.60;attribut
-data_refresh;Ventes web;web_sales;26;ws_ext_list_price;;entier;6879;0;0.0;6806;4.58;28845.0;8;2385.12;attribut
-data_refresh;Ventes web;web_sales;27;ws_ext_tax;;entier;6879;0;0.0;5153;0.0;2035.49;7;120.21;attribut
-data_refresh;Ventes web;web_sales;28;ws_coupon_amt;;entier;6879;0;0.0;1418;0.0;19178.36;8;0.00;attribut
-data_refresh;Ventes web;web_sales;29;ws_ext_ship_cost;;entier;6879;0;0.0;6668;0.0;11858.68;8;572.43;attribut
-data_refresh;Ventes web;web_sales;30;ws_net_paid;Montant net payé (hors taxe, hors port);entier;6879;0;0.0;6698;0.0;23944.0;8;2003.52;attribut
-data_refresh;Ventes web;web_sales;31;ws_net_paid_inc_tax;;entier;6879;0;0.0;6755;0.0;24662.32;8;2123.73;attribut
-data_refresh;Ventes web;web_sales;32;ws_net_paid_inc_ship;;entier;6879;0;0.0;6840;1.3;33368.64;8;2575.95;attribut
-data_refresh;Ventes web;web_sales;33;ws_net_paid_inc_ship_tax;;entier;6879;0;0.0;6844;1.33;34086.96;8;2696.16;attribut
-data_refresh;Ventes web;web_sales;34;ws_net_profit;Marge nette de la ligne;entier;6879;0;0.0;6758;-9397.56;14510.0;8;1183.92;attribut
+data_refresh;Ventes web;web_sales;1;ws_sold_date_sk;Date de commande web (clé vers date_dim);entier;6879;0;0.0;19;38697.0;38715.0;5;38697;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;2;ws_sold_time_sk;;entier;6879;0;0.0;895;32.0;86315.0;5;38598;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;3;ws_ship_date_sk;Date d'expédition (clé vers date_dim);entier;6879;0;0.0;137;38699.0;38835.0;5;38806;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;4;ws_item_sk;Produit vendu (clé vers item);entier;6879;0;0.0;3692;0.0;17998.0;5;17861;clé primaire composite (candidate)
+data_refresh;Ventes web;web_sales;5;ws_bill_customer_sk;Client facturé (clé vers customer);entier;6879;0;0.0;847;9.0;99945.0;5;95479;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;6;ws_bill_cdemo_sk;;entier;6879;0;0.0;847;1099.0;1919911.0;7;481076;attribut
+data_refresh;Ventes web;web_sales;7;ws_bill_hdemo_sk;;entier;6879;13;0.189;795;3.0;7191.0;4;5618;attribut
+data_refresh;Ventes web;web_sales;8;ws_bill_addr_sk;;entier;6879;10;0.145;837;18.0;49937.0;5;14580;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;9;ws_ship_customer_sk;;entier;6879;0;0.0;854;145.0;99945.0;5;95479;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;10;ws_ship_cdemo_sk;;entier;6879;0;0.0;854;1099.0;1919911.0;7;481076;attribut
+data_refresh;Ventes web;web_sales;11;ws_ship_hdemo_sk;;entier;6879;13;0.189;803;3.0;7191.0;4;5618;attribut
+data_refresh;Ventes web;web_sales;12;ws_ship_addr_sk;;entier;6879;10;0.145;844;18.0;49937.0;5;14580;attribut
+data_refresh;Ventes web;web_sales;13;ws_web_page_sk;Page web de la vente (clé vers web_page);entier;6879;2;0.029;60;0.0;59.0;2;58;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;14;ws_web_site_sk;Site web (clé vers web_site);entier;6879;3;0.044;30;0.0;29.0;2;22;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;15;ws_ship_mode_sk;Mode d'expédition (clé vers ship_mode);entier;6879;1;0.015;20;0.0;19.0;2;4;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;16;ws_warehouse_sk;Entrepôt d'expédition (clé vers warehouse);entier;6879;2;0.029;5;0.0;4.0;1;1;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;17;ws_promo_sk;Promotion appliquée (clé vers promotion);entier;6879;2;0.029;300;0.0;299.0;3;118;clé étrangère (candidate)
+data_refresh;Ventes web;web_sales;18;ws_order_number;Numéro de commande web;entier;6879;0;0.0;900;89100.0;89999.0;5;89100;clé primaire composite (candidate)
+data_refresh;Ventes web;web_sales;19;ws_quantity;Quantité vendue sur la ligne;entier;6879;0;0.0;100;1.0;100.0;3;44;attribut
+data_refresh;Ventes web;web_sales;20;ws_wholesale_cost;;entier;6879;0;0.0;5024;1.01;99.99;5;27.96;attribut
+data_refresh;Ventes web;web_sales;21;ws_list_price;;entier;6879;0;0.0;5940;1.28;296.16;6;67.66;attribut
+data_refresh;Ventes web;web_sales;22;ws_sales_price;Prix de vente unitaire;entier;6879;0;0.0;5081;0.0;276.11;6;41.27;attribut
+data_refresh;Ventes web;web_sales;23;ws_ext_discount_amt;;entier;6879;0;0.0;6657;0.0;23960.64;8;1161.16;attribut
+data_refresh;Ventes web;web_sales;24;ws_ext_sales_price;Montant de la ligne (quantité x prix de vente);entier;6879;0;0.0;6678;0.0;23944.0;8;1815.88;attribut
+data_refresh;Ventes web;web_sales;25;ws_ext_wholesale_cost;;entier;6879;0;0.0;6753;2.14;9733.36;7;1230.24;attribut
+data_refresh;Ventes web;web_sales;26;ws_ext_list_price;;entier;6879;0;0.0;6806;4.58;28845.0;8;2977.04;attribut
+data_refresh;Ventes web;web_sales;27;ws_ext_tax;;entier;6879;0;0.0;5153;0.0;2035.49;7;63.19;attribut
+data_refresh;Ventes web;web_sales;28;ws_coupon_amt;;entier;6879;0;0.0;1418;0.0;19178.36;8;762.67;attribut
+data_refresh;Ventes web;web_sales;29;ws_ext_ship_cost;;entier;6879;0;0.0;6668;0.0;11858.68;8;774.03;attribut
+data_refresh;Ventes web;web_sales;30;ws_net_paid;Montant net payé (hors taxe, hors port);entier;6879;0;0.0;6698;0.0;23944.0;8;1053.21;attribut
+data_refresh;Ventes web;web_sales;31;ws_net_paid_inc_tax;;entier;6879;0;0.0;6755;0.0;24662.32;8;1116.40;attribut
+data_refresh;Ventes web;web_sales;32;ws_net_paid_inc_ship;;entier;6879;0;0.0;6840;1.3;33368.64;8;1827.24;attribut
+data_refresh;Ventes web;web_sales;33;ws_net_paid_inc_ship_tax;;entier;6879;0;0.0;6844;1.33;34086.96;8;1890.43;attribut
+data_refresh;Ventes web;web_sales;34;ws_net_profit;Marge nette de la ligne;entier;6879;0;0.0;6758;-9397.56;14510.0;8;-177.03;attribut
 data_refresh;Retours;web_returns;1;wr_returned_date_sk;Date du retour (clé vers date_dim);entier;400;0;0.0;365;36994.0;39429.0;5;38953;clé étrangère (candidate)
 data_refresh;Retours;web_returns;2;wr_returned_time_sk;;entier;400;0;0.0;400;165.0;85931.0;5;75847;attribut
 data_refresh;Retours;web_returns;3;wr_item_sk;Produit retourné (clé vers item);entier;400;0;0.0;328;19.0;17900.0;5;1898;clé primaire composite (candidate)
@@ -507,12 +507,12 @@ data_refresh;Retours;web_returns;21;wr_refunded_cash;;entier;400;0;0.0;399;0.0;9
 data_refresh;Retours;web_returns;22;wr_reversed_charge;;entier;400;0;0.0;396;0.0;5415.23;7;5.94;attribut
 data_refresh;Retours;web_returns;23;wr_account_credit;;entier;400;0;0.0;390;0.0;4503.98;7;0.06;attribut
 data_refresh;Retours;web_returns;24;wr_net_loss;;entier;400;0;0.0;400;0.93;17824.64;8;116.95;attribut
-data_refresh;Navigation web;web_clickstreams;1;wcs_click_date_sk;Date du clic (clé vers date_dim);entier;68988;0;0.0;19;38697.0;38715.0;5;38700;clé étrangère (candidate)
-data_refresh;Navigation web;web_clickstreams;2;wcs_click_time_sk;Heure du clic (clé vers time_dim);entier;68988;0;0.0;44840;2.0;86398.0;5;27529;clé étrangère (candidate)
-data_refresh;Navigation web;web_clickstreams;3;wcs_sales_sk;Commande web associée (vide si le clic n'a pas abouti à une vente);entier;68988;62109;90.029;900;89100.0;89999.0;5;89260;clé étrangère (candidate)
-data_refresh;Navigation web;web_clickstreams;4;wcs_item_sk;Produit consulté (clé vers item);entier;68988;0;0.0;17553;0.0;17999.0;5;12196;clé étrangère (candidate)
-data_refresh;Navigation web;web_clickstreams;5;wcs_web_page_sk;Page consultée (clé vers web_page);entier;68988;2;0.003;60;0.0;59.0;2;28;clé étrangère (candidate)
-data_refresh;Navigation web;web_clickstreams;6;wcs_user_sk;Visiteur identifié (clé vers customer, vide si anonyme);entier;68988;29167;42.278;2603;9.0;99945.0;5;47100;clé étrangère (candidate)
+data_refresh;Navigation web;web_clickstreams;1;wcs_click_date_sk;Date du clic (clé vers date_dim);entier;68988;0;0.0;19;38697.0;38715.0;5;38702;clé étrangère (candidate)
+data_refresh;Navigation web;web_clickstreams;2;wcs_click_time_sk;Heure du clic (clé vers time_dim);entier;68988;0;0.0;44840;2.0;86398.0;5;41302;clé étrangère (candidate)
+data_refresh;Navigation web;web_clickstreams;3;wcs_sales_sk;Commande web associée (vide si le clic n'a pas abouti à une vente);entier;68988;62109;90.029;900;89100.0;89999.0;5;89314;clé étrangère (candidate)
+data_refresh;Navigation web;web_clickstreams;4;wcs_item_sk;Produit consulté (clé vers item);entier;68988;0;0.0;17553;0.0;17999.0;5;16022;clé étrangère (candidate)
+data_refresh;Navigation web;web_clickstreams;5;wcs_web_page_sk;Page consultée (clé vers web_page);entier;68988;2;0.003;60;0.0;59.0;2;7;clé étrangère (candidate)
+data_refresh;Navigation web;web_clickstreams;6;wcs_user_sk;Visiteur identifié (clé vers customer, vide si anonyme);entier;68988;29167;42.278;2603;9.0;99945.0;5;90061;clé étrangère (candidate)
 data_refresh;Avis produits;product_reviews;1;pr_review_sk;Identifiant de l'avis;entier;909;0;0.0;909;89991.0;90899.0;5;89991;clé primaire (candidate)
 data_refresh;Avis produits;product_reviews;2;pr_review_date;;date;909;0;0.0;720;2001-01-05;2006-01-01;10;2001-04-30;attribut
 data_refresh;Avis produits;product_reviews;3;pr_review_time;;heure;909;0;0.0;858;00:01:59;23:59:17;8;17:36:54;attribut
