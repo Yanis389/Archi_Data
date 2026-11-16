@@ -1,0 +1,46 @@
+{
+  "canaux": [
+    {
+      "canal": "magasin",
+      "qte_vendue": 34089501,
+      "qte_retournee": 982900,
+      "lignes_retour": 38328,
+      "taux_retour_pct": 2.88
+    },
+    {
+      "canal": "web",
+      "qte_vendue": 34072007,
+      "qte_retournee": 1002301,
+      "lignes_retour": 38887,
+      "taux_retour_pct": 2.94
+    }
+  ],
+  "nb_motifs": 35,
+  "part_motif_min_pct": 2.74,
+  "part_motif_max_pct": 2.94,
+  "ecart_relatif_max_min": 1.07,
+  "exemple_libelles_motifs": [
+    "bold warhorses should have to unwind beside the carefully blithe platelets? s",
+    "epitaphs will have to affix stealthily even notornis! warhorses since the busy att",
+    "slyly thin dugouts on the ironically enticing realms woul"
+  ],
+  "total_lignes_retour": 77215,
+  "categorie_taux_max_magasin": {
+    "categorie": "Sports & Outdoors",
+    "taux_pct": 2.98
+  },
+  "categorie_taux_min_magasin": {
+    "categorie": "Electronics",
+    "taux_pct": 2.67
+  },
+  "nb_categories_magasin": 9,
+  "categorie_taux_max_web": {
+    "categorie": "Toys & Games",
+    "taux_pct": 3.25
+  },
+  "categorie_taux_min_web": {
+    "categorie": "Movies & TV",
+    "taux_pct": 2.79
+  },
+  "nb_categories_web": 9
+}

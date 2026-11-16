@@ -1,0 +1,19 @@
+canal,categorie,qte_vendue,qte_retournee,lignes_retour,taux_retour_pct
+magasin,Sports & Outdoors,1216747,36307,1375,2.98
+magasin,Books,9108677,271361,10404,2.98
+magasin,Toys & Games,819874,23969,931,2.92
+magasin,Home & Kitchen,1239862,35978,1415,2.9
+magasin,Music,15389404,441105,17208,2.87
+magasin,Clothing & Accessories,1651094,46878,1811,2.84
+magasin,Tools & Home Improvement,808044,22647,916,2.8
+magasin,Movies & TV,2208104,60626,2495,2.75
+magasin,Electronics,1647695,44029,1773,2.67
+web,Toys & Games,834088,27129,992,3.25
+web,Tools & Home Improvement,798354,25229,950,3.16
+web,Sports & Outdoors,1217326,36104,1392,2.97
+web,Books,9071639,268856,10482,2.96
+web,Home & Kitchen,1266878,37187,1417,2.94
+web,Music,15343393,449974,17454,2.93
+web,Electronics,1674860,48500,1870,2.9
+web,Clothing & Accessories,1644266,47300,1891,2.88
+web,Movies & TV,2221203,62022,2439,2.79

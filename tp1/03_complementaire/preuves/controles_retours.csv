@@ -1,0 +1,6 @@
+controle,lignes_concernees,total_lignes,pct,note
+retours sans motif,18,77215,0.023,motif absent
+retours dont le motif n'existe pas dans reason,0,77215,0.0,orphelins vers reason
+retours dont le produit est absent du référentiel item,0,77215,0.0,orphelins vers item
+retours sans catégorie renseignée,0,77215,0.0,catégorie vide
+quantité de retour <= 0,0,77215,0.0,quantité invalide
