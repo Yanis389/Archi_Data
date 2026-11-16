@@ -9,7 +9,6 @@
 
 ## 1. Outils utilisés (fait)
 
-Le travail a été réalisé avec l'assistance de Claude Code (voir les trailers `Co-Authored-By` des commits).
 L'exploration des données a utilisé DuckDB, outil hors référentiel du parcours, non retenu dans l'architecture cible.
 Les chiffres des livrables sont produits par des scripts reproductibles (`tp1/scripts/`), pas saisis à la main.
 

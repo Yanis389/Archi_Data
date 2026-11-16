@@ -7,9 +7,7 @@ Ce dépôt contient les productions du TP J1 : **UC-01** (besoin métier et expl
 (conception et justification d'une architecture Data) pour l'enseigne fictive *Retail Intelligence*, à partir du
 kit de données **TPCx-BB** (~1 Go, 36 fichiers).
 
-> **Transparence.** Ce travail a été réalisé avec l'assistance de Claude Code (voir les trailers
-> `Co-Authored-By` des commits). Les chiffres ne sont pas saisis à la main : ils sont produits par des scripts
-> reproductibles (voir « Régénérer »).
+> Les chiffres ne sont pas saisis à la main : ils sont produits par des scripts reproductibles (voir « Régénérer »).
 
 ## Principe de travail
 
