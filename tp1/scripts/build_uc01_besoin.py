@@ -168,7 +168,7 @@ def build_cadrage() -> None:
           "rejoignent sans orphelin dans l'immense majorité des cas : cela renforce l'hypothèse sans l'établir "
           "formellement.", "warn")
 
-    d.h1("3. Utilisateurs concernés et responsabilités", saut=True)
+    d.h1("3. Utilisateurs concernés et responsabilités")
     d.p("Six profils sont proposés par le sujet ; un septième a été ajouté car le kit contient des données de navigation "
         "web et d'avis clients qui ne concernent aucun des six premiers de façon directe.")
     d.table(["Profil", "Responsabilités", "Décisions typiques"], [list(p) for p in PROFILS], widths=[22, 40, 38])
@@ -190,7 +190,7 @@ def build_cadrage() -> None:
                 rows.append([niveau, q[0] + " - " + q[2], q[1], tag_faisabilite(q[7])])
     d.table(["Priorité", "Besoin (question décisionnelle)", "Profil", "Données"], rows, widths=[16, 52, 17, 15])
 
-    d.h1("5. Ce que les données permettent réellement", saut=True)
+    d.h1("5. Ce que les données permettent réellement")
     d.p("Le sujet demande de ne pas confondre ce que l'entreprise souhaite analyser, ce que les fichiers permettent "
         "d'analyser, ce qui nécessiterait une source complémentaire et ce qui reste une hypothèse.")
     sr = rel("store_sales", "ss_item_sk", "item")
@@ -299,7 +299,7 @@ def build_questions() -> None:
              "Commentaire"], rows, widths=[4, 9, 17, 13, 11, 13, 10, 8, 15])
     d.landscape(False)
 
-    d.h1("3. Schéma des besoins métier", saut=True)
+    d.h1("3. Schéma des besoins métier")
     d.p("Le schéma relie les utilisateurs aux questions, aux indicateurs, aux domaines de données et aux fichiers "
         "effectivement observés. Les éléments **vérifiés** (vert) sont distingués de ceux qui sont partiels, non "
         "fiables ou simplement souhaités (pointillés).")

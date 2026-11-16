@@ -9,7 +9,7 @@ kit de données **TPCx-BB** (~1 Go, 36 fichiers).
 
 > **Transparence.** Ce travail a été réalisé avec l'assistance de Claude Code (voir les trailers
 > `Co-Authored-By` des commits). Les chiffres ne sont pas saisis à la main : ils sont produits par des scripts
-> reproductibles (voir « Régénérer »). Voir aussi « Ce qui reste à faire par l'auteur ».
+> reproductibles (voir « Régénérer »).
 
 ## Principe de travail
 
@@ -46,9 +46,7 @@ tp1/
 |   |-- UC02_gouvernance.pdf
 |   |-- UC02_local_vers_azure.pdf
 |   `-- preuves/                     # schémas SVG, matrice des composants
-|-- 03_complementaire/               # UC-C1, UC-C2 : non réalisés
-|-- 04_avance/                       # UC-A1 : non réalisé
-`-- 05_contribution_individuelle/    # à rédiger par l'auteur
+`-- 05_contribution_individuelle/
 ```
 
 ## Données
@@ -88,11 +86,3 @@ l'architecture cible (voir `UC02_positionnement_composants.pdf`).
 **Data Lake en zones Bronze / Silver / Gold (Parquet), zone Gold modélisée en étoile.** Lakehouse (Delta Lake)
 et HBase restent facultatifs. Tout est une **conception logique : rien n'est déployé ni testé**, y compris la
 déclinaison Azure.
-
-## Ce qui reste à faire par l'auteur
-
-- Relire et s'approprier les livrables : chacun doit pouvoir expliquer ses choix à l'oral.
-- Compléter le nom complet sur les PDF (constante `AUTEUR` dans `scripts/rapport.py`).
-- Rédiger `05_contribution_individuelle/` (contribution personnelle : ce qu'on a examiné, contrôlé, décidé).
-- Faire valider les points « À valider » auprès du formateur (version du kit, rôle de `data_refresh`, devise...).
-- Éventuellement traiter la partie complémentaire (UC-C1, UC-C2) et avancée (UC-A1).

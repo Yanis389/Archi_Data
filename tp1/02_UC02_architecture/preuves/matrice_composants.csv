@@ -8,6 +8,6 @@ Parquet;Format de référence;Stockage analytique colonnaire;Oui;"Format de Silv
 HBase;Facultatif;Approfondissement NoSQL;Non;"Pas de besoin d'accès clé-valeur à faible latence identifié ; non conditionnel à la validation."
 PDGF;Selon kit disponible;Génération des données si le kit le permet;Non;"Le kit fournit déjà les fichiers ; aucune trace du générateur n'est dans le dossier."
 Delta Lake;Facultatif;Approfondissement Lakehouse;Option;"Évolution possible pour les upserts du refresh ; non conditionnel à la validation."
-ADLS Gen2;Objectif obligatoire;Déclinaison cloud de l'architecture;Cible (Jour 4);"Même organisation de zones sur des conteneurs ; conçu ici, traité au Jour 4."
+ADLS Gen2;Objectif obligatoire;Déclinaison cloud de l'architecture;Cible;"Même organisation de zones sur des conteneurs ; conçu ici, non déployé."
 Azure Data Factory;Présentation / étude;Orchestration et intégration cloud;Étudié;"Équivalent cloud logique de NiFi ; non déployé."
 Azure Synapse;Présentation / étude;Services analytiques cloud;Étudié;"Équivalent cloud logique de Spark SQL ; non déployé."

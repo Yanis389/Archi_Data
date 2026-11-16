@@ -214,11 +214,11 @@ def build_comparaison() -> None:
          "Une couche modélisée pour le SQL/BI et une couche intermédiaire pour l'exploration.", S("D")],
         ["Sécurité et accès", "Colonnes personnelles dans `customer` (nom, e-mail, naissance) ; jeu synthétique.",
          "Droits par zone ; colonnes personnelles pseudonymisées ou masquées hors zone restreinte.", S("D")],
-        ["Évolution", "Cible Azure (ADLS Gen2) au Jour 4 ; HBase et Delta Lake facultatifs.",
+        ["Évolution", "Cible Azure (ADLS Gen2) ; HBase et Delta Lake facultatifs.",
          "Organisation des zones indépendante de la technologie, transposable sur ADLS Gen2.", S("V")],
     ], widths=[13, 36, 36, 15])
 
-    d.h1("2. Les trois approches comparées (étape B)", saut=True)
+    d.h1("2. Les trois approches comparées (étape B)")
     A = lambda t: B(t, "v")  # noqa: E731
     d.table(["", "Data Warehouse", "Data Lake organisé en zones", "Data Lakehouse"], [
         ["**Principe**", "Entrepôt centralisé au schéma défini **à l'écriture** (étoile / flocon), alimenté par ETL.",
@@ -243,7 +243,7 @@ def build_comparaison() -> None:
          "Pertinente comme **évolution** (dédoublonnage et upserts du refresh) mais non nécessaire pour valider le Jour 1."],
     ], widths=[12, 29, 30, 29])
 
-    d.h1("3. Adéquation aux contraintes", saut=True)
+    d.h1("3. Adéquation aux contraintes")
     d.p("Évaluation qualitative (adapté / partiel / peu adapté) plutôt qu'un score chiffré : les pondérations seraient "
         "arbitraires. " + S("H") + " Les appréciations sont à discuter.")
     ad, pa, pe = B("Adapté", "v"), B("Partiel", "h"), B("Peu adapté", "n")
@@ -268,14 +268,14 @@ def build_comparaison() -> None:
         "**Pourquoi un lake zoné** : fichiers `.dat` bruts à conserver, refresh à rejouer, texte des avis, volumes en hausse, "
         "et les outils du parcours (HDFS, NiFi, Spark) sont ceux d'un lake.",
         "**Pourquoi une zone Gold dimensionnelle** : les KPI (CA, panier, retours, stocks) demandent des définitions stables et du SQL rapide : c'est la force du Warehouse, absorbée dans le lake.",
-        "**Pourquoi pas le Lakehouse tout de suite** : Delta Lake est facultatif, ajoute une dépendance, et le besoin d'ACID/upserts n'est pas démontré au Jour 1. "
+        "**Pourquoi pas le Lakehouse d'emblée** : Delta Lake est facultatif, ajoute une dépendance, et le besoin d'ACID/upserts n'est pas démontré au Jour 1. "
         "Il deviendra pertinent si le refresh impose des mises à jour fréquentes. " + S("H"),
     ])
     d.box("Limites de ce choix", "Un lake sans gouvernance devient un *Data Swamp* (voir `UC02_gouvernance.pdf`). Le Parquet seul "
           "n'apporte ni transactions, ni garantie de schéma, ni historique : le dédoublonnage et les mises à jour devront être "
           "gérés par les traitements Spark. La performance SQL du lake reste inférieure à celle d'un entrepôt dédié.", "warn")
 
-    d.h1("5. Questions de recul (UC-02)", saut=True)
+    d.h1("5. Questions de recul (UC-02)")
     d.table(["Question du sujet", "Réponse argumentée"], [
         ["Pourquoi un Data Lake peut-il compléter un Data Warehouse ?",
          "Le Warehouse sert les KPI modélisés ; le Lake conserve le brut, le texte (avis) et les volumes de clics à coût faible, et alimente le Warehouse (ELT). Ici, la zone Gold joue le rôle d'entrepôt dans le lake."],
@@ -314,7 +314,7 @@ def build_cible() -> None:
         ["7", "Supervision et gouvernance", "Traçabilité, qualité, accès, journaux, coûts.", "Voir `UC02_gouvernance.pdf`"],
     ], widths=[5, 20, 50, 25])
 
-    d.h1("2. Zones Bronze, Silver et Gold", saut=True)
+    d.h1("2. Zones Bronze, Silver et Gold")
     d.p("Les termes Raw, Bronze, Silver et Gold sont des **conventions d'organisation** : leur rôle est précisé ici. "
         "Ici, *Raw* et *Bronze* sont confondus (une seule zone brute).")
     d.table(["", "Bronze (brut)", "Silver (contrôlé)", "Gold (prêt à l'analyse)"], [
@@ -334,7 +334,7 @@ def build_cible() -> None:
     d.box("Principe de reconstruction", "Seule la zone Bronze est irremplaçable. Silver et Gold peuvent être **reconstruites** à "
           "tout moment depuis Bronze : c'est ce qui permet de corriger une règle de nettoyage sans perdre de donnée.", "ok")
 
-    d.h1("3. Zone Gold : modèle en étoile", saut=True)
+    d.h1("3. Zone Gold : modèle en étoile")
     d.figure(svg_etoile(), "Figure 2 - Modèle dimensionnel de la zone Gold (liaisons fait -> dimension).")
     rl = relations_resume("data")
     d.p(f"Les liaisons du schéma s'appuient sur des relations **contrôlées** en UC-01 : {rl['verifiees']} sur {rl['total']} "
@@ -349,7 +349,7 @@ def build_cible() -> None:
         f"{S('V')} **Marge** : le modèle expose les mesures de coût mais le KPI de marge reste **non fiable** (prix sous le coût d'achat).",
     ])
 
-    d.h1("4. Partitionnement et format", saut=True)
+    d.h1("4. Partitionnement et format")
     rows = []
     for t, part, raison in [
         ("store_sales, web_sales", "année / mois de vente", "Lectures par période ; élagage des partitions"),
@@ -362,7 +362,7 @@ def build_cible() -> None:
         rows.append([f"`{t}`", part, raison])
     d.table(["Table(s)", "Partition", "Raison"], rows, widths=[30, 28, 42])
     d.p("Le format **Parquet** est retenu pour Silver et Gold (stockage colonnaire, compression, schéma embarqué). La taille "
-        "réelle après conversion n'est pas connue : elle sera mesurée au Jour 2. " + S("H"))
+        "réelle après conversion n'est pas connue : elle n'a pas été mesurée. " + S("H"))
 
     d.h1("5. Ce que cette architecture ne fait pas")
     d.ul([
@@ -393,7 +393,7 @@ def build_flux() -> None:
          mo(sum(int(f["taille_octets"]) for f in P["fichiers"] if f["source"] == "data_refresh"))],
     ], num_cols=(1, 2, 3), widths=[40, 15, 22, 23])
 
-    d.h1("2. Description détaillée de chaque flux", saut=True)
+    d.h1("2. Description détaillée de chaque flux")
     d.p("Pour chaque flux : source, format d'entrée, ingestion, zone de destination, contrôles, transformations, résultat et consommateur (étape E).")
     flux = [
         ("F1 - Référentiels", "Clients, adresses, démographie, dates, heures, produits, promotions, motifs, modes d'expédition, magasins, entrepôts, pages et sites web (15 tables).",
@@ -428,7 +428,7 @@ def build_flux() -> None:
             ["Contrôles", ctr], ["Transformations", trf], ["Résultat attendu", res], ["Consommateur final", conso],
         ], widths=[22, 78])
 
-    d.h1("3. Batch ou flux continu ?", saut=True)
+    d.h1("3. Batch ou flux continu ?")
     d.table(["Besoin identifié (UC-01)", "Rythme", "Traitement"], [
         ["Ventes, retours, indicateurs commerciaux", "Quotidien ou hebdomadaire", "**Batch**"],
         ["Stocks", "Hebdomadaire (grain des relevés)", "**Batch**"],
@@ -461,7 +461,7 @@ COMPOSANTS = [
     ("HBase", "Facultatif", "Approfondissement NoSQL", "Non", "Pas de besoin d'accès clé-valeur à faible latence identifié ; non conditionnel à la validation."),
     ("PDGF", "Selon kit disponible", "Génération des données si le kit le permet", "Non", "Le kit fournit déjà les fichiers ; aucune trace du générateur n'est dans le dossier."),
     ("Delta Lake", "Facultatif", "Approfondissement Lakehouse", "Option", "Évolution possible pour les upserts du refresh ; non conditionnel à la validation."),
-    ("ADLS Gen2", "Objectif obligatoire", "Déclinaison cloud de l'architecture", "Cible (Jour 4)", "Même organisation de zones sur des conteneurs ; conçu ici, traité au Jour 4."),
+    ("ADLS Gen2", "Objectif obligatoire", "Déclinaison cloud de l'architecture", "Cible", "Même organisation de zones sur des conteneurs ; conçu ici, non déployé."),
     ("Azure Data Factory", "Présentation / étude", "Orchestration et intégration cloud", "Étudié", "Équivalent cloud logique de NiFi ; non déployé."),
     ("Azure Synapse", "Présentation / étude", "Services analytiques cloud", "Étudié", "Équivalent cloud logique de Spark SQL ; non déployé."),
 ]
@@ -477,20 +477,19 @@ def build_composants() -> None:
            "Présentation / étude": "d"}
     rows = [[f"**{c}**", B(st, cls[st]), role, dans, justif] for (c, st, role, dans, justif) in COMPOSANTS]
     d.table(["Composant", "Statut (référentiel)", "Rôle dans le parcours", "Dans la cible ?", "Justification"], rows,
-            widths=[16, 15, 22, 10, 37])
+            widths=[14, 20, 20, 9, 37])
     d.h1("2. Lecture de la matrice")
     ob = [c for c in COMPOSANTS if c[1] in ("Obligatoire", "Format de référence")]
     fa = [c for c in COMPOSANTS if c[1] in ("Facultatif", "Selon kit disponible")]
     d.ul([
         f"**Socle ({len(ob)} composants)** : " + ", ".join(c[0] for c in ob) + ". Ils composent l'architecture locale de bout en bout.",
         f"**Facultatifs ou conditionnels ({len(fa)})** : " + ", ".join(c[0] for c in fa) + ". Ils sont **hors du chemin critique** : la validation du Jour 1 n'en dépend pas.",
-        "**Cloud** : ADLS Gen2 est un objectif obligatoire traité au Jour 4 ; Azure Data Factory et Synapse sont **présentés** et leur déploiement complet n'est pas exigé.",
+        "**Cloud** : ADLS Gen2 est un objectif obligatoire du parcours ; Azure Data Factory et Synapse sont **présentés** et leur déploiement complet n'est pas exigé.",
     ])
     d.h2("Outil d'exploration utilisé au Jour 1 (hors référentiel)")
     d.box("Transparence", "L'analyse des données de l'UC-01 a été exécutée avec **DuckDB** (lecture SQL directe des `.dat` sur un "
           "poste, sans cluster). C'est un outil de travail personnel, **hors référentiel du parcours** : il n'est pas retenu dans "
-          "l'architecture cible. Les mêmes contrôles seront refaits avec PySpark quand l'environnement HDFS/Spark sera disponible "
-          "(Jour 2). Le script est reproductible : `scripts/profiler_tpcx_bb.py`.", "warn")
+          "l'architecture cible. Aucun cluster HDFS/Spark n'a été utilisé à ce stade. Le script est reproductible : `scripts/profiler_tpcx_bb.py`.", "warn")
     d.h1("3. Limites et points à valider")
     d.ul([
         "Aucun de ces composants n'a été **installé ni testé** par ce travail : leur rôle est logique.",
@@ -533,7 +532,7 @@ def build_gouvernance() -> None:
          f"{mo(total_octets())} de sources ; 3 tables concentrent l'essentiel du volume ; refresh périodique à prévoir.", "Rapport de volumes par zone ; compactage."],
     ], widths=[17, 32, 27, 24])
 
-    d.h1("3. Contrôles de qualité par zone", saut=True)
+    d.h1("3. Contrôles de qualité par zone")
     d.p("Le catalogue de règles reprend les contrôles réellement exécutés en UC-01 (`controles_qualite.csv`, "
         "`controles_relations.csv`) : ils deviennent des règles de la plateforme.")
     d.table(["Zone", "Règle", "Origine (UC-01)", "Action si échec"], [
@@ -548,7 +547,7 @@ def build_gouvernance() -> None:
         ["Gold", "Fraîcheur : date max attendue par table", "`data` s'arrête au 2005-12-13 ; le refresh complète", "Alerte"],
     ], widths=[10, 36, 31, 23])
 
-    d.h1("4. Rôles et responsabilités", saut=True)
+    d.h1("4. Rôles et responsabilités")
     d.table(["Rôle", "Responsabilité"], [
         ["Équipe Data", "Propriétaire des zones Bronze et Silver ; écrit et surveille les contrôles ; tient le catalogue."],
         ["Propriétaire de domaine (par ex. Direction commerciale)", "Valide la définition des KPI de son domaine et arbitre les règles métier (doublons, motifs de retour)."],
@@ -579,7 +578,7 @@ def build_azure() -> None:
     d.p("Les zones Bronze / Silver / Gold et les règles de gouvernance sont **indépendantes de la technologie**. Seule change "
         "l'implémentation de chaque couche.")
     d.table(["Couche logique", "Local (Linux / Ubuntu)", "Cible Azure", "Statut du composant cloud"], [
-        ["Stockage des zones", "HDFS", "Azure Data Lake Storage Gen2 (compte de stockage avec espace de noms hiérarchique)", "Objectif obligatoire (Jour 4)"],
+        ["Stockage des zones", "HDFS", "Azure Data Lake Storage Gen2 (compte de stockage avec espace de noms hiérarchique)", "Objectif obligatoire"],
         ["Ingestion et orchestration", "Apache NiFi", "Azure Data Factory (pipelines, activités de copie)", "Présentation / étude"],
         ["Traitements distribués", "Apache Spark / PySpark", "Spark dans Azure Synapse (ou service Spark équivalent)", "Présentation / étude"],
         ["Requêtes SQL sur Gold", "Spark SQL", "Pool SQL serverless de Synapse sur les fichiers Parquet", "Présentation / étude"],
@@ -590,7 +589,7 @@ def build_azure() -> None:
         ["Coûts", "Matériel et disque du poste ou du serveur", "Stockage + transactions + sortie réseau, facturation à l'usage", "Critère de la cible (étape G)"],
     ], widths=[18, 24, 38, 20])
 
-    d.h1("2. Éléments à identifier pour la cible Azure (étape G)", saut=True)
+    d.h1("2. Éléments à identifier pour la cible Azure (étape G)")
     d.table(["Élément", "Proposition", "Statut"], [
         ["**Compte de stockage**", "Un compte ADLS Gen2 par environnement (développement, production), avec espace de noms hiérarchique activé. Nom : `stretailintel<env>` (minuscules et chiffres).", S("D")],
         ["**Conteneurs**", "`bronze`, `silver`, `gold`, plus un conteneur `quarantaine` pour les fichiers rejetés.", S("D")],
@@ -609,7 +608,7 @@ def build_azure() -> None:
         ["Contrôle de gestion", "-", "-", "Lecture (mesures financières)"],
     ], widths=[40, 20, 20, 20])
 
-    d.h1("3. Comparaison local / cloud", saut=True)
+    d.h1("3. Comparaison local / cloud")
     d.table(["Critère", "Local", "Azure", "Lecture"], [
         ["Coût de démarrage", "Matériel et temps d'installation", "Aucun matériel ; paiement à l'usage", "Le cloud réduit l'investissement initial."],
         ["Coût d'exploitation", "Faible pour 1 Go ; fixe", "Variable : stockage, transactions, sorties", "Le cloud demande un suivi budgétaire."],

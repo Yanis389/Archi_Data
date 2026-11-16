@@ -95,7 +95,7 @@ table { border-collapse: collapse; width:100%; margin: 2mm 0 4mm; font-size: 8.4
 table.fixed { table-layout: fixed; } table.fixed td, table.fixed th { overflow-wrap: anywhere; }
 th { background: var(--bleu); color:#fff; text-align:left; padding: 1.6mm 2mm; font-weight:600; }
 td { border: 1px solid var(--ligne); padding: 1.4mm 2mm; vertical-align: top; }
-tr { page-break-inside: avoid; } tbody tr:nth-child(even) td { background:#f7fafb; }
+tr { page-break-inside: avoid; } table.keep { page-break-inside: avoid; } tbody tr:nth-child(even) td { background:#f7fafb; }
 td.num, th.num { text-align:right; font-variant-numeric: tabular-nums; } td.num { white-space:nowrap; }
 code { font: 8.6pt Menlo, monospace; background:#eef2f5; padding: 0 1mm; border-radius: 1mm; }
 .st { display:inline-block; font-size:7.2pt; font-weight:700; padding: .2mm 1.6mm; border-radius: 1.2mm; white-space:nowrap; color:#fff; }
@@ -164,6 +164,8 @@ class Doc:
                           for i, c in enumerate(r))
             trs.append(f"<tr>{tds}</tr>")
         klass = ' class="fixed"' if widths else ""
+        if len(rows) <= 12:  # petit tableau : ne pas le couper entre deux pages
+            klass = klass[:-1] + ' keep"' if klass else ' class="keep"'
         self.body.append(f"<table{klass}>{cg}<thead><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table>")
 
     def figure(self, svg: str, legende: str) -> None:

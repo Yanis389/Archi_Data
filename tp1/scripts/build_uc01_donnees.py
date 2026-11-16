@@ -51,7 +51,7 @@ def build_qualification() -> None:
     d.p(f"Aucune installation de cluster n'est nécessaire à ce stade (consigne du Jour 1) : l'analyse s'exécute en "
         f"{fmt(P['duree_execution_s'], 0)} secondes sur un poste individuel.")
 
-    d.h1("2. Format et structure des fichiers", saut=True)
+    d.h1("2. Format et structure des fichiers")
     d.kpis([(str(len(P["fichiers"])), "fichiers"), (mo(total_octets()), "volume total"),
             (f"{ok}/{len(dat)}", "fichiers .dat au schéma cohérent"),
             (fmt(sum(int(f["lignes"]) for f in dat)), "lignes au total")])
@@ -83,7 +83,7 @@ def build_qualification() -> None:
     d.p("Trois tables concentrent l'essentiel des lignes : " + ", ".join(f"`{t}` ({fmt(n)})" for n, t in big) +
         ". Ce sont des candidates naturelles au stockage colonnaire (Parquet) et au partitionnement par date.")
 
-    d.h1("4. Fiches des fichiers principaux", saut=True)
+    d.h1("4. Fiches des fichiers principaux")
     d.p("Relevé demandé par le sujet pour chaque fichier : nom, emplacement, format, taille, lignes, colonnes, types, "
         "clés, nulls et limites. L'intégralité des colonnes (noms, types, nulls, distincts, min, max, exemple) est dans "
         "`UC01_inventaire_sources.xlsx`, onglet *Colonnes*.")
@@ -113,7 +113,7 @@ def build_qualification() -> None:
     d.table(["Fichier", "Taille", "Lignes x col.", "Clé candidate", "Types observés", "Nulls notables", "Limites de compréhension"],
             rows, widths=[17, 7, 10, 14, 13, 14, 25])
 
-    d.h1("5. Clés et unicité", saut=True)
+    d.h1("5. Clés et unicité")
     d.h2("5.1 Clés primaires simples")
     pks = [(t, pk[0]) for t, pk in CLES_PRIMAIRES.items() if len(pk) == 1]
     allok = all(col(t, c)["nb_lignes"] == col(t, c)["nb_distincts"] and col(t, c)["nb_nulls"] == 0 for t, c in pks)
@@ -155,7 +155,7 @@ def build_qualification() -> None:
             [[f"`{c['table']}`", f"`{c['colonne']}`", fmt(c["nb_nulls"]), pct(c["pct_nulls"], 1), note.get(c["colonne"], "")]
              for c in top], num_cols=(2, 3), widths=[18, 22, 14, 10, 36])
 
-    d.h1("7. Cohérence et anomalies visibles", saut=True)
+    d.h1("7. Cohérence et anomalies visibles")
     nb = len(P["qualite"])
     anom = [q for q in P["qualite"] if q["nature"] == "anomalie"]
     anom_pos = [q for q in anom if int(q["nb_concernes"] or 0) > 0]
@@ -181,7 +181,7 @@ def build_qualification() -> None:
           f"3. **Référentiel produit incomplet** : {fmt(qual('inventory', 'absents de item')['nb_concernes'])} lignes d'inventaire "
           "(0,999 %) portent sur 180 produits qui n'existent que dans `data_refresh/item`.", "warn")
 
-    d.h1("8. Relations possibles entre domaines", saut=True)
+    d.h1("8. Relations possibles entre domaines")
     d.p(f"Aucune jointure n'a été supposée d'après les noms de colonnes : pour chacune, la présence dans les deux tables, "
         "le type, l'unicité de la clé parent, les valeurs vides et les orphelins ont été contrôlés. "
         f"**{rs['total']} relations** ont été examinées dans `data` : **{rs['verifiees']} sont vérifiées (0 orphelin)**, "
@@ -223,7 +223,7 @@ def build_qualification() -> None:
     ]
     d.table(["Relation", "Constat mesuré", "Lecture"], rows, widths=[30, 28, 42])
 
-    d.h1("9. data et data_refresh : un complément incrémental", saut=True)
+    d.h1("9. data et data_refresh : un complément incrémental")
     d.p("L'hypothèse testée est que `data_refresh` **complète** `data` sans le remplacer. Sur les tables à clé primaire, "
         "les clés du refresh sont **disjointes** de celles de `data` (colonne « déjà présentes »), et pour les tables "
         "à clé de substitution elles **prolongent** la numérotation.")
@@ -258,7 +258,7 @@ def build_qualification() -> None:
         "retour doit rattacher le retour à la date de la vente. Les stocks sont relevés environ **une fois par semaine** "
         f"({couverture('inventory')['jours_distincts']} dates sur cinq ans).")
 
-    d.h1("11. Conclusion : exploitabilité par domaine", saut=True)
+    d.h1("11. Conclusion : exploitabilité par domaine")
     d.table(["Domaine", "Verdict", "Raison principale"], [
         ["Ventes magasin", B("Exploitable"), "Jointures sans orphelin, mesures cohérentes ; clé composite non unique (0,6 %)."],
         ["Ventes web", B("Exploitable"), "Idem ; expéditions toutes postérieures aux commandes."],
@@ -332,7 +332,7 @@ def build_limites() -> None:
     d.table(["N°", "Limite", "Constat (preuve)", "Impact", "Parade", "Statut"],
             [[a, f"**{b}**", c, e, f, S(g)] for (a, b, c, e, f, g) in L], widths=[6, 16, 28, 19, 24, 7])
 
-    d.h1("2. Hypothèses de travail", saut=True)
+    d.h1("2. Hypothèses de travail")
     d.table(["N°", "Hypothèse", "Pourquoi elle est faite", "Comment la vérifier", "Statut"], [
         ["H1", "Les noms de colonnes déduits de TPC-DS/BigBench sont exacts", "Même nombre de champs que le standard pour 34 fichiers ; jointures sans orphelin", "Dictionnaire officiel du kit ou du générateur", S("H") + " " + S("A")],
         ["H2", "Une valeur de `customer_sk` désigne la même personne en magasin et sur le web", "Une seule table `customer` référencée par les deux canaux", "Règle de gestion de l'enseigne ; contrôle d'attributs", S("H")],
@@ -358,7 +358,7 @@ def build_limites() -> None:
         ["Consentement client", "Q16", "Bases légales, canaux autorisés", "CRM / DPO"],
     ], widths=[22, 14, 30, 34])
 
-    d.h1("4. Questions à poser au formateur", saut=True)
+    d.h1("4. Questions à poser au formateur")
     d.ol([
         "Quelle est la version et la provenance exacte du kit TPCx-BB ? Un dictionnaire de données existe-t-il ? " + S("A"),
         "Quel est le rôle de `data_refresh` : lot incrémental à intégrer après `data` ? Pourquoi 4 clés de retours y sont-elles déjà présentes dans `data` ? " + S("A"),
