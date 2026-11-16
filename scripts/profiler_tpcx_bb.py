@@ -136,7 +136,7 @@ def profile_columns(con, table: str, source: str) -> list[dict]:
         aggs += [
             f"count(nullif({c}, ''))",
             f"count(distinct nullif({c}, ''))",
-            f"count(try_cast(nullif({c}, '') as bigint))",
+            f"count(*) filter (where regexp_matches({c}, '^-?[0-9]+$'))",
             f"count({num(c)})",
             f"count(*) filter (where regexp_matches({c}, '^[0-9]{{4}}-[0-9]{{2}}-[0-9]{{2}}$'))",
             f"count(*) filter (where regexp_matches({c}, '^[0-9]{{2}}:[0-9]{{2}}:[0-9]{{2}}$'))",
@@ -164,7 +164,9 @@ def profile_columns(con, table: str, source: str) -> list[dict]:
             typ = "heure"
         else:
             typ = "texte"
-        if typ in ("entier", "décimal"):
+        if typ == "entier":
+            vmin, vmax = int(nmin), int(nmax)
+        elif typ == "décimal":
             vmin, vmax = nmin, nmax
         else:
             vmin, vmax = smin, smax

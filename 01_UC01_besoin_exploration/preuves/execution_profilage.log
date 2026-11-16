@@ -1,78 +1,78 @@
-[12:56:31] Découverte des fichiers dans /Users/yanishelali/Documents/ecole/Master_2/Archi_Data/retail_project
-[12:56:31] 36 fichiers trouvés
-[12:56:31] Chargement dans DuckDB (contrôle du nombre de champs par ligne)
-[12:56:32]   chargé customer                                 99 000 lignes
-[12:56:32]   chargé customer_address                         49 500 lignes
-[12:56:32]   chargé customer_demographics                 1 920 800 lignes
-[12:56:33]   chargé date_dim                                109 573 lignes
-[12:56:33]   chargé household_demographics                    7 200 lignes
-[12:56:33]   chargé income_band                                  20 lignes
-[12:56:35]   chargé inventory                            23 255 100 lignes
-[12:56:35]   chargé item                                     17 820 lignes
-[12:56:35]   chargé item_marketprices                        89 100 lignes
-[12:56:36]   chargé product_reviews                          89 991 lignes
-[12:56:36]   chargé promotion                                   300 lignes
-[12:56:36]   chargé reason                                       35 lignes
-[12:56:36]   chargé ship_mode                                    20 lignes
-[12:56:36]   chargé store                                        12 lignes
-[12:56:36]   chargé store_returns                            37 902 lignes
-[12:56:38]   chargé store_sales                             667 579 lignes
-[12:56:38]   chargé time_dim                                 86 400 lignes
-[12:56:38]   chargé warehouse                                     5 lignes
-[12:56:39]   chargé web_clickstreams                      6 770 550 lignes
-[12:56:39]   chargé web_page                                     60 lignes
-[12:56:39]   chargé web_returns                              38 487 lignes
-[12:56:41]   chargé web_sales                               668 052 lignes
-[12:56:41]   chargé web_site                                     30 lignes
-[12:56:41]   chargé customer__refresh                         1 000 lignes
-[12:56:41]   chargé customer_address__refresh                   500 lignes
-[12:56:41]   chargé inventory__refresh                      234 900 lignes
-[12:56:41]   chargé item__refresh                               180 lignes
-[12:56:41]   chargé item_marketprices__refresh                  900 lignes
-[12:56:41]   chargé product_reviews__refresh                    909 lignes
-[12:56:41]   chargé store_returns__refresh                      426 lignes
-[12:56:41]   chargé store_sales__refresh                      6 632 lignes
-[12:56:42]   chargé web_clickstreams__refresh                68 988 lignes
-[12:56:42]   chargé web_returns__refresh                        400 lignes
-[12:56:42]   chargé web_sales__refresh                        6 879 lignes
-[12:56:42] inventaire écrit (36 lignes)
-[12:56:42] Profil des colonnes
-[12:56:42]   data/customer
-[12:56:42]   data/customer_address
-[12:56:43]   data/customer_demographics
-[12:56:43]   data/household_demographics
-[12:56:43]   data/income_band
-[12:56:44]   data/date_dim
-[12:56:44]   data/time_dim
-[12:56:44]   data/item
-[12:56:44]   data/item_marketprices
-[12:56:44]   data/promotion
-[12:56:44]   data/reason
-[12:56:44]   data/ship_mode
-[12:56:45]   data/store
-[12:56:45]   data/warehouse
-[12:56:47]   data/inventory
-[12:56:48]   data/store_sales
-[12:56:49]   data/store_returns
-[12:56:51]   data/web_sales
-[12:56:52]   data/web_returns
-[12:56:52]   data/web_page
-[12:56:52]   data/web_site
-[12:56:53]   data/web_clickstreams
-[12:56:53]   data/product_reviews
-[12:56:53]   data_refresh/customer
-[12:56:53]   data_refresh/customer_address
-[12:56:53]   data_refresh/item
-[12:56:53]   data_refresh/item_marketprices
-[12:56:53]   data_refresh/inventory
-[12:56:54]   data_refresh/store_sales
-[12:56:54]   data_refresh/store_returns
-[12:56:54]   data_refresh/web_sales
-[12:56:54]   data_refresh/web_returns
-[12:56:54]   data_refresh/web_clickstreams
-[12:56:54]   data_refresh/product_reviews
-[12:56:54] Contrôle des relations candidates
-[12:56:56]   114 relations contrôlées
-[12:56:56] Contrôles de qualité
-[12:56:58] KPI de test
-[12:56:59] Terminé en 27.3 s -> 01_UC01_besoin_exploration/preuves
+[13:03:53] Découverte des fichiers dans /Users/yanishelali/Documents/ecole/Master_2/Archi_Data/retail_project
+[13:03:53] 36 fichiers trouvés
+[13:03:53] Chargement dans DuckDB (contrôle du nombre de champs par ligne)
+[13:03:53]   chargé customer                                 99 000 lignes
+[13:03:53]   chargé customer_address                         49 500 lignes
+[13:03:54]   chargé customer_demographics                 1 920 800 lignes
+[13:03:54]   chargé date_dim                                109 573 lignes
+[13:03:54]   chargé household_demographics                    7 200 lignes
+[13:03:54]   chargé income_band                                  20 lignes
+[13:03:56]   chargé inventory                            23 255 100 lignes
+[13:03:57]   chargé item                                     17 820 lignes
+[13:03:57]   chargé item_marketprices                        89 100 lignes
+[13:03:57]   chargé product_reviews                          89 991 lignes
+[13:03:57]   chargé promotion                                   300 lignes
+[13:03:57]   chargé reason                                       35 lignes
+[13:03:57]   chargé ship_mode                                    20 lignes
+[13:03:57]   chargé store                                        12 lignes
+[13:03:58]   chargé store_returns                            37 902 lignes
+[13:03:59]   chargé store_sales                             667 579 lignes
+[13:03:59]   chargé time_dim                                 86 400 lignes
+[13:03:59]   chargé warehouse                                     5 lignes
+[13:04:00]   chargé web_clickstreams                      6 770 550 lignes
+[13:04:00]   chargé web_page                                     60 lignes
+[13:04:00]   chargé web_returns                              38 487 lignes
+[13:04:02]   chargé web_sales                               668 052 lignes
+[13:04:02]   chargé web_site                                     30 lignes
+[13:04:02]   chargé customer__refresh                         1 000 lignes
+[13:04:02]   chargé customer_address__refresh                   500 lignes
+[13:04:02]   chargé inventory__refresh                      234 900 lignes
+[13:04:02]   chargé item__refresh                               180 lignes
+[13:04:02]   chargé item_marketprices__refresh                  900 lignes
+[13:04:02]   chargé product_reviews__refresh                    909 lignes
+[13:04:02]   chargé store_returns__refresh                      426 lignes
+[13:04:02]   chargé store_sales__refresh                      6 632 lignes
+[13:04:03]   chargé web_clickstreams__refresh                68 988 lignes
+[13:04:03]   chargé web_returns__refresh                        400 lignes
+[13:04:03]   chargé web_sales__refresh                        6 879 lignes
+[13:04:03] inventaire écrit (36 lignes)
+[13:04:03] Profil des colonnes
+[13:04:04]   data/customer
+[13:04:04]   data/customer_address
+[13:04:05]   data/customer_demographics
+[13:04:05]   data/household_demographics
+[13:04:05]   data/income_band
+[13:04:06]   data/date_dim
+[13:04:06]   data/time_dim
+[13:04:07]   data/item
+[13:04:07]   data/item_marketprices
+[13:04:07]   data/promotion
+[13:04:07]   data/reason
+[13:04:07]   data/ship_mode
+[13:04:07]   data/store
+[13:04:07]   data/warehouse
+[13:04:09]   data/inventory
+[13:04:11]   data/store_sales
+[13:04:12]   data/store_returns
+[13:04:15]   data/web_sales
+[13:04:15]   data/web_returns
+[13:04:15]   data/web_page
+[13:04:15]   data/web_site
+[13:04:17]   data/web_clickstreams
+[13:04:17]   data/product_reviews
+[13:04:17]   data_refresh/customer
+[13:04:17]   data_refresh/customer_address
+[13:04:17]   data_refresh/item
+[13:04:17]   data_refresh/item_marketprices
+[13:04:17]   data_refresh/inventory
+[13:04:17]   data_refresh/store_sales
+[13:04:17]   data_refresh/store_returns
+[13:04:17]   data_refresh/web_sales
+[13:04:18]   data_refresh/web_returns
+[13:04:18]   data_refresh/web_clickstreams
+[13:04:18]   data_refresh/product_reviews
+[13:04:18] Contrôle des relations candidates
+[13:04:20]   114 relations contrôlées
+[13:04:20] Contrôles de qualité
+[13:04:22] KPI de test
+[13:04:23] Terminé en 30.0 s -> 01_UC01_besoin_exploration/preuves
