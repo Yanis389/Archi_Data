@@ -1,0 +1,12 @@
+table;cle;cles_refresh_deja_presentes_dans_data;lignes_data;lignes_refresh;max_cle_data;max_cle_refresh;min_cle_data;min_cle_refresh
+customer;c_customer_sk;0;99000;1000;98999;99999;0;99000
+customer_address;ca_address_sk;0;49500;500;49499;49999;0;49500
+item;i_item_sk;0;17820;180;17819;17999;0;17820
+item_marketprices;imp_sk;0;89100;900;89099;89999;0;89100
+inventory;inv_date_sk + inv_item_sk + inv_warehouse_sk;0;23255100;234900;;;;
+store_sales;ss_ticket_number + ss_item_sk;0;667579;6632;;;;
+store_returns;sr_ticket_number + sr_item_sk;2;37902;426;;;;
+web_sales;ws_order_number + ws_item_sk;0;668052;6879;;;;
+web_returns;wr_order_number + wr_item_sk;2;38487;400;;;;
+web_clickstreams;;;6770550;68988;;;;
+product_reviews;pr_review_sk;0;89991;909;89990;90899;0;89991

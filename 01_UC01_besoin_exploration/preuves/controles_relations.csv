@@ -1,0 +1,115 @@
+source;table_enfant;colonne_enfant;table_parent;colonne_parent;portee_parent;nb_lignes;nb_renseignees;pct_nulls;non_numeriques;valeurs_distinctes_enfant;lignes_orphelines;valeurs_orphelines;pct_orphelines;cle_parent_unique;verdict
+data;store_sales;ss_sold_date_sk;date_dim;d_date_sk;data;667579;667579;0.0;0;1808;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_sold_date_sk;date_dim;d_date_sk;data + data_refresh;6632;6632;0.0;0;19;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_sold_time_sk;time_dim;t_time_sk;data;667579;667579;0.0;0;55645;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_sold_time_sk;time_dim;t_time_sk;data + data_refresh;6632;6632;0.0;0;896;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_item_sk;item;i_item_sk;data;667579;667579;0.0;0;17820;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_item_sk;item;i_item_sk;data + data_refresh;6632;6632;0.0;0;3536;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_customer_sk;customer;c_customer_sk;data;667579;667579;0.0;0;37336;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_customer_sk;customer;c_customer_sk;data + data_refresh;6632;6632;0.0;0;827;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_cdemo_sk;customer_demographics;cd_demo_sk;data;667579;667341;0.036;0;36953;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_cdemo_sk;customer_demographics;cd_demo_sk;data + data_refresh;6632;6620;0.181;0;825;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_hdemo_sk;household_demographics;hd_demo_sk;data;667579;667284;0.044;0;7161;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_hdemo_sk;household_demographics;hd_demo_sk;data + data_refresh;6632;6619;0.196;0;767;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_addr_sk;customer_address;ca_address_sk;data;667579;667131;0.067;0;26286;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_addr_sk;customer_address;ca_address_sk;data + data_refresh;6632;6618;0.211;0;822;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_store_sk;store;s_store_sk;data;667579;667579;0.0;0;12;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_store_sk;store;s_store_sk;data + data_refresh;6632;6632;0.0;0;12;0;0;0.0;oui;relation vérifiée
+data;store_sales;ss_promo_sk;promotion;p_promo_sk;data;667579;667421;0.024;0;300;0;0;0.0;oui;relation vérifiée
+data_refresh;store_sales;ss_promo_sk;promotion;p_promo_sk;data + data_refresh;6632;6631;0.015;0;300;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_sold_date_sk;date_dim;d_date_sk;data;668052;668052;0.0;0;1808;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_sold_date_sk;date_dim;d_date_sk;data + data_refresh;6879;6879;0.0;0;19;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_sold_time_sk;time_dim;t_time_sk;data;668052;668052;0.0;0;55563;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_sold_time_sk;time_dim;t_time_sk;data + data_refresh;6879;6879;0.0;0;895;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_ship_date_sk;date_dim;d_date_sk;data;668052;668052;0.0;0;1927;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_ship_date_sk;date_dim;d_date_sk;data + data_refresh;6879;6879;0.0;0;137;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_item_sk;item;i_item_sk;data;668052;668052;0.0;0;17820;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_item_sk;item;i_item_sk;data + data_refresh;6879;6879;0.0;0;3692;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_bill_customer_sk;customer;c_customer_sk;data;668052;668052;0.0;0;37367;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_bill_customer_sk;customer;c_customer_sk;data + data_refresh;6879;6879;0.0;0;847;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_ship_customer_sk;customer;c_customer_sk;data;668052;668052;0.0;0;39377;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_ship_customer_sk;customer;c_customer_sk;data + data_refresh;6879;6879;0.0;0;854;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_bill_addr_sk;customer_address;ca_address_sk;data;668052;667780;0.041;0;26208;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_bill_addr_sk;customer_address;ca_address_sk;data + data_refresh;6879;6869;0.145;0;837;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_web_page_sk;web_page;wp_web_page_sk;data;668052;667888;0.025;0;60;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_web_page_sk;web_page;wp_web_page_sk;data + data_refresh;6879;6877;0.029;0;60;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_web_site_sk;web_site;web_site_sk;data;668052;667898;0.023;0;30;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_web_site_sk;web_site;web_site_sk;data + data_refresh;6879;6876;0.044;0;30;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_ship_mode_sk;ship_mode;sm_ship_mode_sk;data;668052;667882;0.025;0;20;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_ship_mode_sk;ship_mode;sm_ship_mode_sk;data + data_refresh;6879;6878;0.015;0;20;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_warehouse_sk;warehouse;w_warehouse_sk;data;668052;667894;0.024;0;5;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_warehouse_sk;warehouse;w_warehouse_sk;data + data_refresh;6879;6877;0.029;0;5;0;0;0.0;oui;relation vérifiée
+data;web_sales;ws_promo_sk;promotion;p_promo_sk;data;668052;667931;0.018;0;300;0;0;0.0;oui;relation vérifiée
+data_refresh;web_sales;ws_promo_sk;promotion;p_promo_sk;data + data_refresh;6879;6877;0.029;0;300;0;0;0.0;oui;relation vérifiée
+data;store_returns;sr_returned_date_sk;date_dim;d_date_sk;data;37902;37902;0.0;0;2221;0;0;0.0;oui;relation vérifiée
+data_refresh;store_returns;sr_returned_date_sk;date_dim;d_date_sk;data + data_refresh;426;426;0.0;0;89;0;0;0.0;oui;relation vérifiée
+data;store_returns;sr_item_sk;item;i_item_sk;data;37902;37902;0.0;0;12551;0;0;0.0;oui;relation vérifiée
+data_refresh;store_returns;sr_item_sk;item;i_item_sk;data + data_refresh;426;426;0.0;0;361;0;0;0.0;oui;relation vérifiée
+data;store_returns;sr_customer_sk;customer;c_customer_sk;data;37902;37902;0.0;0;6226;0;0;0.0;oui;relation vérifiée
+data_refresh;store_returns;sr_customer_sk;customer;c_customer_sk;data + data_refresh;426;426;0.0;0;89;0;0;0.0;oui;relation vérifiée
+data;store_returns;sr_store_sk;store;s_store_sk;data;37902;37902;0.0;0;12;0;0;0.0;oui;relation vérifiée
+data_refresh;store_returns;sr_store_sk;store;s_store_sk;data + data_refresh;426;426;0.0;0;12;0;0;0.0;oui;relation vérifiée
+data;store_returns;sr_reason_sk;reason;r_reason_sk;data;37902;37891;0.029;0;35;0;0;0.0;oui;relation vérifiée
+data_refresh;store_returns;sr_reason_sk;reason;r_reason_sk;data + data_refresh;426;426;0.0;0;35;0;0;0.0;oui;relation vérifiée
+data;web_returns;wr_returned_date_sk;date_dim;d_date_sk;data;38487;38487;0.0;0;2492;0;0;0.0;oui;relation vérifiée
+data_refresh;web_returns;wr_returned_date_sk;date_dim;d_date_sk;data + data_refresh;400;400;0.0;0;365;0;0;0.0;oui;relation vérifiée
+data;web_returns;wr_item_sk;item;i_item_sk;data;38487;38487;0.0;0;12601;0;0;0.0;oui;relation vérifiée
+data_refresh;web_returns;wr_item_sk;item;i_item_sk;data + data_refresh;400;400;0.0;0;328;0;0;0.0;oui;relation vérifiée
+data;web_returns;wr_refunded_customer_sk;customer;c_customer_sk;data;38487;38487;0.0;0;6437;0;0;0.0;oui;relation vérifiée
+data_refresh;web_returns;wr_refunded_customer_sk;customer;c_customer_sk;data + data_refresh;400;400;0.0;0;90;0;0;0.0;oui;relation vérifiée
+data;web_returns;wr_returning_customer_sk;customer;c_customer_sk;data;38487;38487;0.0;0;6437;0;0;0.0;oui;relation vérifiée
+data_refresh;web_returns;wr_returning_customer_sk;customer;c_customer_sk;data + data_refresh;400;400;0.0;0;90;0;0;0.0;oui;relation vérifiée
+data;web_returns;wr_web_page_sk;web_page;wp_web_page_sk;data;38487;38477;0.026;0;60;0;0;0.0;oui;relation vérifiée
+data_refresh;web_returns;wr_web_page_sk;web_page;wp_web_page_sk;data + data_refresh;400;400;0.0;0;60;0;0;0.0;oui;relation vérifiée
+data;web_returns;wr_reason_sk;reason;r_reason_sk;data;38487;38480;0.018;0;35;0;0;0.0;oui;relation vérifiée
+data_refresh;web_returns;wr_reason_sk;reason;r_reason_sk;data + data_refresh;400;400;0.0;0;35;0;0;0.0;oui;relation vérifiée
+data;inventory;inv_date_sk;date_dim;d_date_sk;data;23255100;23255100;0.0;0;259;0;0;0.0;oui;relation vérifiée
+data_refresh;inventory;inv_date_sk;date_dim;d_date_sk;data + data_refresh;234900;234900;0.0;0;3;0;0;0.0;oui;relation vérifiée
+data;inventory;inv_item_sk;item;i_item_sk;data;23255100;23255100;0.0;0;18000;232380;180;0.9993;oui;relation partielle (orphelins)
+data_refresh;inventory;inv_item_sk;item;i_item_sk;data + data_refresh;234900;234900;0.0;0;18000;0;0;0.0;oui;relation vérifiée
+data;inventory;inv_warehouse_sk;warehouse;w_warehouse_sk;data;23255100;23255100;0.0;0;5;0;0;0.0;oui;relation vérifiée
+data_refresh;inventory;inv_warehouse_sk;warehouse;w_warehouse_sk;data + data_refresh;234900;234900;0.0;0;5;0;0;0.0;oui;relation vérifiée
+data;web_clickstreams;wcs_click_date_sk;date_dim;d_date_sk;data;6770550;6770550;0.0;0;1808;0;0;0.0;oui;relation vérifiée
+data_refresh;web_clickstreams;wcs_click_date_sk;date_dim;d_date_sk;data + data_refresh;68988;68988;0.0;0;19;0;0;0.0;oui;relation vérifiée
+data;web_clickstreams;wcs_click_time_sk;time_dim;t_time_sk;data;6770550;6770550;0.0;0;86400;0;0;0.0;oui;relation vérifiée
+data_refresh;web_clickstreams;wcs_click_time_sk;time_dim;t_time_sk;data + data_refresh;68988;68988;0.0;0;44840;0;0;0.0;oui;relation vérifiée
+data;web_clickstreams;wcs_item_sk;item;i_item_sk;data;6770550;6770550;0.0;0;17820;0;0;0.0;oui;relation vérifiée
+data_refresh;web_clickstreams;wcs_item_sk;item;i_item_sk;data + data_refresh;68988;68988;0.0;0;17553;0;0;0.0;oui;relation vérifiée
+data;web_clickstreams;wcs_web_page_sk;web_page;wp_web_page_sk;data;6770550;6770386;0.002;0;60;0;0;0.0;oui;relation vérifiée
+data_refresh;web_clickstreams;wcs_web_page_sk;web_page;wp_web_page_sk;data + data_refresh;68988;68986;0.003;0;60;0;0;0.0;oui;relation vérifiée
+data;web_clickstreams;wcs_user_sk;customer;c_customer_sk;data;6770550;3917089;42.145;0;88695;0;0;0.0;oui;relation vérifiée
+data_refresh;web_clickstreams;wcs_user_sk;customer;c_customer_sk;data + data_refresh;68988;39821;42.278;0;2603;0;0;0.0;oui;relation vérifiée
+data;web_clickstreams;wcs_sales_sk;web_sales;ws_order_number;data;6770550;668052;90.133;0;89100;0;0;0.0;non;relation vérifiée
+data_refresh;web_clickstreams;wcs_sales_sk;web_sales;ws_order_number;data + data_refresh;68988;6879;90.029;0;900;0;0;0.0;non;relation vérifiée
+data;product_reviews;pr_item_sk;item;i_item_sk;data;89991;89991;0.0;0;16742;0;0;0.0;oui;relation vérifiée
+data_refresh;product_reviews;pr_item_sk;item;i_item_sk;data + data_refresh;909;909;0.0;0;685;0;0;0.0;oui;relation vérifiée
+data;product_reviews;pr_user_sk;customer;c_customer_sk;data;89991;89991;0.0;0;39376;0;0;0.0;oui;relation vérifiée
+data_refresh;product_reviews;pr_user_sk;customer;c_customer_sk;data + data_refresh;909;909;0.0;0;846;0;0;0.0;oui;relation vérifiée
+data;product_reviews;pr_order_sk;web_sales;ws_order_number;data;89991;89991;0.0;0;89098;0;0;0.0;non;relation vérifiée
+data_refresh;product_reviews;pr_order_sk;web_sales;ws_order_number;data + data_refresh;909;909;0.0;0;909;0;0;0.0;non;relation vérifiée
+data;product_reviews;pr_order_sk;store_sales;ss_ticket_number;data;89991;89991;0.0;0;89098;0;0;0.0;non;relation vérifiée
+data_refresh;product_reviews;pr_order_sk;store_sales;ss_ticket_number;data + data_refresh;909;909;0.0;0;909;0;0;0.0;non;relation vérifiée
+data;item_marketprices;imp_item_sk;item;i_item_sk;data;89100;89100;0.0;0;17820;0;0;0.0;oui;relation vérifiée
+data_refresh;item_marketprices;imp_item_sk;item;i_item_sk;data + data_refresh;900;900;0.0;0;882;0;0;0.0;oui;relation vérifiée
+data;customer;c_current_cdemo_sk;customer_demographics;cd_demo_sk;data;99000;98982;0.018;0;96438;0;0;0.0;oui;relation vérifiée
+data_refresh;customer;c_current_cdemo_sk;customer_demographics;cd_demo_sk;data + data_refresh;1000;1000;0.0;0;1000;0;0;0.0;oui;relation vérifiée
+data;customer;c_current_hdemo_sk;household_demographics;hd_demo_sk;data;99000;98971;0.029;0;7200;0;0;0.0;oui;relation vérifiée
+data_refresh;customer;c_current_hdemo_sk;household_demographics;hd_demo_sk;data + data_refresh;1000;1000;0.0;0;943;0;0;0.0;oui;relation vérifiée
+data;customer;c_current_addr_sk;customer_address;ca_address_sk;data;99000;98978;0.022;0;42734;0;0;0.0;oui;relation vérifiée
+data_refresh;customer;c_current_addr_sk;customer_address;ca_address_sk;data + data_refresh;1000;1000;0.0;0;988;0;0;0.0;oui;relation vérifiée
+data;customer;c_first_sales_date_sk;date_dim;d_date_sk;data;99000;98982;0.018;0;65187;0;0;0.0;oui;relation vérifiée
+data_refresh;customer;c_first_sales_date_sk;date_dim;d_date_sk;data + data_refresh;1000;1000;0.0;0;996;0;0;0.0;oui;relation vérifiée
+data;customer;c_first_shipto_date_sk;date_dim;d_date_sk;data;99000;98975;0.025;0;65121;0;0;0.0;oui;relation vérifiée
+data_refresh;customer;c_first_shipto_date_sk;date_dim;d_date_sk;data + data_refresh;1000;1000;0.0;0;999;0;0;0.0;oui;relation vérifiée
+data;household_demographics;hd_income_band_sk;income_band;ib_income_band_sk;data;7200;7198;0.028;0;20;0;0;0.0;oui;relation vérifiée
+data;promotion;p_item_sk;item;i_item_sk;data;300;300;0.0;0;298;0;0;0.0;oui;relation vérifiée
+data;promotion;p_start_date_sk;date_dim;d_date_sk;data;300;300;0.0;0;300;0;0;0.0;oui;relation vérifiée
+data;promotion;p_end_date_sk;date_dim;d_date_sk;data;300;300;0.0;0;299;0;0;0.0;oui;relation vérifiée
+data;web_page;wp_customer_sk;customer;c_customer_sk;data;60;60;0.0;0;60;0;0;0.0;oui;relation vérifiée
+data;web_page;wp_creation_date_sk;date_dim;d_date_sk;data;60;60;0.0;0;60;0;0;0.0;oui;relation vérifiée
+data;web_site;web_open_date_sk;date_dim;d_date_sk;data;30;30;0.0;0;30;0;0;0.0;oui;relation vérifiée
+data;store;s_closed_date_sk;date_dim;d_date_sk;data;12;12;0.0;0;12;0;0;0.0;oui;relation vérifiée
+data;store_returns;sr_ticket_number + sr_item_sk;store_sales;ss_ticket_number + ss_item_sk;data;37902;37902;0;0;;0;;0.0;oui (composite);relation vérifiée
+data_refresh;store_returns;sr_ticket_number + sr_item_sk;store_sales;ss_ticket_number + ss_item_sk;data + data_refresh;426;426;0;0;;407;;95.5399;oui (composite);relation partielle (orphelins)
+data;web_returns;wr_order_number + wr_item_sk;web_sales;ws_order_number + ws_item_sk;data;38487;38487;0;0;;0;;0.0;oui (composite);relation vérifiée
+data_refresh;web_returns;wr_order_number + wr_item_sk;web_sales;ws_order_number + ws_item_sk;data + data_refresh;400;400;0;0;;371;;92.75;oui (composite);relation partielle (orphelins)

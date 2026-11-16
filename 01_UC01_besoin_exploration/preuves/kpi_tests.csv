@@ -1,0 +1,21 @@
+kpi;canal;formule;valeur;unite;erreur
+Chiffre d'affaires;Magasin;SUM(ss_net_paid);1150529586.37;devise non précisée;
+Chiffre d'affaires;Web;SUM(ws_net_paid);1535374825.67;devise non précisée;
+Nombre de transactions;Magasin;COUNT(DISTINCT ss_ticket_number);89100;tickets;
+Nombre de transactions;Web;COUNT(DISTINCT ws_order_number);89100;commandes;
+Panier moyen;Magasin;SUM(ss_net_paid) / COUNT(DISTINCT ss_ticket_number);12912.79;devise / ticket;
+Panier moyen;Web;SUM(ws_net_paid) / COUNT(DISTINCT ws_order_number);17232.04;devise / commande;
+Quantités vendues;Magasin;SUM(ss_quantity);33755474.0;unités;
+Quantités vendues;Web;SUM(ws_quantity);33724378.0;unités;
+Taux de remise;Magasin;SUM(ss_ext_discount_amt) / SUM(ss_ext_list_price);49.99;%;
+Taux de remise;Web;SUM(ws_ext_discount_amt) / SUM(ws_ext_list_price);50.03;%;
+Marge nette;Magasin;SUM(ss_net_profit);-552553374.82;devise non précisée;
+Marge nette;Web;SUM(ws_net_profit);-168576494.45;devise non précisée;
+Taux de retour en quantité;Magasin;SUM(sr_return_quantity) / SUM(ss_quantity);2.88;%;
+Taux de retour en quantité;Web;SUM(wr_return_quantity) / SUM(ws_quantity);2.94;%;
+Montant retourné;Magasin;SUM(sr_return_amt);36688696.43;devise non précisée;
+Montant retourné;Web;SUM(wr_return_amt);50260175.31;devise non précisée;
+Stock moyen par relevé;Entrepôts;AVG(inv_quantity_on_hand);500.14;unités;
+Part des clics aboutissant à une commande;Web;COUNT(wcs_sales_sk) / COUNT(*);9.867;%;
+Note moyenne des avis;Web;AVG(pr_review_rating);4.24;note sur 5;
+Nombre de produits distincts vendus;Magasin;COUNT(DISTINCT ss_item_sk);17820;produits;

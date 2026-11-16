@@ -1,0 +1,15 @@
+source;table;colonne_date;date_min;date_max;jours_distincts
+data;store_sales;ss_sold_date_sk;2001-01-01;2005-12-13;1808
+data_refresh;store_sales;ss_sold_date_sk;2005-12-13;2005-12-31;19
+data;web_sales;ws_sold_date_sk;2001-01-01;2005-12-13;1808
+data_refresh;web_sales;ws_sold_date_sk;2005-12-13;2005-12-31;19
+data;store_returns;sr_returned_date_sk;2001-01-25;2007-11-14;2221
+data_refresh;store_returns;sr_returned_date_sk;2001-08-24;2007-06-02;89
+data;web_returns;wr_returned_date_sk;2001-01-26;2008-03-18;2492
+data_refresh;web_returns;wr_returned_date_sk;2001-04-15;2007-12-15;365
+data;inventory;inv_date_sk;2001-01-01;2005-12-12;259
+data_refresh;inventory;inv_date_sk;2005-12-12;2005-12-26;3
+data;web_clickstreams;wcs_click_date_sk;2001-01-01;2005-12-13;1808
+data_refresh;web_clickstreams;wcs_click_date_sk;2005-12-13;2005-12-31;19
+data;product_reviews;pr_review_date;2001-01-01;2006-01-01;1827
+data_refresh;product_reviews;pr_review_date;2001-01-05;2006-01-01;720
