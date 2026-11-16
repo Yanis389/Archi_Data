@@ -22,7 +22,7 @@ dans DuckDB, puis écrit dans `--out` des preuves reproductibles :
 Les noms de colonnes viennent de `schemas.py` (statut « Déduit », voir ce fichier).
 
 Usage :
-    python scripts/profiler_tpcx_bb.py --data ../retail_project --out 01_UC01_besoin_exploration/preuves
+    python scripts/profiler_tpcx_bb.py --data <DATA> --out 01_UC01_besoin_exploration/preuves
 """
 from __future__ import annotations
 
