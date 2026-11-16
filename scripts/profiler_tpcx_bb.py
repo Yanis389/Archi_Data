@@ -280,6 +280,9 @@ def quality_checks(con) -> list[dict]:
         "Teste la cohérence interne des mesures avant d'agréger un chiffre d'affaires.")
     add(ss, "Lignes en perte (marge nette négative)", "observation",
         f"select count(*) filter (where {num('ss_net_profit')} < 0), count(*) from {ss}")
+    add(ss, "Prix de vente unitaire inférieur au coût d'achat unitaire", "observation",
+        f"select count(*) filter (where {num('ss_sales_price')} < {num('ss_wholesale_cost')}), count(*) from {ss}",
+        "Vente à perte sur la majorité des lignes : la marge calculée n'est pas exploitable.")
     add(ss, "Doublons sur (ticket, produit)", "anomalie",
         f"select count(*) - count(distinct (ss_ticket_number, ss_item_sk)), count(*) from {ss}",
         "Clé primaire composite candidate.")
@@ -297,6 +300,8 @@ def quality_checks(con) -> list[dict]:
         f"select count(*) filter (where {sk('ws_ship_date_sk')} < {sk('ws_sold_date_sk')}), count(*) from {ws}")
     add(ws, "Lignes en perte (marge nette négative)", "observation",
         f"select count(*) filter (where {num('ws_net_profit')} < 0), count(*) from {ws}")
+    add(ws, "Prix de vente unitaire inférieur au coût d'achat unitaire", "observation",
+        f"select count(*) filter (where {num('ws_sales_price')} < {num('ws_wholesale_cost')}), count(*) from {ws}")
     add(ws, "Doublons sur (commande, produit)", "anomalie",
         f"select count(*) - count(distinct (ws_order_number, ws_item_sk)), count(*) from {ws}")
     # -- retours
@@ -369,6 +374,18 @@ def quality_checks(con) -> list[dict]:
     # -- magasins / dates
     add("store", "Magasins fermés (s_closed_date_sk renseigné)", "observation",
         "select count(*) filter (where nullif(s_closed_date_sk,'') is not null), count(*) from store")
+    add("store", "Date de fermeture antérieure à l'ouverture (s_rec_start_date)", "anomalie",
+        "select count(*) filter (where try_cast(d.d_date as date) < try_cast(s.s_rec_start_date as date)), count(*) from store s "
+        "join date_dim d on d.d_date_sk = try_cast(nullif(s.s_closed_date_sk,'') as bigint)",
+        "Les dates de fermeture sont aléatoires (de 1917 à 2141) : ne pas les lire comme des fermetures réelles.")
+    add("store", "Date de fermeture postérieure à la fin des données (2005-12-31)", "observation",
+        "select count(*) filter (where try_cast(d.d_date as date) > date '2005-12-31'), count(*) from store s "
+        "join date_dim d on d.d_date_sk = try_cast(nullif(s.s_closed_date_sk,'') as bigint)")
+    add("inventory", "Produits de l'inventaire absents de item (data) mais présents dans item (data_refresh)", "anomalie",
+        "select count(*) filter (where i.i_item_sk is null and r.i_item_sk is not null), count(*) from inventory v "
+        "left join (select try_cast(i_item_sk as bigint) i_item_sk from item) i on i.i_item_sk = try_cast(v.inv_item_sk as bigint) "
+        "left join (select try_cast(i_item_sk as bigint) i_item_sk from item__refresh) r on r.i_item_sk = try_cast(v.inv_item_sk as bigint)",
+        "Le référentiel produit initial est incomplet : la jointure inventaire -> produit exige data_refresh/item.")
     add("date_dim", "Doublons sur d_date", "anomalie",
         "select count(*) - count(distinct d_date), count(*) from date_dim")
 

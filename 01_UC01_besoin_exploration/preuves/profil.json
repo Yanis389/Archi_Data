@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-11-16 12:51:53",
+ "genere_le": "2026-11-16 12:56:42",
  "duckdb": "2.0.0",
  "python": "3.13.1",
  "systeme": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
@@ -598,7 +598,7 @@
    "min": 0.0,
    "max": 98999.0,
    "longueur_max": 5,
-   "exemple": "4096",
+   "exemple": "14336",
    "role": "clé primaire (candidate)"
   },
   {
@@ -616,7 +616,7 @@
    "min": "AAAAAAAAAAAAAAAA",
    "max": "AAAAAAAAAAAAFQLR",
    "longueur_max": 16,
-   "exemple": "AAAAAAAAAAAAAGBO",
+   "exemple": "AAAAAAAAAAAAAVFK",
    "role": "attribut"
   },
   {
@@ -634,7 +634,7 @@
    "min": 18.0,
    "max": 1920796.0,
    "longueur_max": 7,
-   "exemple": "1755645",
+   "exemple": "722751",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -652,7 +652,7 @@
    "min": 0.0,
    "max": 7199.0,
    "longueur_max": 4,
-   "exemple": "4121",
+   "exemple": "3946",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -670,7 +670,7 @@
    "min": 0.0,
    "max": 49499.0,
    "longueur_max": 5,
-   "exemple": "27996",
+   "exemple": "20876",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -688,7 +688,7 @@
    "min": 3.0,
    "max": 109570.0,
    "longueur_max": 6,
-   "exemple": "15586",
+   "exemple": "65758",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -706,7 +706,7 @@
    "min": 1.0,
    "max": 109568.0,
    "longueur_max": 6,
-   "exemple": "49491",
+   "exemple": "4327",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -724,7 +724,7 @@
    "min": "Dr.",
    "max": "Sir",
    "longueur_max": 4,
-   "exemple": "Dr.",
+   "exemple": "Sir",
    "role": "attribut"
   },
   {
@@ -742,7 +742,7 @@
    "min": "Aaron",
    "max": "Zulma",
    "longueur_max": 11,
-   "exemple": "Ronald",
+   "exemple": "William",
    "role": "attribut"
   },
   {
@@ -760,7 +760,7 @@
    "min": "Aaron",
    "max": "Zuniga",
    "longueur_max": 13,
-   "exemple": "King",
+   "exemple": "Goodman",
    "role": "attribut"
   },
   {
@@ -796,7 +796,7 @@
    "min": 1.0,
    "max": 31.0,
    "longueur_max": 2,
-   "exemple": "16",
+   "exemple": "11",
    "role": "attribut"
   },
   {
@@ -814,7 +814,7 @@
    "min": 1.0,
    "max": 12.0,
    "longueur_max": 2,
-   "exemple": "11",
+   "exemple": "2",
    "role": "attribut"
   },
   {
@@ -832,7 +832,7 @@
    "min": 1924.0,
    "max": 1992.0,
    "longueur_max": 4,
-   "exemple": "1931",
+   "exemple": "1980",
    "role": "attribut"
   },
   {
@@ -850,7 +850,7 @@
    "min": "AFGHANISTAN",
    "max": "ZIMBABWE",
    "longueur_max": 20,
-   "exemple": "MALDIVES",
+   "exemple": "BOLIVIA",
    "role": "attribut"
   },
   {
@@ -868,7 +868,7 @@
    "min": "0",
    "max": "zzwNvcFMmc",
    "longueur_max": 13,
-   "exemple": "nCfRffTIyU",
+   "exemple": "Bsp",
    "role": "attribut"
   },
   {
@@ -886,7 +886,7 @@
    "min": "Aaron.Alexander@wildmail.com",
    "max": "Zulma.Meyer@rediffmail.com",
    "longueur_max": 41,
-   "exemple": "Ronald.King@hushmail.com",
+   "exemple": "William.Goodman@consultant.com",
    "role": "attribut"
   },
   {
@@ -904,7 +904,7 @@
    "min": "0",
    "max": "zzwy3",
    "longueur_max": 10,
-   "exemple": "9dG2a",
+   "exemple": "ZrNhmG",
    "role": "attribut"
   },
   {
@@ -922,7 +922,7 @@
    "min": 0.0,
    "max": 49499.0,
    "longueur_max": 5,
-   "exemple": "2048",
+   "exemple": "10240",
    "role": "clé primaire (candidate)"
   },
   {
@@ -940,7 +940,7 @@
    "min": "AAAAAAAAAAAAAAAA",
    "max": "AAAAAAAAAAAACVFV",
    "longueur_max": 16,
-   "exemple": "AAAAAAAAAAAAADAU",
+   "exemple": "AAAAAAAAAAAAAPDW",
    "role": "attribut"
   },
   {
@@ -958,7 +958,7 @@
    "min": 1.0,
    "max": 1000.0,
    "longueur_max": 4,
-   "exemple": "276",
+   "exemple": "441",
    "role": "attribut"
   },
   {
@@ -976,7 +976,7 @@
    "min": "10th",
    "max": "Woodland Woodland",
    "longueur_max": 21,
-   "exemple": "Cedar",
+   "exemple": "Lee Valley",
    "role": "attribut"
   },
   {
@@ -994,7 +994,7 @@
    "min": "Ave",
    "max": "Wy",
    "longueur_max": 9,
-   "exemple": "Ln",
+   "exemple": "Lane",
    "role": "attribut"
   },
   {
@@ -1012,7 +1012,7 @@
    "min": "0",
    "max": "zzqCbPS",
    "longueur_max": 10,
-   "exemple": "dLlVmaVHGz",
+   "exemple": "q7hcVhK",
    "role": "attribut"
   },
   {
@@ -1030,7 +1030,7 @@
    "min": "Aberdeen",
    "max": "Zion",
    "longueur_max": 20,
-   "exemple": "Church Hill",
+   "exemple": "Bennett",
    "role": "attribut"
   },
   {
@@ -1048,7 +1048,7 @@
    "min": "Abbeville County",
    "max": "Ziebach County",
    "longueur_max": 28,
-   "exemple": "Nobles County",
+   "exemple": "Marquette County",
    "role": "attribut"
   },
   {
@@ -1066,7 +1066,7 @@
    "min": "AK",
    "max": "WY",
    "longueur_max": 2,
-   "exemple": "MN",
+   "exemple": "MI",
    "role": "attribut"
   },
   {
@@ -1084,7 +1084,7 @@
    "min": 10002.0,
    "max": 99998.0,
    "longueur_max": 5,
-   "exemple": "68871",
+   "exemple": "98433",
    "role": "attribut"
   },
   {
@@ -1120,7 +1120,7 @@
    "min": -10.0,
    "max": -5.0,
    "longueur_max": 3,
-   "exemple": "-6",
+   "exemple": "-5",
    "role": "attribut"
   },
   {
@@ -1138,7 +1138,7 @@
    "min": "apartment",
    "max": "single family",
    "longueur_max": 13,
-   "exemple": "condo",
+   "exemple": "apartment",
    "role": "attribut"
   },
   {
@@ -1156,7 +1156,7 @@
    "min": 0.0,
    "max": 1920799.0,
    "longueur_max": 7,
-   "exemple": "14336",
+   "exemple": "2048",
    "role": "clé primaire (candidate)"
   },
   {
@@ -1192,7 +1192,7 @@
    "min": "D",
    "max": "W",
    "longueur_max": 1,
-   "exemple": "U",
+   "exemple": "S",
    "role": "attribut"
   },
   {
@@ -1210,7 +1210,7 @@
    "min": "2 yr Degree",
    "max": "Unknown",
    "longueur_max": 15,
-   "exemple": "4 yr Degree",
+   "exemple": "Primary",
    "role": "attribut"
   },
   {
@@ -1228,7 +1228,7 @@
    "min": 500.0,
    "max": 10000.0,
    "longueur_max": 5,
-   "exemple": "9000",
+   "exemple": "3500",
    "role": "attribut"
   },
   {
@@ -1264,7 +1264,7 @@
    "min": 0.0,
    "max": 9.0,
    "longueur_max": 1,
-   "exemple": "1",
+   "exemple": "5",
    "role": "attribut"
   },
   {
@@ -1318,7 +1318,7 @@
    "min": 0.0,
    "max": 7199.0,
    "longueur_max": 4,
-   "exemple": "0",
+   "exemple": "6144",
    "role": "clé primaire (candidate)"
   },
   {
@@ -1336,7 +1336,7 @@
    "min": 0.0,
    "max": 19.0,
    "longueur_max": 2,
-   "exemple": "3",
+   "exemple": "5",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -1372,7 +1372,7 @@
    "min": 0.0,
    "max": 9.0,
    "longueur_max": 1,
-   "exemple": "0",
+   "exemple": "6",
    "role": "attribut"
   },
   {
@@ -1390,7 +1390,7 @@
    "min": -1.0,
    "max": 4.0,
    "longueur_max": 2,
-   "exemple": "0",
+   "exemple": "3",
    "role": "attribut"
   },
   {
@@ -1462,7 +1462,7 @@
    "min": 0.0,
    "max": 109572.0,
    "longueur_max": 6,
-   "exemple": "4096",
+   "exemple": "26624",
    "role": "clé primaire (candidate)"
   },
   {
@@ -1480,7 +1480,7 @@
    "min": "AAAAAAAAAAAAAAAA",
    "max": "AAAAAAAAAAAAGGCI",
    "longueur_max": 16,
-   "exemple": "AAAAAAAAAAAAAGBO",
+   "exemple": "AAAAAAAAAAAABNKA",
    "role": "attribut"
   },
   {
@@ -1498,7 +1498,7 @@
    "min": "1900-01-01",
    "max": "2199-12-31",
    "longueur_max": 10,
-   "exemple": "1911-03-21",
+   "exemple": "1972-11-23",
    "role": "attribut"
   },
   {
@@ -1516,7 +1516,7 @@
    "min": 0.0,
    "max": 3599.0,
    "longueur_max": 4,
-   "exemple": "134",
+   "exemple": "874",
    "role": "attribut"
   },
   {
@@ -1534,7 +1534,7 @@
    "min": 0.0,
    "max": 15653.0,
    "longueur_max": 5,
-   "exemple": "585",
+   "exemple": "3803",
    "role": "attribut"
   },
   {
@@ -1552,7 +1552,7 @@
    "min": 0.0,
    "max": 1199.0,
    "longueur_max": 4,
-   "exemple": "44",
+   "exemple": "291",
    "role": "attribut"
   },
   {
@@ -1570,7 +1570,7 @@
    "min": 1900.0,
    "max": 2199.0,
    "longueur_max": 4,
-   "exemple": "1911",
+   "exemple": "1972",
    "role": "attribut"
   },
   {
@@ -1588,7 +1588,7 @@
    "min": 1.0,
    "max": 7.0,
    "longueur_max": 1,
-   "exemple": "2",
+   "exemple": "4",
    "role": "attribut"
   },
   {
@@ -1606,7 +1606,7 @@
    "min": 1.0,
    "max": 12.0,
    "longueur_max": 2,
-   "exemple": "3",
+   "exemple": "11",
    "role": "attribut"
   },
   {
@@ -1624,7 +1624,7 @@
    "min": 1.0,
    "max": 31.0,
    "longueur_max": 2,
-   "exemple": "21",
+   "exemple": "23",
    "role": "attribut"
   },
   {
@@ -1642,7 +1642,7 @@
    "min": 1.0,
    "max": 4.0,
    "longueur_max": 1,
-   "exemple": "1",
+   "exemple": "4",
    "role": "attribut"
   },
   {
@@ -1660,7 +1660,7 @@
    "min": 1900.0,
    "max": 2199.0,
    "longueur_max": 4,
-   "exemple": "1911",
+   "exemple": "1972",
    "role": "attribut"
   },
   {
@@ -1678,7 +1678,7 @@
    "min": 0.0,
    "max": 1199.0,
    "longueur_max": 4,
-   "exemple": "44",
+   "exemple": "291",
    "role": "attribut"
   },
   {
@@ -1696,7 +1696,7 @@
    "min": 0.0,
    "max": 15653.0,
    "longueur_max": 5,
-   "exemple": "585",
+   "exemple": "3803",
    "role": "attribut"
   },
   {
@@ -1714,7 +1714,7 @@
    "min": "Friday",
    "max": "Wednesday",
    "longueur_max": 9,
-   "exemple": "Tuesday",
+   "exemple": "Thursday",
    "role": "attribut"
   },
   {
@@ -1732,7 +1732,7 @@
    "min": "1900Q1",
    "max": "2199Q4",
    "longueur_max": 6,
-   "exemple": "1911Q1",
+   "exemple": "1972Q4",
    "role": "attribut"
   },
   {
@@ -1786,7 +1786,7 @@
    "min": "N",
    "max": "Y",
    "longueur_max": 1,
-   "exemple": "Y",
+   "exemple": "N",
    "role": "attribut"
   },
   {
@@ -1804,7 +1804,7 @@
    "min": 2415021.0,
    "max": 2488069.0,
    "longueur_max": 7,
-   "exemple": "2455417",
+   "exemple": "2458551",
    "role": "attribut"
   },
   {
@@ -1822,7 +1822,7 @@
    "min": 2415020.0,
    "max": 2488370.0,
    "longueur_max": 7,
-   "exemple": "2474104",
+   "exemple": "2444723",
    "role": "attribut"
   },
   {
@@ -1840,7 +1840,7 @@
    "min": 2414657.0,
    "max": 2487705.0,
    "longueur_max": 7,
-   "exemple": "2425604",
+   "exemple": "2461325",
    "role": "attribut"
   },
   {
@@ -1858,7 +1858,7 @@
    "min": 2414930.0,
    "max": 2487977.0,
    "longueur_max": 7,
-   "exemple": "2470594",
+   "exemple": "2442263",
    "role": "attribut"
   },
   {
@@ -1966,7 +1966,7 @@
    "min": 0.0,
    "max": 86399.0,
    "longueur_max": 5,
-   "exemple": "20480",
+   "exemple": "4096",
    "role": "clé primaire (candidate)"
   },
   {
@@ -1984,7 +1984,7 @@
    "min": "AAAAAAAAAAAAAAAA",
    "max": "AAAAAAAAAAAAEXVB",
    "longueur_max": 16,
-   "exemple": "AAAAAAAAAAAABEHS",
+   "exemple": "AAAAAAAAAAAAAGBO",
    "role": "attribut"
   },
   {
@@ -2002,7 +2002,7 @@
    "min": 0.0,
    "max": 86399.0,
    "longueur_max": 5,
-   "exemple": "20480",
+   "exemple": "4096",
    "role": "attribut"
   },
   {
@@ -2020,7 +2020,7 @@
    "min": 0.0,
    "max": 23.0,
    "longueur_max": 2,
-   "exemple": "5",
+   "exemple": "1",
    "role": "attribut"
   },
   {
@@ -2038,7 +2038,7 @@
    "min": 0.0,
    "max": 59.0,
    "longueur_max": 2,
-   "exemple": "41",
+   "exemple": "8",
    "role": "attribut"
   },
   {
@@ -2056,7 +2056,7 @@
    "min": 0.0,
    "max": 59.0,
    "longueur_max": 2,
-   "exemple": "20",
+   "exemple": "16",
    "role": "attribut"
   },
   {
@@ -2128,7 +2128,7 @@
    "min": "breakfast",
    "max": "lunch",
    "longueur_max": 9,
-   "exemple": "breakfast",
+   "exemple": "dinner",
    "role": "attribut"
   },
   {
@@ -2146,7 +2146,7 @@
    "min": 0.0,
    "max": 17819.0,
    "longueur_max": 5,
-   "exemple": "2048",
+   "exemple": "0",
    "role": "clé primaire (candidate)"
   },
   {
@@ -2164,7 +2164,7 @@
    "min": "AAAAAAAAAAAAAAAA",
    "max": "AAAAAAAAAAAABAJJ",
    "longueur_max": 16,
-   "exemple": "AAAAAAAAAAAAADAU",
+   "exemple": "AAAAAAAAAAAAAAAA",
    "role": "attribut"
   },
   {
@@ -2182,7 +2182,7 @@
    "min": "2000-01-03",
    "max": "2000-12-31",
    "longueur_max": 10,
-   "exemple": "2000-01-24",
+   "exemple": "2000-01-14",
    "role": "attribut"
   },
   {
@@ -2218,7 +2218,7 @@
    "min": "Tiresias' about the thin bold frets s...",
    "max": "waters without the doggedly bold brai...",
    "longueur_max": 200,
-   "exemple": "patterns cajole! dolphins at the furious permanent orbits...",
+   "exemple": "quickly even dinos beneath the frays must have to boost b...",
    "role": "attribut"
   },
   {
@@ -2236,7 +2236,7 @@
    "min": 0.1,
    "max": 99.98,
    "longueur_max": 5,
-   "exemple": "19.81",
+   "exemple": "72.29",
    "role": "attribut"
   },
   {
@@ -2254,7 +2254,7 @@
    "min": 0.02,
    "max": 87.35,
    "longueur_max": 5,
-   "exemple": "8.38",
+   "exemple": "64.96",
    "role": "attribut"
   },
   {
@@ -2272,7 +2272,7 @@
    "min": 1001703.0,
    "max": 10015586.0,
    "longueur_max": 8,
-   "exemple": "2306822",
+   "exemple": "3898712",
    "role": "attribut"
   },
   {
@@ -2290,7 +2290,7 @@
    "min": "0",
    "max": "zzjGgUYcbAv5",
    "longueur_max": 50,
-   "exemple": "gOr2P5zO0V5ueZGZNgxbq",
+   "exemple": "71TS7NSbvH1YbdiQMG6ttBHKAljiNoIRB",
    "role": "attribut"
   },
   {
@@ -2326,7 +2326,7 @@
    "min": "Accessories",
    "max": "World Music",
    "longueur_max": 26,
-   "exemple": "Men",
+   "exemple": "Fan Shop",
    "role": "attribut"
   },
   {
@@ -2344,7 +2344,7 @@
    "min": 1.0,
    "max": 9.0,
    "longueur_max": 1,
-   "exemple": "4",
+   "exemple": "9",
    "role": "attribut"
   },
   {
@@ -2362,7 +2362,7 @@
    "min": "Books",
    "max": "Toys & Games",
    "longueur_max": 24,
-   "exemple": "Clothing & Accessories",
+   "exemple": "Sports & Outdoors",
    "role": "attribut"
   },
   {
@@ -2380,7 +2380,7 @@
    "min": 1.0,
    "max": 1000.0,
    "longueur_max": 4,
-   "exemple": "534",
+   "exemple": "995",
    "role": "attribut"
   },
   {
@@ -2398,7 +2398,7 @@
    "min": "0",
    "max": "zzgZWXS8l9",
    "longueur_max": 50,
-   "exemple": "NDb8cuI",
+   "exemple": "2VOxvrIWwlJQTSk6",
    "role": "attribut"
   },
   {
@@ -2416,7 +2416,7 @@
    "min": "N/A",
    "max": "small",
    "longueur_max": 11,
-   "exemple": "large",
+   "exemple": "small",
    "role": "attribut"
   },
   {
@@ -2434,7 +2434,7 @@
    "min": "0",
    "max": "zzgcmuIaN7RYM7l0",
    "longueur_max": 20,
-   "exemple": "9XrL",
+   "exemple": "99Ee1r6uFbZSSClAX3",
    "role": "attribut"
   },
   {
@@ -2452,7 +2452,7 @@
    "min": "almond",
    "max": "yellow",
    "longueur_max": 10,
-   "exemple": "cornflower",
+   "exemple": "dodger",
    "role": "attribut"
   },
   {
@@ -2470,7 +2470,7 @@
    "min": "Box",
    "max": "Unknown",
    "longueur_max": 7,
-   "exemple": "Each",
+   "exemple": "Oz",
    "role": "attribut"
   },
   {
@@ -2506,7 +2506,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 3,
-   "exemple": "36",
+   "exemple": "18",
    "role": "attribut"
   },
   {
@@ -2524,7 +2524,7 @@
    "min": "007opddaOvFJaNhIv3bJnnaQdVzksWzjR8mmNdV",
    "max": "zzpaKRcbmMb3ZS29lmbJ",
    "longueur_max": 50,
-   "exemple": "a8q131EOqcuxN30E",
+   "exemple": "8m9n5Q7T33DNWidoA6nWlg6ydmpA1SKOoOJLXiLVb",
    "role": "attribut"
   },
   {
@@ -2542,7 +2542,7 @@
    "min": 0.0,
    "max": 89099.0,
    "longueur_max": 5,
-   "exemple": "10240",
+   "exemple": "0",
    "role": "clé primaire (candidate)"
   },
   {
@@ -2560,7 +2560,7 @@
    "min": 0.0,
    "max": 17819.0,
    "longueur_max": 5,
-   "exemple": "43",
+   "exemple": "5810",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -2578,7 +2578,7 @@
    "min": "AAAAAAAAAAAAAAAB",
    "max": "AAAAAAAAAAAAABMM",
    "longueur_max": 16,
-   "exemple": "AAAAAAAAAAAAAAHY",
+   "exemple": "AAAAAAAAAAAAAANN",
    "role": "attribut"
   },
   {
@@ -2596,7 +2596,7 @@
    "min": 0.09,
    "max": 99.98,
    "longueur_max": 5,
-   "exemple": "38.49",
+   "exemple": "95.41",
    "role": "attribut"
   },
   {
@@ -2614,7 +2614,7 @@
    "min": 36890.0,
    "max": 38697.0,
    "longueur_max": 5,
-   "exemple": "37097",
+   "exemple": "36890",
    "role": "attribut"
   },
   {
@@ -2632,7 +2632,7 @@
    "min": 36897.0,
    "max": 38717.0,
    "longueur_max": 5,
-   "exemple": "38025",
+   "exemple": "38405",
    "role": "attribut"
   },
   {
@@ -3946,7 +3946,7 @@
    "min": 0.0,
    "max": 17999.0,
    "longueur_max": 5,
-   "exemple": "12288",
+   "exemple": "12720",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -3964,7 +3964,7 @@
    "min": 0.0,
    "max": 4.0,
    "longueur_max": 1,
-   "exemple": "0",
+   "exemple": "1",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -3982,7 +3982,7 @@
    "min": 0.0,
    "max": 1000.0,
    "longueur_max": 4,
-   "exemple": "39",
+   "exemple": "567",
    "role": "attribut"
   },
   {
@@ -4000,7 +4000,7 @@
    "min": 36890.0,
    "max": 38697.0,
    "longueur_max": 5,
-   "exemple": "36917",
+   "exemple": "36950",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4018,7 +4018,7 @@
    "min": 0.0,
    "max": 86399.0,
    "longueur_max": 5,
-   "exemple": "85047",
+   "exemple": "59297",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4036,7 +4036,7 @@
    "min": 0.0,
    "max": 17819.0,
    "longueur_max": 5,
-   "exemple": "14519",
+   "exemple": "6655",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -4054,7 +4054,7 @@
    "min": 2.0,
    "max": 98999.0,
    "longueur_max": 5,
-   "exemple": "75364",
+   "exemple": "52782",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4072,7 +4072,7 @@
    "min": 18.0,
    "max": 1920742.0,
    "longueur_max": 7,
-   "exemple": "1079941",
+   "exemple": "1555411",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4090,7 +4090,7 @@
    "min": 0.0,
    "max": 7199.0,
    "longueur_max": 4,
-   "exemple": "6405",
+   "exemple": "2370",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4108,7 +4108,7 @@
    "min": 0.0,
    "max": 49499.0,
    "longueur_max": 5,
-   "exemple": "22538",
+   "exemple": "26965",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4126,7 +4126,7 @@
    "min": 0.0,
    "max": 11.0,
    "longueur_max": 2,
-   "exemple": "9",
+   "exemple": "3",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4144,7 +4144,7 @@
    "min": 0.0,
    "max": 299.0,
    "longueur_max": 3,
-   "exemple": "290",
+   "exemple": "234",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4162,7 +4162,7 @@
    "min": 0.0,
    "max": 89099.0,
    "longueur_max": 5,
-   "exemple": "1377",
+   "exemple": "2998",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -4180,7 +4180,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 3,
-   "exemple": "46",
+   "exemple": "88",
    "role": "attribut"
   },
   {
@@ -4198,7 +4198,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 6,
-   "exemple": "92.30",
+   "exemple": "92.36",
    "role": "attribut"
   },
   {
@@ -4216,7 +4216,7 @@
    "min": 1.0,
    "max": 200.0,
    "longueur_max": 6,
-   "exemple": "115.38",
+   "exemple": "139.46",
    "role": "attribut"
   },
   {
@@ -4234,7 +4234,7 @@
    "min": 0.0,
    "max": 199.3,
    "longueur_max": 6,
-   "exemple": "21.92",
+   "exemple": "73.91",
    "role": "attribut"
   },
   {
@@ -4252,7 +4252,7 @@
    "min": 0.0,
    "max": 18984.0,
    "longueur_max": 8,
-   "exemple": "4299.16",
+   "exemple": "5768.40",
    "role": "attribut"
   },
   {
@@ -4270,7 +4270,7 @@
    "min": 0.0,
    "max": 18745.0,
    "longueur_max": 8,
-   "exemple": "1008.32",
+   "exemple": "6504.08",
    "role": "attribut"
   },
   {
@@ -4288,7 +4288,7 @@
    "min": 1.0,
    "max": 9997.0,
    "longueur_max": 7,
-   "exemple": "4245.80",
+   "exemple": "8127.68",
    "role": "attribut"
   },
   {
@@ -4306,7 +4306,7 @@
    "min": 1.2,
    "max": 19814.0,
    "longueur_max": 8,
-   "exemple": "5307.48",
+   "exemple": "12272.48",
    "role": "attribut"
   },
   {
@@ -4324,7 +4324,7 @@
    "min": 0.0,
    "max": 1637.8,
    "longueur_max": 7,
-   "exemple": "70.58",
+   "exemple": "455.29",
    "role": "attribut"
   },
   {
@@ -4360,7 +4360,7 @@
    "min": 0.0,
    "max": 18745.0,
    "longueur_max": 8,
-   "exemple": "1008.32",
+   "exemple": "6504.08",
    "role": "attribut"
   },
   {
@@ -4378,7 +4378,7 @@
    "min": 0.0,
    "max": 19869.7,
    "longueur_max": 8,
-   "exemple": "1078.90",
+   "exemple": "6959.37",
    "role": "attribut"
   },
   {
@@ -4396,7 +4396,7 @@
    "min": -9866.6,
    "max": 9134.0,
    "longueur_max": 8,
-   "exemple": "-3237.48",
+   "exemple": "-1623.60",
    "role": "attribut"
   },
   {
@@ -4414,7 +4414,7 @@
    "min": 36914.0,
    "max": 39398.0,
    "longueur_max": 5,
-   "exemple": "37220",
+   "exemple": "38665",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4432,7 +4432,7 @@
    "min": 2.0,
    "max": 86399.0,
    "longueur_max": 5,
-   "exemple": "20171",
+   "exemple": "38795",
    "role": "attribut"
   },
   {
@@ -4450,7 +4450,7 @@
    "min": 0.0,
    "max": 17819.0,
    "longueur_max": 5,
-   "exemple": "657",
+   "exemple": "14407",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -4468,7 +4468,7 @@
    "min": 2.0,
    "max": 98991.0,
    "longueur_max": 5,
-   "exemple": "62112",
+   "exemple": "94281",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4486,7 +4486,7 @@
    "min": 226.0,
    "max": 1920352.0,
    "longueur_max": 7,
-   "exemple": "590085",
+   "exemple": "722566",
    "role": "attribut"
   },
   {
@@ -4504,7 +4504,7 @@
    "min": 1.0,
    "max": 7197.0,
    "longueur_max": 4,
-   "exemple": "5399",
+   "exemple": "2517",
    "role": "attribut"
   },
   {
@@ -4522,7 +4522,7 @@
    "min": 8.0,
    "max": 49493.0,
    "longueur_max": 5,
-   "exemple": "31442",
+   "exemple": "4023",
    "role": "attribut"
   },
   {
@@ -4540,7 +4540,7 @@
    "min": 0.0,
    "max": 11.0,
    "longueur_max": 2,
-   "exemple": "5",
+   "exemple": "11",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4558,7 +4558,7 @@
    "min": 0.0,
    "max": 34.0,
    "longueur_max": 2,
-   "exemple": "19",
+   "exemple": "20",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4576,7 +4576,7 @@
    "min": 7.0,
    "max": 89096.0,
    "longueur_max": 5,
-   "exemple": "12605",
+   "exemple": "67978",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -4594,7 +4594,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 3,
-   "exemple": "17",
+   "exemple": "35",
    "role": "attribut"
   },
   {
@@ -4612,7 +4612,7 @@
    "min": 0.0,
    "max": 15441.3,
    "longueur_max": 8,
-   "exemple": "364.99",
+   "exemple": "2374.75",
    "role": "attribut"
   },
   {
@@ -4630,7 +4630,7 @@
    "min": 0.0,
    "max": 1159.19,
    "longueur_max": 7,
-   "exemple": "3.65",
+   "exemple": "23.75",
    "role": "attribut"
   },
   {
@@ -4648,7 +4648,7 @@
    "min": 0.0,
    "max": 16522.19,
    "longueur_max": 8,
-   "exemple": "368.64",
+   "exemple": "2398.50",
    "role": "attribut"
   },
   {
@@ -4666,7 +4666,7 @@
    "min": 0.5,
    "max": 100.0,
    "longueur_max": 6,
-   "exemple": "87.40",
+   "exemple": "63.22",
    "role": "attribut"
   },
   {
@@ -4684,7 +4684,7 @@
    "min": 0.0,
    "max": 15089.41,
    "longueur_max": 8,
-   "exemple": "48.65",
+   "exemple": "3799.82",
    "role": "attribut"
   },
   {
@@ -4702,7 +4702,7 @@
    "min": 0.0,
    "max": 12818.84,
    "longueur_max": 8,
-   "exemple": "335.79",
+   "exemple": "1021.14",
    "role": "attribut"
   },
   {
@@ -4720,7 +4720,7 @@
    "min": 0.0,
    "max": 7473.37,
    "longueur_max": 7,
-   "exemple": "23.36",
+   "exemple": "27.07",
    "role": "attribut"
   },
   {
@@ -4738,7 +4738,7 @@
    "min": 0.0,
    "max": 8846.21,
    "longueur_max": 7,
-   "exemple": "5.84",
+   "exemple": "1326.54",
    "role": "attribut"
   },
   {
@@ -4756,7 +4756,7 @@
    "min": 0.0,
    "max": 15089.41,
    "longueur_max": 8,
-   "exemple": "55.95",
+   "exemple": "3847.32",
    "role": "attribut"
   },
   {
@@ -4774,7 +4774,7 @@
    "min": 36890.0,
    "max": 38697.0,
    "longueur_max": 5,
-   "exemple": "36928",
+   "exemple": "36890",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4792,7 +4792,7 @@
    "min": 0.0,
    "max": 86398.0,
    "longueur_max": 5,
-   "exemple": "60402",
+   "exemple": "26789",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4810,7 +4810,7 @@
    "min": 36891.0,
    "max": 38817.0,
    "longueur_max": 5,
-   "exemple": "37001",
+   "exemple": "36993",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4828,7 +4828,7 @@
    "min": 0.0,
    "max": 17819.0,
    "longueur_max": 5,
-   "exemple": "9606",
+   "exemple": "794",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -4846,7 +4846,7 @@
    "min": 2.0,
    "max": 98998.0,
    "longueur_max": 5,
-   "exemple": "32603",
+   "exemple": "85457",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4864,7 +4864,7 @@
    "min": 18.0,
    "max": 1920793.0,
    "longueur_max": 7,
-   "exemple": "60949",
+   "exemple": "380790",
    "role": "attribut"
   },
   {
@@ -4882,7 +4882,7 @@
    "min": 0.0,
    "max": 7199.0,
    "longueur_max": 4,
-   "exemple": "1036",
+   "exemple": "2436",
    "role": "attribut"
   },
   {
@@ -4900,7 +4900,7 @@
    "min": 0.0,
    "max": 49499.0,
    "longueur_max": 5,
-   "exemple": "41170",
+   "exemple": "42649",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4918,7 +4918,7 @@
    "min": 2.0,
    "max": 98998.0,
    "longueur_max": 5,
-   "exemple": "32603",
+   "exemple": "29934",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -4936,7 +4936,7 @@
    "min": 18.0,
    "max": 1920793.0,
    "longueur_max": 7,
-   "exemple": "60949",
+   "exemple": "1583844",
    "role": "attribut"
   },
   {
@@ -4954,7 +4954,7 @@
    "min": 0.0,
    "max": 7199.0,
    "longueur_max": 4,
-   "exemple": "1036",
+   "exemple": "5251",
    "role": "attribut"
   },
   {
@@ -4972,7 +4972,7 @@
    "min": 0.0,
    "max": 49499.0,
    "longueur_max": 5,
-   "exemple": "41170",
+   "exemple": "525",
    "role": "attribut"
   },
   {
@@ -4990,7 +4990,7 @@
    "min": 0.0,
    "max": 59.0,
    "longueur_max": 2,
-   "exemple": "23",
+   "exemple": "2",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5008,7 +5008,7 @@
    "min": 0.0,
    "max": 29.0,
    "longueur_max": 2,
-   "exemple": "7",
+   "exemple": "14",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5062,7 +5062,7 @@
    "min": 0.0,
    "max": 299.0,
    "longueur_max": 3,
-   "exemple": "269",
+   "exemple": "120",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5080,7 +5080,7 @@
    "min": 0.0,
    "max": 89099.0,
    "longueur_max": 5,
-   "exemple": "1899",
+   "exemple": "0",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -5098,7 +5098,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 3,
-   "exemple": "18",
+   "exemple": "93",
    "role": "attribut"
   },
   {
@@ -5116,7 +5116,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 6,
-   "exemple": "60.73",
+   "exemple": "32.62",
    "role": "attribut"
   },
   {
@@ -5134,7 +5134,7 @@
    "min": 1.03,
    "max": 299.82,
    "longueur_max": 6,
-   "exemple": "172.47",
+   "exemple": "81.22",
    "role": "attribut"
   },
   {
@@ -5152,7 +5152,7 @@
    "min": 0.0,
    "max": 299.67,
    "longueur_max": 6,
-   "exemple": "144.87",
+   "exemple": "59.29",
    "role": "attribut"
   },
   {
@@ -5170,7 +5170,7 @@
    "min": 0.0,
    "max": 29682.18,
    "longueur_max": 8,
-   "exemple": "496.80",
+   "exemple": "2039.49",
    "role": "attribut"
   },
   {
@@ -5188,7 +5188,7 @@
    "min": 0.0,
    "max": 28808.01,
    "longueur_max": 8,
-   "exemple": "2607.66",
+   "exemple": "5513.97",
    "role": "attribut"
   },
   {
@@ -5206,7 +5206,7 @@
    "min": 1.01,
    "max": 9998.0,
    "longueur_max": 7,
-   "exemple": "1093.14",
+   "exemple": "3033.66",
    "role": "attribut"
   },
   {
@@ -5224,7 +5224,7 @@
    "min": 1.28,
    "max": 29858.0,
    "longueur_max": 8,
-   "exemple": "3104.46",
+   "exemple": "7553.46",
    "role": "attribut"
   },
   {
@@ -5242,7 +5242,7 @@
    "min": 0.0,
    "max": 2421.72,
    "longueur_max": 7,
-   "exemple": "130.38",
+   "exemple": "330.84",
    "role": "attribut"
   },
   {
@@ -5278,7 +5278,7 @@
    "min": 0.0,
    "max": 14216.37,
    "longueur_max": 8,
-   "exemple": "1303.87",
+   "exemple": "1661.76",
    "role": "attribut"
   },
   {
@@ -5296,7 +5296,7 @@
    "min": 0.0,
    "max": 28808.01,
    "longueur_max": 8,
-   "exemple": "2607.66",
+   "exemple": "5513.97",
    "role": "attribut"
   },
   {
@@ -5314,7 +5314,7 @@
    "min": 0.0,
    "max": 30248.41,
    "longueur_max": 8,
-   "exemple": "2738.04",
+   "exemple": "5844.81",
    "role": "attribut"
   },
   {
@@ -5332,7 +5332,7 @@
    "min": 0.0,
    "max": 38975.5,
    "longueur_max": 8,
-   "exemple": "3911.53",
+   "exemple": "7175.73",
    "role": "attribut"
   },
   {
@@ -5350,7 +5350,7 @@
    "min": 0.0,
    "max": 41246.72,
    "longueur_max": 8,
-   "exemple": "4041.91",
+   "exemple": "7506.57",
    "role": "attribut"
   },
   {
@@ -5368,7 +5368,7 @@
    "min": -9894.06,
    "max": 18977.31,
    "longueur_max": 8,
-   "exemple": "1514.52",
+   "exemple": "2480.31",
    "role": "attribut"
   },
   {
@@ -5386,7 +5386,7 @@
    "min": 36915.0,
    "max": 39523.0,
    "longueur_max": 5,
-   "exemple": "37713",
+   "exemple": "38952",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5404,7 +5404,7 @@
    "min": 0.0,
    "max": 86393.0,
    "longueur_max": 5,
-   "exemple": "77591",
+   "exemple": "68126",
    "role": "attribut"
   },
   {
@@ -5422,7 +5422,7 @@
    "min": 1.0,
    "max": 17818.0,
    "longueur_max": 5,
-   "exemple": "13995",
+   "exemple": "9590",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -5440,7 +5440,7 @@
    "min": 2.0,
    "max": 98989.0,
    "longueur_max": 5,
-   "exemple": "71334",
+   "exemple": "52948",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5458,7 +5458,7 @@
    "min": 226.0,
    "max": 1920652.0,
    "longueur_max": 7,
-   "exemple": "941681",
+   "exemple": "893223",
    "role": "attribut"
   },
   {
@@ -5476,7 +5476,7 @@
    "min": 1.0,
    "max": 7196.0,
    "longueur_max": 4,
-   "exemple": "3394",
+   "exemple": "2020",
    "role": "attribut"
   },
   {
@@ -5494,7 +5494,7 @@
    "min": 9.0,
    "max": 49499.0,
    "longueur_max": 5,
-   "exemple": "5283",
+   "exemple": "6942",
    "role": "attribut"
   },
   {
@@ -5512,7 +5512,7 @@
    "min": 2.0,
    "max": 98989.0,
    "longueur_max": 5,
-   "exemple": "71334",
+   "exemple": "52948",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5530,7 +5530,7 @@
    "min": 226.0,
    "max": 1920652.0,
    "longueur_max": 7,
-   "exemple": "941681",
+   "exemple": "893223",
    "role": "attribut"
   },
   {
@@ -5548,7 +5548,7 @@
    "min": 1.0,
    "max": 7196.0,
    "longueur_max": 4,
-   "exemple": "3394",
+   "exemple": "2020",
    "role": "attribut"
   },
   {
@@ -5566,7 +5566,7 @@
    "min": 9.0,
    "max": 49499.0,
    "longueur_max": 5,
-   "exemple": "5283",
+   "exemple": "6942",
    "role": "attribut"
   },
   {
@@ -5584,7 +5584,7 @@
    "min": 0.0,
    "max": 59.0,
    "longueur_max": 2,
-   "exemple": "10",
+   "exemple": "32",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5602,7 +5602,7 @@
    "min": 0.0,
    "max": 34.0,
    "longueur_max": 2,
-   "exemple": "26",
+   "exemple": "13",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -5620,7 +5620,7 @@
    "min": 6.0,
    "max": 89092.0,
    "longueur_max": 5,
-   "exemple": "33699",
+   "exemple": "63444",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -5638,7 +5638,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 3,
-   "exemple": "48",
+   "exemple": "33",
    "role": "attribut"
   },
   {
@@ -5656,7 +5656,7 @@
    "min": 0.0,
    "max": 21944.16,
    "longueur_max": 8,
-   "exemple": "1021.92",
+   "exemple": "626.01",
    "role": "attribut"
   },
   {
@@ -5674,7 +5674,7 @@
    "min": 0.0,
    "max": 1603.38,
    "longueur_max": 7,
-   "exemple": "20.44",
+   "exemple": "25.04",
    "role": "attribut"
   },
   {
@@ -5692,7 +5692,7 @@
    "min": 0.0,
    "max": 23041.37,
    "longueur_max": 8,
-   "exemple": "1042.36",
+   "exemple": "651.05",
    "role": "attribut"
   },
   {
@@ -5710,7 +5710,7 @@
    "min": 0.5,
    "max": 100.0,
    "longueur_max": 6,
-   "exemple": "91.63",
+   "exemple": "18.74",
    "role": "attribut"
   },
   {
@@ -5728,7 +5728,7 @@
    "min": 0.0,
    "max": 22251.64,
    "longueur_max": 8,
-   "exemple": "1501.29",
+   "exemple": "958.40",
    "role": "attribut"
   },
   {
@@ -5746,7 +5746,7 @@
    "min": 0.0,
    "max": 17605.44,
    "longueur_max": 8,
-   "exemple": "981.04",
+   "exemple": "244.14",
    "role": "attribut"
   },
   {
@@ -5764,7 +5764,7 @@
    "min": 0.0,
    "max": 13448.48,
    "longueur_max": 8,
-   "exemple": "22.48",
+   "exemple": "286.40",
    "role": "attribut"
   },
   {
@@ -5782,7 +5782,7 @@
    "min": 0.0,
    "max": 14338.32,
    "longueur_max": 8,
-   "exemple": "18.40",
+   "exemple": "95.47",
    "role": "attribut"
   },
   {
@@ -5800,7 +5800,7 @@
    "min": 0.0,
    "max": 23511.98,
    "longueur_max": 8,
-   "exemple": "1542.17",
+   "exemple": "1008.48",
    "role": "attribut"
   },
   {
@@ -6538,7 +6538,7 @@
    "min": 36890.0,
    "max": 38697.0,
    "longueur_max": 5,
-   "exemple": "36893",
+   "exemple": "36896",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6556,7 +6556,7 @@
    "min": 0.0,
    "max": 86399.0,
    "longueur_max": 5,
-   "exemple": "24508",
+   "exemple": "17154",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6574,7 +6574,7 @@
    "min": 0.0,
    "max": 89099.0,
    "longueur_max": 5,
-   "exemple": "163",
+   "exemple": "298",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6592,7 +6592,7 @@
    "min": 0.0,
    "max": 17819.0,
    "longueur_max": 5,
-   "exemple": "16575",
+   "exemple": "200",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6610,7 +6610,7 @@
    "min": 0.0,
    "max": 59.0,
    "longueur_max": 2,
-   "exemple": "13",
+   "exemple": "54",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6628,7 +6628,7 @@
    "min": 0.0,
    "max": 98998.0,
    "longueur_max": 5,
-   "exemple": "21816",
+   "exemple": "76073",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6646,7 +6646,7 @@
    "min": 0.0,
    "max": 89990.0,
    "longueur_max": 5,
-   "exemple": "4096",
+   "exemple": "0",
    "role": "clé primaire (candidate)"
   },
   {
@@ -6664,7 +6664,7 @@
    "min": "2001-01-01",
    "max": "2006-01-01",
    "longueur_max": 10,
-   "exemple": "2005-03-21",
+   "exemple": "2002-08-06",
    "role": "attribut"
   },
   {
@@ -6682,7 +6682,7 @@
    "min": "00:00:00",
    "max": "23:59:51",
    "longueur_max": 8,
-   "exemple": "17:33:37",
+   "exemple": "09:16:45",
    "role": "attribut"
   },
   {
@@ -6718,7 +6718,7 @@
    "min": 0.0,
    "max": 17819.0,
    "longueur_max": 5,
-   "exemple": "10000",
+   "exemple": "8612",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6736,7 +6736,7 @@
    "min": 2.0,
    "max": 98998.0,
    "longueur_max": 5,
-   "exemple": "65366",
+   "exemple": "20019",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6754,7 +6754,7 @@
    "min": 0.0,
    "max": 89097.0,
    "longueur_max": 5,
-   "exemple": "4455",
+   "exemple": "62441",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -6772,7 +6772,7 @@
    "min": "\"A Customer\" is wrong. This is Jay's ...",
    "max": "yuk yuk yuk, this woman CANNOT SING! ...",
    "longueur_max": 5748,
-   "exemple": "Next time will go with the product it was hard to find sh...",
+   "exemple": "Catch Without Arms, Zebraskin, Tanbark, Planting Seeds, a...",
    "role": "attribut"
   },
   {
@@ -7870,7 +7870,7 @@
    "min": 0.0,
    "max": 17999.0,
    "longueur_max": 5,
-   "exemple": "6108",
+   "exemple": "11388",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -7888,7 +7888,7 @@
    "min": 0.0,
    "max": 4.0,
    "longueur_max": 1,
-   "exemple": "4",
+   "exemple": "2",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -7906,7 +7906,7 @@
    "min": 0.0,
    "max": 1000.0,
    "longueur_max": 4,
-   "exemple": "876",
+   "exemple": "740",
    "role": "attribut"
   },
   {
@@ -7924,7 +7924,7 @@
    "min": 38697.0,
    "max": 38715.0,
    "longueur_max": 5,
-   "exemple": "38697",
+   "exemple": "38703",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -7942,7 +7942,7 @@
    "min": 80.0,
    "max": 86215.0,
    "longueur_max": 5,
-   "exemple": "21281",
+   "exemple": "46097",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -7960,7 +7960,7 @@
    "min": 3.0,
    "max": 17989.0,
    "longueur_max": 5,
-   "exemple": "12731",
+   "exemple": "6560",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -7978,7 +7978,7 @@
    "min": 66.0,
    "max": 99894.0,
    "longueur_max": 5,
-   "exemple": "54531",
+   "exemple": "8888",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -7996,7 +7996,7 @@
    "min": 1339.0,
    "max": 1920675.0,
    "longueur_max": 7,
-   "exemple": "1475324",
+   "exemple": "1781743",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -8014,7 +8014,7 @@
    "min": 4.0,
    "max": 7188.0,
    "longueur_max": 4,
-   "exemple": "178",
+   "exemple": "1554",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -8032,7 +8032,7 @@
    "min": 22.0,
    "max": 49930.0,
    "longueur_max": 5,
-   "exemple": "47932",
+   "exemple": "34719",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -8050,7 +8050,7 @@
    "min": 0.0,
    "max": 11.0,
    "longueur_max": 2,
-   "exemple": "11",
+   "exemple": "10",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -8068,7 +8068,7 @@
    "min": 0.0,
    "max": 299.0,
    "longueur_max": 3,
-   "exemple": "210",
+   "exemple": "116",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -8086,7 +8086,7 @@
    "min": 89100.0,
    "max": 89999.0,
    "longueur_max": 5,
-   "exemple": "89100",
+   "exemple": "89374",
    "role": "clé primaire composite (candidate)"
   },
   {
@@ -8104,7 +8104,7 @@
    "min": 1.0,
    "max": 100.0,
    "longueur_max": 3,
-   "exemple": "52",
+   "exemple": "20",
    "role": "attribut"
   },
   {
@@ -8122,7 +8122,7 @@
    "min": 1.0,
    "max": 99.98,
    "longueur_max": 5,
-   "exemple": "49.36",
+   "exemple": "42.80",
    "role": "attribut"
   },
   {
@@ -8140,7 +8140,7 @@
    "min": 1.07,
    "max": 193.97,
    "longueur_max": 6,
-   "exemple": "60.22",
+   "exemple": "59.06",
    "role": "attribut"
   },
   {
@@ -8158,7 +8158,7 @@
    "min": 0.0,
    "max": 187.08,
    "longueur_max": 6,
-   "exemple": "24.09",
+   "exemple": "24.21",
    "role": "attribut"
   },
   {
@@ -8176,7 +8176,7 @@
    "min": 0.0,
    "max": 16024.14,
    "longueur_max": 8,
-   "exemple": "1878.76",
+   "exemple": "697.00",
    "role": "attribut"
   },
   {
@@ -8194,7 +8194,7 @@
    "min": 0.0,
    "max": 18520.92,
    "longueur_max": 8,
-   "exemple": "1252.68",
+   "exemple": "484.20",
    "role": "attribut"
   },
   {
@@ -8212,7 +8212,7 @@
    "min": 1.69,
    "max": 9974.0,
    "longueur_max": 7,
-   "exemple": "2566.72",
+   "exemple": "856.00",
    "role": "attribut"
   },
   {
@@ -8230,7 +8230,7 @@
    "min": 2.38,
    "max": 19093.14,
    "longueur_max": 8,
-   "exemple": "3131.44",
+   "exemple": "1181.20",
    "role": "attribut"
   },
   {
@@ -8248,7 +8248,7 @@
    "min": 0.0,
    "max": 1666.88,
    "longueur_max": 7,
-   "exemple": "19.92",
+   "exemple": "3.10",
    "role": "attribut"
   },
   {
@@ -8266,7 +8266,7 @@
    "min": 0.0,
    "max": 10876.33,
    "longueur_max": 8,
-   "exemple": "588.76",
+   "exemple": "329.26",
    "role": "attribut"
   },
   {
@@ -8284,7 +8284,7 @@
    "min": 0.0,
    "max": 18520.92,
    "longueur_max": 8,
-   "exemple": "663.92",
+   "exemple": "154.94",
    "role": "attribut"
   },
   {
@@ -8302,7 +8302,7 @@
    "min": 0.0,
    "max": 20187.8,
    "longueur_max": 8,
-   "exemple": "683.84",
+   "exemple": "158.04",
    "role": "attribut"
   },
   {
@@ -8320,7 +8320,7 @@
    "min": -8585.28,
    "max": 9022.86,
    "longueur_max": 8,
-   "exemple": "-1902.80",
+   "exemple": "-701.06",
    "role": "attribut"
   },
   {
@@ -9742,7 +9742,7 @@
    "min": 38697.0,
    "max": 38715.0,
    "longueur_max": 5,
-   "exemple": "38702",
+   "exemple": "38698",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -9760,7 +9760,7 @@
    "min": 2.0,
    "max": 86398.0,
    "longueur_max": 5,
-   "exemple": "41302",
+   "exemple": "40116",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -9778,7 +9778,7 @@
    "min": 89100.0,
    "max": 89999.0,
    "longueur_max": 5,
-   "exemple": "89314",
+   "exemple": "89153",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -9796,7 +9796,7 @@
    "min": 0.0,
    "max": 17999.0,
    "longueur_max": 5,
-   "exemple": "16022",
+   "exemple": "7320",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -9814,7 +9814,7 @@
    "min": 0.0,
    "max": 59.0,
    "longueur_max": 2,
-   "exemple": "7",
+   "exemple": "54",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -9832,7 +9832,7 @@
    "min": 9.0,
    "max": 99945.0,
    "longueur_max": 5,
-   "exemple": "90061",
+   "exemple": "80822",
    "role": "clé étrangère (candidate)"
   },
   {
@@ -12087,6 +12087,16 @@
   },
   {
    "table": "store_sales",
+   "controle": "Prix de vente unitaire inférieur au coût d'achat unitaire",
+   "nature": "observation",
+   "nb_concernes": 462852,
+   "nb_total": 667579,
+   "pct": 69.3329,
+   "interpretation": "Vente à perte sur la majorité des lignes : la marge calculée n'est pas exploitable.",
+   "erreur": ""
+  },
+  {
+   "table": "store_sales",
    "controle": "Doublons sur (ticket, produit)",
    "nature": "anomalie",
    "nb_concernes": 4136,
@@ -12152,6 +12162,16 @@
    "nb_concernes": 407163,
    "nb_total": 668052,
    "pct": 60.9478,
+   "interpretation": "",
+   "erreur": ""
+  },
+  {
+   "table": "web_sales",
+   "controle": "Prix de vente unitaire inférieur au coût d'achat unitaire",
+   "nature": "observation",
+   "nb_concernes": 366607,
+   "nb_total": 668052,
+   "pct": 54.877,
    "interpretation": "",
    "erreur": ""
   },
@@ -12413,6 +12433,36 @@
    "nb_total": 12,
    "pct": 100.0,
    "interpretation": "",
+   "erreur": ""
+  },
+  {
+   "table": "store",
+   "controle": "Date de fermeture antérieure à l'ouverture (s_rec_start_date)",
+   "nature": "anomalie",
+   "nb_concernes": 5,
+   "nb_total": 12,
+   "pct": 41.6667,
+   "interpretation": "Les dates de fermeture sont aléatoires (de 1917 à 2141) : ne pas les lire comme des fermetures réelles.",
+   "erreur": ""
+  },
+  {
+   "table": "store",
+   "controle": "Date de fermeture postérieure à la fin des données (2005-12-31)",
+   "nature": "observation",
+   "nb_concernes": 7,
+   "nb_total": 12,
+   "pct": 58.3333,
+   "interpretation": "",
+   "erreur": ""
+  },
+  {
+   "table": "inventory",
+   "controle": "Produits de l'inventaire absents de item (data) mais présents dans item (data_refresh)",
+   "nature": "anomalie",
+   "nb_concernes": 232380,
+   "nb_total": 23255100,
+   "pct": 0.9993,
+   "interpretation": "Le référentiel produit initial est incomplet : la jointure inventaire -> produit exige data_refresh/item.",
    "erreur": ""
   },
   {
