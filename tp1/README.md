@@ -46,6 +46,8 @@ tp1/
 |   |-- UC02_gouvernance.pdf
 |   |-- UC02_local_vers_azure.pdf
 |   `-- preuves/                     # schémas SVG, matrice des composants
+|-- 03_complementaire/               # UC-C1 (processus décisionnel), UC-C2 (limites de la BI classique)
+|-- 04_avance/                       # UC-A1 (architecture détaillée, stratégie de données, gouvernance)
 `-- 05_contribution_individuelle/
 ```
 
@@ -68,6 +70,11 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/build_uc01_donnees.py
 # 3. Livrables UC-02
 .venv/bin/python scripts/build_uc02.py
+# 4. Parties complémentaire et avancée
+.venv/bin/python scripts/profil_complementaire.py
+.venv/bin/python scripts/build_ucc1.py
+.venv/bin/python scripts/build_ucc2.py
+.venv/bin/python scripts/build_uca1.py
 ```
 
 Les PDF sont rendus avec Google Chrome en mode headless (macOS : `/Applications/Google Chrome.app`).
