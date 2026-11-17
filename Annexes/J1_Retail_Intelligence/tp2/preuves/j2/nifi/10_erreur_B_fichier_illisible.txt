@@ -1,0 +1,25 @@
+# TP J2 - preuve générée le 2026-11-17 12:38:55 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; NF="python3 /work/ingestion/nifi/nifi_flux.py"
+cp /data/tpcxbb/data_refresh/store_sales/store_sales.dat /data/nifi/input/ && chmod 000 /data/nifi/input/store_sales.dat
+ls -l /data/nifi/input; echo "attente de 2 cycles GetFile (planification 10 s, polling 30 s)..."; sleep 45
+echo "--- le fichier est toujours là : GetFile l ignore SANS erreur ni bulletin"; ls -l /data/nifi/input
+$NF etat obligatoire | sed -n "1,7p"
+echo "--- bulletins NiFi :"; $NF bulletins | tail -3; echo "(fin des bulletins)"
+grep -c "store_sales" /opt/nifi/logs/nifi-app.log | sed "s/^/mentions de store_sales dans nifi-app.log depuis le démarrage : /"
+total 904
+---------- 1 etudiant etudiant 922171 Nov 17 12:38 store_sales.dat
+attente de 2 cycles GetFile (planification 10 s, polling 30 s)...
+--- le fichier est toujours là : GetFile l ignore SANS erreur ni bulletin
+total 904
+---------- 1 etudiant etudiant 922171 Nov 17 12:38 store_sales.dat
+Process Group : UC04 - GetFile vers PutHDFS
+processeur                                          état        entrés  sortis         lus      écrits
+LogAttribute - diagnostic des echecs                Running          0       0     0 bytes     0 bytes
+GetFile - lecture /data/nifi/input                  Running          0       0     0 bytes     0 bytes
+PutHDFS - ecriture /retail-lake/raw/nifi            Running          0       0     0 bytes     0 bytes
+PutFile - quarantaine locale /data/nifi/error       Running          0       0     0 bytes     0 bytes
+
+--- bulletins NiFi :
+(fin des bulletins)
+mentions de store_sales dans nifi-app.log depuis le démarrage : 0
+# code retour : 0

@@ -1,0 +1,47 @@
+# TP J2 - preuve générée le 2026-11-17 12:30:26 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; NF="python3 /work/ingestion/nifi/nifi_flux.py"
+$NF demarrer-proc obligatoire "PutHDFS - ecriture /retail-lake/raw/nifi"
+$NF demarrer-proc obligatoire "LogAttribute - diagnostic des echecs"
+$NF demarrer-proc obligatoire "PutFile - quarantaine locale /data/nifi/error"
+$NF demarrer-proc obligatoire "GetFile - lecture /data/nifi/input"
+sleep 20; $NF etat obligatoire
+echo "--- dossier d entrée après lecture (Keep Source File=false)"; ls -l /data/nifi/input
+echo "--- vérification HDFS"; hdfs dfs -ls -h /retail-lake/raw/nifi; hdfs dfs -du -h /retail-lake/raw/nifi
+echo "--- intégrité : dépôt NiFi vs dépôt manuel UC-03 du même fichier"
+hdfs dfs -checksum /retail-lake/raw/nifi/store_sales.dat /retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat
+echo "sha256 NiFi : $(hdfs dfs -cat /retail-lake/raw/nifi/store_sales.dat | sha256sum | cut -d" " -f1)"
+echo "sha256 kit  : $(sha256sum /data/tpcxbb/data_refresh/store_sales/store_sales.dat | cut -d" " -f1)"
+echo "lignes NiFi : $(hdfs dfs -cat /retail-lake/raw/nifi/store_sales.dat | wc -l)  kit : $(wc -l < /data/tpcxbb/data_refresh/store_sales/store_sales.dat)"
+echo "--- source originale conservée"; ls -l /data/tpcxbb/data_refresh/store_sales/store_sales.dat
+PutHDFS - ecriture /retail-lake/raw/nifi : RUNNING
+LogAttribute - diagnostic des echecs : RUNNING
+PutFile - quarantaine locale /data/nifi/error : RUNNING
+GetFile - lecture /data/nifi/input : RUNNING
+Process Group : UC04 - GetFile vers PutHDFS
+processeur                                          état        entrés  sortis         lus      écrits
+LogAttribute - diagnostic des echecs                Running          0       0     0 bytes     0 bytes
+GetFile - lecture /data/nifi/input                  Running          0       1   900.56 KB   900.56 KB
+PutHDFS - ecriture /retail-lake/raw/nifi            Running          1       0   900.56 KB     0 bytes
+PutFile - quarantaine locale /data/nifi/error       Running          0       0     0 bytes     0 bytes
+
+connexion (source -> destination)                                                      en file
+GetFile - lecture /data/nifi/input -> PutHDFS - ecriture /retail-lake/raw/nifi      0 (0 bytes)
+LogAttribute - diagnostic des echecs -> PutFile - quarantaine locale /data/nifi/err 0 (0 bytes)
+PutHDFS - ecriture /retail-lake/raw/nifi -> LogAttribute - diagnostic des echecs    0 (0 bytes)
+
+processeurs invalides : aucun
+--- dossier d entrée après lecture (Keep Source File=false)
+total 0
+--- vérification HDFS
+Found 1 items
+-rw-r--r--   1 etudiant supergroup    900.6 K 2026-11-17 12:30 /retail-lake/raw/nifi/store_sales.dat
+900.6 K  900.6 K  /retail-lake/raw/nifi/store_sales.dat
+--- intégrité : dépôt NiFi vs dépôt manuel UC-03 du même fichier
+/retail-lake/raw/nifi/store_sales.dat	MD5-of-0MD5-of-512CRC32C	000002000000000000000000a1b8170a00399b8cfd280a78227c70cd
+/retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat	MD5-of-0MD5-of-512CRC32C	000002000000000000000000a1b8170a00399b8cfd280a78227c70cd
+sha256 NiFi : 3c71c010a17d15c90564ddb12be4a1286f494669198b55e782edef6f8e8b23df
+sha256 kit  : 3c71c010a17d15c90564ddb12be4a1286f494669198b55e782edef6f8e8b23df
+lignes NiFi : 6632  kit : 6632
+--- source originale conservée
+-rw-rw-rw- 1 etudiant etudiant 922171 Nov 15 23:34 /data/tpcxbb/data_refresh/store_sales/store_sales.dat
+# code retour : 0

@@ -1,0 +1,187 @@
+{
+  "evenement": {
+    "id": "1",
+    "eventId": 1,
+    "eventTime": "11/17/2026 12:30:29.690 CET",
+    "eventTimestamp": "2026-11-17T11:30:29.690Z",
+    "eventDuration": 886,
+    "lineageDuration": 1109,
+    "eventType": "SEND",
+    "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+    "fileSize": "900.56 KB",
+    "fileSizeBytes": 922171,
+    "groupId": "e9456f33-01a1-1000-ef7b-ff53e83f36e6",
+    "componentId": "e9456f7d-01a1-1000-349a-9954ce1f7d5d",
+    "componentType": "PutHDFS",
+    "componentName": "PutHDFS - ecriture /retail-lake/raw/nifi",
+    "attributes": [
+      {
+        "name": "absolute.hdfs.path",
+        "value": "/retail-lake/raw/nifi"
+      },
+      {
+        "name": "absolute.path",
+        "value": "/data/nifi/input/",
+        "previousValue": "/data/nifi/input/"
+      },
+      {
+        "name": "file.creationTime",
+        "value": "2026-11-17T12:30:21+0100",
+        "previousValue": "2026-11-17T12:30:21+0100"
+      },
+      {
+        "name": "file.group",
+        "value": "etudiant",
+        "previousValue": "etudiant"
+      },
+      {
+        "name": "file.lastAccessTime",
+        "value": "2026-11-17T12:30:21+0100",
+        "previousValue": "2026-11-17T12:30:21+0100"
+      },
+      {
+        "name": "file.lastModifiedTime",
+        "value": "2026-11-17T12:30:21+0100",
+        "previousValue": "2026-11-17T12:30:21+0100"
+      },
+      {
+        "name": "file.owner",
+        "value": "etudiant",
+        "previousValue": "etudiant"
+      },
+      {
+        "name": "file.permissions",
+        "value": "rw-r--r--",
+        "previousValue": "rw-r--r--"
+      },
+      {
+        "name": "filename",
+        "value": "store_sales.dat",
+        "previousValue": "store_sales.dat"
+      },
+      {
+        "name": "hadoop.file.url",
+        "value": "hdfs://localhost:9000/retail-lake/raw/nifi/store_sales.dat"
+      },
+      {
+        "name": "path",
+        "value": "/",
+        "previousValue": "/"
+      },
+      {
+        "name": "target.dir.created",
+        "value": "false"
+      },
+      {
+        "name": "uuid",
+        "value": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "previousValue": "03f0068a-c98f-4e01-9296-ee38d6e4798c"
+      }
+    ],
+    "parentUuids": [],
+    "childUuids": [],
+    "transitUri": "hdfs://localhost:9000/retail-lake/raw/nifi/store_sales.dat",
+    "contentEqual": true,
+    "inputContentAvailable": true,
+    "inputContentClaimSection": "1",
+    "inputContentClaimContainer": "default",
+    "inputContentClaimIdentifier": "1794915028583-1",
+    "inputContentClaimOffset": 0,
+    "inputContentClaimFileSize": "900.56 KB",
+    "inputContentClaimFileSizeBytes": 922171,
+    "outputContentAvailable": true,
+    "outputContentClaimSection": "1",
+    "outputContentClaimContainer": "default",
+    "outputContentClaimIdentifier": "1794915028583-1",
+    "outputContentClaimOffset": 0,
+    "outputContentClaimFileSize": "900.56 KB",
+    "outputContentClaimFileSizeBytes": 922171,
+    "replayAvailable": true,
+    "sourceConnectionIdentifier": "e9457201-01a1-1000-4226-2951d4974dd7"
+  },
+  "lignage": {
+    "nodes": [
+      {
+        "id": "1",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "parentUuids": [],
+        "childUuids": [],
+        "type": "EVENT",
+        "eventType": "SEND",
+        "componentType": "PutHDFS",
+        "millis": 1794915029690,
+        "timestamp": "11/17/2026 12:30:29.690 CET"
+      },
+      {
+        "id": "0",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "parentUuids": [],
+        "childUuids": [],
+        "type": "EVENT",
+        "eventType": "RECEIVE",
+        "componentType": "GetFile",
+        "millis": 1794915028601,
+        "timestamp": "11/17/2026 12:30:28.601 CET"
+      },
+      {
+        "id": "3",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "parentUuids": [],
+        "childUuids": [],
+        "type": "EVENT",
+        "eventType": "DROP",
+        "componentType": "PutHDFS",
+        "millis": 1794915029691,
+        "timestamp": "11/17/2026 12:30:29.691 CET"
+      },
+      {
+        "id": "2",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "parentUuids": [],
+        "childUuids": [],
+        "type": "EVENT",
+        "eventType": "ATTRIBUTES_MODIFIED",
+        "componentType": "PutHDFS",
+        "millis": 1794915029691,
+        "timestamp": "11/17/2026 12:30:29.691 CET"
+      },
+      {
+        "id": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "type": "FLOWFILE",
+        "millis": 1794915028601,
+        "timestamp": "11/17/2026 12:30:28.601 CET"
+      }
+    ],
+    "links": [
+      {
+        "sourceId": "1",
+        "targetId": "2",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "timestamp": "11/17/2026 12:30:29.691 CET",
+        "millis": 1794915029691
+      },
+      {
+        "sourceId": "2",
+        "targetId": "3",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "timestamp": "11/17/2026 12:30:29.691 CET",
+        "millis": 1794915029691
+      },
+      {
+        "sourceId": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "targetId": "1",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "timestamp": "11/17/2026 12:30:29.690 CET",
+        "millis": 1794915029690
+      },
+      {
+        "sourceId": "0",
+        "targetId": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "flowFileUuid": "03f0068a-c98f-4e01-9296-ee38d6e4798c",
+        "timestamp": "11/17/2026 12:30:28.601 CET",
+        "millis": 1794915028601
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+# TP J2 - preuve générée le 2026-11-17 12:39:49 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; NF="python3 /work/ingestion/nifi/nifi_flux.py"
+echo "--- correction de B : droit de lecture rétabli"; chmod 644 /data/nifi/input/store_sales.dat; ls -l /data/nifi/input
+sleep 40
+echo "--- le fichier existe déjà dans /retail-lake/raw/nifi : Conflict Resolution Strategy = fail"
+$NF etat obligatoire
+echo "--- bulletins"; $NF bulletins | tail -3
+echo "--- journal LogAttribute (nifi-app.log)"; grep -A3 "ECHEC-PutHDFS" /opt/nifi/logs/nifi-app.log | grep -E "ECHEC-PutHDFS|filename|absolute.path|uuid" | head -6 | cut -c1-170
+grep -E "PutHDFS.*(already exists|failure)" /opt/nifi/logs/nifi-app.log | tail -2 | cut -c1-300
+echo "--- quarantaine locale (contenu conservé pour reprise)"; ls -l /data/nifi/error
+echo "--- HDFS : le dépôt existant n a PAS été écrasé"; hdfs dfs -ls /retail-lake/raw/nifi
+--- correction de B : droit de lecture rétabli
+total 904
+-rw-r--r-- 1 etudiant etudiant 922171 Nov 17 12:38 store_sales.dat
+--- le fichier existe déjà dans /retail-lake/raw/nifi : Conflict Resolution Strategy = fail
+Process Group : UC04 - GetFile vers PutHDFS
+processeur                                          état        entrés  sortis         lus      écrits
+LogAttribute - diagnostic des echecs                Running          1       1     0 bytes     0 bytes
+GetFile - lecture /data/nifi/input                  Running          0       1   900.56 KB   900.56 KB
+PutHDFS - ecriture /retail-lake/raw/nifi            Running          1       1     0 bytes     0 bytes
+PutFile - quarantaine locale /data/nifi/error       Running          1       0   900.56 KB     0 bytes
+
+connexion (source -> destination)                                                      en file
+GetFile - lecture /data/nifi/input -> PutHDFS - ecriture /retail-lake/raw/nifi      0 (0 bytes)
+LogAttribute - diagnostic des echecs -> PutFile - quarantaine locale /data/nifi/err 0 (0 bytes)
+PutHDFS - ecriture /retail-lake/raw/nifi -> LogAttribute - diagnostic des echecs    0 (0 bytes)
+
+processeurs invalides : aucun
+--- bulletins
+------------------ECHEC-PutHDFS ------------------
+FlowFile Properties
+Key: '
+--- journal LogAttribute (nifi-app.log)
+------------------ECHEC-PutHDFS ------------------
+------------------ECHEC-PutHDFS ------------------
+2026-11-17 12:39:53,076 WARN [Timer-Driven Process Thread-9] o.apache.nifi.processors.hadoop.PutHDFS PutHDFS[id=e9456f7d-01a1-1000-349a-9954ce1f7d5d] penalizing StandardFlowFileRecord[uuid=51d8bf78-adde-4e50-ad01-120e66d1ca7a,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1794915
+--- quarantaine locale (contenu conservé pour reprise)
+total 904
+-rw-r--r-- 1 etudiant etudiant 922171 Nov 17 12:40 store_sales.dat
+--- HDFS : le dépôt existant n a PAS été écrasé
+Found 1 items
+-rw-r--r--   1 etudiant supergroup     922171 2026-11-17 12:30 /retail-lake/raw/nifi/store_sales.dat
+# code retour : 0

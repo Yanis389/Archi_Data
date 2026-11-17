@@ -1,0 +1,15 @@
+# TP J2 - preuve générée le 2026-11-17 12:40:55 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; python3 /work/ingestion/nifi/nifi_flux.py lignage 1 --json /work/preuves/j2/nifi/provenance_lignage_store_sales.json; echo; python3 /work/ingestion/nifi/nifi_flux.py lignage 5
+Lignage du FlowFile 03f0068a-c98f-4e01-9296-ee38d6e4798c (fichier store_sales.dat)
+  11/17/2026 12:30:28.601 CET RECEIVE    événement 0
+  FlowFile 03f0068a-c98f-4e01-9296-ee38d6e4798c
+  11/17/2026 12:30:29.690 CET SEND       événement 1
+  11/17/2026 12:30:29.691 CET DROP       événement 3
+  11/17/2026 12:30:29.691 CET ATTRIBUTES_MODIFIED événement 2
+
+Lignage du FlowFile 51d8bf78-adde-4e50-ad01-120e66d1ca7a (fichier store_sales.dat)
+  11/17/2026 12:39:53.020 CET RECEIVE    événement 4
+  FlowFile 51d8bf78-adde-4e50-ad01-120e66d1ca7a
+  11/17/2026 12:40:23.181 CET SEND       événement 5
+  11/17/2026 12:40:23.183 CET DROP       événement 6
+# code retour : 0
