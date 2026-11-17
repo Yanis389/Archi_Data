@@ -1,0 +1,18 @@
+# TP J2 - preuve générée le 2026-11-17 12:10:36 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ ls -1 $HADOOP_HOME/logs/*.log; echo; for f in $HADOOP_HOME/logs/*.log; do echo "== $(basename $f) : $(grep -cE " (ERROR|FATAL) " $f) ERROR/FATAL, $(grep -c " WARN " $f) WARN"; grep -E " WARN " $f | sed -E "s/^[0-9-]+ [0-9:,]+ //" | sort | uniq -c | sort -rn | head -4; done
+/opt/hadoop/logs/hadoop-etudiant-datanode-tp2-hadoop.log
+/opt/hadoop/logs/hadoop-etudiant-namenode-tp2-hadoop.log
+/opt/hadoop/logs/hadoop-etudiant-secondarynamenode-tp2-hadoop.log
+
+== hadoop-etudiant-datanode-tp2-hadoop.log : 0 ERROR/FATAL, 4 WARN
+      1 WARN org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /home/etudiant/hadoop-http-auth-signature-secret
+      1 WARN org.apache.hadoop.hdfs.server.datanode.web.DatanodeHttpServer: Got null for restCsrfPreventionFilter - will not do any filtering.
+      1 WARN org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: dfsUsed file missing in /home/etudiant/hadoop-data/datanode/current/BP-106008982-172.17.0.2-1794913776088/current, will proceed with Du for space computation calculation, 
+      1 WARN org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: dfs.datanode.directoryscan.throttle.limit.ms.per.sec set to value above 1000 ms/sec. Assuming default value of -1
+== hadoop-etudiant-namenode-tp2-hadoop.log : 0 ERROR/FATAL, 4 WARN
+      2 WARN org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /home/etudiant/hadoop-http-auth-signature-secret
+      1 WARN org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Only one namespace edits storage directory (dfs.namenode.edits.dir) configured. Beware of data loss due to lack of redundant storage directories!
+      1 WARN org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Only one image storage directory (dfs.namenode.name.dir) configured. Beware of data loss due to lack of redundant storage directories!
+== hadoop-etudiant-secondarynamenode-tp2-hadoop.log : 0 ERROR/FATAL, 2 WARN
+      2 WARN org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /home/etudiant/hadoop-http-auth-signature-secret
+# code retour : 0

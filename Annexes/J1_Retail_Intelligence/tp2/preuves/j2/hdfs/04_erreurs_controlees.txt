@@ -1,0 +1,8 @@
+# TP J2 - preuve générée le 2026-11-17 12:11:08 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ echo "--- 1. chemin inexistant"; hdfs dfs -ls /retail-lake/inexistant; echo "--- 2. utilisateur sans droits (identité simulée invite, authentification simple)"; HADOOP_USER_NAME=invite hdfs dfs -mkdir /retail-lake/essai_invite; echo "--- 3. vérification : rien n a été créé"; hdfs dfs -ls /retail-lake
+--- 1. chemin inexistant
+ls: `/retail-lake/inexistant': No such file or directory
+--- 2. utilisateur sans droits (identité simulée invite, authentification simple)
+mkdir: Permission denied: user=invite, access=WRITE, inode="/retail-lake":etudiant:supergroup:drwxr-xr-x
+--- 3. vérification : rien n a été créé
+# code retour : 0

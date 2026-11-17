@@ -1,0 +1,18 @@
+# TP J2 - preuve générée le 2026-11-17 12:28:20 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ export JAVA_HOME=$JAVA_HOME_NIFI; echo "JAVA_HOME=$JAVA_HOME"; $JAVA_HOME/bin/java -version 2>&1 | head -1
+# NiFi 2.x : nifi.sh start garde la sortie standard ouverte -> lancement détaché, sortie redirigée vers un fichier
+setsid nohup /opt/nifi/bin/nifi.sh start > ~/nifi-start.log 2>&1 < /dev/null &
+t0=$(date +%s); until curl -sk -m 5 -o /dev/null -w "%{http_code}" https://localhost:8443/nifi/ | grep -q 200; do sleep 3; [ $(( $(date +%s) - t0 )) -gt 240 ] && break; done
+echo "interface https://localhost:8443/nifi disponible après $(( $(date +%s) - t0 )) s"
+/opt/nifi/bin/nifi.sh status 2>&1 | grep -E "Status|running|Process" | cut -c1-160 | tail -3
+grep -E "Started Server on|Started Application in" /opt/nifi/logs/nifi-app.log | tail -2 | cut -c1-160
+ss -ltnp 2>/dev/null | grep -E ":8443 " | cut -c1-90
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk-arm64
+openjdk version "21.0.13.0.3" 2026-10-24
+interface https://localhost:8443/nifi disponible après 24 s
+2026-11-17 12:28:46,839 INFO [main] org.apache.nifi.bootstrap.Command Application Process [18213] Command Status [SUCCESS] HTTP 200
+2026-11-17 12:28:46,842 INFO [main] org.apache.nifi.bootstrap.Command Status: UP
+2026-11-17 12:28:45,294 INFO [main] org.apache.nifi.web.server.JettyServer Started Server on https://0.0.0.0:8443/nifi
+2026-11-17 12:28:45,313 INFO [main] org.apache.nifi.runtime.Application Started Application in 23.427 seconds (23427080080 ns)
+LISTEN 0      50                      *:8443             *:*    users:(("java",pid=18213,f
+# code retour : 0

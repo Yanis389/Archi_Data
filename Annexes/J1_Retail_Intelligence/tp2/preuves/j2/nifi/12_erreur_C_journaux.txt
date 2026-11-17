@@ -1,0 +1,41 @@
+# TP J2 - preuve générée le 2026-11-17 12:40:41 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ L=/opt/nifi/logs/nifi-app.log
+echo "=== message de PutHDFS"; grep "penalizing" $L | tail -1 | sed -E "s/claim=StandardContentClaim \[[^]]*\]*[^,]*,//" | fold -w 160
+echo; echo "=== bloc écrit par LogAttribute (attributs du FlowFile en échec)"; awk "/ECHEC-PutHDFS/{f=1} f{print} /^-+ECHEC-PutHDFS -+\$/ && n++ {f=0}" $L | head -40 | cut -c1-160
+=== message de PutHDFS
+2026-11-17 12:39:53,076 WARN [Timer-Driven Process Thread-9] o.apache.nifi.processors.hadoop.PutHDFS PutHDFS[id=e9456f7d-01a1-1000-349a-9954ce1f7d5d] penalizing
+ StandardFlowFileRecord[uuid=51d8bf78-adde-4e50-ad01-120e66d1ca7a, offset=0, length=922171],offset=0,name=store_sales.dat,size=922171] and routing to failure be
+cause file with same name already exists
+
+=== bloc écrit par LogAttribute (attributs du FlowFile en échec)
+------------------ECHEC-PutHDFS ------------------
+FlowFile Properties
+Key: 'entryDate'
+	Value: 'Tue Nov 17 12:39:53 CET 2026'
+Key: 'lineageStartDate'
+	Value: 'Tue Nov 17 12:39:53 CET 2026'
+Key: 'fileSize'
+	Value: '922171'
+FlowFile Attribute Map Content
+Key: 'absolute.path'
+	Value: '/data/nifi/input/'
+Key: 'file.creationTime'
+	Value: '2026-11-17T12:38:55+0100'
+Key: 'file.group'
+	Value: 'etudiant'
+Key: 'file.lastAccessTime'
+	Value: '2026-11-17T12:39:53+0100'
+Key: 'file.lastModifiedTime'
+	Value: '2026-11-17T12:38:55+0100'
+Key: 'file.owner'
+	Value: 'etudiant'
+Key: 'file.permissions'
+	Value: 'rw-r--r--'
+Key: 'filename'
+	Value: 'store_sales.dat'
+Key: 'path'
+	Value: '/'
+Key: 'uuid'
+	Value: '51d8bf78-adde-4e50-ad01-120e66d1ca7a'
+------------------ECHEC-PutHDFS ------------------
+# code retour : 0

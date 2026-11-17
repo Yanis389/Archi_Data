@@ -1,0 +1,11 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:36 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ start-dfs.sh; sleep 8; jps | sort -k2
+Starting namenodes on [localhost]
+Starting datanodes
+Starting secondary namenodes [tp2-hadoop]
+tp2-hadoop: Warning: Permanently added 'tp2-hadoop' (ED25519) to the list of known hosts.
+540 DataNode
+923 Jps
+442 NameNode
+714 SecondaryNameNode
+# code retour : 0

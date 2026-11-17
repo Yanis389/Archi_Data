@@ -1,0 +1,30 @@
+# TP J2 - preuve générée le 2026-11-17 12:29:14 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; python3 /work/ingestion/nifi/decouverte_nifi.py
+Produit : NiFi 2.12.0  |  build ?  |  fuseau CET
+URI : https://localhost:8443/nifi-api/
+État du contrôleur : threads actifs=0  FlowFiles en file=0  processeurs en marche=0 arrêtés=0 invalides=0
+JVM : tas utilisé 333.48 MB / max 1,024 MB  |  processeurs 8  |  uptime 00:00:54.331
+  dépôt flowfile   libre   206.9 GB  utilisé 7.0%
+  dépôt default    libre   206.9 GB  utilisé 7.0%
+  dépôt default    libre   206.9 GB  utilisé 7.0%
+
+Types de processeurs disponibles : 304
+  GetFile                   disponible  (nifi-standard-nar 2.12.0)
+  ListFile                  disponible  (nifi-standard-nar 2.12.0)
+  FetchFile                 disponible  (nifi-standard-nar 2.12.0)
+  PutHDFS                   disponible  (nifi-hadoop-nar 2.12.0)
+  ListHDFS                  disponible  (nifi-hadoop-nar 2.12.0)
+  FetchHDFS                 disponible  (nifi-hadoop-nar 2.12.0)
+  GetHDFSFileInfo           disponible  (nifi-hadoop-nar 2.12.0)
+  UpdateAttribute           disponible  (nifi-update-attribute-nar 2.12.0)
+  RouteOnAttribute          disponible  (nifi-standard-nar 2.12.0)
+  LogAttribute              disponible  (nifi-standard-nar 2.12.0)
+  PutFile                   disponible  (nifi-standard-nar 2.12.0)
+  CryptographicHashContent  disponible  (nifi-standard-nar 2.12.0)
+  RetryFlowFile             disponible  (nifi-standard-nar 2.12.0)
+  ValidateRecord            disponible  (nifi-standard-nar 2.12.0)
+  ValidateCsv               disponible  (nifi-standard-nar 2.12.0)
+  DetectDuplicate           disponible  (nifi-standard-nar 2.12.0)
+
+Types de Controller Services disponibles : 125  (ex. : CSVReader, CSVRecordLookupService, CSVRecordSetWriter, DistributedMapCacheLookupService, HazelcastMapCacheClient, MapCacheClientService)
+# code retour : 0

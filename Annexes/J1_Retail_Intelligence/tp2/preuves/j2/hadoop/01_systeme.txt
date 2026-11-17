@@ -1,0 +1,14 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:20 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ head -4 /etc/os-release; uname -srm; echo "CPU : $(nproc)"; free -h | head -2; df -h /home/etudiant | tail -1; python3 --version; id
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+Linux 7.0.12-linuxkit aarch64
+CPU : 8
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       616Mi       606Mi       500Ki       2.8Gi       3.2Gi
+overlay         224G  3.4G  209G   2% /
+Python 3.12.3
+uid=1001(etudiant) gid=1001(etudiant) groups=1001(etudiant)
+# code retour : 0

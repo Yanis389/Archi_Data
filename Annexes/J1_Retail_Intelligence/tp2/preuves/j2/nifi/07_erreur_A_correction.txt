@@ -1,0 +1,12 @@
+# TP J2 - preuve générée le 2026-11-17 12:38:49 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; NF="python3 /work/ingestion/nifi/nifi_flux.py"; G="GetFile - lecture /data/nifi/input"
+$NF arreter-proc obligatoire "$G"
+$NF config obligatoire "$G" "Input Directory" /data/nifi/input
+$NF demarrer-proc obligatoire "$G"
+$NF etat obligatoire | tail -2
+GetFile - lecture /data/nifi/input : demandé STOPPED -> état réel Invalid (validation INVALID)
+GetFile - lecture /data/nifi/input : Input Directory = /data/nifi/input
+GetFile - lecture /data/nifi/input : demandé RUNNING -> état réel Running (validation VALID)
+
+processeurs invalides : aucun
+# code retour : 0

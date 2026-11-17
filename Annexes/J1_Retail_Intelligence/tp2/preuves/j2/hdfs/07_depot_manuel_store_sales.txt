@@ -1,0 +1,28 @@
+# TP J2 - preuve générée le 2026-11-17 12:13:18 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ F=/data/tpcxbb/data/store_sales/store_sales.dat; D=/retail-lake/raw/tpcxbb/initial/store_sales
+hdfs dfs -mkdir -p $D
+time hdfs dfs -put $F $D/
+echo "--- présence et taille"; hdfs dfs -ls -h $D; hdfs dfs -stat "taille=%b octets | taille de bloc=%o octets | replication=%r | date=%y" $D/store_sales.dat
+echo "--- accessibilité : 3 premières lignes relues depuis HDFS"; hdfs dfs -cat $D/store_sales.dat 2>/dev/null | head -3
+echo "--- lignes relues depuis HDFS : $(hdfs dfs -cat $D/store_sales.dat | wc -l) (source : $(wc -l < $F))"
+echo "--- source conservée"; ls -l $F
+echo "--- 2e dépôt identique : refusé, pas d écrasement sans -f"; hdfs dfs -put $F $D/; echo "code retour du 2e put : $?"
+
+real	0m1.784s
+user	0m2.684s
+sys	0m0.424s
+--- présence et taille
+Found 1 items
+-rw-r--r--   1 etudiant supergroup     88.5 M 2026-11-17 12:13 /retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat
+taille=92764700 octets | taille de bloc=134217728 octets | replication=1 | date=2026-11-17 12:13:21
+--- accessibilité : 3 premières lignes relues depuis HDFS
+36890|71480|10001|44404|493944|2898|44093|10|294|0|31|18.00|30.78|23.08|238.70|715.48|558.00|954.18|21.46|0.00|715.48|736.94|157.48
+36890|71480|10000|44404|493944|2898|44093|10|279|0|54|99.21|148.82|83.34|3535.92|4500.36|5357.34|8036.28|225.02|0.00|4500.36|4725.38|-856.98
+36890|71480|15556|44404|493944|2898|44093|10|114|0|39|79.49|94.59|83.24|442.65|3246.36|3100.11|3689.01|184.07|616.81|2629.55|2813.62|-470.56
+--- lignes relues depuis HDFS : 667579 (source : 667579)
+--- source conservée
+-rw-rw-rw- 1 etudiant etudiant 92764700 Nov 15 23:34 /data/tpcxbb/data/store_sales/store_sales.dat
+--- 2e dépôt identique : refusé, pas d écrasement sans -f
+put: `/retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat': File exists
+code retour du 2e put : 1
+# code retour : 0

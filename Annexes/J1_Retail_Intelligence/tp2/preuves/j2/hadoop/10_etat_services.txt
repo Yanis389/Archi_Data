@@ -1,0 +1,19 @@
+# TP J2 - preuve générée le 2026-11-17 12:10:25 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ hdfs dfsadmin -safemode get; hdfs getconf -confKey fs.defaultFS; hdfs getconf -confKey dfs.replication; hdfs getconf -confKey dfs.blocksize; hdfs getconf -namenodes; hdfs getconf -secondaryNameNodes; ss -ltnp 2>/dev/null | grep -E ":(9000|9870|9864|9866|9867|9868) " ; curl -s "http://localhost:9870/jmx?qry=Hadoop:service=NameNode,name=NameNodeInfo" | python3 -c "import json,sys; b=json.load(sys.stdin)[\"beans\"][0]; print(\"Version NameNode :\", b[\"Version\"]); print(\"ClusterId :\", b[\"ClusterId\"]); print(\"DataNodes vivants :\", list(json.loads(b[\"LiveNodes\"]).keys())); print(\"DataNodes morts :\", list(json.loads(b[\"DeadNodes\"]).keys()))"
+Safe mode is OFF
+hdfs://localhost:9000
+1
+134217728
+localhost
+0.0.0.0
+LISTEN 0      256        127.0.0.1:9000       0.0.0.0:*    users:(("java",pid=442,fd=349))
+LISTEN 0      500          0.0.0.0:9870       0.0.0.0:*    users:(("java",pid=442,fd=342))
+LISTEN 0      500          0.0.0.0:9868       0.0.0.0:*    users:(("java",pid=714,fd=338))
+LISTEN 0      256          0.0.0.0:9867       0.0.0.0:*    users:(("java",pid=540,fd=411))
+LISTEN 0      256          0.0.0.0:9866       0.0.0.0:*    users:(("java",pid=540,fd=337))
+LISTEN 0      4096         0.0.0.0:9864       0.0.0.0:*    users:(("java",pid=540,fd=410))
+Version NameNode : 3.5.0, rdbcc7cd797100e6b32cd84f85b53a5193a5f9af0
+ClusterId : CID-e0ddf6fc-5518-4678-8ac1-dba1406facf0
+DataNodes vivants : ['tp2-hadoop:9866']
+DataNodes morts : []
+# code retour : 0

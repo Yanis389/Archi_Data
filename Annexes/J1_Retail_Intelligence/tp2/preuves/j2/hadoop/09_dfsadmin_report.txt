@@ -1,0 +1,47 @@
+# TP J2 - preuve générée le 2026-11-17 12:10:23 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ hdfs dfsadmin -report
+Configured Capacity: 240120725504 (223.63 GB)
+Present Capacity: 224244420608 (208.84 GB)
+DFS Remaining: 224244396032 (208.84 GB)
+DFS Used: 24576 (24 KB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Badly Distributed Blocks: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Badly Distributed Blocks: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (localhost)
+Hostname: tp2-hadoop
+Decommission Status : Normal
+Configured Capacity: 240120725504 (223.63 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 3604246528 (3.36 GB)
+DFS Remaining: 224244396032 (208.84 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.39%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Tue Nov 17 12:10:23 CET 2026
+Last Block Report: Tue Nov 17 12:10:05 CET 2026
+Num of Blocks: 0
+
+
+# code retour : 0

@@ -1,0 +1,40 @@
+# TP J2 - preuve générée le 2026-11-17 12:12:02 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ set -e
+for d in raw/tpcxbb/initial raw/tpcxbb/refresh raw/nifi bronze/tpcxbb silver gold quality/integrite logs/ingestion; do hdfs dfs -mkdir -p /retail-lake/$d; done
+# droits par zone : sources, Gold, contrôles et journaux fermés à "others" ; Gold ouverte en lecture au groupe analystes (ACL)
+hdfs dfs -chmod 750 /retail-lake/raw /retail-lake/gold /retail-lake/quality /retail-lake/logs
+hdfs dfs -setfacl -m group:analystes:r-x,default:group:analystes:r-x,default:other::--- /retail-lake/gold
+hdfs dfs -ls -R /retail-lake
+echo; hdfs dfs -getfacl /retail-lake/gold
+hdfs dfs -count -v /retail-lake
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/bronze
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/bronze/tpcxbb
+drwxr-x---+  - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/gold
+drwxr-x---   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/logs
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/logs/ingestion
+drwxr-x---   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/quality
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/quality/integrite
+drwxr-x---   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/raw
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/raw/nifi
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/raw/tpcxbb
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/raw/tpcxbb/initial
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/raw/tpcxbb/refresh
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/silver
+
+# file: /retail-lake/gold
+# owner: etudiant
+# group: supergroup
+user::rwx
+group::r-x
+group:analystes:r-x
+mask::r-x
+other::---
+default:user::rwx
+default:group::r-x
+default:group:analystes:r-x
+default:mask::r-x
+default:other::---
+
+   DIR_COUNT   FILE_COUNT       CONTENT_SIZE PATHNAME
+          14            0                  0 /retail-lake
+# code retour : 0

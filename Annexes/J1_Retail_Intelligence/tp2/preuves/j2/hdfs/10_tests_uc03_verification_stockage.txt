@@ -1,0 +1,53 @@
+# TP J2 - preuve générée le 2026-11-17 12:18:40 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ /work/tests/hdfs/test_uc03.sh /data/tpcxbb
+== T1 Accès HDFS
+[OK] le NameNode répond et n'est pas en safe mode
+[OK] au moins un DataNode vivant
+       Live datanodes (1):
+== T2 Création de répertoires : arborescence attendue présente
+[OK] /retail-lake/raw/tpcxbb/initial
+[OK] /retail-lake/raw/tpcxbb/refresh
+[OK] /retail-lake/raw/nifi
+[OK] /retail-lake/bronze/tpcxbb
+[OK] /retail-lake/silver
+[OK] /retail-lake/gold
+[OK] /retail-lake/quality
+[OK] /retail-lake/logs/ingestion
+== T3 Dépôt de fichier : tous les fichiers du kit sont présents avec la même taille
+[OK] nombre de fichiers : kit=36 HDFS=36
+[OK] volume total : kit=1033993587 o  HDFS=1033993587 o
+[OK] taille identique fichier par fichier (36 comparaisons)
+       identiques
+== T4 Lecture ou récupération : intégrité par somme de contrôle
+[OK] SHA-256 source = SHA-256 relu depuis HDFS (manifestes) : 36 / 36
+[OK] récupération contrôlée (hdfs dfs -get) de item.dat puis comparaison octet à octet
+       d8d4863009914b86119c2df6f6a55a581cc07617304551ab7b741400ef7fed21  /tmp/recup_item.dat
+       d8d4863009914b86119c2df6f6a55a581cc07617304551ab7b741400ef7fed21  /data/tpcxbb/data/item/item.dat
+[OK] re-vérification indépendante du manifeste (store_sales relu maintenant)
+[OK] lecture : 2 premières lignes de web_sales.dat (refresh)
+       38697|38598|38806|17861|95479|481076||14580|95479|481076||14580|58|22|4|1|118|89100|44|27.96|67.66|41.27|1161.
+       38697|38598|38784|17324|95479|481076||14580|95479|481076||14580|43|21|17|4|291|89100|62|12.89|17.27|8.64|535.0
+[OK] fsck : aucun bloc manquant ou corrompu sous /retail-lake
+       Status: HEALTHY
+        Total blocks (validated):	42 (avg. block size 24619240 B)
+        Missing blocks:		0
+        Corrupt blocks:		0
+== T5 Permissions cohérentes avec l'usage
+[OK] raw, gold, quality, logs fermés à others (drwxr-x---)
+       drwxr-x--- /retail-lake/raw
+       drwxr-x---+ /retail-lake/gold
+       drwxr-x--- /retail-lake/quality
+       drwxr-x--- /retail-lake/logs
+[OK] fichiers Raw en lecture seule pour groupe et others (-rw-r--r--)
+[OK] un utilisateur tiers ne peut pas écrire dans Raw
+       touchz: Permission denied: user=invite, access=EXECUTE, inode="/retail-lake/raw":etudiant:supergroup:drwxr-x---
+[OK] provenance attachée aux fichiers (attributs étendus)
+       # file: /retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat
+       user.sha256="3c71c010a17d15c90564ddb12be4a1286f494669198b55e782edef6f8e8b23df"
+       user.ingestion.run="uc03_refresh_20261117T121614;2026-11-17T12:16:54+0100;hdfs dfs -put;etudiant"
+       user.tpcxbb.source="TPCx-BB Tools 1.7.0 (kit formateur) / data_refresh/store_sales/store_sales.dat"
+       user.tpcxbb.lot="refresh"
+[OK] source originale conservée et non modifiable
+----
+Bilan UC-03 : 23 OK, 0 KO
+# code retour : 0

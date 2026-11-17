@@ -1,0 +1,19 @@
+# TP J2 - preuve générée le 2026-11-17 12:40:54 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; python3 /work/ingestion/nifi/nifi_flux.py provenance --json /work/preuves/j2/nifi/provenance_evenements.json
+  id  horodatage                  type                 composant                                     fichier                       taille  uuid FlowFile
+   0  11/17/2026 12:30:28.601 CET RECEIVE              GetFile - lecture /data/nifi/input            store_sales.dat               922171  03f0068a-c98f-4e01-9296-ee38d6e4798c
+      transit : file:/data/nifi/input/store_sales.dat
+   1  11/17/2026 12:30:29.690 CET SEND                 PutHDFS - ecriture /retail-lake/raw/nifi      store_sales.dat               922171  03f0068a-c98f-4e01-9296-ee38d6e4798c
+      transit : hdfs://localhost:9000/retail-lake/raw/nifi/store_sales.dat
+   2  11/17/2026 12:30:29.691 CET ATTRIBUTES_MODIFIED  PutHDFS - ecriture /retail-lake/raw/nifi      store_sales.dat               922171  03f0068a-c98f-4e01-9296-ee38d6e4798c
+   3  11/17/2026 12:30:29.691 CET DROP                 PutHDFS - ecriture /retail-lake/raw/nifi      store_sales.dat               922171  03f0068a-c98f-4e01-9296-ee38d6e4798c
+      détails : Auto-Terminated by success Relationship
+   4  11/17/2026 12:39:53.020 CET RECEIVE              GetFile - lecture /data/nifi/input            store_sales.dat               922171  51d8bf78-adde-4e50-ad01-120e66d1ca7a
+      transit : file:/data/nifi/input/store_sales.dat
+   5  11/17/2026 12:40:23.181 CET SEND                 PutFile - quarantaine locale /data/nifi/error store_sales.dat               922171  51d8bf78-adde-4e50-ad01-120e66d1ca7a
+      transit : file:/data/nifi/error/store_sales.dat
+   6  11/17/2026 12:40:23.183 CET DROP                 PutFile - quarantaine locale /data/nifi/error store_sales.dat               922171  51d8bf78-adde-4e50-ad01-120e66d1ca7a
+      détails : Auto-Terminated by success Relationship
+
+7 événements exportés dans /work/preuves/j2/nifi/provenance_evenements.json
+# code retour : 0

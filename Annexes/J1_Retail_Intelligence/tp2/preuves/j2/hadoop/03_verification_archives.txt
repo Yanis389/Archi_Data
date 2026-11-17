@@ -1,0 +1,9 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:22 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ cat /opt/verif_archives.txt; ls /opt/nifi/lib | grep -i hadoop
+hadoop-3.5.0-aarch64.tar.gz: OK
+nifi-2.12.0-bin.zip: OK
+nifi-hadoop-nar-2.12.0.nar: OK
+nifi-hadoop-libraries-nar-2.12.0.nar: OK
+nifi-hadoop-libraries-nar-2.12.0.nar
+nifi-hadoop-nar-2.12.0.nar
+# code retour : 0

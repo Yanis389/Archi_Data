@@ -1,0 +1,16 @@
+# TP J2 - preuve générée le 2026-11-17 12:30:21 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ mkdir -p /data/nifi/input /data/nifi/archive /data/nifi/error; ls -ld /data/nifi/*
+cp /data/tpcxbb/data_refresh/store_sales/store_sales.dat /data/nifi/input/
+ls -l /data/nifi/input; sha256sum /data/nifi/input/store_sales.dat /data/tpcxbb/data_refresh/store_sales/store_sales.dat
+echo "--- destination HDFS distincte de l UC-03"; hdfs dfs -ls -d /retail-lake/raw/nifi; hdfs dfs -ls /retail-lake/raw/nifi; echo "(vide avant le flux)"
+drwxr-xr-x 2 etudiant etudiant 4096 Nov 17 12:08 /data/nifi/archive
+drwxr-xr-x 2 etudiant etudiant 4096 Nov 17 12:08 /data/nifi/error
+drwxr-xr-x 2 etudiant etudiant 4096 Nov 17 12:08 /data/nifi/input
+total 904
+-rw-r--r-- 1 etudiant etudiant 922171 Nov 17 12:30 store_sales.dat
+3c71c010a17d15c90564ddb12be4a1286f494669198b55e782edef6f8e8b23df  /data/nifi/input/store_sales.dat
+3c71c010a17d15c90564ddb12be4a1286f494669198b55e782edef6f8e8b23df  /data/tpcxbb/data_refresh/store_sales/store_sales.dat
+--- destination HDFS distincte de l UC-03
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:11 /retail-lake/raw/nifi
+(vide avant le flux)
+# code retour : 0

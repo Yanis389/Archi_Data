@@ -1,0 +1,34 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:33 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ cat $HADOOP_CONF_DIR/core-site.xml $HADOOP_CONF_DIR/hdfs-site.xml | grep -v "^<?xml"; grep -E "^export (JAVA_HOME|HADOOP_HEAPSIZE)" $HADOOP_CONF_DIR/hadoop-env.sh; ls -la ~/hadoop-data
+<!-- TP J2 - Retail Intelligence Platform : HDFS pseudo-distribué (section 1.4 du sujet) -->
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://localhost:9000</value>
+  </property>
+</configuration>
+<!-- TP J2 - Retail Intelligence Platform : HDFS pseudo-distribué (section 1.4 du sujet).
+     ETUDIANT remplacé par le compte Linux réel du conteneur : etudiant.
+     Facteur de réplication 1 : un seul DataNode, une deuxième copie serait impossible à placer. -->
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>1</value>
+  </property>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///home/etudiant/hadoop-data/namenode</value>
+  </property>
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>file:///home/etudiant/hadoop-data/datanode</value>
+  </property>
+</configuration>
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-arm64
+export HADOOP_HEAPSIZE_MAX=512m
+total 20
+drwxr-xr-x 4 etudiant etudiant 4096 Nov 17 12:08 .
+drwxr-x--- 1 etudiant etudiant 4096 Nov 17 12:08 ..
+drwxr-xr-x 2 etudiant etudiant 4096 Nov 17 12:08 datanode
+drwxr-xr-x 2 etudiant etudiant 4096 Nov 17 12:08 namenode
+# code retour : 0

@@ -1,0 +1,21 @@
+# TP J2 - preuve générée le 2026-11-17 12:38:04 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; NF="python3 /work/ingestion/nifi/nifi_flux.py"; G="GetFile - lecture /data/nifi/input"
+ls -d /data/nifi/inexistant 2>&1
+echo "--- 1. arrêt du processeur"; $NF arreter-proc obligatoire "$G"
+echo "--- 2. configuration volontairement erronée"; $NF config obligatoire "$G" "Input Directory" /data/nifi/inexistant
+echo "--- 3. tentative de démarrage"; $NF demarrer-proc obligatoire "$G"
+echo "--- 4. modification refusée tant que le démarrage est demandé"; $NF config obligatoire "$G" "Input Directory" /data/nifi/input
+$NF etat obligatoire | tail -2
+ls: cannot access '/data/nifi/inexistant': No such file or directory
+--- 1. arrêt du processeur
+GetFile - lecture /data/nifi/input : demandé STOPPED -> état réel Invalid (validation INVALID)
+--- 2. configuration volontairement erronée
+GetFile - lecture /data/nifi/input : Input Directory = /data/nifi/inexistant
+  validation : 'Input Directory' validated against '/data/nifi/inexistant' is invalid because Directory does not exist
+--- 3. tentative de démarrage
+GetFile - lecture /data/nifi/input : demandé RUNNING -> état réel Invalid (validation INVALID)
+--- 4. modification refusée tant que le démarrage est demandé
+PUT /processors/e9456f48-01a1-1000-4c5a-8a5fd32dd666 -> HTTP 400 : Cannot modify configuration of GetFile[id=e9456f48-01a1-1000-4c5a-8a5fd32dd666] while the Processor is running
+processeurs invalides : 
+  - GetFile - lecture /data/nifi/input : 'Input Directory' validated against '/data/nifi/inexistant' is invalid because Directory does not exist
+# code retour : 0

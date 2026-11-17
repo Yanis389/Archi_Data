@@ -1,0 +1,80 @@
+# TP J2 - preuve générée le 2026-11-17 12:44:41 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ . ~/.nifi_credentials; NF="python3 /work/ingestion/nifi/nifi_flux.py"
+mkdir -p /data/nifi/lot/refresh
+for t in store_sales web_sales store_returns item customer product_reviews; do cp /data/tpcxbb/data_refresh/$t/$t.dat /data/nifi/lot/refresh/; done
+cp /data/tpcxbb/data_refresh/item_marketprices/item_marketprices_audit.csv /data/nifi/lot/refresh/
+# fichiers SYNTHÉTIQUES de test (pas des données TPCx-BB) pour éprouver les rejets
+: > /data/nifi/lot/refresh/SYNTHETIQUE_vide.dat
+echo "fichier de test synthétique" > /data/nifi/lot/refresh/SYNTHETIQUE_inconnu.txt
+echo "1|test synthetique" > /data/nifi/lot/refresh/SYNTHETIQUE_table_inconnue.dat
+ls -l /data/nifi/lot/refresh
+$NF demarrer enrichi >/dev/null; sleep 50
+$NF etat enrichi
+echo "--- dépôts HDFS par domaine"; hdfs dfs -ls -R /retail-lake/raw/nifi | grep -v "^d" | awk "{printf \"%10s  %s\n\", \$5, \$8}"
+echo "--- quarantaine locale des rejets"; ls -lR /data/nifi/error | grep -v "^total"
+echo "--- dossier d entrée"; ls -A /data/nifi/lot/refresh | wc -l | sed "s/$/ fichier(s) restant(s)/"
+total 3220
+-rw-r--r-- 1 etudiant etudiant      29 Nov 17 12:44 SYNTHETIQUE_inconnu.txt
+-rw-r--r-- 1 etudiant etudiant      19 Nov 17 12:44 SYNTHETIQUE_table_inconnue.dat
+-rw-r--r-- 1 etudiant etudiant       0 Nov 17 12:44 SYNTHETIQUE_vide.dat
+-rw-r--r-- 1 etudiant etudiant  134360 Nov 17 12:44 customer.dat
+-rw-r--r-- 1 etudiant etudiant   69173 Nov 17 12:44 item.dat
+-rw-r--r-- 1 etudiant etudiant  151009 Nov 17 12:44 item_marketprices_audit.csv
+-rw-r--r-- 1 etudiant etudiant  573685 Nov 17 12:44 product_reviews.dat
+-rw-r--r-- 1 etudiant etudiant   48825 Nov 17 12:44 store_returns.dat
+-rw-r--r-- 1 etudiant etudiant  922171 Nov 17 12:44 store_sales.dat
+-rw-r--r-- 1 etudiant etudiant 1378425 Nov 17 12:44 web_sales.dat
+Process Group : UC04 - Flux enrichi (attributs, controles, routage, reprises)
+processeur                                          état        entrés  sortis         lus      écrits
+RouteOnAttribute - routage par domaine              Running          8       8     0 bytes     0 bytes
+UpdateAttribute - motif rejet controle              Running          2       2     0 bytes     0 bytes
+UpdateAttribute - motif rejet domaine               Running          1       1     0 bytes     0 bytes
+UpdateAttribute - attributs de suivi                Running         10      10     0 bytes     0 bytes
+PutHDFS - raw/nifi/<domaine>/<lot>/<table>          Running          7       0     3.13 MB     0 bytes
+CryptographicHashContent - SHA-256                  Running         10      10     3.13 MB     0 bytes
+PutFile - /data/nifi/error/<date>                   Running          3       0    48 bytes     0 bytes
+RouteOnAttribute - controles avant ingestion        Running         10      10     0 bytes     0 bytes
+LogAttribute - journal des rejets                   Running          3       3     0 bytes     0 bytes
+UpdateAttribute - motif echec depot                 Running          0       0     0 bytes     0 bytes
+GetFile - lot /data/nifi/lot                        Running          0      10     3.13 MB     3.13 MB
+RetryFlowFile - 3 tentatives                        Running          0       0     0 bytes     0 bytes
+
+connexion (source -> destination)                                                      en file
+RouteOnAttribute - controles avant ingestion -> RouteOnAttribute - routage par doma 0 (0 bytes)
+PutHDFS - raw/nifi/<domaine>/<lot>/<table> -> RetryFlowFile - 3 tentatives          0 (0 bytes)
+RouteOnAttribute - routage par domaine -> UpdateAttribute - motif rejet domaine     0 (0 bytes)
+RouteOnAttribute - controles avant ingestion -> UpdateAttribute - motif rejet contr 0 (0 bytes)
+RetryFlowFile - 3 tentatives -> UpdateAttribute - motif echec depot                 0 (0 bytes)
+CryptographicHashContent - SHA-256 -> RouteOnAttribute - controles avant ingestion  0 (0 bytes)
+RouteOnAttribute - routage par domaine -> PutHDFS - raw/nifi/<domaine>/<lot>/<table 0 (0 bytes)
+UpdateAttribute - motif rejet domaine -> LogAttribute - journal des rejets          0 (0 bytes)
+UpdateAttribute - attributs de suivi -> CryptographicHashContent - SHA-256          0 (0 bytes)
+RetryFlowFile - 3 tentatives -> UpdateAttribute - motif echec depot                 0 (0 bytes)
+LogAttribute - journal des rejets -> PutFile - /data/nifi/error/<date>              0 (0 bytes)
+UpdateAttribute - motif rejet controle -> LogAttribute - journal des rejets         0 (0 bytes)
+RetryFlowFile - 3 tentatives -> PutHDFS - raw/nifi/<domaine>/<lot>/<table>          0 (0 bytes)
+GetFile - lot /data/nifi/lot -> UpdateAttribute - attributs de suivi                0 (0 bytes)
+UpdateAttribute - motif echec depot -> LogAttribute - journal des rejets            0 (0 bytes)
+
+processeurs invalides : aucun
+--- dépôts HDFS par domaine
+    573685  /retail-lake/raw/nifi/avis/refresh/product_reviews/product_reviews.dat
+    134360  /retail-lake/raw/nifi/clients/refresh/customer/customer.dat
+     69173  /retail-lake/raw/nifi/produits/refresh/item/item.dat
+    151009  /retail-lake/raw/nifi/produits/refresh/item_marketprices_audit/item_marketprices_audit.csv
+     48825  /retail-lake/raw/nifi/retours/refresh/store_returns/store_returns.dat
+    922171  /retail-lake/raw/nifi/store_sales.dat
+    922171  /retail-lake/raw/nifi/ventes/refresh/store_sales/store_sales.dat
+   1378425  /retail-lake/raw/nifi/ventes/refresh/web_sales/web_sales.dat
+--- quarantaine locale des rejets
+/data/nifi/error:
+drwxr-xr-x 2 etudiant etudiant   4096 Nov 17 12:44 2026-11-17
+-rw-r--r-- 1 etudiant etudiant 922171 Nov 17 12:40 store_sales.dat
+
+/data/nifi/error/2026-11-17:
+-rw-r--r-- 1 etudiant etudiant 29 Nov 17 12:44 SYNTHETIQUE_inconnu.txt
+-rw-r--r-- 1 etudiant etudiant 19 Nov 17 12:44 SYNTHETIQUE_table_inconnue.dat
+-rw-r--r-- 1 etudiant etudiant  0 Nov 17 12:44 SYNTHETIQUE_vide.dat
+--- dossier d entrée
+0 fichier(s) restant(s)
+# code retour : 0

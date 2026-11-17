@@ -1,0 +1,58 @@
+# TP J2 - preuve générée le 2026-11-17 12:19:51 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ hdfs dfs -du -h /retail-lake; echo; hdfs dfs -du -h /retail-lake/raw/tpcxbb; echo; hdfs dfs -count -h -v /retail-lake/raw/tpcxbb/initial /retail-lake/raw/tpcxbb/refresh; echo; echo "droits       octets      chemin HDFS"; hdfs dfs -ls -R /retail-lake/raw/tpcxbb | grep -v "^d" | awk "{printf \"%-11s %11s  %s\n\", \$1, \$5, \$8}"; echo; hdfs dfs -ls /retail-lake/logs/ingestion
+0        0        /retail-lake/bronze
+0        0        /retail-lake/gold
+14.2 K   14.2 K   /retail-lake/logs
+0        0        /retail-lake/quality
+986.1 M  986.1 M  /retail-lake/raw
+0        0        /retail-lake/silver
+
+977.0 M  977.0 M  /retail-lake/raw/tpcxbb/initial
+9.1 M    9.1 M    /retail-lake/raw/tpcxbb/refresh
+
+   DIR_COUNT   FILE_COUNT       CONTENT_SIZE PATHNAME
+          24           24            977.0 M /retail-lake/raw/tpcxbb/initial
+          12           12              9.1 M /retail-lake/raw/tpcxbb/refresh
+
+droits       octets      chemin HDFS
+-rw-r--r--     13279063  /retail-lake/raw/tpcxbb/initial/customer/customer.dat
+-rw-r--r--      5387229  /retail-lake/raw/tpcxbb/initial/customer_address/customer_address.dat
+-rw-r--r--     77753083  /retail-lake/raw/tpcxbb/initial/customer_demographics/customer_demographics.dat
+-rw-r--r--     15395800  /retail-lake/raw/tpcxbb/initial/date_dim/date_dim.dat
+-rw-r--r--       155100  /retail-lake/raw/tpcxbb/initial/household_demographics/household_demographics.dat
+-rw-r--r--          327  /retail-lake/raw/tpcxbb/initial/income_band/income_band.dat
+-rw-r--r--    424943678  /retail-lake/raw/tpcxbb/initial/inventory/inventory.dat
+-rw-r--r--      6799286  /retail-lake/raw/tpcxbb/initial/item/item.dat
+-rw-r--r--      4201170  /retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices.dat
+-rw-r--r--          273  /retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices_audit.csv
+-rw-r--r--     56355389  /retail-lake/raw/tpcxbb/initial/product_reviews/product_reviews.dat
+-rw-r--r--        46396  /retail-lake/raw/tpcxbb/initial/promotion/promotion.dat
+-rw-r--r--         3105  /retail-lake/raw/tpcxbb/initial/reason/reason.dat
+-rw-r--r--         1220  /retail-lake/raw/tpcxbb/initial/ship_mode/ship_mode.dat
+-rw-r--r--         3386  /retail-lake/raw/tpcxbb/initial/store/store.dat
+-rw-r--r--      4337400  /retail-lake/raw/tpcxbb/initial/store_returns/store_returns.dat
+-rw-r--r--     92764700  /retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat
+-rw-r--r--      5107780  /retail-lake/raw/tpcxbb/initial/time_dim/time_dim.dat
+-rw-r--r--          584  /retail-lake/raw/tpcxbb/initial/warehouse/warehouse.dat
+-rw-r--r--    178722140  /retail-lake/raw/tpcxbb/initial/web_clickstreams/web_clickstreams.dat
+-rw-r--r--         8040  /retail-lake/raw/tpcxbb/initial/web_page/web_page.dat
+-rw-r--r--      5383513  /retail-lake/raw/tpcxbb/initial/web_returns/web_returns.dat
+-rw-r--r--    133790574  /retail-lake/raw/tpcxbb/initial/web_sales/web_sales.dat
+-rw-r--r--         8838  /retail-lake/raw/tpcxbb/initial/web_site/web_site.dat
+-rw-r--r--       134360  /retail-lake/raw/tpcxbb/refresh/customer/customer.dat
+-rw-r--r--        54587  /retail-lake/raw/tpcxbb/refresh/customer_address/customer_address.dat
+-rw-r--r--      4292915  /retail-lake/raw/tpcxbb/refresh/inventory/inventory.dat
+-rw-r--r--        69173  /retail-lake/raw/tpcxbb/refresh/item/item.dat
+-rw-r--r--        42547  /retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices.dat
+-rw-r--r--       151009  /retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices_audit.csv
+-rw-r--r--       573685  /retail-lake/raw/tpcxbb/refresh/product_reviews/product_reviews.dat
+-rw-r--r--        48825  /retail-lake/raw/tpcxbb/refresh/store_returns/store_returns.dat
+-rw-r--r--       922171  /retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat
+-rw-r--r--      1821864  /retail-lake/raw/tpcxbb/refresh/web_clickstreams/web_clickstreams.dat
+-rw-r--r--        55952  /retail-lake/raw/tpcxbb/refresh/web_returns/web_returns.dat
+-rw-r--r--      1378425  /retail-lake/raw/tpcxbb/refresh/web_sales/web_sales.dat
+
+Found 2 items
+-rw-r--r--   1 etudiant supergroup       9527 2026-11-17 12:16 /retail-lake/logs/ingestion/uc03_initial_20261117T121343_manifeste.csv
+-rw-r--r--   1 etudiant supergroup       4998 2026-11-17 12:17 /retail-lake/logs/ingestion/uc03_refresh_20261117T121614_manifeste.csv
+# code retour : 0
