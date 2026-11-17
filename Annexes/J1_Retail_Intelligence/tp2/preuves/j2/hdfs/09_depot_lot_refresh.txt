@@ -1,0 +1,22 @@
+# TP J2 - preuve générée le 2026-11-17 12:16:14 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ time /work/ingestion/scripts/depot_hdfs_uc03.sh /data/tpcxbb refresh
+customer                         customer.dat                         134360 o  DEPOSE_verifie
+customer_address                 customer_address.dat                  54587 o  DEPOSE_verifie
+inventory                        inventory.dat                       4292915 o  DEPOSE_verifie
+item                             item.dat                              69173 o  DEPOSE_verifie
+item_marketprices                item_marketprices.dat                 42547 o  DEPOSE_verifie
+item_marketprices                item_marketprices_audit.csv          151009 o  DEPOSE_verifie
+product_reviews                  product_reviews.dat                  573685 o  DEPOSE_verifie
+store_returns                    store_returns.dat                     48825 o  DEPOSE_verifie
+store_sales                      store_sales.dat                      922171 o  DEPOSE_verifie
+web_clickstreams                 web_clickstreams.dat                1821864 o  DEPOSE_verifie
+web_returns                      web_returns.dat                       55952 o  DEPOSE_verifie
+web_sales                        web_sales.dat                       1378425 o  DEPOSE_verifie
+----
+run=uc03_refresh_20261117T121614  déposés_vérifiés=12  déjà_présents_identiques=0  échecs_ou_conflits=0
+manifeste : /work/preuves/j2/hdfs/manifeste_refresh.csv  et  /retail-lake/logs/ingestion/uc03_refresh_20261117T121614_manifeste.csv
+
+real	1m2.177s
+user	1m22.358s
+sys	0m8.076s
+# code retour : 0

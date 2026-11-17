@@ -1,0 +1,7 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:34 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ ls -A ~/hadoop-data/namenode | wc -l | sed "s/^/fichiers dans namenode avant formatage : /"; hdfs namenode -format -nonInteractive 2>&1 | grep -E "STARTUP_MSG: (host|version|java)|Storage directory|has been successfully formatted|SHUTDOWN_MSG|ERROR|FATAL"
+fichiers dans namenode avant formatage : 0
+2026-11-17 12:09:36,135 INFO common.Storage: Storage directory /home/etudiant/hadoop-data/namenode has been successfully formatted.
+2026-11-17 12:09:36,339 INFO namenode.NameNode: SHUTDOWN_MSG: 
+SHUTDOWN_MSG: Shutting down NameNode at tp2-hadoop/172.17.0.2
+# code retour : 0

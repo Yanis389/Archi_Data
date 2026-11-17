@@ -1,0 +1,16 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:21 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ /usr/lib/jvm/java-17-openjdk-arm64/bin/java -version; /usr/lib/jvm/java-21-openjdk-arm64/bin/java -version; readlink -f /usr/bin/java; ls -d /usr/lib/jvm/*; echo "JAVA_HOME_HADOOP=$JAVA_HOME_HADOOP"; echo "JAVA_HOME_NIFI=$JAVA_HOME_NIFI"
+openjdk version "17.0.21.0.3" 2026-10-24
+OpenJDK Runtime Environment (build 17.0.21.0.3+1-1-24.04.1-Ubuntu)
+OpenJDK 64-Bit Server VM (build 17.0.21.0.3+1-1-24.04.1-Ubuntu, mixed mode, sharing)
+openjdk version "21.0.13.0.3" 2026-10-24
+OpenJDK Runtime Environment (build 21.0.13.0.3+1-1-24.04.1-Ubuntu)
+OpenJDK 64-Bit Server VM (build 21.0.13.0.3+1-1-24.04.1-Ubuntu, mixed mode, sharing)
+/usr/lib/jvm/java-21-openjdk-arm64/bin/java
+/usr/lib/jvm/java-1.17.0-openjdk-arm64
+/usr/lib/jvm/java-1.21.0-openjdk-arm64
+/usr/lib/jvm/java-17-openjdk-arm64
+/usr/lib/jvm/java-21-openjdk-arm64
+JAVA_HOME_HADOOP=/usr/lib/jvm/java-17-openjdk-arm64
+JAVA_HOME_NIFI=/usr/lib/jvm/java-21-openjdk-arm64
+# code retour : 0

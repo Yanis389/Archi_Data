@@ -1,0 +1,70 @@
+# TP J2 - preuve générée le 2026-11-17 12:19:24 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ F=/retail-lake/raw/tpcxbb/initial/inventory/inventory.dat
+hdfs dfs -stat "taille=%b octets | taille de bloc=%o | replication=%r" $F
+echo "blocs attendus : ceil(424943678 / 134217728) = $(( (424943678 + 134217727) / 134217728 ))"
+hdfs fsck $F -files -blocks -locations 2>/dev/null | grep -vE "^Connecting|^FSCK started|^$"
+echo "--- blocs physiques côté DataNode (fichiers blk_* du disque local)"
+find ~/hadoop-data/datanode -name "blk_*" ! -name "*.meta" -printf "%s %f\n" | sort -n | tail -6
+echo "nombre total de blocs physiques : $(find ~/hadoop-data/datanode -name "blk_*" ! -name "*.meta" | wc -l)"
+echo "--- tentative de réplication 2 sur un mono-nœud (fichier de test, non bloquant)"
+hdfs dfs -cp /retail-lake/raw/tpcxbb/initial/income_band/income_band.dat /retail-lake/quality/integrite/test_replication.dat
+hdfs dfs -setrep 2 /retail-lake/quality/integrite/test_replication.dat
+sleep 3; hdfs fsck /retail-lake/quality/integrite/test_replication.dat 2>/dev/null | grep -E "Under-replicated|Default replication|Average block replication|Status"
+hdfs dfs -rm -skipTrash /retail-lake/quality/integrite/test_replication.dat
+taille=424943678 octets | taille de bloc=134217728 | replication=1
+blocs attendus : ceil(424943678 / 134217728) = 4
+/retail-lake/raw/tpcxbb/initial/inventory/inventory.dat 424943678 bytes, replicated: replication=1, 4 block(s):  OK
+0. BP-106008982-172.17.0.2-1794913776088:blk_1073741833_1009 len=134217728 Live_repl=1  [DatanodeInfoWithStorage[127.0.0.1:9866,DS-ee2d7ff1-1b88-4c7c-a246-5a81af8d8047,DISK]]
+1. BP-106008982-172.17.0.2-1794913776088:blk_1073741834_1010 len=134217728 Live_repl=1  [DatanodeInfoWithStorage[127.0.0.1:9866,DS-ee2d7ff1-1b88-4c7c-a246-5a81af8d8047,DISK]]
+2. BP-106008982-172.17.0.2-1794913776088:blk_1073741835_1011 len=134217728 Live_repl=1  [DatanodeInfoWithStorage[127.0.0.1:9866,DS-ee2d7ff1-1b88-4c7c-a246-5a81af8d8047,DISK]]
+3. BP-106008982-172.17.0.2-1794913776088:blk_1073741836_1012 len=22290494 Live_repl=1  [DatanodeInfoWithStorage[127.0.0.1:9866,DS-ee2d7ff1-1b88-4c7c-a246-5a81af8d8047,DISK]]
+Status: HEALTHY
+ Number of data-nodes:	1
+ Number of racks:		1
+ Total dirs:			0
+ Total symlinks:		0
+Replicated Blocks:
+ Total size:	424943678 B
+ Total files:	1
+ Total blocks (validated):	4 (avg. block size 106235919 B)
+ Minimally replicated blocks:	4 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	1
+ Average block replication:	1.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Tue Nov 17 11:19:26 UTC 2026 in 11 milliseconds
+The filesystem under path '/retail-lake/raw/tpcxbb/initial/inventory/inventory.dat' is HEALTHY
+--- blocs physiques côté DataNode (fichiers blk_* du disque local)
+92764700 blk_1073741826
+133790574 blk_1073741852
+134217728 blk_1073741833
+134217728 blk_1073741834
+134217728 blk_1073741835
+134217728 blk_1073741848
+nombre total de blocs physiques : 42
+--- tentative de réplication 2 sur un mono-nœud (fichier de test, non bloquant)
+Replication 2 set: /retail-lake/quality/integrite/test_replication.dat
+Status: HEALTHY
+ Under-replicated blocks:	1 (100.0 %)
+ Default replication factor:	1
+ Average block replication:	1.0
+Deleted /retail-lake/quality/integrite/test_replication.dat
+# code retour : 0

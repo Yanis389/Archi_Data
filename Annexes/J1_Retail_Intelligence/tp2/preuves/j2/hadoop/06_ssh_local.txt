@@ -1,0 +1,10 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:34 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ service ssh status; ssh-keygen -q -t ed25519 -N "" -f ~/.ssh/id_ed25519 && cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys && ls -l ~/.ssh | sed "s/ [0-9]* [A-Z][a-z][a-z] .* / /"; ssh -o StrictHostKeyChecking=accept-new -o BatchMode=yes localhost "echo connexion SSH sans mot de passe OK sur \$(hostname)"
+ * sshd is running
+total 12
+-rw------- 1 etudiant etudiant authorized_keys
+-rw------- 1 etudiant etudiant id_ed25519
+-rw-r--r-- 1 etudiant etudiant id_ed25519.pub
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+connexion SSH sans mot de passe OK sur tp2-hadoop
+# code retour : 0

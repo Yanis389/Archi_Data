@@ -1,0 +1,11 @@
+# TP J2 - preuve générée le 2026-11-17 12:11:20 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ hdfs dfs -ls -d / /retail-lake; hdfs dfs -stat "proprietaire=%u groupe=%g droits=%A type=%F nom=%n" /retail-lake; hdfs groups etudiant; echo "dfs.permissions.enabled=$(hdfs getconf -confKey dfs.permissions.enabled)"; echo "dfs.permissions.superusergroup=$(hdfs getconf -confKey dfs.permissions.superusergroup)"; echo "hadoop.security.authentication=$(hdfs getconf -confKey hadoop.security.authentication)"; echo "fs.permissions.umask-mode=$(hdfs getconf -confKey fs.permissions.umask-mode)"
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:10 /
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:10 /retail-lake
+proprietaire=etudiant groupe=supergroup droits=rwxr-xr-x type=directory nom=retail-lake
+etudiant : etudiant
+dfs.permissions.enabled=true
+dfs.permissions.superusergroup=supergroup
+hadoop.security.authentication=simple
+fs.permissions.umask-mode=022
+# code retour : 0

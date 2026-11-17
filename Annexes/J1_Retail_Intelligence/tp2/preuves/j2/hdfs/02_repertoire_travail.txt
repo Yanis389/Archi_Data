@@ -1,0 +1,7 @@
+# TP J2 - preuve générée le 2026-11-17 12:10:57 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ hdfs dfs -mkdir -p /retail-lake; hdfs dfs -ls /; hdfs dfs -ls /retail-lake; echo "(répertoire vide)"; hdfs dfs -du -h /retail-lake; hdfs dfs -du -s -h /retail-lake
+Found 1 items
+drwxr-xr-x   - etudiant supergroup          0 2026-11-17 12:10 /retail-lake
+(répertoire vide)
+0  0  /retail-lake
+# code retour : 0

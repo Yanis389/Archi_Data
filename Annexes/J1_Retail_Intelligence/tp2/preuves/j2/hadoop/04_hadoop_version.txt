@@ -1,0 +1,15 @@
+# TP J2 - preuve générée le 2026-11-17 12:09:22 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ hadoop version; echo; echo "HADOOP_HOME=$HADOOP_HOME"; echo "HADOOP_CONF_DIR=$HADOOP_CONF_DIR"; which hadoop hdfs
+Hadoop 3.5.0
+Source code repository https://github.com/apache/hadoop.git -r dbcc7cd797100e6b32cd84f85b53a5193a5f9af0
+Compiled by cnauroth on 2026-03-24T16:57Z
+Compiled on platform linux-aarch_64
+Compiled with protoc 3.25.5
+From source with checksum 64582ed0a62a169c39a19c734a8f33b5
+This command was run using /opt/hadoop/share/hadoop/common/hadoop-common-3.5.0.jar
+
+HADOOP_HOME=/opt/hadoop
+HADOOP_CONF_DIR=/opt/hadoop/etc/hadoop
+/opt/hadoop/bin/hadoop
+/opt/hadoop/bin/hdfs
+# code retour : 0

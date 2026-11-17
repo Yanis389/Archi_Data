@@ -1,0 +1,22 @@
+# TP J2 - preuve générée le 2026-11-17 12:10:53 CET - utilisateur=etudiant - hôte=tp2-hadoop
+$ hdfs dfs -ls /; echo "(racine vide : espace HDFS neuf)"; hdfs dfs -df -h /; hdfs dfsadmin -report | sed -n "1,5p;/Live datanodes/,/Num of Blocks/p" | grep -E "Configured Capacity|DFS Used|DFS Remaining|Live datanodes|Name:|Hostname|Decommission|Last contact|Num of Blocks" 
+(racine vide : espace HDFS neuf)
+Filesystem                Size  Used  Available  Use%
+hdfs://localhost:9000  223.6 G  24 K    208.8 G    0%
+Configured Capacity: 240120725504 (223.63 GB)
+DFS Remaining: 224244363264 (208.84 GB)
+DFS Used: 24576 (24 KB)
+DFS Used%: 0.00%
+Live datanodes (1):
+Name: 127.0.0.1:9866 (localhost)
+Hostname: tp2-hadoop
+Decommission Status : Normal
+Configured Capacity: 240120725504 (223.63 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 3604279296 (3.36 GB)
+DFS Remaining: 224244363264 (208.84 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 93.39%
+Last contact: Tue Nov 17 12:10:56 CET 2026
+Num of Blocks: 0
+# code retour : 0
