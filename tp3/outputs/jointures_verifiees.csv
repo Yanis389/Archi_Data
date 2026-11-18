@@ -1,0 +1,7 @@
+jointure;cle_gauche;cle_droite;relation;type;cle_droite_unique;lignes_avant;lignes_apres;lignes_cle_vide_cote_gauche;lignes_non_rapprochees;verdict
+store_sales -> date_dim;ss_sold_date_sk;d_date_sk;N:1 (plusieurs lignes de vente par jour);inner;True;667579;667579;0;0;OK
+store_sales -> store;ss_store_sk;s_store_sk;N:1 (plusieurs ventes par magasin);inner;True;667579;667579;0;0;OK
+store_sales -> item;ss_item_sk;i_item_sk;N:1 (plusieurs lignes par produit);inner;True;667579;667579;0;0;OK
+store_returns -> reason;sr_reason_sk;r_reason_sk;N:1 (plusieurs retours par motif), motif vide conservé (left);left;True;37902;37902;11;0;OK
+ventes_par_magasin -> retours_par_magasin;magasin_sk;retour_magasin_sk;1:1 (un agrégat par magasin de chaque côté);inner;True;12;12;0;0;OK
+ventes+retours -> store;magasin_sk;s_store_sk;N:1 (agrégat par magasin vers sa fiche);inner;True;12;12;0;0;OK

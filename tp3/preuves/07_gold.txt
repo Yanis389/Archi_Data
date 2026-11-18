@@ -1,0 +1,141 @@
+# TP3 - preuve générée le 2026-11-18 12:39:38 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
+$ python -m transformations.gold
+26/11/18 12:39:43 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:39:43 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+26/11/18 12:39:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 12:40:11] OK   jointure store_sales -> date_dim: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 12:40:17] OK   jointure store_sales -> store: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 12:40:22] OK   gold.ventes_par_magasin_mois: 720 lignes, granularité ['magasin_sk', 'annee', 'mois'] unique=True
+--- gold.ventes_par_magasin_mois ---
+root
+ |-- magasin_sk: integer (nullable = true)
+ |-- magasin_nom: string (nullable = true)
+ |-- magasin_etat: string (nullable = true)
+ |-- annee: integer (nullable = true)
+ |-- mois: integer (nullable = true)
+ |-- periode: string (nullable = true)
+ |-- nb_lignes: long (nullable = true)
+ |-- nb_tickets: long (nullable = true)
+ |-- nb_jours_avec_ventes: long (nullable = true)
+ |-- quantite_vendue: long (nullable = true)
+ |-- montant_lignes_brut: decimal(22,2) (nullable = true)
+ |-- chiffre_affaires: decimal(22,2) (nullable = true)
+ |-- panier_moyen: decimal(23,2) (nullable = true)
+ |-- _sources: string (nullable = true)
+ |-- _gold_at: timestamp (nullable = true)
+ |-- _regles_version: string (nullable = true)
++----------+-----------+------------+-----+----+-------+---------+----------+--------------------+---------------+-------------------+----------------+------------+
+|magasin_sk|magasin_nom|magasin_etat|annee|mois|periode|nb_lignes|nb_tickets|nb_jours_avec_ventes|quantite_vendue|montant_lignes_brut|chiffre_affaires|panier_moyen|
++----------+-----------+------------+-----+----+-------+---------+----------+--------------------+---------------+-------------------+----------------+------------+
+|0         |Forest     |CO          |2001 |1   |2001-01|861      |111       |29                  |44609          |1543731.88         |1386332.96      |12489.49    |
+|0         |Forest     |CO          |2001 |2   |2001-02|917      |123       |28                  |47166          |1689368.29         |1538610.08      |12509.03    |
+|0         |Forest     |CO          |2001 |3   |2001-03|1015     |125       |31                  |50304          |2055241.80         |1850977.23      |14807.82    |
+|0         |Forest     |CO          |2001 |4   |2001-04|979      |132       |30                  |49850          |1887462.70         |1733270.60      |13130.84    |
+|0         |Forest     |CO          |2001 |5   |2001-05|926      |120       |31                  |47860          |1735107.38         |1574749.95      |13122.92    |
+|0         |Forest     |CO          |2001 |6   |2001-06|773      |109       |30                  |40140          |1551198.66         |1423436.15      |13059.05    |
+|0         |Forest     |CO          |2001 |7   |2001-07|995      |138       |31                  |49235          |1888995.27         |1700187.42      |12320.20    |
+|0         |Forest     |CO          |2001 |8   |2001-08|923      |124       |30                  |45631          |1552604.58         |1367459.14      |11027.90    |
+|0         |Forest     |CO          |2001 |9   |2001-09|1031     |134       |30                  |51764          |2044896.04         |1852561.78      |13825.09    |
+|0         |Forest     |CO          |2001 |10  |2001-10|832      |110       |31                  |41833          |1563798.46         |1390208.90      |12638.26    |
+|0         |Forest     |CO          |2001 |11  |2001-11|1028     |127       |30                  |53352          |1992778.75         |1819084.93      |14323.50    |
+|0         |Forest     |CO          |2001 |12  |2001-12|1034     |141       |31                  |53941          |2092423.78         |1856239.35      |13164.82    |
++----------+-----------+------------+-----+----+-------+---------+----------+--------------------+---------------+-------------------+----------------+------------+
+only showing top 12 rows
+[2026-11-18 12:40:23] OK   jointure store_sales -> item: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 12:40:25] OK   gold.ventes_par_categorie_annee: 45 lignes, granularité ['categorie', 'annee'] unique=True
+--- gold.ventes_par_categorie_annee ---
+root
+ |-- categorie: string (nullable = true)
+ |-- annee: integer (nullable = true)
+ |-- nb_lignes: long (nullable = true)
+ |-- nb_jours_avec_ventes: long (nullable = true)
+ |-- quantite_vendue: long (nullable = true)
+ |-- chiffre_affaires: decimal(22,2) (nullable = true)
+ |-- part_ca_annee_pct: decimal(29,2) (nullable = true)
+ |-- _sources: string (nullable = true)
+ |-- _gold_at: timestamp (nullable = true)
+ |-- _regles_version: string (nullable = true)
++------------------------+-----+---------+--------------------+---------------+----------------+-----------------+
+|categorie               |annee|nb_lignes|nb_jours_avec_ventes|quantite_vendue|chiffre_affaires|part_ca_annee_pct|
++------------------------+-----+---------+--------------------+---------------+----------------+-----------------+
+|Music                   |2001 |60993    |365                 |3086125        |105338495.32    |45.31            |
+|Books                   |2001 |35948    |365                 |1819416        |62231425.35     |26.77            |
+|Movies & TV             |2001 |8783     |365                 |445598         |15129909.71     |6.51             |
+|Clothing & Accessories  |2001 |6463     |365                 |325858         |11434730.37     |4.92             |
+|Electronics             |2001 |6519     |365                 |327226         |11108757.83     |4.78             |
+|Home & Kitchen          |2001 |4929     |365                 |247322         |8296899.82      |3.57             |
+|Sports & Outdoors       |2001 |4762     |365                 |238212         |8081674.00      |3.48             |
+|Toys & Games            |2001 |3296     |365                 |165165         |5471576.63      |2.35             |
+|Tools & Home Improvement|2001 |3180     |365                 |159312         |5405190.80      |2.32             |
+|Music                   |2002 |61017    |365                 |3083170        |104246833.82    |45.14            |
+|Books                   |2002 |35789    |365                 |1818599        |61047147.36     |26.43            |
+|Movies & TV             |2002 |8710     |365                 |436731         |15184615.65     |6.57             |
++------------------------+-----+---------+--------------------+---------------+----------------+-----------------+
+only showing top 12 rows
+[2026-11-18 12:40:26] OK   jointure store_returns -> reason: 37902 -> 37902 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 12:40:28] OK   gold.retours_par_motif: 36 lignes, granularité ['motif_libelle'] unique=True
+--- gold.retours_par_motif ---
+root
+ |-- motif_sk: integer (nullable = true)
+ |-- motif_libelle: string (nullable = true)
+ |-- nb_lignes_retour: long (nullable = true)
+ |-- quantite_retournee: long (nullable = true)
+ |-- montant_rembourse: decimal(22,2) (nullable = true)
+ |-- perte_nette: decimal(22,2) (nullable = true)
+ |-- part_lignes_pct: double (nullable = true)
+ |-- _sources: string (nullable = true)
+ |-- _gold_at: timestamp (nullable = true)
+ |-- _regles_version: string (nullable = true)
++--------+-----------------------------------------------------------------------------------------------+----------------+------------------+-----------------+-----------+---------------+
+|motif_sk|motif_libelle                                                                                  |nb_lignes_retour|quantite_retournee|montant_rembourse|perte_nette|part_lignes_pct|
++--------+-----------------------------------------------------------------------------------------------+----------------+------------------+-----------------+-----------+---------------+
+|34      |bold warhorses should have to unwind beside the carefully blithe platelets? s                  |1143            |28026             |1040892.40       |1175139.80 |3.02           |
+|26      |idly ironic dugouts over the stealthy regular tithes shall grow along the furious frets. wartho|1131            |29606             |1132130.50       |1225081.19 |2.98           |
+|23      |thinly furious pearls was quietly dogged busy forges! thin sheave                              |1129            |29919             |1087611.60       |1243610.39 |2.98           |
+|3       |fluffily stealthy excuses until the quick pearls engage idly brave attainments! close gif      |1125            |28894             |1015445.44       |1074787.22 |2.97           |
+|29      |stealthily slow grouches mold quietly in place of the waters! regular dogged pint              |1119            |27830             |1000943.79       |1069104.86 |2.95           |
+|8       |bold escapades by the bold permanent ideas should have to serve except the blith               |1116            |27997             |1075293.76       |1162740.13 |2.94           |
+|9       |stealthy pains impress ruthlessly! warthogs through the idle thi                               |1115            |28511             |1131446.79       |1150563.09 |2.94           |
+|2       |excuses after the permanent courts try to was excuses? fluffy silent orbits d                  |1110            |28725             |1082657.03       |1158022.32 |2.93           |
+|16      |Tiresias' serve courts; sly regular epitaphs ought to x-ray! n                                 |1105            |29461             |1105377.81       |1242726.05 |2.92           |
+|0       |slyly thin dugouts on the ironically enticing realms woul                                      |1100            |29149             |1046081.84       |1176404.48 |2.9            |
+|4       |brave quiet waters print carefully among the brave regular waters! brave sauternes             |1097            |27676             |1024103.30       |1145591.05 |2.89           |
+|11      |doggedly busy sentiments ought to engage until the quietly quic                                |1096            |28714             |1069091.03       |1217519.95 |2.89           |
++--------+-----------------------------------------------------------------------------------------------+----------------+------------------+-----------------+-----------+---------------+
+only showing top 12 rows
+[2026-11-18 12:40:30] OK   jointure ventes_par_magasin -> retours_par_magasin: 12 -> 12 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 12:40:31] OK   jointure ventes+retours -> store: 12 -> 12 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 12:40:32] OK   gold.taux_retour_par_magasin: 12 lignes, granularité ['magasin_sk'] unique=True
+--- gold.taux_retour_par_magasin ---
+root
+ |-- magasin_sk: integer (nullable = true)
+ |-- magasin_nom: string (nullable = true)
+ |-- quantite_vendue: long (nullable = true)
+ |-- quantite_retournee: long (nullable = true)
+ |-- taux_retour_quantite_pct: double (nullable = true)
+ |-- montant_lignes_brut: decimal(22,2) (nullable = true)
+ |-- montant_rembourse: decimal(22,2) (nullable = true)
+ |-- taux_retour_montant_pct: decimal(30,3) (nullable = true)
+ |-- chiffre_affaires: decimal(22,2) (nullable = true)
+ |-- _sources: string (nullable = true)
+ |-- _gold_at: timestamp (nullable = true)
+ |-- _regles_version: string (nullable = true)
++----------+------------+---------------+------------------+------------------------+-------------------+-----------------+-----------------------+----------------+
+|magasin_sk|magasin_nom |quantite_vendue|quantite_retournee|taux_retour_quantite_pct|montant_lignes_brut|montant_rembourse|taux_retour_montant_pct|chiffre_affaires|
++----------+------------+---------------+------------------+------------------------+-------------------+-----------------+-----------------------+----------------+
+|0         |Forest      |2830581        |81867             |2.892                   |107232320.14       |3109938.52       |2.900                  |96727851.94     |
+|1         |Hillside    |2817524        |81485             |2.892                   |106406449.75       |3150077.47       |2.960                  |95929844.66     |
+|2         |Sherwood    |2760007        |81250             |2.944                   |104610803.14       |3068968.90       |2.934                  |94040402.78     |
+|3         |Pioneer     |2800824        |77840             |2.779                   |106544945.30       |2975606.67       |2.793                  |96063990.59     |
+|4         |Elmwood     |2832572        |77632             |2.741                   |107292630.20       |2845984.25       |2.653                  |96770105.59     |
+|5         |Egypt       |2789703        |75783             |2.717                   |104691960.79       |2868093.55       |2.740                  |94097279.37     |
+|6         |Bloomfield  |2780253        |77700             |2.795                   |105525800.61       |2904894.78       |2.753                  |94751173.08     |
+|7         |Buffalo     |2915053        |85692             |2.94                    |109714870.06       |3212939.99       |2.928                  |98950137.76     |
+|8         |Williamstown|2821869        |82811             |2.935                   |107232486.60       |3210736.36       |2.994                  |96578622.89     |
+|9         |Germantown  |2830684        |85489             |3.02                    |107294834.63       |3163818.86       |2.949                  |96748356.68     |
+|10        |Avalon      |2785773        |78989             |2.835                   |104668943.12       |2919756.71       |2.790                  |94263977.55     |
+|11        |Bedford     |2790631        |85554             |3.066                   |106007960.27       |3257880.37       |3.073                  |95607843.48     |
++----------+------------+---------------+------------------+------------------------+-------------------+-----------------+-----------------------+----------------+
+# code retour : 0

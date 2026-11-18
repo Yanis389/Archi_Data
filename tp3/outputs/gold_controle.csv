@@ -1,0 +1,5 @@
+jeu;lignes;colonnes;granularite;granularite_unique;sources_silver;chemin
+ventes_par_magasin_mois;720;16;magasin_sk x annee x mois;True;silver.store_sales, silver.date_dim, silver.store;data/gold/ventes_par_magasin_mois
+ventes_par_categorie_annee;45;10;categorie x annee;True;silver.store_sales, silver.date_dim, silver.item;data/gold/ventes_par_categorie_annee
+retours_par_motif;36;10;motif_libelle;True;silver.store_returns, silver.reason;data/gold/retours_par_motif
+taux_retour_par_magasin;12;12;magasin_sk;True;silver.store_sales, silver.store_returns, silver.store;data/gold/taux_retour_par_magasin
