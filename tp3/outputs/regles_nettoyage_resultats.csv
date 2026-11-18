@@ -1,0 +1,47 @@
+table;regle;action;categorie;nb;unite;total
+store_sales;R01;TRANSFO;Valeur manquante;0;valeurs;15354317
+store_sales;R02;REJET;Type incorrect;0;lignes;667579
+store_sales;R03;REJET;Identifiant invalide;0;lignes;667579
+store_sales;R04;DEDOUBLON;Doublon;0;lignes;667579
+store_sales;SS-R05;REJET;Valeur atypique;0;lignes;667579
+store_sales;SS-R06;REJET;Valeur atypique;0;lignes;667579
+store_sales;SS-R07;REJET;Valeur atypique;0;lignes;667579
+store_sales;SS-R08;SIGNALEMENT;Doublon;8174;lignes;667579
+store_sales;SS-R09;SIGNALEMENT;Valeur atypique;3324;lignes;667579
+store_sales;SS-R10;SIGNALEMENT;Valeur atypique;462852;lignes;667579
+store_sales;SS-R11;SIGNALEMENT;Valeur atypique;495971;lignes;667579
+store_returns;R01;TRANSFO;Valeur manquante;0;valeurs;758040
+store_returns;R02;REJET;Type incorrect;0;lignes;37902
+store_returns;R03;REJET;Identifiant invalide;0;lignes;37902
+store_returns;R04;DEDOUBLON;Doublon;0;lignes;37902
+store_returns;SR-R05;REJET;Valeur atypique;0;lignes;37902
+store_returns;SR-R06;REJET;Valeur atypique;0;lignes;37902
+store_returns;SR-R07;SIGNALEMENT;Doublon;313;lignes;37902
+store_returns;SR-R08;SIGNALEMENT;Valeur atypique;190;lignes;37902
+store_returns;SR-R09;SIGNALEMENT;Valeur manquante;11;lignes;37902
+item;R01;TRANSFO;Valeur manquante;2575;valeurs;392040
+item;R02;REJET;Type incorrect;0;lignes;17820
+item;R03;REJET;Identifiant invalide;0;lignes;17820
+item;R04;DEDOUBLON;Doublon;0;lignes;17820
+item;R05;REJET;Identifiant invalide;0;lignes;17820
+item;IT-R05;SIGNALEMENT;Valeur atypique;0;lignes;17820
+item;IT-R06;SIGNALEMENT;Valeur atypique;7768;lignes;17820
+item;IT-R07;SIGNALEMENT;Valeur manquante;6;lignes;17820
+item;IT-T01;TRANSFO;Valeur manquante;6;valeurs;17820
+store;R01;TRANSFO;Valeur manquante;1;valeurs;348
+store;R02;REJET;Type incorrect;0;lignes;12
+store;R03;REJET;Identifiant invalide;0;lignes;12
+store;R04;DEDOUBLON;Doublon;0;lignes;12
+store;R05;REJET;Identifiant invalide;0;lignes;12
+store;ST-R05;DECISION;Date incohérente;;;
+date_dim;R01;TRANSFO;Valeur manquante;0;valeurs;3068044
+date_dim;R02;REJET;Type incorrect;0;lignes;109573
+date_dim;R03;REJET;Identifiant invalide;0;lignes;109573
+date_dim;R04;DEDOUBLON;Doublon;0;lignes;109573
+date_dim;R05;REJET;Identifiant invalide;0;lignes;109573
+date_dim;DD-R05;REJET;Date incohérente;0;lignes;109573
+reason;R01;TRANSFO;Valeur manquante;4;valeurs;105
+reason;R02;REJET;Type incorrect;0;lignes;35
+reason;R03;REJET;Identifiant invalide;0;lignes;35
+reason;R04;DEDOUBLON;Doublon;0;lignes;35
+reason;R05;REJET;Identifiant invalide;0;lignes;35
