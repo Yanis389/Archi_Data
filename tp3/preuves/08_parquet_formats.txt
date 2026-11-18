@@ -1,13 +1,13 @@
-# TP3 - preuve générée le 2026-11-18 12:41:54 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# TP3 - preuve générée le 2026-11-18 17:39:49 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
 # python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
 $ python -m transformations.parquet_formats
-26/11/18 12:41:56 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
-26/11/18 12:41:56 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/11/18 12:51:52 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:51:52 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 Setting default log level to "WARN".
-26/11/18 12:41:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-[2026-11-18 12:41:59] 1. Écriture en Parquet, relecture et vérification
-[2026-11-18 12:42:14] OK   silver.store_sales: 667579 -> 667579 lignes, schéma identique=True, lignes différentes=0
-[2026-11-18 12:42:15] OK   gold.ventes_par_magasin_mois: 720 -> 720 lignes, schéma identique=True, lignes différentes=0
+26/11/18 12:51:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 17:39:49] 1. Écriture en Parquet, relecture et vérification
+[2026-11-18 17:39:52] OK   silver.store_sales: 667579 -> 667579 lignes, schéma identique=True, lignes différentes=0
+[2026-11-18 17:39:52] OK   gold.ventes_par_magasin_mois: 720 -> 720 lignes, schéma identique=True, lignes différentes=0
 root
  |-- magasin_sk: integer (nullable = true)
  |-- magasin_nom: string (nullable = true)
@@ -35,19 +35,19 @@ root
 |0         |Forest     |CO          |2001 |5   |2001-05|926      |120       |31                  |47860          |1735107.38         |1574749.95      |13122.92    |
 +----------+-----------+------------+-----+----+-------+---------+----------+--------------------+---------------+-------------------+----------------+------------+
 only showing top 5 rows
-[2026-11-18 12:42:16] OK   gold.ventes_par_categorie_annee: 45 -> 45 lignes, schéma identique=True, lignes différentes=0
-[2026-11-18 12:42:17] OK   gold.retours_par_motif: 36 -> 36 lignes, schéma identique=True, lignes différentes=0
-[2026-11-18 12:42:17] OK   gold.taux_retour_par_magasin: 12 -> 12 lignes, schéma identique=True, lignes différentes=0
-[2026-11-18 12:42:17] 2. Comparaison CSV / JSON / Parquet sur silver.store_sales
-[2026-11-18 12:42:26]    csv            144.0 Mo  écriture   2.0s  agrégat 1 colonne  0.46s  types altérés 13/30
-[2026-11-18 12:42:32]    json           471.9 Mo  écriture   1.2s  agrégat 1 colonne  0.60s  types altérés 22/30
-[2026-11-18 12:42:34]    parquet         42.2 Mo  écriture   1.6s  agrégat 1 colonne  0.14s  types altérés 0/30
-[2026-11-18 12:42:37]    parquet_gzip    32.1 Mo  écriture   2.1s  agrégat 1 colonne  0.14s  types altérés 0/30
-[2026-11-18 12:42:37] 3. Parquet : lecture d'une colonne vs toutes les colonnes ; pushdown de filtre
-Lecture Parquet : 1 colonne = 0.11s (médiane) ; 23 colonnes numériques = 0.68s (médiane)
+[2026-11-18 17:39:52] OK   gold.ventes_par_categorie_annee: 45 -> 45 lignes, schéma identique=True, lignes différentes=0
+[2026-11-18 17:39:52] OK   gold.retours_par_motif: 36 -> 36 lignes, schéma identique=True, lignes différentes=0
+[2026-11-18 17:39:53] OK   gold.taux_retour_par_magasin: 12 -> 12 lignes, schéma identique=True, lignes différentes=0
+[2026-11-18 17:39:53] 2. Comparaison CSV / JSON / Parquet sur silver.store_sales
+[2026-11-18 17:39:54]    csv            144.0 Mo  écriture   2.1s  agrégat 1 colonne  0.49s  types altérés 13/30
+[2026-11-18 17:39:55]    json           471.9 Mo  écriture   1.3s  agrégat 1 colonne  1.05s  types altérés 22/30
+[2026-11-18 17:39:56]    parquet         42.2 Mo  écriture   1.0s  agrégat 1 colonne  0.14s  types altérés 0/30
+[2026-11-18 17:39:56]    parquet_gzip    32.1 Mo  écriture   2.3s  agrégat 1 colonne  0.11s  types altérés 0/30
+[2026-11-18 17:39:56] 3. Parquet : lecture d'une colonne vs toutes les colonnes ; pushdown de filtre
+Lecture Parquet : 1 colonne = 0.10s (médiane) ; 23 colonnes numériques = 0.37s (médiane)
 Plan d'exécution d'un filtre sur ss_store_sk (cherchez PushedFilters / ReadSchema) :
   +- FileScan parquet [ss_store_sk#6634,ss_ticket_number#6636L,ss_net_paid#6647] Batched: true, DataFilters: [isnotnull(ss_store_sk#6634), (ss_store_sk#6634 = 2)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/Users/yanishelali/Documents/ecole/Mast
-[2026-11-18 12:42:40] 4. Limites de Parquet seul (pas de transaction, pas de contrôle de schéma)
+[2026-11-18 17:39:56] 4. Limites de Parquet seul (pas de transaction, pas de contrôle de schéma)
 Après 3 ajouts : 5 lignes (2 + 1 + 2 rejouées), colonnes vues par défaut = ['id', 'valeur']
 Avec mergeSchema : colonnes = ['id', 'valeur', 'colonne_en_plus'] ; lignes id=1 en double = 2
 -> aucun refus d'un schéma différent, aucune protection contre le rejeu, pas d'historique ni de retour arrière.

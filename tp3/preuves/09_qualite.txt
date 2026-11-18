@@ -1,18 +1,18 @@
-# TP3 - preuve générée le 2026-11-18 12:44:33 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# TP3 - preuve générée le 2026-11-18 17:39:57 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
 # python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
 $ python -m quality.controles_qualite
-26/11/18 12:44:35 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
-26/11/18 12:44:35 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/11/18 12:52:54 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:52:54 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 Setting default log level to "WARN".
-26/11/18 12:44:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-[2026-11-18 12:44:40] Complétude
-[2026-11-18 12:44:43] Unicité et clés candidates
-[2026-11-18 12:44:49] Validité des types
-[2026-11-18 12:44:49] Cohérence des valeurs
-[2026-11-18 12:44:53] Volumes
-[2026-11-18 12:44:56] Intégrité référentielle
-[2026-11-18 12:44:58] Réconciliation Gold <-> Silver
-[2026-11-18 12:44:59] Réconciliation avec les KPI du Jour 1 (moteur DuckDB)
+26/11/18 12:52:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 17:39:58] Complétude
+[2026-11-18 17:39:58] Unicité et clés candidates
+[2026-11-18 17:39:59] Validité des types
+[2026-11-18 17:39:59] Cohérence des valeurs
+[2026-11-18 17:39:59] Volumes
+[2026-11-18 17:39:59] Intégrité référentielle
+[2026-11-18 17:40:00] Réconciliation Gold <-> Silver
+[2026-11-18 17:40:00] Réconciliation avec les KPI du Jour 1 (moteur DuckDB)
 BILAN : 81 contrôles -> {'OK': 72, 'AVERTISSEMENT': 2, 'INFO': 7, 'ECHEC': 0}
   AVERTISSEMENT Q14 store_sales: clé ss_ticket_number+ss_item_sk unique (résultat 4136, attendu 0)
   AVERTISSEMENT Q16 store_returns: clé sr_ticket_number+sr_item_sk unique (résultat 158, attendu 0)

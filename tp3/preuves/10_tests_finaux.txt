@@ -1,0 +1,34 @@
+# TP3 - preuve générée le 2026-11-18 17:40:00 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
+$ python -m unittest tests.test_final_uc06 -v
+26/11/18 12:53:20 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:53:20 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+26/11/18 12:53:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+test_formats_correctement_identifies (tests.test_final_uc06.Test81Lecture.test_formats_correctement_identifies) ... ok
+test_schemas_lisibles (tests.test_final_uc06.Test81Lecture.test_schemas_lisibles) ... ok
+test_sources_accessibles (tests.test_final_uc06.Test81Lecture.test_sources_accessibles) ... ok
+test_volumes_releves (tests.test_final_uc06.Test81Lecture.test_volumes_releves) ... ok
+test_agregations_ont_une_granularite_definie (tests.test_final_uc06.Test82Transformation.test_agregations_ont_une_granularite_definie) ... ok
+test_jointures_justifiees (tests.test_final_uc06.Test82Transformation.test_jointures_justifiees) ... ok
+test_regles_de_nettoyage_documentees (tests.test_final_uc06.Test82Transformation.test_regles_de_nettoyage_documentees) ... ok
+test_transformations_executables (tests.test_final_uc06.Test82Transformation.test_transformations_executables) ... ok
+test_types_coherents (tests.test_final_uc06.Test82Transformation.test_types_coherents) ... ok
+test_chemins_documentes (tests.test_final_uc06.Test83Zones.test_chemins_documentes) ... ok
+test_gold_produites (tests.test_final_uc06.Test83Zones.test_gold_produites) ... ok
+test_provenance_conservee (tests.test_final_uc06.Test83Zones.test_provenance_conservee) ... 
+ok
+test_silver_produites (tests.test_final_uc06.Test83Zones.test_silver_produites) ... ok
+test_resultat_ecrit_en_parquet (tests.test_final_uc06.Test84Parquet.test_resultat_ecrit_en_parquet) ... ok
+test_resultat_relu_schema_et_lignes (tests.test_final_uc06.Test84Parquet.test_resultat_relu_schema_et_lignes) ... ok
+test_aucun_echec_et_anomalies_documentees (tests.test_final_uc06.Test85Qualite.test_aucun_echec_et_anomalies_documentees) ... ok
+test_cles_candidates_verifiees (tests.test_final_uc06.Test85Qualite.test_cles_candidates_verifiees) ... ok
+test_doublons_examines (tests.test_final_uc06.Test85Qualite.test_doublons_examines) ... 
+ok
+test_limites_des_controles_precisees (tests.test_final_uc06.Test85Qualite.test_limites_des_controles_precisees) ... ok
+test_reconciliation_gold_silver_et_jour1 (tests.test_final_uc06.Test85Qualite.test_reconciliation_gold_silver_et_jour1) ... ok
+test_valeurs_manquantes_controlees (tests.test_final_uc06.Test85Qualite.test_valeurs_manquantes_controlees) ... ok
+----------------------------------------------------------------------
+Ran 21 tests in 15.142s
+OK
+# code retour : 0

@@ -1,14 +1,14 @@
-# TP3 - preuve générée le 2026-11-18 12:29:42 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# TP3 - preuve générée le 2026-11-18 17:39:32 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
 # python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
 $ python -m transformations.bronze
-26/11/18 12:29:44 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
-26/11/18 12:29:44 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/11/18 12:49:44 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:49:44 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 Setting default log level to "WARN".
-26/11/18 12:29:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-[2026-11-18 12:29:54] OK   bronze.store_sales    source=  667579 bronze=  667579 (6.5s)
-[2026-11-18 12:29:56] OK   bronze.store_returns  source=   37902 bronze=   37902 (0.9s)
-[2026-11-18 12:29:56] OK   bronze.item           source=   17820 bronze=   17820 (0.6s)
-[2026-11-18 12:29:57] OK   bronze.store          source=      12 bronze=      12 (0.2s)
-[2026-11-18 12:29:58] OK   bronze.date_dim       source=  109573 bronze=  109573 (0.9s)
-[2026-11-18 12:29:58] OK   bronze.reason         source=      35 bronze=      35 (0.1s)
+26/11/18 12:49:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 17:39:34] OK   bronze.store_sales    source=  667579 bronze=  667579 (11.3s)
+[2026-11-18 17:39:35] OK   bronze.store_returns  source=   37902 bronze=   37902 (0.9s)
+[2026-11-18 17:39:35] OK   bronze.item           source=   17820 bronze=   17820 (0.6s)
+[2026-11-18 17:39:35] OK   bronze.store          source=      12 bronze=      12 (0.5s)
+[2026-11-18 17:39:35] OK   bronze.date_dim       source=  109573 bronze=  109573 (1.5s)
+[2026-11-18 17:39:35] OK   bronze.reason         source=      35 bronze=      35 (0.2s)
 # code retour : 0

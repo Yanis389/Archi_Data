@@ -1,13 +1,13 @@
-# TP3 - preuve générée le 2026-11-18 12:39:38 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# TP3 - preuve générée le 2026-11-18 17:39:46 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
 # python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
 $ python -m transformations.gold
-26/11/18 12:39:43 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
-26/11/18 12:39:43 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/11/18 12:51:28 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:51:28 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 Setting default log level to "WARN".
-26/11/18 12:39:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-[2026-11-18 12:40:11] OK   jointure store_sales -> date_dim: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
-[2026-11-18 12:40:17] OK   jointure store_sales -> store: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
-[2026-11-18 12:40:22] OK   gold.ventes_par_magasin_mois: 720 lignes, granularité ['magasin_sk', 'annee', 'mois'] unique=True
+26/11/18 12:51:29 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 17:39:46] OK   jointure store_sales -> date_dim: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 17:39:47] OK   jointure store_sales -> store: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 17:39:48] OK   gold.ventes_par_magasin_mois: 720 lignes, granularité ['magasin_sk', 'annee', 'mois'] unique=True
 --- gold.ventes_par_magasin_mois ---
 root
  |-- magasin_sk: integer (nullable = true)
@@ -43,8 +43,8 @@ root
 |0         |Forest     |CO          |2001 |12  |2001-12|1034     |141       |31                  |53941          |2092423.78         |1856239.35      |13164.82    |
 +----------+-----------+------------+-----+----+-------+---------+----------+--------------------+---------------+-------------------+----------------+------------+
 only showing top 12 rows
-[2026-11-18 12:40:23] OK   jointure store_sales -> item: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
-[2026-11-18 12:40:25] OK   gold.ventes_par_categorie_annee: 45 lignes, granularité ['categorie', 'annee'] unique=True
+[2026-11-18 17:39:48] OK   jointure store_sales -> item: 667579 -> 667579 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 17:39:48] OK   gold.ventes_par_categorie_annee: 45 lignes, granularité ['categorie', 'annee'] unique=True
 --- gold.ventes_par_categorie_annee ---
 root
  |-- categorie: string (nullable = true)
@@ -74,8 +74,8 @@ root
 |Movies & TV             |2002 |8710     |365                 |436731         |15184615.65     |6.57             |
 +------------------------+-----+---------+--------------------+---------------+----------------+-----------------+
 only showing top 12 rows
-[2026-11-18 12:40:26] OK   jointure store_returns -> reason: 37902 -> 37902 lignes ; non rapprochées=0 ; clé unique=True
-[2026-11-18 12:40:28] OK   gold.retours_par_motif: 36 lignes, granularité ['motif_libelle'] unique=True
+[2026-11-18 17:39:48] OK   jointure store_returns -> reason: 37902 -> 37902 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 17:39:48] OK   gold.retours_par_motif: 36 lignes, granularité ['motif_libelle'] unique=True
 --- gold.retours_par_motif ---
 root
  |-- motif_sk: integer (nullable = true)
@@ -105,9 +105,9 @@ root
 |11      |doggedly busy sentiments ought to engage until the quietly quic                                |1096            |28714             |1069091.03       |1217519.95 |2.89           |
 +--------+-----------------------------------------------------------------------------------------------+----------------+------------------+-----------------+-----------+---------------+
 only showing top 12 rows
-[2026-11-18 12:40:30] OK   jointure ventes_par_magasin -> retours_par_magasin: 12 -> 12 lignes ; non rapprochées=0 ; clé unique=True
-[2026-11-18 12:40:31] OK   jointure ventes+retours -> store: 12 -> 12 lignes ; non rapprochées=0 ; clé unique=True
-[2026-11-18 12:40:32] OK   gold.taux_retour_par_magasin: 12 lignes, granularité ['magasin_sk'] unique=True
+[2026-11-18 17:39:48] OK   jointure ventes_par_magasin -> retours_par_magasin: 12 -> 12 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 17:39:48] OK   jointure ventes+retours -> store: 12 -> 12 lignes ; non rapprochées=0 ; clé unique=True
+[2026-11-18 17:39:48] OK   gold.taux_retour_par_magasin: 12 lignes, granularité ['magasin_sk'] unique=True
 --- gold.taux_retour_par_magasin ---
 root
  |-- magasin_sk: integer (nullable = true)

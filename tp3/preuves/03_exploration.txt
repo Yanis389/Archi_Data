@@ -1,10 +1,10 @@
-# TP3 - preuve générée le 2026-11-18 12:32:55 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# TP3 - preuve générée le 2026-11-18 17:39:24 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
 # python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
 $ python -m exploration.exploration
-26/11/18 12:32:58 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
-26/11/18 12:32:58 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/11/18 12:48:43 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:48:43 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 Setting default log level to "WARN".
-26/11/18 12:32:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/18 12:48:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 ====================================================================================================
 SOURCE store_sales  (667579 lignes, 23 colonnes)
 ====================================================================================================
@@ -615,5 +615,5 @@ Résumé des contrôles :
   store_returns  Retour sans vente d'origine (ticket + article)                    0 / 37902    (0.0%)
   store_returns  Retour daté avant la vente                                        0 / 37902    (0.0%)
   store_returns  Quantité retournée > quantité vendue                              0 / 37902    (0.0%)
-[2026-11-18 12:34:10] Rapports écrits dans outputs/ (profil_colonnes.csv, valeurs_atypiques.csv)
+[2026-11-18 17:39:32] Rapports écrits dans outputs/ (profil_colonnes.csv, valeurs_atypiques.csv)
 # code retour : 0

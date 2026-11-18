@@ -1,5 +1,5 @@
 {
-  "date_releve": "2026-11-18T12:23:38",
+  "date_releve": "2026-11-18T17:39:19",
   "systeme": "Darwin 27.0.0 (arm64)",
   "python": "3.13.1",
   "python_executable": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/.venv/bin/python",
@@ -12,7 +12,7 @@
   "cpu": 8,
   "memoire_machine": "8.0 Go",
   "memoire_driver_spark": "2g",
-  "disque_libre": "3.7 Go",
+  "disque_libre": "5.3 Go",
   "chemins": {
     "donnees_sources": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/retail_project/data",
     "bronze": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/bronze",

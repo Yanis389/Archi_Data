@@ -1,6 +1,6 @@
 format;lignes;taille_octets;taille;ecriture_s;lecture_agregat_1_colonne_min_s;lecture_agregat_1_colonne_mediane_s;colonnes_au_type_altere_sans_schema_impose;colonnes_total;exemples_types_alteres
 source .dat (texte pipe);667579;92764700;88.5 Mo;;;;;30;sans en-tête ni types
-csv;667579;151046476;144.0 Mo;1.99;0.41;0.46;13;30;"ss_ticket_number: bigint -> int; ss_wholesale_cost: decimal(12,2) -> double; ss_list_price: decimal(12,2) -> double"
-json;667579;494825896;471.9 Mo;1.24;0.6;0.6;22;30;"ss_sold_date_sk: int -> bigint; ss_sold_time_sk: int -> bigint; ss_item_sk: int -> bigint"
-parquet;667579;44216349;42.2 Mo;1.55;0.1;0.14;0;30;
-parquet_gzip;667579;33701596;32.1 Mo;2.09;0.12;0.14;0;30;
+csv;667579;151046476;144.0 Mo;2.14;0.49;0.49;13;30;"ss_ticket_number: bigint -> int; ss_wholesale_cost: decimal(12,2) -> double; ss_list_price: decimal(12,2) -> double"
+json;667579;494825896;471.9 Mo;1.3;0.91;1.05;22;30;"ss_sold_date_sk: int -> bigint; ss_sold_time_sk: int -> bigint; ss_item_sk: int -> bigint"
+parquet;667579;44216349;42.2 Mo;1.05;0.13;0.14;0;30;
+parquet_gzip;667579;33701596;32.1 Mo;2.26;0.11;0.11;0;30;

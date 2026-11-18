@@ -1,15 +1,15 @@
-# TP3 - preuve générée le 2026-11-18 12:35:59 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# TP3 - preuve générée le 2026-11-18 17:39:35 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
 # python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
 $ python -m transformations.silver
-26/11/18 12:36:01 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
-26/11/18 12:36:01 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/11/18 12:50:11 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:50:11 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 Setting default log level to "WARN".
-26/11/18 12:36:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-[2026-11-18 12:36:50] OK   silver.store_sales    bronze=  667579 = silver   667579 + quarantaine   0 + doublons   0  (16.8s)
-[2026-11-18 12:36:57] OK   silver.store_returns  bronze=   37902 = silver    37902 + quarantaine   0 + doublons   0  (2.1s)
-[2026-11-18 12:37:01] OK   silver.item           bronze=   17820 = silver    17820 + quarantaine   0 + doublons   0  (1.4s)
-[2026-11-18 12:37:03] OK   silver.store          bronze=      12 = silver       12 + quarantaine   0 + doublons   0  (0.7s)
-[2026-11-18 12:37:07] OK   silver.date_dim       bronze=  109573 = silver   109573 + quarantaine   0 + doublons   0  (1.4s)
-[2026-11-18 12:37:09] OK   silver.reason         bronze=      35 = silver       35 + quarantaine   0 + doublons   0  (0.4s)
-[2026-11-18 12:37:09] Document des règles généré : /Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/docs/transformations/regles_nettoyage.md
+26/11/18 12:50:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 17:39:41] OK   silver.store_sales    bronze=  667579 = silver   667579 + quarantaine   0 + doublons   0  (14.7s)
+[2026-11-18 17:39:41] OK   silver.store_returns  bronze=   37902 = silver    37902 + quarantaine   0 + doublons   0  (1.5s)
+[2026-11-18 17:39:42] OK   silver.item           bronze=   17820 = silver    17820 + quarantaine   0 + doublons   0  (0.6s)
+[2026-11-18 17:39:42] OK   silver.store          bronze=      12 = silver       12 + quarantaine   0 + doublons   0  (0.2s)
+[2026-11-18 17:39:42] OK   silver.date_dim       bronze=  109573 = silver   109573 + quarantaine   0 + doublons   0  (1.1s)
+[2026-11-18 17:39:42] OK   silver.reason         bronze=      35 = silver       35 + quarantaine   0 + doublons   0  (0.2s)
+[2026-11-18 17:39:42] Document des règles généré : /Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/docs/transformations/regles_nettoyage.md
 # code retour : 0
