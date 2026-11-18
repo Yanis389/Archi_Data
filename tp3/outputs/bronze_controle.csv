@@ -1,0 +1,7 @@
+table;lignes_source;lignes_bronze;ecart;statut;duree_ecriture_s;chemin_bronze
+store_sales;667579;667579;0;OK;6.48;data/bronze/store_sales
+store_returns;37902;37902;0;OK;0.85;data/bronze/store_returns
+item;17820;17820;0;OK;0.61;data/bronze/item
+store;12;12;0;OK;0.16;data/bronze/store
+date_dim;109573;109573;0;OK;0.94;data/bronze/date_dim
+reason;35;35;0;OK;0.11;data/bronze/reason
