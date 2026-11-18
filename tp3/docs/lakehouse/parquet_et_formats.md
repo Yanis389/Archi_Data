@@ -29,8 +29,8 @@ identiques et exploitables, le répertoire de sortie est identifié.
 | Critère | Source `.dat` (texte pipe) | CSV | JSON | Parquet (snappy) | Parquet (gzip) |
 |---|---|---|---|---|---|
 | Volume observé | 88,5 Mo (23 col.) | 144,0 Mo | 471,9 Mo | **42,2 Mo** | 32,1 Mo |
-| Durée d'écriture | — | 2,0 s | 1,2 s | 1,6 s | 2,1 s |
-| Agrégat sur 1 colonne (médiane de 3) | — | 0,46 s | 0,60 s | **0,14 s** | 0,14 s |
+| Durée d'écriture | — | 2,1 s | 1,3 s | 1,0 s | 2,3 s |
+| Agrégat sur 1 colonne (médiane de 3) | — | 0,49 s | 1,05 s | **0,14 s** | 0,11 s |
 | Types retrouvés à la relecture *sans* schéma imposé | aucun (pas d'en-tête) | 13 colonnes sur 30 altérées | 22 sur 30 altérées | **0 sur 30** | 0 sur 30 |
 | Organisation | lignes, texte | lignes, texte | lignes, un objet par ligne (noms répétés) | **colonnes**, par groupes de lignes, avec statistiques | idem |
 | Lisible à l'œil | oui | oui | oui | non (binaire) | non |
@@ -40,12 +40,12 @@ Exemples d'altérations de types : en CSV `ss_wholesale_cost` `decimal(12,2)` �
 
 **Précautions de lecture** : (1) la comparaison porte sur le Silver à 30 colonnes (23 colonnes d'origine + indicateurs `qa_*`
 et provenance), pas strictement sur le fichier source à 23 colonnes ; (2) mesures faites en local, sur une seule machine, avec de petits
-volumes et 3 répétitions : le **classement** est fiable, les **valeurs absolues** ne se transposent pas à un cluster ;
+volumes et 3 répétitions : le **classement** est fiable, les **valeurs absolues** ne se transposent pas à un cluster et varient d'une exécution à l'autre (deux exécutions complètes : CSV 0,46 à 0,49 s, JSON 0,60 à 1,05 s, Parquet 0,14 s ; 1 colonne contre 23 : 6× puis 3,7× plus rapide). Les tailles, elles, sont identiques à chaque exécution ;
 (3) l'écriture n'est pas plus rapide en Parquet : l'avantage porte sur le volume, la lecture et les types.
 
 ## Pourquoi un format colonne convient aux usages analytiques (preuves)
 
-- **Lecture sélective** : agréger une colonne prend 0,11 s contre 0,68 s pour agréger les 23 colonnes numériques (médianes de 3) :
+- **Lecture sélective** : agréger une colonne prend 0,10 s contre 0,37 s pour agréger les 23 colonnes numériques (médianes de 3) :
   Parquet ne lit que les colonnes demandées. En CSV ou JSON, il faut lire et analyser toutes les lignes en entier.
 - **Pushdown de filtre** : le plan d'exécution d'un filtre sur `ss_store_sk` ne lit que 3 colonnes (`ReadSchema` réduit)
   et transmet le filtre au lecteur Parquet (`DataFilters` dans `FileScan parquet`, voir la preuve). Les statistiques min/max

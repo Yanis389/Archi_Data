@@ -24,9 +24,9 @@ Hadoop du Jour 2 n'a pas été relancé). Ce choix correspond aux solutions de r
 l'environnement »). **Les traitements n'ont donc pas été exécutés sur un cluster HDFS** : Spark tourne en mode local,
 sur les fichiers du lot initial TPCx-BB déposés sur le disque.
 
-Java 20 n'est pas une version LTS ; Spark 4.x cible officiellement Java 17 et 21. Il a fonctionné sans
-erreur sur ce périmètre (preuve : `preuves/01_env_check.txt`), mais la version recommandée pour
-reproduire reste Java 17 ou 21.
+Java 20 n'est pas une version LTS. Il a fonctionné sans erreur sur ce périmètre (preuve : `preuves/01_env_check.txt`).
+Les versions Java supportées officiellement par Spark 4.3.0 n'ont pas été vérifiées dans sa documentation : pour une
+reproduction sûre, utiliser une version LTS (17 ou 21, d'après la documentation de Spark 4.x que nous connaissons).
 
 ## Chemins utilisés
 
