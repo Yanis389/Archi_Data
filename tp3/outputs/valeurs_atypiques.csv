@@ -1,0 +1,20 @@
+table;controle;nb_lignes;total;pct;interpretation
+store_sales;Quantité <= 0;0;667579;0.0;aucune : pas de retour mélangé aux ventes
+store_sales;Prix de vente < 0;0;667579;0.0;aucune valeur négative : les retours sont dans store_returns
+store_sales;Prix de vente = 0;3324;667579;0.4979;articles à 0 : atypique mais possible (offert, promotion) -> conservé et signalé
+store_sales;Montant ligne != quantité x prix (écart > 0,02);0;667579;0.0;cohérence interne des mesures : avant d'agréger un chiffre d'affaires
+store_sales;Prix de vente > prix catalogue;0;667579;0.0;aucune : seules des remises
+store_sales;Prix de vente < coût d'achat;462852;667579;69.3329;majorité des lignes : particularité du jeu synthétique, marge non fiable -> conservé et signalé
+store_sales;Marge nette négative;495971;667579;74.294;idem : à interpréter avec prudence
+store_returns;Quantité retournée <= 0;0;37902;0.0;aucune
+store_returns;Montant remboursé < 0;0;37902;0.0;aucune
+store_returns;Montant remboursé = 0;190;37902;0.5013;retour sans remboursement : conservé
+item;Prix courant <= 0 ou vide;0;17820;0.0;aucune
+item;Prix courant < coût d'achat;7768;17820;43.5915;observation métier, conservé
+item;Marque vide;6;17820;0.0337;libellé à harmoniser (Non renseigné) en Silver
+date_dim;d_year != année de d_date;0;109573;0.0;cohérence interne du calendrier
+date_dim;d_moy != mois de d_date;0;109573;0.0;cohérence interne du calendrier
+store;Ventes postérieures à la date de fermeture du magasin;276032;667579;41.3482;s_closed_date_sk est incohérent (dates de 1917 à 2141) : colonne NON exploitable, on ne filtre pas les ventes dessus
+store_returns;Retour sans vente d'origine (ticket + article);0;37902;0.0;aucun : intégrité retour -> vente
+store_returns;Retour daté avant la vente;0;37902;0.0;aucun
+store_returns;Quantité retournée > quantité vendue;0;37902;0.0;aucun

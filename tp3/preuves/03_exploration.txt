@@ -1,0 +1,618 @@
+# TP3 - preuve générée le 2026-11-18 12:27:41 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
+$ python -m exploration.exploration
+26/11/18 12:27:43 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:27:43 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+26/11/18 12:27:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+====================================================================================================
+SOURCE store_sales  (667579 lignes, 23 colonnes)
+====================================================================================================
+root
+ |-- ss_sold_date_sk: integer (nullable = true)
+ |-- ss_sold_time_sk: integer (nullable = true)
+ |-- ss_item_sk: integer (nullable = true)
+ |-- ss_customer_sk: integer (nullable = true)
+ |-- ss_cdemo_sk: integer (nullable = true)
+ |-- ss_hdemo_sk: integer (nullable = true)
+ |-- ss_addr_sk: integer (nullable = true)
+ |-- ss_store_sk: integer (nullable = true)
+ |-- ss_promo_sk: integer (nullable = true)
+ |-- ss_ticket_number: long (nullable = true)
+ |-- ss_quantity: integer (nullable = true)
+ |-- ss_wholesale_cost: decimal(12,2) (nullable = true)
+ |-- ss_list_price: decimal(12,2) (nullable = true)
+ |-- ss_sales_price: decimal(12,2) (nullable = true)
+ |-- ss_ext_discount_amt: decimal(12,2) (nullable = true)
+ |-- ss_ext_sales_price: decimal(12,2) (nullable = true)
+ |-- ss_ext_wholesale_cost: decimal(12,2) (nullable = true)
+ |-- ss_ext_list_price: decimal(12,2) (nullable = true)
+ |-- ss_ext_tax: decimal(12,2) (nullable = true)
+ |-- ss_coupon_amt: decimal(12,2) (nullable = true)
+ |-- ss_net_paid: decimal(12,2) (nullable = true)
+ |-- ss_net_paid_inc_tax: decimal(12,2) (nullable = true)
+ |-- ss_net_profit: decimal(12,2) (nullable = true)
+-RECORD 0------------------------
+ ss_sold_date_sk       | 36890   
+ ss_sold_time_sk       | 71480   
+ ss_item_sk            | 10001   
+ ss_customer_sk        | 44404   
+ ss_cdemo_sk           | 493944  
+ ss_hdemo_sk           | 2898    
+ ss_addr_sk            | 44093   
+ ss_store_sk           | 10      
+ ss_promo_sk           | 294     
+ ss_ticket_number      | 0       
+ ss_quantity           | 31      
+ ss_wholesale_cost     | 18.00   
+ ss_list_price         | 30.78   
+ ss_sales_price        | 23.08   
+ ss_ext_discount_amt   | 238.70  
+ ss_ext_sales_price    | 715.48  
+ ss_ext_wholesale_cost | 558.00  
+ ss_ext_list_price     | 954.18  
+ ss_ext_tax            | 21.46   
+ ss_coupon_amt         | 0.00    
+ ss_net_paid           | 715.48  
+ ss_net_paid_inc_tax   | 736.94  
+ ss_net_profit         | 157.48  
+-RECORD 1------------------------
+ ss_sold_date_sk       | 36890   
+ ss_sold_time_sk       | 71480   
+ ss_item_sk            | 10000   
+ ss_customer_sk        | 44404   
+ ss_cdemo_sk           | 493944  
+ ss_hdemo_sk           | 2898    
+ ss_addr_sk            | 44093   
+ ss_store_sk           | 10      
+ ss_promo_sk           | 279     
+ ss_ticket_number      | 0       
+ ss_quantity           | 54      
+ ss_wholesale_cost     | 99.21   
+ ss_list_price         | 148.82  
+ ss_sales_price        | 83.34   
+ ss_ext_discount_amt   | 3535.92 
+ ss_ext_sales_price    | 4500.36 
+ ss_ext_wholesale_cost | 5357.34 
+ ss_ext_list_price     | 8036.28 
+ ss_ext_tax            | 225.02  
+ ss_coupon_amt         | 0.00    
+ ss_net_paid           | 4500.36 
+ ss_net_paid_inc_tax   | 4725.38 
+ ss_net_profit         | -856.98 
+-RECORD 2------------------------
+ ss_sold_date_sk       | 36890   
+ ss_sold_time_sk       | 71480   
+ ss_item_sk            | 15556   
+ ss_customer_sk        | 44404   
+ ss_cdemo_sk           | 493944  
+ ss_hdemo_sk           | 2898    
+ ss_addr_sk            | 44093   
+ ss_store_sk           | 10      
+ ss_promo_sk           | 114     
+ ss_ticket_number      | 0       
+ ss_quantity           | 39      
+ ss_wholesale_cost     | 79.49   
+ ss_list_price         | 94.59   
+ ss_sales_price        | 83.24   
+ ss_ext_discount_amt   | 442.65  
+ ss_ext_sales_price    | 3246.36 
+ ss_ext_wholesale_cost | 3100.11 
+ ss_ext_list_price     | 3689.01 
+ ss_ext_tax            | 184.07  
+ ss_coupon_amt         | 616.81  
+ ss_net_paid           | 2629.55 
+ ss_net_paid_inc_tax   | 2813.62 
+ ss_net_profit         | -470.56 
+only showing top 3 rows
+Colonnes avec valeurs manquantes : {'ss_cdemo_sk': 238, 'ss_hdemo_sk': 295, 'ss_addr_sk': 448, 'ss_promo_sk': 158}
+Doublons sur la clé candidate ['ss_ticket_number', 'ss_item_sk'] : 4038 clés répétées, 4136 lignes en excès
+Lignes exactement dupliquées (toutes colonnes identiques) : 0
+====================================================================================================
+SOURCE store_returns  (37902 lignes, 20 colonnes)
+====================================================================================================
+root
+ |-- sr_returned_date_sk: integer (nullable = true)
+ |-- sr_return_time_sk: integer (nullable = true)
+ |-- sr_item_sk: integer (nullable = true)
+ |-- sr_customer_sk: integer (nullable = true)
+ |-- sr_cdemo_sk: integer (nullable = true)
+ |-- sr_hdemo_sk: integer (nullable = true)
+ |-- sr_addr_sk: integer (nullable = true)
+ |-- sr_store_sk: integer (nullable = true)
+ |-- sr_reason_sk: integer (nullable = true)
+ |-- sr_ticket_number: long (nullable = true)
+ |-- sr_return_quantity: integer (nullable = true)
+ |-- sr_return_amt: decimal(12,2) (nullable = true)
+ |-- sr_return_tax: decimal(12,2) (nullable = true)
+ |-- sr_return_amt_inc_tax: decimal(12,2) (nullable = true)
+ |-- sr_fee: decimal(12,2) (nullable = true)
+ |-- sr_return_ship_cost: decimal(12,2) (nullable = true)
+ |-- sr_refunded_cash: decimal(12,2) (nullable = true)
+ |-- sr_reversed_charge: decimal(12,2) (nullable = true)
+ |-- sr_store_credit: decimal(12,2) (nullable = true)
+ |-- sr_net_loss: decimal(12,2) (nullable = true)
+-RECORD 0------------------------
+ sr_returned_date_sk   | 38806   
+ sr_return_time_sk     | 37121   
+ sr_item_sk            | 15784   
+ sr_customer_sk        | 5206    
+ sr_cdemo_sk           | 647228  
+ sr_hdemo_sk           | 4483    
+ sr_addr_sk            | 7207    
+ sr_store_sk           | 5       
+ sr_reason_sk          | 17      
+ sr_ticket_number      | 64537   
+ sr_return_quantity    | 9       
+ sr_return_amt         | 142.38  
+ sr_return_tax         | 2.85    
+ sr_return_amt_inc_tax | 145.23  
+ sr_fee                | 39.94   
+ sr_return_ship_cost   | 554.44  
+ sr_refunded_cash      | 101.09  
+ sr_reversed_charge    | 8.26    
+ sr_store_credit       | 33.03   
+ sr_net_loss           | 560.14  
+-RECORD 1------------------------
+ sr_returned_date_sk   | 37388   
+ sr_return_time_sk     | 1727    
+ sr_item_sk            | 8140    
+ sr_customer_sk        | 60704   
+ sr_cdemo_sk           | 1478832 
+ sr_hdemo_sk           | 5094    
+ sr_addr_sk            | 30228   
+ sr_store_sk           | 6       
+ sr_reason_sk          | 12      
+ sr_ticket_number      | 22850   
+ sr_return_quantity    | 43      
+ sr_return_amt         | 5709.11 
+ sr_return_tax         | 57.09   
+ sr_return_amt_inc_tax | 5766.20 
+ sr_fee                | 11.34   
+ sr_return_ship_cost   | 5184.82 
+ sr_refunded_cash      | 3025.83 
+ sr_reversed_charge    | 939.15  
+ sr_store_credit       | 1744.13 
+ sr_net_loss           | 5299.00 
+-RECORD 2------------------------
+ sr_returned_date_sk   | 37388   
+ sr_return_time_sk     | 26037   
+ sr_item_sk            | 6639    
+ sr_customer_sk        | 60704   
+ sr_cdemo_sk           | 1478832 
+ sr_hdemo_sk           | 5094    
+ sr_addr_sk            | 30228   
+ sr_store_sk           | 6       
+ sr_reason_sk          | 33      
+ sr_ticket_number      | 22850   
+ sr_return_quantity    | 2       
+ sr_return_amt         | 71.44   
+ sr_return_tax         | 0.71    
+ sr_return_amt_inc_tax | 72.15   
+ sr_fee                | 72.68   
+ sr_return_ship_cost   | 80.49   
+ sr_refunded_cash      | 37.86   
+ sr_reversed_charge    | 11.75   
+ sr_store_credit       | 21.83   
+ sr_net_loss           | 81.91   
+only showing top 3 rows
+Colonnes avec valeurs manquantes : {'sr_cdemo_sk': 21, 'sr_hdemo_sk': 15, 'sr_addr_sk': 42, 'sr_reason_sk': 11}
+Doublons sur la clé candidate ['sr_ticket_number', 'sr_item_sk'] : 155 clés répétées, 158 lignes en excès
+Lignes exactement dupliquées (toutes colonnes identiques) : 0
+====================================================================================================
+SOURCE item  (17820 lignes, 22 colonnes)
+====================================================================================================
+root
+ |-- i_item_sk: integer (nullable = true)
+ |-- i_item_id: string (nullable = true)
+ |-- i_rec_start_date: date (nullable = true)
+ |-- i_rec_end_date: date (nullable = true)
+ |-- i_item_desc: string (nullable = true)
+ |-- i_current_price: decimal(12,2) (nullable = true)
+ |-- i_wholesale_cost: decimal(12,2) (nullable = true)
+ |-- i_brand_id: integer (nullable = true)
+ |-- i_brand: string (nullable = true)
+ |-- i_class_id: integer (nullable = true)
+ |-- i_class: string (nullable = true)
+ |-- i_category_id: integer (nullable = true)
+ |-- i_category: string (nullable = true)
+ |-- i_manufact_id: integer (nullable = true)
+ |-- i_manufact: string (nullable = true)
+ |-- i_size: string (nullable = true)
+ |-- i_formulation: string (nullable = true)
+ |-- i_color: string (nullable = true)
+ |-- i_units: string (nullable = true)
+ |-- i_container: string (nullable = true)
+ |-- i_manager_id: integer (nullable = true)
+ |-- i_product_name: string (nullable = true)
+-RECORD 0----------------------------------------------------
+ i_item_sk        | 0                                        
+ i_item_id        | AAAAAAAAAAAAAAAA                         
+ i_rec_start_date | 2000-01-14                               
+ i_rec_end_date   | NULL                                     
+ i_item_desc      | quickly even dinos beneath the frays ... 
+ i_current_price  | 72.29                                    
+ i_wholesale_cost | 64.96                                    
+ i_brand_id       | 3898712                                  
+ i_brand          | 71TS7NSbvH1YbdiQMG6ttBHKAljiNoIRB        
+ i_class_id       | 1                                        
+ i_class          | Fan Shop                                 
+ i_category_id    | 9                                        
+ i_category       | Sports & Outdoors                        
+ i_manufact_id    | 995                                      
+ i_manufact       | 2VOxvrIWwlJQTSk6                         
+ i_size           | small                                    
+ i_formulation    | 99Ee1r6uFbZSSClAX3                       
+ i_color          | dodger                                   
+ i_units          | Oz                                       
+ i_container      | Unknown                                  
+ i_manager_id     | 18                                       
+ i_product_name   | 8m9n5Q7T33DNWidoA6nWlg6ydmpA1SKOoOJLX... 
+-RECORD 1----------------------------------------------------
+ i_item_sk        | 1                                        
+ i_item_id        | AAAAAAAAAAAAAAAB                         
+ i_rec_start_date | 2000-09-23                               
+ i_rec_end_date   | NULL                                     
+ i_item_desc      | quietly quiet hockey players outside ... 
+ i_current_price  | 95.67                                    
+ i_wholesale_cost | 30.57                                    
+ i_brand_id       | 2218494                                  
+ i_brand          | qNBimHGBu763udH                          
+ i_class_id       | 4                                        
+ i_class          | New                                      
+ i_category_id    | 3                                        
+ i_category       | Books                                    
+ i_manufact_id    | 69                                       
+ i_manufact       | M0VWtUYYkxy6iEMa2XZOxQSCTxFrOqsXg        
+ i_size           | petite                                   
+ i_formulation    | dz1S8VrTflBJIq1kC61                      
+ i_color          | tan                                      
+ i_units          | Dram                                     
+ i_container      | Unknown                                  
+ i_manager_id     | 91                                       
+ i_product_name   | CPB648WB37uUv5OCqjzYe7rH3T               
+-RECORD 2----------------------------------------------------
+ i_item_sk        | 2                                        
+ i_item_id        | AAAAAAAAAAAAAAAC                         
+ i_rec_start_date | 2000-09-01                               
+ i_rec_end_date   | NULL                                     
+ i_item_desc      | dogged dugouts need to maintain regul... 
+ i_current_price  | 62.74                                    
+ i_wholesale_cost | 47.70                                    
+ i_brand_id       | 6043423                                  
+ i_brand          | ma5                                      
+ i_class_id       | 3                                        
+ i_class          | Education & Reference                    
+ i_category_id    | 3                                        
+ i_category       | Books                                    
+ i_manufact_id    | 831                                      
+ i_manufact       | SXEWAxq6kTcO8sAwISBAM9                   
+ i_size           | N/A                                      
+ i_formulation    | nF9XEmsyODYrRYXE2P8H                     
+ i_color          | mint                                     
+ i_units          | Bunch                                    
+ i_container      | Unknown                                  
+ i_manager_id     | 19                                       
+ i_product_name   | bMcWnXWH4yWhqADKdlZicQXcIhd48e8iROsSc... 
+only showing top 3 rows
+Colonnes avec valeurs manquantes : {'i_rec_end_date': 17820, 'i_item_desc': 4, 'i_brand_id': 8, 'i_brand': 6}
+Doublons sur la clé candidate ['i_item_sk'] : 0 clés répétées, 0 lignes en excès
+Lignes exactement dupliquées (toutes colonnes identiques) : 0
+====================================================================================================
+SOURCE store  (12 lignes, 29 colonnes)
+====================================================================================================
+root
+ |-- s_store_sk: integer (nullable = true)
+ |-- s_store_id: string (nullable = true)
+ |-- s_rec_start_date: date (nullable = true)
+ |-- s_rec_end_date: date (nullable = true)
+ |-- s_closed_date_sk: integer (nullable = true)
+ |-- s_store_name: string (nullable = true)
+ |-- s_number_employees: integer (nullable = true)
+ |-- s_floor_space: integer (nullable = true)
+ |-- s_hours: string (nullable = true)
+ |-- s_manager: string (nullable = true)
+ |-- s_market_id: integer (nullable = true)
+ |-- s_geography_class: string (nullable = true)
+ |-- s_market_desc: string (nullable = true)
+ |-- s_market_manager: string (nullable = true)
+ |-- s_division_id: integer (nullable = true)
+ |-- s_division_name: string (nullable = true)
+ |-- s_company_id: integer (nullable = true)
+ |-- s_company_name: string (nullable = true)
+ |-- s_street_number: string (nullable = true)
+ |-- s_street_name: string (nullable = true)
+ |-- s_street_type: string (nullable = true)
+ |-- s_suite_number: string (nullable = true)
+ |-- s_city: string (nullable = true)
+ |-- s_county: string (nullable = true)
+ |-- s_state: string (nullable = true)
+ |-- s_zip: string (nullable = true)
+ |-- s_country: string (nullable = true)
+ |-- s_gmt_offset: decimal(5,2) (nullable = true)
+ |-- s_tax_precentage: decimal(5,2) (nullable = true)
+-RECORD 0------------------------------------------------------
+ s_store_sk         | 0                                        
+ s_store_id         | AAAAAAAAAAAAAAAA                         
+ s_rec_start_date   | 2000-08-02                               
+ s_rec_end_date     | NULL                                     
+ s_closed_date_sk   | 71238                                    
+ s_store_name       | Forest                                   
+ s_number_employees | 217                                      
+ s_floor_space      | 8891512                                  
+ s_hours            | 8AM-12AM                                 
+ s_manager          | Joshua Watson                            
+ s_market_id        | 6                                        
+ s_geography_class  | Unknown                                  
+ s_market_desc      | realms sublate quickly outside the ep... 
+ s_market_manager   | Randy King                               
+ s_division_id      | 1                                        
+ s_division_name    | Unknown                                  
+ s_company_id       | 1                                        
+ s_company_name     | Unknown                                  
+ s_street_number    | 916                                      
+ s_street_name      | 1st                                      
+ s_street_type      | Boulevard                                
+ s_suite_number     | XF                                       
+ s_city             | Post Oak                                 
+ s_county           | Hinsdale County                          
+ s_state            | CO                                       
+ s_zip              | 47562                                    
+ s_country          | United States                            
+ s_gmt_offset       | -7.00                                    
+ s_tax_precentage   | 0.06                                     
+-RECORD 1------------------------------------------------------
+ s_store_sk         | 1                                        
+ s_store_id         | AAAAAAAAAAAAAAAB                         
+ s_rec_start_date   | 2000-07-03                               
+ s_rec_end_date     | NULL                                     
+ s_closed_date_sk   | 18994                                    
+ s_store_name       | Hillside                                 
+ s_number_employees | 244                                      
+ s_floor_space      | 8751339                                  
+ s_hours            | 8AM-4PM                                  
+ s_manager          | Gary Gold                                
+ s_market_id        | 3                                        
+ s_geography_class  | Unknown                                  
+ s_market_desc      | close escapades across the carefully ... 
+ s_market_manager   | John Green                               
+ s_division_id      | 1                                        
+ s_division_name    | Unknown                                  
+ s_company_id       | 1                                        
+ s_company_name     | Unknown                                  
+ s_street_number    | 696                                      
+ s_street_name      | 3rd 4th                                  
+ s_street_type      | Blvd                                     
+ s_suite_number     | gcg5eGNxs                                
+ s_city             | Jerusalem                                
+ s_county           | Union County                             
+ s_state            | TN                                       
+ s_zip              | 80145                                    
+ s_country          | United States                            
+ s_gmt_offset       | -6.00                                    
+ s_tax_precentage   | 0.03                                     
+-RECORD 2------------------------------------------------------
+ s_store_sk         | 2                                        
+ s_store_id         | AAAAAAAAAAAAAAAC                         
+ s_rec_start_date   | 2000-09-01                               
+ s_rec_end_date     | NULL                                     
+ s_closed_date_sk   | 8900                                     
+ s_store_name       | Sherwood                                 
+ s_number_employees | 266                                      
+ s_floor_space      | 5913334                                  
+ s_hours            | 8AM-4PM                                  
+ s_manager          | James Anderson                           
+ s_market_id        | 6                                        
+ s_geography_class  | Unknown                                  
+ s_market_desc      | frays may kindle over the bold ironic... 
+ s_market_manager   | Raymond Kitchens                         
+ s_division_id      | 1                                        
+ s_division_name    | Unknown                                  
+ s_company_id       | 1                                        
+ s_company_name     | Unknown                                  
+ s_street_number    | 293                                      
+ s_street_name      | Main Fourteenth                          
+ s_street_type      | Ct.                                      
+ s_suite_number     | 8pCGst                                   
+ s_city             | Mount Vernon                             
+ s_county           | Sierra County                            
+ s_state            | CA                                       
+ s_zip              | 97832                                    
+ s_country          | United States                            
+ s_gmt_offset       | -8.00                                    
+ s_tax_precentage   | 0.07                                     
+only showing top 3 rows
+Colonnes avec valeurs manquantes : {'s_rec_end_date': 12}
+Doublons sur la clé candidate ['s_store_sk'] : 0 clés répétées, 0 lignes en excès
+Lignes exactement dupliquées (toutes colonnes identiques) : 0
+====================================================================================================
+SOURCE date_dim  (109573 lignes, 28 colonnes)
+====================================================================================================
+root
+ |-- d_date_sk: integer (nullable = true)
+ |-- d_date_id: string (nullable = true)
+ |-- d_date: date (nullable = true)
+ |-- d_month_seq: integer (nullable = true)
+ |-- d_week_seq: integer (nullable = true)
+ |-- d_quarter_seq: integer (nullable = true)
+ |-- d_year: integer (nullable = true)
+ |-- d_dow: integer (nullable = true)
+ |-- d_moy: integer (nullable = true)
+ |-- d_dom: integer (nullable = true)
+ |-- d_qoy: integer (nullable = true)
+ |-- d_fy_year: integer (nullable = true)
+ |-- d_fy_quarter_seq: integer (nullable = true)
+ |-- d_fy_week_seq: integer (nullable = true)
+ |-- d_day_name: string (nullable = true)
+ |-- d_quarter_name: string (nullable = true)
+ |-- d_holiday: string (nullable = true)
+ |-- d_weekend: string (nullable = true)
+ |-- d_following_holiday: string (nullable = true)
+ |-- d_first_dom: integer (nullable = true)
+ |-- d_last_dom: integer (nullable = true)
+ |-- d_same_day_ly: integer (nullable = true)
+ |-- d_same_day_lq: integer (nullable = true)
+ |-- d_current_day: string (nullable = true)
+ |-- d_current_week: string (nullable = true)
+ |-- d_current_month: string (nullable = true)
+ |-- d_current_quarter: string (nullable = true)
+ |-- d_current_year: string (nullable = true)
+-RECORD 0-------------------------------
+ d_date_sk           | 0                
+ d_date_id           | AAAAAAAAAAAAAAAA 
+ d_date              | 1900-01-01       
+ d_month_seq         | 0                
+ d_week_seq          | 0                
+ d_quarter_seq       | 0                
+ d_year              | 1900             
+ d_dow               | 1                
+ d_moy               | 1                
+ d_dom               | 1                
+ d_qoy               | 1                
+ d_fy_year           | 1900             
+ d_fy_quarter_seq    | 0                
+ d_fy_week_seq       | 0                
+ d_day_name          | Monday           
+ d_quarter_name      | 1900Q1           
+ d_holiday           | Y                
+ d_weekend           | N                
+ d_following_holiday | N                
+ d_first_dom         | 2448812          
+ d_last_dom          | 2458802          
+ d_same_day_ly       | 2472542          
+ d_same_day_lq       | 2420941          
+ d_current_day       | N                
+ d_current_week      | N                
+ d_current_month     | N                
+ d_current_quarter   | N                
+ d_current_year      | N                
+-RECORD 1-------------------------------
+ d_date_sk           | 1                
+ d_date_id           | AAAAAAAAAAAAAAAB 
+ d_date              | 1900-01-02       
+ d_month_seq         | 0                
+ d_week_seq          | 0                
+ d_quarter_seq       | 0                
+ d_year              | 1900             
+ d_dow               | 2                
+ d_moy               | 1                
+ d_dom               | 2                
+ d_qoy               | 1                
+ d_fy_year           | 1900             
+ d_fy_quarter_seq    | 0                
+ d_fy_week_seq       | 0                
+ d_day_name          | Tuesday          
+ d_quarter_name      | 1900Q1           
+ d_holiday           | Y                
+ d_weekend           | N                
+ d_following_holiday | N                
+ d_first_dom         | 2441612          
+ d_last_dom          | 2427135          
+ d_same_day_ly       | 2449909          
+ d_same_day_lq       | 2430434          
+ d_current_day       | N                
+ d_current_week      | N                
+ d_current_month     | N                
+ d_current_quarter   | N                
+ d_current_year      | N                
+-RECORD 2-------------------------------
+ d_date_sk           | 2                
+ d_date_id           | AAAAAAAAAAAAAAAC 
+ d_date              | 1900-01-03       
+ d_month_seq         | 0                
+ d_week_seq          | 0                
+ d_quarter_seq       | 0                
+ d_year              | 1900             
+ d_dow               | 3                
+ d_moy               | 1                
+ d_dom               | 3                
+ d_qoy               | 1                
+ d_fy_year           | 1900             
+ d_fy_quarter_seq    | 0                
+ d_fy_week_seq       | 0                
+ d_day_name          | Wednesday        
+ d_quarter_name      | 1900Q1           
+ d_holiday           | Y                
+ d_weekend           | N                
+ d_following_holiday | N                
+ d_first_dom         | 2436156          
+ d_last_dom          | 2449280          
+ d_same_day_ly       | 2455660          
+ d_same_day_lq       | 2433174          
+ d_current_day       | N                
+ d_current_week      | N                
+ d_current_month     | N                
+ d_current_quarter   | N                
+ d_current_year      | N                
+only showing top 3 rows
+Colonnes avec valeurs manquantes : aucune
+Doublons sur la clé candidate ['d_date_sk'] : 0 clés répétées, 0 lignes en excès
+Lignes exactement dupliquées (toutes colonnes identiques) : 0
+====================================================================================================
+SOURCE reason  (35 lignes, 3 colonnes)
+====================================================================================================
+root
+ |-- r_reason_sk: integer (nullable = true)
+ |-- r_reason_id: string (nullable = true)
+ |-- r_reason_desc: string (nullable = true)
++-----------+---------------+----------------------------------------+
+|r_reason_sk|    r_reason_id|                           r_reason_desc|
++-----------+---------------+----------------------------------------+
+|          0|     59h3KawhwK|slyly thin dugouts on the ironically ...|
+|          1| a6TzYqeb5XgwOe|epitaphs will have to affix stealthil...|
+|          2|        R2PsDlX|excuses after the permanent courts tr...|
+|          3|         HZNdBl|fluffily stealthy excuses until the q...|
+|          4|           o1tg|brave quiet waters print carefully am...|
+|          5|             uy|busily sly excuses hang: slow braids ...|
+|          6|        I0hkZWL|carefully furious pearls use busily q...|
+|          7|IO4UcogNLFpHfG0|warthogs should grow: sentiments unwi...|
+|          8|           tFy8|bold escapades by the bold permanent ...|
+|          9|  hcPckyyAkDElU|stealthy pains impress ruthlessly! wa...|
++-----------+---------------+----------------------------------------+
+only showing top 10 rows
+Colonnes avec valeurs manquantes : aucune
+Doublons sur la clé candidate ['r_reason_sk'] : 0 clés répétées, 0 lignes en excès
+Lignes exactement dupliquées (toutes colonnes identiques) : 0
+====================================================================================================
+VALEURS ATYPIQUES ET COHÉRENCE
+====================================================================================================
+Dates de fermeture déclarées des magasins (jointure date_dim) :
++----------+--------------+
+|s_store_sk|date_fermeture|
++----------+--------------+
+|0         |2095-01-16    |
+|1         |1952-01-03    |
+|2         |1924-05-15    |
+|3         |2091-05-21    |
+|4         |2117-12-26    |
+|5         |2141-04-26    |
+|6         |1943-02-26    |
+|7         |2095-08-12    |
+|8         |2038-10-13    |
+|9         |1968-10-22    |
+|10        |1917-01-27    |
+|11        |2019-06-20    |
++----------+--------------+
+Période des ventes : 2001-01-01 -> 2005-12-13
+Résumé des contrôles :
+  store_sales    Quantité <= 0                                                     0 / 667579   (0.0%)
+  store_sales    Prix de vente < 0                                                 0 / 667579   (0.0%)
+  store_sales    Prix de vente = 0                                              3324 / 667579   (0.4979%)
+  store_sales    Montant ligne != quantité x prix (écart > 0,02)                   0 / 667579   (0.0%)
+  store_sales    Prix de vente > prix catalogue                                    0 / 667579   (0.0%)
+  store_sales    Prix de vente < coût d'achat                                 462852 / 667579   (69.3329%)
+  store_sales    Marge nette négative                                         495971 / 667579   (74.294%)
+  store_returns  Quantité retournée <= 0                                           0 / 37902    (0.0%)
+  store_returns  Montant remboursé < 0                                             0 / 37902    (0.0%)
+  store_returns  Montant remboursé = 0                                           190 / 37902    (0.5013%)
+  item           Prix courant <= 0 ou vide                                         0 / 17820    (0.0%)
+  item           Prix courant < coût d'achat                                    7768 / 17820    (43.5915%)
+  item           Marque vide                                                       6 / 17820    (0.0337%)
+  date_dim       d_year != année de d_date                                         0 / 109573   (0.0%)
+  date_dim       d_moy != mois de d_date                                           0 / 109573   (0.0%)
+  store          Ventes postérieures à la date de fermeture du magasin        276032 / 667579   (41.3482%)
+  store_returns  Retour sans vente d'origine (ticket + article)                    0 / 37902    (0.0%)
+  store_returns  Retour daté avant la vente                                        0 / 37902    (0.0%)
+  store_returns  Quantité retournée > quantité vendue                              0 / 37902    (0.0%)
+[2026-11-18 12:28:22] Rapports écrits dans outputs/ (profil_colonnes.csv, valeurs_atypiques.csv)
+# code retour : 0
