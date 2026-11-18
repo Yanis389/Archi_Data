@@ -1,0 +1,61 @@
+# TP3 - preuve générée le 2026-11-18 12:35:30 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
+$ python -m unittest tests.test_regles_silver -v
+26/11/18 12:35:32 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:35:32 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+26/11/18 12:35:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+test_item_marque_vide_et_cle_dupliquee (tests.test_regles_silver.TestRegles.test_item_marque_vide_et_cle_dupliquee) ... 
+[2026-11-18 12:35:47] OK   silver.item           bronze=       5 = silver        3 + quarantaine   2 + doublons   0  (0.6s)
+ok
+test_store_sales_anomalies_injectees (tests.test_regles_silver.TestRegles.test_store_sales_anomalies_injectees) ... [2026-11-18 12:35:52] OK   silver.store_sales    bronze=      13 = silver        7 + quarantaine   5 + doublons   1  (1.1s)
+ok
+----------------------------------------------------------------------
+Ran 2 tests in 22.960s
+OK
+Motifs de quarantaine : ['R02,R03', 'R03', 'SS-R05,SS-R06', 'SS-R06', 'SS-R07']
+root
+ |-- ss_sold_date_sk: integer (nullable = true)
+ |-- ss_sold_time_sk: integer (nullable = true)
+ |-- ss_item_sk: integer (nullable = true)
+ |-- ss_customer_sk: integer (nullable = true)
+ |-- ss_cdemo_sk: integer (nullable = true)
+ |-- ss_hdemo_sk: integer (nullable = true)
+ |-- ss_addr_sk: integer (nullable = true)
+ |-- ss_store_sk: integer (nullable = true)
+ |-- ss_promo_sk: integer (nullable = true)
+ |-- ss_ticket_number: long (nullable = true)
+ |-- ss_quantity: integer (nullable = true)
+ |-- ss_wholesale_cost: decimal(12,2) (nullable = true)
+ |-- ss_list_price: decimal(12,2) (nullable = true)
+ |-- ss_sales_price: decimal(12,2) (nullable = true)
+ |-- ss_ext_discount_amt: decimal(12,2) (nullable = true)
+ |-- ss_ext_sales_price: decimal(12,2) (nullable = true)
+ |-- ss_ext_wholesale_cost: decimal(12,2) (nullable = true)
+ |-- ss_ext_list_price: decimal(12,2) (nullable = true)
+ |-- ss_ext_tax: decimal(12,2) (nullable = true)
+ |-- ss_coupon_amt: decimal(12,2) (nullable = true)
+ |-- ss_net_paid: decimal(12,2) (nullable = true)
+ |-- ss_net_paid_inc_tax: decimal(12,2) (nullable = true)
+ |-- ss_net_profit: decimal(12,2) (nullable = true)
+ |-- qa_cle_dupliquee: boolean (nullable = true)
+ |-- qa_prix_nul: boolean (nullable = true)
+ |-- qa_vente_a_perte: boolean (nullable = true)
+ |-- qa_marge_negative: boolean (nullable = true)
+ |-- _source_file: string (nullable = true)
+ |-- _batch: string (nullable = true)
+ |-- _ingested_at: timestamp (nullable = true)
+ |-- _silver_at: timestamp (nullable = true)
+ |-- _regles_version: string (nullable = true)
++----------------+-----------+----------------+-----------+----------------+
+|ss_ticket_number|ss_quantity|qa_cle_dupliquee|qa_prix_nul|qa_vente_a_perte|
++----------------+-----------+----------------+-----------+----------------+
+|               1|          2|           false|      false|           false|
+|               7|          2|           false|      false|           false|
+|               8|          2|            true|      false|           false|
+|               8|          3|            true|      false|           false|
+|               9|          2|           false|       true|            true|
+|              10|          2|           false|      false|            true|
+|              11|          2|           false|      false|           false|
++----------------+-----------+----------------+-----------+----------------+
+# code retour : 0
