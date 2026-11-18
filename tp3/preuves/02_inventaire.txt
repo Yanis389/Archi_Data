@@ -1,0 +1,21 @@
+# TP3 - preuve générée le 2026-11-18 12:25:48 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
+$ python -m exploration.inventaire
+26/11/18 12:25:50 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:25:50 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+26/11/18 12:25:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 12:25:53] Inventaire de store_sales
+[2026-11-18 12:26:20] Inventaire de store_returns
+[2026-11-18 12:26:39] Inventaire de item
+[2026-11-18 12:26:45] Inventaire de store
+[2026-11-18 12:26:59] Inventaire de date_dim
+[2026-11-18 12:27:09] Inventaire de reason
+[2026-11-18 12:27:09] Inventaire écrit : /Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/docs/data-dictionary/inventaire_technique.md
+store_sales      88.5 Mo   667579 lignes  23 col  structure_ok=True  cle_unique=False
+store_returns     4.1 Mo    37902 lignes  20 col  structure_ok=True  cle_unique=False
+item              6.5 Mo    17820 lignes  22 col  structure_ok=True  cle_unique=True
+store             3.3 Ko       12 lignes  29 col  structure_ok=True  cle_unique=True
+date_dim         14.7 Mo   109573 lignes  28 col  structure_ok=True  cle_unique=True
+reason            3.0 Ko       35 lignes   3 col  structure_ok=True  cle_unique=True
+# code retour : 0

@@ -94,3 +94,25 @@ def nb_nuls(df, colonnes=None):
     colonnes = colonnes or df.columns
     ligne = df.agg(*[F.sum(F.col(c).isNull().cast("int")).alias(c) for c in colonnes]).first()
     return {c: int(ligne[c] or 0) for c in colonnes}
+
+
+def lire_type(spark: SparkSession, table: str):
+    """Lecture brute + application des types déclarés avec try_cast.
+
+    try_cast renvoie NULL quand la conversion est impossible (au lieu de lever une erreur, ce que
+    ferait cast en mode ANSI de Spark 4) : la zone Silver compare ensuite NULL avant/après pour
+    détecter les conversions qui échouent.
+    """
+    brut = lire_brut(spark, table)
+    return brut.select(*[F.col(c).try_cast(t).alias(c) for c, t in schemas.SCHEMAS[table]])
+
+
+def ecrire_csv_rapport(lignes: list, chemin, entetes: list) -> None:
+    """Écrit un rapport CSV (séparateur ';', UTF-8) à partir d'une liste de dictionnaires."""
+    import csv
+    from pathlib import Path
+    Path(chemin).parent.mkdir(parents=True, exist_ok=True)
+    with open(chemin, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=entetes, delimiter=";", extrasaction="ignore")
+        w.writeheader()
+        w.writerows(lignes)
