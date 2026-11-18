@@ -10,3 +10,12 @@ retail_project/
 # Fichiers intermédiaires de génération des PDF
 build/
 .DS_Store
+
+# TP3 : zones de données générées par les scripts (reproductibles via tp3/run_all.sh).
+# Seule la zone Gold (quelques centaines de lignes) est versionnée comme preuve.
+tp3/data/bronze/
+tp3/data/silver/
+tp3/data/quarantaine/
+tp3/data/parquet_test/
+*.crc
+_SUCCESS

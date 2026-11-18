@@ -1,0 +1,3 @@
+# Environnement validé pour le TP3 (voir docs/environment/fiche_environnement.md)
+# Python 3.13, Java 17+ (testé avec Corretto 20)
+pyspark==4.3.0
