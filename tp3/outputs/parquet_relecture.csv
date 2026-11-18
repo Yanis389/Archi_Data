@@ -1,0 +1,6 @@
+jeu;repertoire_sortie;lignes_original;lignes_relues;schema_identique;lignes_differentes_exceptAll;taille;statut
+silver.store_sales;data/parquet_test/silver_store_sales_copie;667579;667579;True;0;44.5 Mo;OK
+gold.ventes_par_magasin_mois;data/parquet_test/gold_ventes_par_magasin_mois_copie;720;720;True;0;25.1 Ko;OK
+gold.ventes_par_categorie_annee;data/parquet_test/gold_ventes_par_categorie_annee_copie;45;45;True;0;4.7 Ko;OK
+gold.retours_par_motif;data/parquet_test/gold_retours_par_motif_copie;36;36;True;0;6.2 Ko;OK
+gold.taux_retour_par_magasin;data/parquet_test/gold_taux_retour_par_magasin_copie;12;12;True;0;4.8 Ko;OK
