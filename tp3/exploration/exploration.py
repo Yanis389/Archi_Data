@@ -91,8 +91,14 @@ def main():
     plage = ss.join(dd, ss.ss_sold_date_sk == dd.d_date_sk).agg(F.min("d_date").alias("premiere_vente"), F.max("d_date").alias("derniere_vente")).first()
     print(f"Période des ventes : {plage['premiere_vente']} -> {plage['derniere_vente']}")
     apres = ss.join(dd, ss.ss_sold_date_sk == dd.d_date_sk).join(fer, ss.ss_store_sk == fer.s_store_sk).filter(F.col("d_date") > F.col("date_fermeture")).count()
+    par_magasin = (ss.join(dd, ss.ss_sold_date_sk == dd.d_date_sk).groupBy("ss_store_sk")
+                   .agg(F.min("d_date").alias("premiere_vente")).join(fer, F.col("ss_store_sk") == fer.s_store_sk))
+    nb_mag = par_magasin.filter(F.col("date_fermeture") < F.col("premiere_vente")).count()
+    n_mag = st.count()
+    print(f"Magasins dont la fermeture déclarée précède leur première vente : {nb_mag} sur {n_mag}")
     ctrl("store", "Ventes postérieures à la date de fermeture du magasin", apres, n_ss,
-         "s_closed_date_sk est incohérent (dates de 1917 à 2141) : colonne NON exploitable, on ne filtre pas les ventes dessus")
+         f"s_closed_date_sk incohérent : {nb_mag} magasins sur {n_mag} ont une fermeture antérieure à leur première vente "
+         "(les autres ont des dates futures, 2019 à 2141) -> colonne NON exploitable, on ne filtre pas les ventes dessus")
 
     # retours vs ventes (clé ticket + article, une même clé peut avoir plusieurs lignes de vente)
     v = (ss.join(dd.select(F.col("d_date_sk").alias("k"), F.col("d_date").alias("date_vente")), ss.ss_sold_date_sk == F.col("k"))

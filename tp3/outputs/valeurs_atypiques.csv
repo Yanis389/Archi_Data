@@ -14,7 +14,7 @@ item;Prix courant < coût d'achat;7768;17820;43.5915;observation métier, conser
 item;Marque vide;6;17820;0.0337;libellé à harmoniser (Non renseigné) en Silver
 date_dim;d_year != année de d_date;0;109573;0.0;cohérence interne du calendrier
 date_dim;d_moy != mois de d_date;0;109573;0.0;cohérence interne du calendrier
-store;Ventes postérieures à la date de fermeture du magasin;276032;667579;41.3482;s_closed_date_sk est incohérent (dates de 1917 à 2141) : colonne NON exploitable, on ne filtre pas les ventes dessus
+store;Ventes postérieures à la date de fermeture du magasin;276032;667579;41.3482;s_closed_date_sk incohérent : 5 magasins sur 12 ont une fermeture antérieure à leur première vente (les autres ont des dates futures, 2019 à 2141) -> colonne NON exploitable, on ne filtre pas les ventes dessus
 store_returns;Retour sans vente d'origine (ticket + article);0;37902;0.0;aucun : intégrité retour -> vente
 store_returns;Retour daté avant la vente;0;37902;0.0;aucun
 store_returns;Quantité retournée > quantité vendue;0;37902;0.0;aucun
