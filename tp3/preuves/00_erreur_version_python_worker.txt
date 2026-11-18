@@ -1,0 +1,12 @@
+# TP3 - preuve générée le 2026-11-18 12:23:50 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
+$ echo "python3 du PATH système : $(PATH=/opt/homebrew/bin:/usr/bin:/bin python3 --version) ; python du venv : $(.venv/bin/python --version)"; PATH=/opt/homebrew/bin:/usr/bin:/bin env -u PYSPARK_PYTHON .venv/bin/python scripts/repro_erreur_python_worker.py 2>&1 | grep -E "PYTHON_VERSION_MISMATCH|ERREUR" | cut -c1-400 | head -3; echo "--- avec la correction de lib/spark_utils.get_spark :"; PATH=/opt/homebrew/bin:/usr/bin:/bin env -u PYSPARK_PYTHON .venv/bin/python -c "from lib.spark_utils import get_spark; s=get_spark(\"fix\"); s.createDataFrame([(\"a\",1)],[\"k\",\"v\"]).show(); s.stop()" 2>&1 | grep -E "^\||^\+"
+python3 du PATH système : Python 3.15.2 ; python du venv : Python 3.13.1
+pyspark.errors.exceptions.base.PySparkRuntimeError: [PYTHON_VERSION_MISMATCH] Python in worker has different version: 3.15 than that in driver: 3.13, PySpark cannot run with different minor versions.
+ERREUR REPRODUITE : ['pyspark.errors.exceptions.base.PySparkRuntimeError: [PYTHON_VERSION_MISMATCH] Python in worker has different version: 3.15 than that in driver: 3.13, PySpark cannot run with different minor versions.', 'Please check environment variables PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON are correctly set.']
+--- avec la correction de lib/spark_utils.get_spark :
+|  k|  v|
++---+---+
+|  a|  1|
++---+---+
+# code retour : 0

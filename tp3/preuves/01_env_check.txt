@@ -1,0 +1,54 @@
+# TP3 - preuve générée le 2026-11-18 12:23:35 CET - utilisateur=yanishelali - hôte=MacBook-Pro-de-Yanis-2
+# python=Python 3.13.1 | java=openjdk version "20.0.1" 2023-04-18
+$ python -m exploration.env_check
+26/11/18 12:23:36 WARN Utils: Your hostname, MacBook-Pro-de-Yanis-2.local, resolves to a loopback address: 127.0.0.1; using 10.192.33.120 instead (on interface en0)
+26/11/18 12:23:36 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+26/11/18 12:23:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-11-18 12:23:38] Versions et ressources relevées :
+{
+  "date_releve": "2026-11-18T12:23:38",
+  "systeme": "Darwin 27.0.0 (arm64)",
+  "python": "3.13.1",
+  "python_executable": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/.venv/bin/python",
+  "java": "20.0.1",
+  "java_vendor": "Amazon.com Inc.",
+  "pyspark": "4.3.0",
+  "spark": "4.3.0",
+  "mode_execution": "local[*]",
+  "parallelisme_par_defaut": 8,
+  "cpu": 8,
+  "memoire_machine": "8.0 Go",
+  "memoire_driver_spark": "2g",
+  "disque_libre": "3.7 Go",
+  "chemins": {
+    "donnees_sources": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/retail_project/data",
+    "bronze": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/bronze",
+    "silver": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/silver",
+    "gold": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/gold",
+    "quarantaine": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/quarantaine",
+    "sortie_tests": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/parquet_test",
+    "rapports": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/outputs"
+  },
+  "sources_presentes": {
+    "store_sales": true,
+    "store_returns": true,
+    "item": true,
+    "store": true,
+    "date_dim": true,
+    "reason": true
+  },
+  "hdfs": "non utilisé : lecture depuis un répertoire local (solution de repli, voir README)"
+}
+[2026-11-18 12:23:39] Schéma du fichier de test (reason) :
+root
+ |-- r_reason_sk: string (nullable = true)
+ |-- r_reason_id: string (nullable = true)
+ |-- r_reason_desc: string (nullable = true)
+[2026-11-18 12:23:40] OK   session_spark
+[2026-11-18 12:23:40] OK   lecture_fichier_test
+[2026-11-18 12:23:40] OK   schema_affiche
+[2026-11-18 12:23:40] OK   ecriture_relecture_test
+[2026-11-18 12:23:40] OK   sources_non_modifiees
+[2026-11-18 12:23:40] OK   sortie_distincte_des_sources
+# code retour : 0

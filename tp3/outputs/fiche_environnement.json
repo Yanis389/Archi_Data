@@ -1,0 +1,42 @@
+{
+  "date_releve": "2026-11-18T12:23:38",
+  "systeme": "Darwin 27.0.0 (arm64)",
+  "python": "3.13.1",
+  "python_executable": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/.venv/bin/python",
+  "java": "20.0.1",
+  "java_vendor": "Amazon.com Inc.",
+  "pyspark": "4.3.0",
+  "spark": "4.3.0",
+  "mode_execution": "local[*]",
+  "parallelisme_par_defaut": 8,
+  "cpu": 8,
+  "memoire_machine": "8.0 Go",
+  "memoire_driver_spark": "2g",
+  "disque_libre": "3.7 Go",
+  "chemins": {
+    "donnees_sources": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/retail_project/data",
+    "bronze": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/bronze",
+    "silver": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/silver",
+    "gold": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/gold",
+    "quarantaine": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/quarantaine",
+    "sortie_tests": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/data/parquet_test",
+    "rapports": "/Users/yanishelali/Documents/ecole/Master_2/Archi_Data/Annexes/J1_Retail_Intelligence/tp3/outputs"
+  },
+  "sources_presentes": {
+    "store_sales": true,
+    "store_returns": true,
+    "item": true,
+    "store": true,
+    "date_dim": true,
+    "reason": true
+  },
+  "hdfs": "non utilisé : lecture depuis un répertoire local (solution de repli, voir README)",
+  "verifications": {
+    "session_spark": true,
+    "lecture_fichier_test": true,
+    "schema_affiche": true,
+    "ecriture_relecture_test": true,
+    "sources_non_modifiees": true,
+    "sortie_distincte_des_sources": true
+  }
+}
